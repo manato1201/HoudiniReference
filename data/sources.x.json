@@ -1,0 +1,16 @@
+{
+  "_comment": "X 公式 API v2 のみ。publish_public=false(既定)の間、X の投稿の抜粋は公開物(items.json / site/data)に出さず、data/items.x.local.json(ローカル専用・.gitignore 済み)だけに置く。enabled=true にし、環境変数 X_BEARER_TOKEN を設定した時だけ動く。単価は未確認(assumed_usd_per_post は仮)。",
+  "enabled": false,
+  "publish_public": false,
+  "api_base": "https://api.x.com/2",
+  "max_posts_per_run": 50,
+  "monthly_post_budget": 1500,
+  "retention_days": 30,
+  "assumed_usd_per_post": 0.005,
+  "accounts": [
+    {"handle": "sidefx", "tab": "news", "tags": ["SideFX"]}
+  ],
+  "queries": [
+    {"q": "(Houdini OR #houdini) -is:retweet", "tab": "tips", "tags": []}
+  ]
+}

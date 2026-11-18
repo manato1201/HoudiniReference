@@ -1,0 +1,6 @@
+[project]
+name = "houdini-reference"
+version = "0.1.0"
+description = "Houdini の Tips・ニュース・リファレンスを公式フィード/API から集める収集器と静的サイト"
+requires-python = ">=3.12"
+dependencies = []  # 標準ライブラリのみ(urllib / xml.etree)

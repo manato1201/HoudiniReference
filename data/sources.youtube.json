@@ -1,0 +1,18 @@
+{
+  "_comment": "チャンネル ID は、実際にフィードを GET して取れることを確認したものだけ(2026-11-18)。推測で足さない。追加は channel_id を確認してから。",
+  "channels": [
+    {"slug": "sidefx", "name": "Houdini (SideFX)", "id": "UCegWLyW4CYzph4dYW-gYy0g", "tags": ["SideFX"], "tab": "tips"},
+    {"slug": "entagma", "name": "Entagma", "id": "UCWu6SQmC6nAZ-reuj3lF2eQ", "tags": [], "tab": "tips"},
+    {"slug": "horikawa", "name": "Junichiro Horikawa", "id": "UC5NStd0QmACnWs9DzqJ3vHg", "tags": [], "tab": "tips"},
+    {"slug": "ninebetween", "name": "Nine Between", "id": "UCRVaHP-vsYOeuZnn2DTutpQ", "tags": [], "tab": "tips"}
+  ],
+  "api_search": {
+    "enabled": false,
+    "_comment": "任意。環境変数 YOUTUBE_API_KEY が無ければ黙ってスキップ。search.list は 1 回 100 ユニット(無料枠は 1 日 10,000)。API 由来のデータは 30 日で消す。",
+    "queries": ["Houdini tutorial", "Houdini tips"],
+    "days": 7,
+    "max_results": 10,
+    "max_requests_per_run": 5,
+    "tab": "tips"
+  }
+}

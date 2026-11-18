@@ -1,0 +1,9 @@
+{
+  "_comment": "RSS/Atom の情報源。収集は公式が提供するフィードの範囲だけ。sidefx.com は robots.txt の Crawl-delay: 5 を守る(コード側で 5 秒間隔)。",
+  "sources": [
+    {"id": "sidefx-news", "name": "SideFX ニュース", "url": "https://www.sidefx.com/forum/feeds/forum/70/", "tab": "news", "tags": ["SideFX"], "limit": 30, "keep": 200},
+    {"id": "sidefx-forum", "name": "SideFX フォーラム", "url": "https://www.sidefx.com/forum/feeds/topics/", "tab": "tips", "tags": ["Forum"], "limit": 30, "keep": 150},
+    {"id": "sidefx-changelog-22", "name": "SideFX 変更履歴 22.0", "url": "https://www.sidefx.com/changelog/rss/22_0/", "tab": "reference", "tags": ["Release notes"], "limit": 40, "keep": 120},
+    {"id": "sidefx-changelog-21", "name": "SideFX 変更履歴 21.0", "url": "https://www.sidefx.com/changelog/rss/21_0/", "tab": "reference", "tags": ["Release notes"], "limit": 20, "keep": 60}
+  ]
+}

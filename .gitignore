@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.env
+.env.*
+.venv/
+*.tmp
+.scratch/
+# X の投稿の抜粋はローカル専用(公開リポジトリに載せない)
+data/items.x.local.json
+
+# e2e の撮影(確認用)
+shot_*.png

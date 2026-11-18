@@ -1,0 +1,1830 @@
+{
+ "schema_version": 1,
+ "generated_at": "2026-11-18T07:04:11Z",
+ "sources": [
+  {
+   "id": "sidefx-news",
+   "name": "SideFX ニュース",
+   "kind": "rss",
+   "tab": "news",
+   "ok": true,
+   "fetched": 15,
+   "not_modified": false,
+   "last_ok": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "sidefx-forum",
+   "name": "SideFX フォーラム",
+   "kind": "rss",
+   "tab": "tips",
+   "ok": true,
+   "fetched": 15,
+   "not_modified": false,
+   "last_ok": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "sidefx-changelog-22",
+   "name": "SideFX 変更履歴 22.0",
+   "kind": "rss",
+   "tab": "reference",
+   "ok": true,
+   "fetched": 18,
+   "not_modified": false,
+   "last_ok": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "sidefx-changelog-21",
+   "name": "SideFX 変更履歴 21.0",
+   "kind": "rss",
+   "tab": "reference",
+   "ok": true,
+   "fetched": 1,
+   "not_modified": false,
+   "last_ok": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "youtube-sidefx",
+   "name": "Houdini (SideFX)",
+   "kind": "youtube",
+   "tab": "tips",
+   "ok": true,
+   "fetched": 15,
+   "not_modified": false,
+   "last_ok": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "youtube-entagma",
+   "name": "Entagma",
+   "kind": "youtube",
+   "tab": "tips",
+   "ok": true,
+   "fetched": 15,
+   "not_modified": false,
+   "last_ok": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "youtube-horikawa",
+   "name": "Junichiro Horikawa",
+   "kind": "youtube",
+   "tab": "tips",
+   "ok": true,
+   "fetched": 15,
+   "not_modified": false,
+   "last_ok": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "youtube-ninebetween",
+   "name": "Nine Between",
+   "kind": "youtube",
+   "tab": "tips",
+   "ok": true,
+   "fetched": 15,
+   "not_modified": false,
+   "last_ok": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "x",
+   "name": "X",
+   "kind": "x",
+   "ok": null,
+   "skipped": "disabled"
+  }
+ ],
+ "items": [
+  {
+   "id": "6702aab2c002c27d",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum",
+   "source": "SideFX フォーラム",
+   "title": "does houdin 22 support renderman 27.3",
+   "url": "https://www.sidefx.com/forum/topic/104780/",
+   "published": "2026-11-18T02:47:04Z",
+   "excerpt": "i can't find any information on this. even simple yes or no would be very helpful. thanks!",
+   "tags": [
+    "Forum",
+    "Rendering"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "3490556be59d2010",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum",
+   "source": "SideFX フォーラム",
+   "title": "Polyextude with Inset: One Corner doesn't Inset{[SOLVED]}",
+   "url": "https://www.sidefx.com/forum/topic/104779/",
+   "published": "2026-11-17T20:44:36Z",
+   "excerpt": "Hi! I have a super simple shape that I want to extrude with a bit of inset. For some reason, the corner at point number 0 doesn't want to inset. I checked and theres only one point there, normals are…",
+   "tags": [
+    "Forum"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "50ff0b1ae3219d05",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum",
+   "source": "SideFX フォーラム",
+   "title": "VEX xyzdist: distance to a primitive number?{[SOLVED]}",
+   "url": "https://www.sidefx.com/forum/topic/104778/",
+   "published": "2026-11-17T19:28:17Z",
+   "excerpt": "Hi! I have no groups on my geo and want my point wrangle to detect the distance to a specific primitive from the second input. Each point searches for a different primitive. The documentation talks a…",
+   "tags": [
+    "Forum",
+    "VEX"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "dfbeccf2486c5635",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum",
+   "source": "SideFX フォーラム",
+   "title": "Production builds?",
+   "url": "https://www.sidefx.com/forum/topic/104776/",
+   "published": "2026-11-17T17:33:56Z",
+   "excerpt": "Is there a production build dropping soon? Us Redshift goons like bug fixes too! G",
+   "tags": [
+    "Forum",
+    "Rendering"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "58e835738f0a7313",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.507: Fixes a bug with the color visual...",
+   "url": "https://www.sidefx.com/changelog/entry/1005579917/",
+   "published": "2026-11-17T17:19:26Z",
+   "excerpt": "Fixes a bug with the color visualizer in the APEX Ragdoll Tool in APEX Animate. When Impact Threshold was on, the color would either be inactive or active but would not reflect match local or match w…",
+   "tags": [
+    "Release notes",
+    "APEX",
+    "H22.0"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "8092c9727995a146",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum",
+   "source": "SideFX フォーラム",
+   "title": "APEX_rigpose - view selected geomerty",
+   "url": "https://www.sidefx.com/forum/topic/104775/",
+   "published": "2026-11-17T16:26:08Z",
+   "excerpt": "hi – is it possible to display only the geometry of the selected layer? In this example, the flower petals are located on the inside – how would one go about animating something like this? this examp…",
+   "tags": [
+    "Forum"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "97a8370672a66e43",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.507: Fixes a bug where layer drawable...",
+   "url": "https://www.sidefx.com/changelog/entry/1005579918/",
+   "published": "2026-11-17T15:16:52Z",
+   "excerpt": "Fixes a bug where layer drawable transforms would not update if the incoming layer's transform was animated.",
+   "tags": [
+    "Release notes",
+    "H22.0"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "ba2933b2731c6c0a",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.507: Upgraded Houdini's OpenSSL l...",
+   "url": "https://www.sidefx.com/changelog/entry/1005579919/",
+   "published": "2026-11-17T14:42:40Z",
+   "excerpt": "Upgraded Houdini's OpenSSL library to 3.5.9.",
+   "tags": [
+    "Release notes",
+    "H22.0"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "7dd6d590946e52bc",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum",
+   "source": "SideFX フォーラム",
+   "title": "karles22 – MatX-native Cycles render delegate for Houdini22",
+   "url": "https://www.sidefx.com/forum/topic/104774/",
+   "published": "2026-11-17T11:22:10Z",
+   "excerpt": "Dear Houdini loving artists! My name is Nikolaus Vuckovic, I'm a 3D/VFX artist from Vienna, Austria. After 20+ years of rendering in various engines, I finally built my own tool called karles22. It's…",
+   "tags": [
+    "Forum",
+    "Rendering"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "26a72bcb9fc3e217",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum",
+   "source": "SideFX フォーラム",
+   "title": "How to get subcategories for profiling using the HDK",
+   "url": "https://www.sidefx.com/forum/topic/104773/",
+   "published": "2026-11-17T11:08:42Z",
+   "excerpt": "I'm working on a DOP solver node using the HDK, and wondering how to get subcategories for profiling data in Houdini. For example, the Bullet Solver has these subcategories: UT_PerfMonAutoSolveEvent…",
+   "tags": [
+    "Forum",
+    "RBD"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "3b61e7731a8acea8",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum",
+   "source": "SideFX フォーラム",
+   "title": "So Karma just doesnt support Transmission Scattering?",
+   "url": "https://www.sidefx.com/forum/topic/104772/",
+   "published": "2026-11-17T09:59:05Z",
+   "excerpt": "Pretty big limitation if you ask me. Im trying to switch over from Redshift and been playing around with Karma XPU in Solaris. I just could not find a way to have scattering on transmission materials…",
+   "tags": [
+    "Forum",
+    "Solaris",
+    "Karma",
+    "Rendering"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "df103d02b479800f",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.506: Bind numpad keys by default for P...",
+   "url": "https://www.sidefx.com/changelog/entry/1005579920/",
+   "published": "2026-11-17T02:45:38Z",
+   "excerpt": "Bind numpad keys by default for Paint 3D's viewerstate to be equivalent to the number row keybinds that toggle the current tool.",
+   "tags": [
+    "Release notes",
+    "H22.0"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "d375f16c260d3bc8",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.506: Fixed dot-to-dot cables losing th...",
+   "url": "https://www.sidefx.com/changelog/entry/1005579921/",
+   "published": "2026-11-16T22:24:22Z",
+   "excerpt": "Fixed dot-to-dot cables losing their thickness.",
+   "tags": [
+    "Release notes",
+    "H22.0"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "90b8c5f7a5d7ba45",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.506: Fixed issues with segment meshes...",
+   "url": "https://www.sidefx.com/changelog/entry/1005579922/",
+   "published": "2026-11-16T21:50:38Z",
+   "excerpt": "Fixed issues with segment meshes and material overrides not being appled to landscape splines correctly. Fixed a crash when deleting landscape splines.",
+   "tags": [
+    "Release notes",
+    "H22.0"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:XJt4t_ExMMA",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "Computational Design | David Burpee | Houdini Connect",
+   "url": "https://www.youtube.com/watch?v=XJt4t_ExMMA",
+   "published": "2026-11-16T21:37:26Z",
+   "excerpt": "Computational designer David Burpee shares his journey from high-rise architecture into industrial design and experimental footwear with his brand MorphXgen. Find out how he uses Houdini as a time-ba…",
+   "tags": [
+    "YouTube",
+    "SideFX"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "60d7554f0a8ce511",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.506: Fixed an issue where deleting an...",
+   "url": "https://www.sidefx.com/changelog/entry/1005579923/",
+   "published": "2026-11-16T21:08:37Z",
+   "excerpt": "Fixed an issue where deleting an input and then undoing it would result in the input not being correctly sent to Houdini.",
+   "tags": [
+    "Release notes",
+    "H22.0"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "20ad28b3226a4a55",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.506: Fixed an issue when using bluepri...",
+   "url": "https://www.sidefx.com/changelog/entry/1005579924/",
+   "published": "2026-11-16T21:00:21Z",
+   "excerpt": "Fixed an issue when using blueprints with the public API where callbacks would not be received.",
+   "tags": [
+    "Release notes",
+    "H22.0"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "d222d3ec339aada0",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-21",
+   "source": "SideFX 変更履歴 21.0",
+   "title": "21.0.902: Fixed an issue where sesinetd wou...",
+   "url": "https://www.sidefx.com/changelog/entry/1005620668/",
+   "published": "2026-11-16T20:48:26Z",
+   "excerpt": "Fixed an issue where sesinetd would drop usage information if a log failed.",
+   "tags": [
+    "Release notes",
+    "H21.0"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "ccfb7731009581dc",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.506: Fixed an issue where sesinetd wou...",
+   "url": "https://www.sidefx.com/changelog/entry/1005579925/",
+   "published": "2026-11-16T18:06:11Z",
+   "excerpt": "Fixed an issue where sesinetd would drop usage information if a log attempt failed.",
+   "tags": [
+    "Release notes",
+    "H22.0"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "f21240607c1cbea4",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum",
+   "source": "SideFX フォーラム",
+   "title": "All Manual UV layout in a single node?",
+   "url": "https://www.sidefx.com/forum/topic/104768/",
+   "published": "2026-11-16T16:18:31Z",
+   "excerpt": "Hi! I'm used to doing the UV layout by hand in Maya with full control of where each shell goes. Currently, in Houdini, the only way I found was to use a uvEdit node per changes. Is there a node that…",
+   "tags": [
+    "Forum"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "56a4a72660e6c7d5",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.506: The Flipbook ROP's camera pi...",
+   "url": "https://www.sidefx.com/changelog/entry/1005579926/",
+   "published": "2026-11-16T15:26:01Z",
+   "excerpt": "The Flipbook ROP's camera picker window now works when the LOP Network parameter points to an actual LOP Network node rather than a LOP node. Also fixed some issues with the RMB context menu on LOP N…",
+   "tags": [
+    "Release notes",
+    "H22.0"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "e03e59dbd85d4493",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum",
+   "source": "SideFX フォーラム",
+   "title": "Seamlessly Looping Noises",
+   "url": "https://www.sidefx.com/forum/topic/104767/",
+   "published": "2026-11-16T15:07:34Z",
+   "excerpt": "I've been trying to loop noises seamlessly at a particular frame (typically, $FEND). I've had some success using AI to help. However, the solutions are complicated and don't generalize well. Is there…",
+   "tags": [
+    "Forum"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "c88d535b46234550",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum",
+   "source": "SideFX フォーラム",
+   "title": "External Deep EXR as a Render-Time Holdout in Karma",
+   "url": "https://www.sidefx.com/forum/topic/104765/",
+   "published": "2026-11-16T09:17:08Z",
+   "excerpt": "Hi SideFX team and everyone, I would like to discuss support for using an existing Deep EXR sequence as a render-time holdout in Karma, similar to Mantra’s camera background image workflow with Backg…",
+   "tags": [
+    "Forum",
+    "Karma",
+    "Rendering"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "7905f0352444be8a",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.504: Fixed a bug where pick snapping i...",
+   "url": "https://www.sidefx.com/changelog/entry/1005579927/",
+   "published": "2026-11-15T03:09:47Z",
+   "excerpt": "Fixed a bug where pick snapping incorrectly snapped to the cook selection.",
+   "tags": [
+    "Release notes",
+    "H22.0"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "7b82d69eb05efcde",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum",
+   "source": "SideFX フォーラム",
+   "title": "Create UsdShade prims and Nodegraph nodes with Python",
+   "url": "https://www.sidefx.com/forum/topic/104760/",
+   "published": "2026-11-15T00:38:45Z",
+   "excerpt": "Is there a way to create Shader prims (using the USD python API) that have the necessary information for the Edit Material Lop to create the corresponding nodegraph nodes? My use case is this: 1. Exp…",
+   "tags": [
+    "Forum",
+    "Solaris",
+    "Python"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "b6769aad141e4049",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum",
+   "source": "SideFX フォーラム",
+   "title": "Is it documented which attributes are calculated on the fly?",
+   "url": "https://www.sidefx.com/forum/topic/104756/",
+   "published": "2026-11-14T02:58:50Z",
+   "excerpt": "For example, when I use a Primitive Wrangler, the @P has value, which seems to be the average position of all the primitive's points. My question is where this behavior is documented? And what else a…",
+   "tags": [
+    "Forum",
+    "VEX"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "024ddde778cc9d80",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.503: Removed an erroneous preference i...",
+   "url": "https://www.sidefx.com/changelog/entry/1005579928/",
+   "published": "2026-11-13T17:21:14Z",
+   "excerpt": "Removed an erroneous preference in the network display options.",
+   "tags": [
+    "Release notes",
+    "H22.0"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:rzjFc3xgGp4",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "H22 | Machine Learning | Introduction",
+   "url": "https://www.youtube.com/watch?v=rzjFc3xgGp4",
+   "published": "2026-11-13T15:23:26Z",
+   "excerpt": "All Lessons and Project Files: https://www.sidefx.com/tutorials/understanding-machine-learning/ Learn how to train your own neural networks in Houdini and explore the fundamental concepts behind mach…",
+   "tags": [
+    "YouTube",
+    "SideFX"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:jGdQLSxWmBM",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "H22 | Machine Learning 8 | Feature Engineering and Encoding",
+   "url": "https://www.youtube.com/watch?v=jGdQLSxWmBM",
+   "published": "2026-11-13T15:23:26Z",
+   "excerpt": "All Lessons and Project Files: https://www.sidefx.com/tutorials/understanding-machine-learning/ Learn how to use neural networks in Houdini to represent multiple texture maps using UV coordinates and…",
+   "tags": [
+    "YouTube",
+    "SideFX"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:tHEZNoEK8oc",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "H22 | Machine Learning 5 | Optimizers and Gradient Descent",
+   "url": "https://www.youtube.com/watch?v=tHEZNoEK8oc",
+   "published": "2026-11-13T15:23:25Z",
+   "excerpt": "All Lessons and Project Files: https://www.sidefx.com/tutorials/understanding-machine-learning/ Learn how neural networks improve during training by exploring optimization techniques in Houdini. You’…",
+   "tags": [
+    "YouTube",
+    "SideFX"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:mjhH0YScYa0",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "H22 | Machine Learning 6 | TOPs, Hidden Layers and Partial Training",
+   "url": "https://www.youtube.com/watch?v=mjhH0YScYa0",
+   "published": "2026-11-13T15:23:25Z",
+   "excerpt": "All Lessons and Project Files: https://www.sidefx.com/tutorials/understanding-machine-learning/ Learn how to improve machine learning training in Houdini by experimenting with different learning rate…",
+   "tags": [
+    "YouTube",
+    "SideFX",
+    "PDG/TOPs"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:lBUhNn87LfQ",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "H22 | Machine Learning 7 | Identifying Good ML Problems",
+   "url": "https://www.youtube.com/watch?v=lBUhNn87LfQ",
+   "published": "2026-11-13T15:23:25Z",
+   "excerpt": "All Lessons and Project Files: https://www.sidefx.com/tutorials/understanding-machine-learning/ Learn how to determine when machine learning is the right approach for a problem in Houdini and how to…",
+   "tags": [
+    "YouTube",
+    "SideFX"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:juI-3kINitc",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "H22 | Machine Learning 11 | PyTorch",
+   "url": "https://www.youtube.com/watch?v=juI-3kINitc",
+   "published": "2026-11-13T15:23:25Z",
+   "excerpt": "All Lessons and Project Files: https://www.sidefx.com/tutorials/understanding-machine-learning/ Learn how PyTorch powers machine learning in Houdini and explore the fundamentals of building and train…",
+   "tags": [
+    "YouTube",
+    "SideFX"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:gsdBT6g0AzA",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "H22 | Machine Learning 10 | Overfitting in Practice",
+   "url": "https://www.youtube.com/watch?v=gsdBT6g0AzA",
+   "published": "2026-11-13T15:23:25Z",
+   "excerpt": "All Lessons and Project Files: https://www.sidefx.com/tutorials/understanding-machine-learning/ Learn how to identify and address overfitting in Houdini by training neural networks with different mod…",
+   "tags": [
+    "YouTube",
+    "SideFX"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:gDN6P_suFV4",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "H22 | Machine Learning 13 | ONNX",
+   "url": "https://www.youtube.com/watch?v=gDN6P_suFV4",
+   "published": "2026-11-13T15:23:25Z",
+   "excerpt": "All Lessons and Project Files: https://www.sidefx.com/tutorials/understanding-machine-learning/ Learn how ONNX is used to deploy trained neural networks in Houdini and understand how it differs from…",
+   "tags": [
+    "YouTube",
+    "SideFX"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:YaKR3qlmDG0",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "H22 | Machine Learning 2 | Train a Simple Neural Network",
+   "url": "https://www.youtube.com/watch?v=YaKR3qlmDG0",
+   "published": "2026-11-13T15:23:25Z",
+   "excerpt": "All Lessons and Project Files: https://www.sidefx.com/tutorials/understanding-machine-learning/ Learn how to train your first neural network in Houdini using a simple dataset and the ML Train Regress…",
+   "tags": [
+    "YouTube",
+    "SideFX"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:PANNC5Haxww",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "H22 | Machine Learning 9 | Overfitting",
+   "url": "https://www.youtube.com/watch?v=PANNC5Haxww",
+   "published": "2026-11-13T15:23:25Z",
+   "excerpt": "All Lessons and Project Files: https://www.sidefx.com/tutorials/understanding-machine-learning/ Learn how to recognize and prevent overfitting when training neural networks in Houdini. You’ll explore…",
+   "tags": [
+    "YouTube",
+    "SideFX"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:NP1WXwV1Q_4",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "H22 | Machine Learning 3 | Building a Deep Neural Network",
+   "url": "https://www.youtube.com/watch?v=NP1WXwV1Q_4",
+   "published": "2026-11-13T15:23:25Z",
+   "excerpt": "All Lessons and Project Files: https://www.sidefx.com/tutorials/understanding-machine-learning/ Learn how neural networks work by exploring their underlying structure and how they learn to approximat…",
+   "tags": [
+    "YouTube",
+    "SideFX"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:Jab4zQc3CGc",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "H22 | Machine Learning 4 | Model a Heightfield",
+   "url": "https://www.youtube.com/watch?v=Jab4zQc3CGc",
+   "published": "2026-11-13T15:23:25Z",
+   "excerpt": "All Lessons and Project Files: https://www.sidefx.com/tutorials/understanding-machine-learning/ Learn how to train a neural network in Houdini to recreate a height field using machine learning. You’l…",
+   "tags": [
+    "YouTube",
+    "SideFX",
+    "Terrain"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:BQmSLV1qIqA",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "H22 | Machine Learning 1 | ML Thinking",
+   "url": "https://www.youtube.com/watch?v=BQmSLV1qIqA",
+   "published": "2026-11-13T15:23:25Z",
+   "excerpt": "All Lessons and Project Files: https://www.sidefx.com/tutorials/understanding-machine-learning/ Learn how machine learning works and explore the fundamental concepts behind training neural networks i…",
+   "tags": [
+    "YouTube",
+    "SideFX"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:3B7OphQf_l0",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "H22 | Machine Learning 12 | PyTorch Architectures",
+   "url": "https://www.youtube.com/watch?v=3B7OphQf_l0",
+   "published": "2026-11-13T15:23:25Z",
+   "excerpt": "All Lessons and Project Files: https://www.sidefx.com/tutorials/understanding-machine-learning/ Learn how to build a custom neural network in Houdini using PyTorch to improve height field reconstruct…",
+   "tags": [
+    "YouTube",
+    "SideFX"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "efff7e762a49ef63",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.503: Texture overrides on groom SOPs n...",
+   "url": "https://www.sidefx.com/changelog/entry/1005579929/",
+   "published": "2026-11-13T11:58:07Z",
+   "excerpt": "Texture overrides on groom SOPs now accept op: paths to COPs, so Copernicus textures can drive parameters directly and update when the COP changes.",
+   "tags": [
+    "Release notes",
+    "Copernicus",
+    "H22.0"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "ea0cebb2dc3185e5",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.502: Fixed bugs in the Comb SOP when i...",
+   "url": "https://www.sidefx.com/changelog/entry/1005579930/",
+   "published": "2026-11-12T20:59:50Z",
+   "excerpt": "Fixed bugs in the Comb SOP when it failed to create or update its normal attribute when smoothing normals or erasing changes, which could lead to a crash.",
+   "tags": [
+    "Release notes",
+    "H22.0"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "acbafdc01a697b98",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.502: Fixed a bug where edge selection...",
+   "url": "https://www.sidefx.com/changelog/entry/1005579931/",
+   "published": "2026-11-12T17:31:12Z",
+   "excerpt": "Fixed a bug where edge selection highlights wouldn't be visible in uv view",
+   "tags": [
+    "Release notes",
+    "H22.0"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "869ad5697c6bf9b3",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.501: Fix calculation of Luminosity ble...",
+   "url": "https://www.sidefx.com/changelog/entry/1005619048/",
+   "published": "2026-11-12T03:15:02Z",
+   "excerpt": "Fix calculation of Luminosity blend mode in COP Blend which was preventing the blend mode from acting as a passthrough for the background when the foreground colour is (0,0,0,0).",
+   "tags": [
+    "Release notes",
+    "Copernicus",
+    "H22.0"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "2b5d9d648440da4f",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.501: Fix calculation of Luminosity ble...",
+   "url": "https://www.sidefx.com/changelog/entry/1005579932/",
+   "published": "2026-11-12T03:14:36Z",
+   "excerpt": "Fix calculation of Luminosity blend mode in COP Blend which was preventing the blend mode from acting as a passthrough for the background when the foreground colour is (0,0,0,0).",
+   "tags": [
+    "Release notes",
+    "Copernicus",
+    "H22.0"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "fb4426dfa9e6d873",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum",
+   "source": "SideFX フォーラム",
+   "title": "HDA : how to have button icon path be relative to HDA path?",
+   "url": "https://www.sidefx.com/forum/topic/104751/",
+   "published": "2026-11-11T22:54:33Z",
+   "excerpt": "so i've got an HDA with a button and it has an icon. the issue is that the icon path is hardcoded and thus it can easily be broken if you're using this HDA on a different machine as the paths aren't…",
+   "tags": [
+    "Forum",
+    "HDA"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "72c98c20a1e91508",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum",
+   "source": "SideFX フォーラム",
+   "title": "VEX: Best way to check if primitive is packed? {[SOLVED]}",
+   "url": "https://www.sidefx.com/forum/topic/104748/",
+   "published": "2026-11-11T14:36:40Z",
+   "excerpt": "Is there a function to tell if a prim is packed? Or, is there a function like hasprimattrib but for intrinsics?(that way, I could check if packedfulltransform exist...)",
+   "tags": [
+    "Forum",
+    "VEX"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "44a0226914d5f4c9",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.501: Internal changes to what gets sav...",
+   "url": "https://www.sidefx.com/changelog/entry/1005579933/",
+   "published": "2026-11-11T14:32:30Z",
+   "excerpt": "Internal changes to what gets saved out for nodes",
+   "tags": [
+    "Release notes",
+    "H22.0"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:SwjsWmIZtAo",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-entagma",
+   "source": "Entagma",
+   "title": "Vellum201 Ep. 10: Ripping Cloth",
+   "url": "https://www.youtube.com/watch?v=SwjsWmIZtAo",
+   "published": "2026-11-04T14:46:05Z",
+   "excerpt": "This week on Vellum201 we are ripping cloth the easy way! You will learn a quick and art-directable way to create \"tearing cloth\". See you tomorrow on Patreon and Entagma.com!",
+   "tags": [
+    "YouTube"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:VDIsRIsVgsw",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-entagma",
+   "source": "Entagma",
+   "title": "Free Houdini: GSplats from a single image (MoGe-2 & SHARP)",
+   "url": "https://www.youtube.com/watch?v=VDIsRIsVgsw",
+   "published": "2026-10-26T15:30:15Z",
+   "excerpt": "Gaussian splats are fun, but they need time to train and at least 100 images for good results. Enter MoGe-2 & SHARP, two machine learning models promising Splats from a single photo. Let's see how to…",
+   "tags": [
+    "YouTube"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:D18uUJHykMI",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-entagma",
+   "source": "Entagma",
+   "title": "Free Houdini: GSplats from a single image (MoGe-2 & SHARP)",
+   "url": "https://www.youtube.com/watch?v=D18uUJHykMI",
+   "published": "2026-10-25T14:51:20Z",
+   "excerpt": "Tomorrow Chris walks you through a way to create gaussian splats from one single image. Since gaussian splats usually take a lot of images, this is quite a neat option to have on hand in need of a qu…",
+   "tags": [
+    "YouTube"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:f1T3s4v30HU",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-entagma",
+   "source": "Entagma",
+   "title": "Vellum 201 - Ep.09: Autostitcher",
+   "url": "https://www.youtube.com/watch?v=f1T3s4v30HU",
+   "published": "2026-10-22T13:42:38Z",
+   "excerpt": "In this Episode Chris created a multi purpose tool! You will learn how to create a setup that disassembles a 3D object, creates planes out of it, stitches it back together at the right places and let…",
+   "tags": [
+    "YouTube",
+    "Vellum"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "1c77f170005c7e8c",
+   "tab": "news",
+   "kind": "rss",
+   "source_id": "sidefx-news",
+   "source": "SideFX ニュース",
+   "title": "Houdini 22 Production Build! Update 22.0.466",
+   "url": "https://www.sidefx.com/forum/post/463666/",
+   "published": "2026-10-08T19:32:24Z",
+   "excerpt": "Hidey ho! Houdini 22 has been updated to 22.0.466. Gsplat display issue and few others were fixed in 22.0.4 Here's a link to the changelog showing all the changes that have gone in since 22.0.429. Ch…",
+   "tags": [
+    "SideFX",
+    "H22.0"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "f0b05eb4ee408f43",
+   "tab": "news",
+   "kind": "rss",
+   "source_id": "sidefx-news",
+   "source": "SideFX ニュース",
+   "title": "Canadian Thanksgiving Monday, Oct.12th",
+   "url": "https://www.sidefx.com/forum/post/463639/",
+   "published": "2026-10-06T14:47:29Z",
+   "excerpt": "Hidey ho! It's a long weekend coming up in Canada so most of us will be off on Monday, Oct.12th, but we'll be back on Tuesday, fully recovered from our turkey comas.",
+   "tags": [
+    "SideFX"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:WdHFQF3pZA0",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-entagma",
+   "source": "Entagma",
+   "title": "Free Tutorial: Gaussian Splat Segmentation",
+   "url": "https://www.youtube.com/watch?v=WdHFQF3pZA0",
+   "published": "2026-10-05T14:30:15Z",
+   "excerpt": "Chris got a request from Kay John Yim at HIVEalt26 to build a tool for gaussian splat segmentation. And Chris did exactly that. He will show you how to create a 2D Mask from your gaussian splats, tha…",
+   "tags": [
+    "YouTube"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "ab1ad67848b61437",
+   "tab": "news",
+   "kind": "rss",
+   "source_id": "sidefx-news",
+   "source": "SideFX ニュース",
+   "title": "Houdini 22 Production Build! Update 22.0.459",
+   "url": "https://www.sidefx.com/forum/post/463576/",
+   "published": "2026-10-01T20:26:59Z",
+   "excerpt": "Hidey ho! Houdini 22 has been updated to 22.0.459. Here's a link to the changelog showing all the changes that have gone in since 22.0.429. Changelog [www.sidefx.com]",
+   "tags": [
+    "SideFX",
+    "H22.0"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:lVL5qz9v23k",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-entagma",
+   "source": "Entagma",
+   "title": "Free Tutorial: Gsplat Segmentation",
+   "url": "https://www.youtube.com/watch?v=lVL5qz9v23k",
+   "published": "2026-09-30T15:30:11Z",
+   "excerpt": "On Monday we are taking a look at a request at HIVEalt 26: Gsplat Segmentation. Chris built a tool to select specific objects in your gaussian splat! #gaussiansplatting #segmentation #houdini #sidefx…",
+   "tags": [
+    "YouTube"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:KYgzXSRfVsw",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-entagma",
+   "source": "Entagma",
+   "title": "Advanced Setups: SDF Hacks",
+   "url": "https://www.youtube.com/watch?v=KYgzXSRfVsw",
+   "published": "2026-09-23T05:30:34Z",
+   "excerpt": "Tomorrow Chris has some SDF Hacks for you. Learn how to turn a texture into a VDB or create cool gyroid patterns in a volume. He came overprepared to the Hive Talk in London, which means extra Conten…",
+   "tags": [
+    "YouTube"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "631b56b5abfb97a6",
+   "tab": "news",
+   "kind": "rss",
+   "source_id": "sidefx-news",
+   "source": "SideFX ニュース",
+   "title": "Markdown version of Houdini docs available for LLMs",
+   "url": "https://www.sidefx.com/forum/post/463457/",
+   "published": "2026-09-22T16:13:04Z",
+   "excerpt": "Hi ho! We now have a markdown version of the docs available for LLMs to use. The launching point is the standard https://www.sidefx.com/llms.txt [www.sidefx.com] which links to https://www.sidefx.com…",
+   "tags": [
+    "SideFX"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:mlBO92dOdkk",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-entagma",
+   "source": "Entagma",
+   "title": "Vellum 201 - Ep.08",
+   "url": "https://www.youtube.com/watch?v=mlBO92dOdkk",
+   "published": "2026-09-10T15:32:04Z",
+   "excerpt": "Episode 8 of our Vellum Course is now online on Entagma.com! Can you guess which Artwork inspired Chris to do this piece? You will learn how to create this intricate fabric with it‘s constraints and…",
+   "tags": [
+    "YouTube",
+    "Vellum"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "b1f4fa0a5ec82dc6",
+   "tab": "news",
+   "kind": "rss",
+   "source_id": "sidefx-news",
+   "source": "SideFX ニュース",
+   "title": "Labour Day - Monday Sept.7th",
+   "url": "https://www.sidefx.com/forum/post/463205/",
+   "published": "2026-09-02T16:21:00Z",
+   "excerpt": "Hidey ho! We'll be off this coming Monday in Canada and the U.S. for Labour Day. Some of us will be off on Friday too! We'll be back in action on Tuesday, Sept.8th.",
+   "tags": [
+    "SideFX"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "dc79171e4adbad03",
+   "tab": "news",
+   "kind": "rss",
+   "source_id": "sidefx-news",
+   "source": "SideFX ニュース",
+   "title": "Houdini 22 Production Build! Update 22.0.429",
+   "url": "https://www.sidefx.com/forum/post/463194/",
+   "published": "2026-09-01T17:29:08Z",
+   "excerpt": "Hidey ho! Houdini 22 has been updated to 22.0.429. Here's a link to the changelog showing all the changes that have gone in since 22.0.368. Changelog [www.sidefx.com]",
+   "tags": [
+    "SideFX",
+    "H22.0"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:nQDrdU3jhjw",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-entagma",
+   "source": "Entagma",
+   "title": "Adding deforming bubbles to your viscous FLIP simulation",
+   "url": "https://www.youtube.com/watch?v=nQDrdU3jhjw",
+   "published": "2026-08-24T15:30:12Z",
+   "excerpt": "Philipp is back with his Honey setup for another round of FLIP. He will show you how to add deforming bubbles to any viscous fluid without having to resim or other complicated additions. For Links to…",
+   "tags": [
+    "YouTube",
+    "FLIP"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:EC7IskaPXYA",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-entagma",
+   "source": "Entagma",
+   "title": "Adding deforming bubbles to your vicous FLIP simulation",
+   "url": "https://www.youtube.com/watch?v=EC7IskaPXYA",
+   "published": "2026-08-22T14:00:10Z",
+   "excerpt": "You wished for a part 2, so we brought Philipp back! On Monday he will show you how to add deforming bubbles to any vicous liquid without having to resim to keep your setup as flexible as possible.",
+   "tags": [
+    "YouTube",
+    "FLIP"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:v34huo3wkNY",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-entagma",
+   "source": "Entagma",
+   "title": "Vellum 201 - Ep.07: Upressing & Postprocessing cloth",
+   "url": "https://www.youtube.com/watch?v=v34huo3wkNY",
+   "published": "2026-08-19T17:10:03Z",
+   "excerpt": "Tomorrow we are fixing cloth sims! Chris will show you an emergency technique for upressing vellum cloth and adding additional details! See you there! #houdini #3d #vellum #cloth #simulation",
+   "tags": [
+    "YouTube",
+    "Vellum"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:2wAMuIsVD0c",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-entagma",
+   "source": "Entagma",
+   "title": "Heightfields on 3D Objects (Modding Houdini 22)",
+   "url": "https://www.youtube.com/watch?v=2wAMuIsVD0c",
+   "published": "2026-08-10T15:00:03Z",
+   "excerpt": "Chris has been playing with the new Adjacency and Heightfield workflows in Copernicus. Both work really well on their own, so why not combine them to put Heightfields on any uv unwrapped object, not…",
+   "tags": [
+    "YouTube",
+    "Copernicus",
+    "Terrain"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:27EsQjdUy64",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-entagma",
+   "source": "Entagma",
+   "title": "Free Tutorial: Heightfields On 3d Objects (Modding Houdini 22)",
+   "url": "https://www.youtube.com/watch?v=27EsQjdUy64",
+   "published": "2026-08-09T12:00:34Z",
+   "excerpt": "On Monday we have another free Tutorial for you, Chris has been playing with the new Adjacency and Heightfield workflows in Copernicus. Both work really well on their own, so why not combine them to…",
+   "tags": [
+    "YouTube",
+    "Copernicus",
+    "Terrain"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "d98576edb322cb0e",
+   "tab": "news",
+   "kind": "rss",
+   "source_id": "sidefx-news",
+   "source": "SideFX ニュース",
+   "title": "Last Houdini 21 Production Build! Update 21.0.792",
+   "url": "https://www.sidefx.com/forum/post/462447/",
+   "published": "2026-07-30T17:43:31Z",
+   "excerpt": "Hidey ho! Houdini 21 has been updated to its last production build. It has been updated to 21.0.792. Here's a link to the changelog showing all the changes that have gone in since 21.0.729. Changelog…",
+   "tags": [
+    "SideFX",
+    "H21.0"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:AoHjueWlvTM",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-entagma",
+   "source": "Entagma",
+   "title": "New Course: Big Setups - Ep.00: FLIP based Foam",
+   "url": "https://www.youtube.com/watch?v=AoHjueWlvTM",
+   "published": "2026-07-30T15:30:35Z",
+   "excerpt": "Watch our new Course now on Entagma.com and Patreon.com! This is the Intro into a new course: Big Setups! Since there is not always a way to condense down a topic into a 20-minute video, we are launc…",
+   "tags": [
+    "YouTube",
+    "FLIP"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:tlRCivECyNY",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-entagma",
+   "source": "Entagma",
+   "title": "New Course! Big Setups - Ep.00: FLIP based Foam",
+   "url": "https://www.youtube.com/watch?v=tlRCivECyNY",
+   "published": "2026-07-28T14:30:21Z",
+   "excerpt": "Get ready for Thursday, Chris has been cooking! We have a lot of setups that just do not fit our usual scale of Tutorial and that is why Chris made this new Course so we can put out more and more com…",
+   "tags": [
+    "YouTube",
+    "FLIP"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "be052efca6805f83",
+   "tab": "news",
+   "kind": "rss",
+   "source_id": "sidefx-news",
+   "source": "SideFX ニュース",
+   "title": "Monday Aug.3rd - Civic Holiday",
+   "url": "https://www.sidefx.com/forum/post/462361/",
+   "published": "2026-07-27T21:08:04Z",
+   "excerpt": "Hi ho! We just wanted to give you a heads up that our Toronto office will be closed on Monday Aug.3rd for Civic Holiday, which is celebrated under different regional names like Heritage Day in Albert…",
+   "tags": [
+    "SideFX"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "4dc536118a2d4761",
+   "tab": "news",
+   "kind": "rss",
+   "source_id": "sidefx-news",
+   "source": "SideFX ニュース",
+   "title": "Daily builds of H22 are now online",
+   "url": "https://www.sidefx.com/forum/post/462160/",
+   "published": "2026-07-20T17:25:46Z",
+   "excerpt": "Hidey ho! Daily builds of H22 are now available on the download page. Enjoy!",
+   "tags": [
+    "SideFX"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "ddad1bd37958ff14",
+   "tab": "news",
+   "kind": "rss",
+   "source_id": "sidefx-news",
+   "source": "SideFX ニュース",
+   "title": "Houdini 22 is now live!",
+   "url": "https://www.sidefx.com/forum/post/461957/",
+   "published": "2026-07-15T16:14:47Z",
+   "excerpt": "Hidey ho! Houdini 22.0.368 - the gold release - is now available for download. Enjoy! https://www.sidefx.com/products/whats-new-in-h22/ [www.sidefx.com]",
+   "tags": [
+    "SideFX",
+    "H22.0"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "8fb91ed65247c008",
+   "tab": "news",
+   "kind": "rss",
+   "source_id": "sidefx-news",
+   "source": "SideFX ニュース",
+   "title": "Houdini 21 Production Build updated to 21.0.729",
+   "url": "https://www.sidefx.com/forum/post/460261/",
+   "published": "2026-05-28T19:47:03Z",
+   "excerpt": "Hidey ho! Our Houdini 21 Production Build has been updated to 21.0.729. Here's a link to the changelog showing all the changes that have gone in since 21.0.700. Changelog [www.sidefx.com]",
+   "tags": [
+    "SideFX",
+    "H21.0"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "5f06d239115728ca",
+   "tab": "news",
+   "kind": "rss",
+   "source_id": "sidefx-news",
+   "source": "SideFX ニュース",
+   "title": "Victoria Day long weekend in Canada",
+   "url": "https://www.sidefx.com/forum/post/459678/",
+   "published": "2026-05-14T17:36:01Z",
+   "excerpt": "Hidey ho! Just a heads up that we Canadians at SideFX have this coming Monday, May.18th off for Victoria Day. (and some of us will be off on Friday too) We'll be back in action on Tuesday, May.19th.",
+   "tags": [
+    "SideFX"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "fd41dfb153c1b74c",
+   "tab": "news",
+   "kind": "rss",
+   "source_id": "sidefx-news",
+   "source": "SideFX ニュース",
+   "title": "Houdini 21 Production Build updated to 21.0.700",
+   "url": "https://www.sidefx.com/forum/post/459062/",
+   "published": "2026-04-29T17:48:33Z",
+   "excerpt": "Hidey ho! Our Houdini 21 Production Build has been updated to 21.0.700. Here's a link to the changelog showing all the changes that have gone in since 21.0.671. Changelog [www.sidefx.com]",
+   "tags": [
+    "SideFX",
+    "H21.0"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "b187aada3199713b",
+   "tab": "news",
+   "kind": "rss",
+   "source_id": "sidefx-news",
+   "source": "SideFX ニュース",
+   "title": "Houdini 21 Production Build updated to 21.0.671",
+   "url": "https://www.sidefx.com/forum/post/457639/",
+   "published": "2026-04-01T15:34:49Z",
+   "excerpt": "Hidey ho! Our Houdini 21 Production Build has been updated to 21.0.671. Here's a link to the changelog showing all the changes that have gone in since 21.0.631. Changelog [www.sidefx.com]",
+   "tags": [
+    "SideFX",
+    "H21.0"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "60247ba87b700582",
+   "tab": "news",
+   "kind": "rss",
+   "source_id": "sidefx-news",
+   "source": "SideFX ニュース",
+   "title": "It's a pretty good Friday on Apr.3rd",
+   "url": "https://www.sidefx.com/forum/post/457494/",
+   "published": "2026-03-31T15:36:14Z",
+   "excerpt": "Hi ho! Friday April.3rd is a stat holiday in Canada so there won't be a lot of SideFX staff around this Friday but we'll be back on Monday Apr.6th.",
+   "tags": [
+    "SideFX"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:FTS46d06EzI",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-horikawa",
+   "source": "Junichiro Horikawa",
+   "title": "Houdini Algorithmic Live #161 - AKIRA ズンッ WALL",
+   "url": "https://www.youtube.com/watch?v=FTS46d06EzI",
+   "published": "2025-08-23T15:37:43Z",
+   "excerpt": "This is a tutorial livestream for Houdini to introduce some of the interesting algorithmic design process. I'm going to make the famouse crater wall (ズン壁) from AKIRA. I've also started a Patreon, if…",
+   "tags": [
+    "YouTube"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:w57jDzNMqOU",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-horikawa",
+   "source": "Junichiro Horikawa",
+   "title": "Houdini Algorithmic Live #160 - Pixel Art with Copernicus",
+   "url": "https://www.youtube.com/watch?v=w57jDzNMqOU",
+   "published": "2025-08-03T16:36:29Z",
+   "excerpt": "This is a tutorial livestream for Houdini to introduce some of the interesting algorithmic design process. I'm going to use Copernicus (COPs) to create pixel art in this livestream. I've also started…",
+   "tags": [
+    "YouTube",
+    "Copernicus"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:1Ti6O6Yfp7U",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-horikawa",
+   "source": "Junichiro Horikawa",
+   "title": "Houdini Algorithmic Live #159 - Bouncing inside Cage",
+   "url": "https://www.youtube.com/watch?v=1Ti6O6Yfp7U",
+   "published": "2025-07-26T17:15:57Z",
+   "excerpt": "This is a tutorial livestream for Houdini to introduce some of the interesting algorithmic design process. In this livestream I'm going to let balls bounce inside a cage object. I've also started a P…",
+   "tags": [
+    "YouTube"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:r2753HA-7RA",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-horikawa",
+   "source": "Junichiro Horikawa",
+   "title": "Houdini Algorithmic Live #158 - Monte Carlo Geometry Processing",
+   "url": "https://www.youtube.com/watch?v=r2753HA-7RA",
+   "published": "2025-07-12T16:22:28Z",
+   "excerpt": "This is a tutorial livestream for Houdini to introduce some of the interesting algorithmic design process. In this livestream I am going to use Monte Carlo method to be used for geometry processing (…",
+   "tags": [
+    "YouTube"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:SDy0A323lfs",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-horikawa",
+   "source": "Junichiro Horikawa",
+   "title": "Houdini Algorithmic Live #157 - Procedural Apartment Complex",
+   "url": "https://www.youtube.com/watch?v=SDy0A323lfs",
+   "published": "2025-07-05T19:52:21Z",
+   "excerpt": "This is a tutorial livestream for Houdini to introduce some of the interesting algorithmic design process. In this livestream I'm going to create a procedural apartment complex using Houdini. I've al…",
+   "tags": [
+    "YouTube"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:fZUXruQH9E0",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-horikawa",
+   "source": "Junichiro Horikawa",
+   "title": "Houdini Algorithmic Live #156 - Spiral Carving",
+   "url": "https://www.youtube.com/watch?v=fZUXruQH9E0",
+   "published": "2025-06-28T17:28:59Z",
+   "excerpt": "This is a tutorial livestream for Houdini to introduce some of the interesting algorithmic design process. In this livestream I'm planning to do a 3d procedural modeling to achieve spiral carving by…",
+   "tags": [
+    "YouTube"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:eEetQznX0XA",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-horikawa",
+   "source": "Junichiro Horikawa",
+   "title": "Houdini Algorithmic Live #155 - Pixel Sorting Solver with Copernicus",
+   "url": "https://www.youtube.com/watch?v=eEetQznX0XA",
+   "published": "2025-06-21T16:31:28Z",
+   "excerpt": "This is a tutorial livestream for Houdini to introduce some of the interesting algorithmic design process. In this livestream I'm going to use Copernicus with Solver to create pixel sorting effect on…",
+   "tags": [
+    "YouTube",
+    "Copernicus"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:SzrhSG2Ll0I",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-horikawa",
+   "source": "Junichiro Horikawa",
+   "title": "Houdini Algorithmic Live #154 - Spherical Transition",
+   "url": "https://www.youtube.com/watch?v=SzrhSG2Ll0I",
+   "published": "2025-06-15T04:11:51Z",
+   "excerpt": "This is a tutorial livestream for Houdini to introduce some of the interesting algorithmic design process. In this livestream I'm going to create a rather simple spherical transition animation from o…",
+   "tags": [
+    "YouTube"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:I7i5rrjAc8c",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-horikawa",
+   "source": "Junichiro Horikawa",
+   "title": "Houdini Algorithmic Live #153 - L-System Road Network",
+   "url": "https://www.youtube.com/watch?v=I7i5rrjAc8c",
+   "published": "2025-06-07T18:39:49Z",
+   "excerpt": "This is a tutorial livestream for Houdini to introduce some of the interesting algorithmic design process. In this livestream I'm going to create a procedural road network using L-System. I've also s…",
+   "tags": [
+    "YouTube"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:TYx6zx4kbG8",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-horikawa",
+   "source": "Junichiro Horikawa",
+   "title": "Houdini Algorithmic Live #152 - Procedural Aerial Overpass",
+   "url": "https://www.youtube.com/watch?v=TYx6zx4kbG8",
+   "published": "2025-05-31T16:11:24Z",
+   "excerpt": "This is a tutorial livestream for Houdini to introduce some of the interesting algorithmic design process. In this livestream I'm going to show how you can create a procedural aerial overpass. I've a…",
+   "tags": [
+    "YouTube"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:GHRuXuEb6S0",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-horikawa",
+   "source": "Junichiro Horikawa",
+   "title": "Houdini Algorithmic Live #151 - Swirl Sculpture",
+   "url": "https://www.youtube.com/watch?v=GHRuXuEb6S0",
+   "published": "2025-05-24T16:08:48Z",
+   "excerpt": "This is a tutorial livestream for Houdini to introduce some of the interesting algorithmic design process. In this livestream I'm going to create a physics based sculpture using vellum. I've also sta…",
+   "tags": [
+    "YouTube",
+    "Vellum"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:JhoCyubec_g",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-horikawa",
+   "source": "Junichiro Horikawa",
+   "title": "Houdini Algorithmic Live #150 - TSP Art (Traveling Salesman Problem)",
+   "url": "https://www.youtube.com/watch?v=JhoCyubec_g",
+   "published": "2025-05-10T17:37:49Z",
+   "excerpt": "This is a tutorial livestream for Houdini to introduce some of the interesting algorithmic design process. In this livestream I'm planning to create a one stroke path by solving TSP (travel salesman…",
+   "tags": [
+    "YouTube"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:ylbU8_PbcBI",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-horikawa",
+   "source": "Junichiro Horikawa",
+   "title": "Houdini Algorithmic Live #149 - Procedural Jade Vine",
+   "url": "https://www.youtube.com/watch?v=ylbU8_PbcBI",
+   "published": "2025-05-03T17:45:50Z",
+   "excerpt": "This is a tutorial livestream for Houdini to introduce some of the interesting algorithmic design process. In this livestream I'm planning to create procedural jade vine model which grows over time.…",
+   "tags": [
+    "YouTube"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:axDm-5ezM6E",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-horikawa",
+   "source": "Junichiro Horikawa",
+   "title": "Houdini Algorithmic Live #148 - SDF-based Softbody",
+   "url": "https://www.youtube.com/watch?v=axDm-5ezM6E",
+   "published": "2025-04-27T03:49:10Z",
+   "excerpt": "This is a tutorial livestream for Houdini to introduce some of the interesting algorithmic design process. In this livestream I'm going to show how you can use SDF to create softbody-like shapes that…",
+   "tags": [
+    "YouTube"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:sa7HS-oSCzI",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-horikawa",
+   "source": "Junichiro Horikawa",
+   "title": "Houdini Algorithmic Live #147 - Procedural Disco Ball",
+   "url": "https://www.youtube.com/watch?v=sa7HS-oSCzI",
+   "published": "2025-04-20T03:42:31Z",
+   "excerpt": "This is a tutorial livestream for Houdini to introduce some of the interesting algorithmic design process. For this livestream I'm going to create a simple procedural disco ball with some volumetric…",
+   "tags": [
+    "YouTube"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:FyhR1VYJ3N4",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-ninebetween",
+   "source": "Nine Between",
+   "title": "THE ULTIMATE COPERNICUS GUIDE || EVERY COPS NODE EXPLAINED",
+   "url": "https://www.youtube.com/watch?v=FyhR1VYJ3N4",
+   "published": "2024-11-27T15:00:15Z",
+   "excerpt": "Feel free to use this tutorial as a reference/documentation guide for every COPS node as of Houdini 20.5. If any nodes are not named below, please let me know in the comments. Thanks! 00:00:00 INTRO…",
+   "tags": [
+    "YouTube",
+    "Copernicus",
+    "H20.5"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:6J9uQSVXZgA",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-ninebetween",
+   "source": "Nine Between",
+   "title": "Houdini is HIP - Part 19: Ocean Simulation II",
+   "url": "https://www.youtube.com/watch?v=6J9uQSVXZgA",
+   "published": "2024-02-20T14:00:06Z",
+   "excerpt": "00:00 Intro and Explanation 03:02 Flat Tank Example 08:35 Guided Ocean Layer 18:15 Simulation Meshing And Ocean Extension 23:45 Ocean Extended Rendering",
+   "tags": [
+    "YouTube",
+    "Rendering"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:6YPnEP0_XJk",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-ninebetween",
+   "source": "Nine Between",
+   "title": "Houdini is HIP - Part 18: Ocean Simulation - Spectrum",
+   "url": "https://www.youtube.com/watch?v=6YPnEP0_XJk",
+   "published": "2024-01-31T14:00:07Z",
+   "excerpt": "00:00 Intro 01:20 Creating an Ocean Grid 04:52 Ocean Spectra Settings 12:08 Wave Instancing 20:15 Preparing to Render 21:50 Rendering Oceans with Karma 27:00 Settings Example and Outro",
+   "tags": [
+    "YouTube",
+    "Karma",
+    "Rendering"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:FB5-zOhiHgs",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-ninebetween",
+   "source": "Nine Between",
+   "title": "Houdini is HIP - Part 17: Sparkling Water Project 3",
+   "url": "https://www.youtube.com/watch?v=FB5-zOhiHgs",
+   "published": "2023-12-27T12:00:19Z",
+   "excerpt": "https://bit.ly/carbonated_part3 00:00 Intro 01:07 Infinite Backdrop 03:55 Solaris Setup 05:54 Basic Materials 08:35 Light Improvements 11:00 Refractive Materials 18:16 Cleaning Geometry 20:25 Foam Re…",
+   "tags": [
+    "YouTube",
+    "Solaris"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:c9Xu9YEZaKs",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-ninebetween",
+   "source": "Nine Between",
+   "title": "Houdini is HIP - Part 16: Sparkling Water Project 2",
+   "url": "https://www.youtube.com/watch?v=c9Xu9YEZaKs",
+   "published": "2023-12-18T15:00:26Z",
+   "excerpt": "https://bit.ly/carbonated_p2 00:00 Intro 00:42 Reference Material Analysis 03:00 Collider Corrections 05:30 Fluid Simulation Adjustments 06:00 Time, FPS and Age 11:30 Reaping Foam Particles 18:50 Set…",
+   "tags": [
+    "YouTube",
+    "FLIP"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:Xs2tHiVFKF0",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-ninebetween",
+   "source": "Nine Between",
+   "title": "Houdini is HIP - Part 15: Sparkling Water Project",
+   "url": "https://www.youtube.com/watch?v=Xs2tHiVFKF0",
+   "published": "2023-11-29T14:00:21Z",
+   "excerpt": "00:00 Intro 01:30 Glass Setup 05:37 Fluid Sourcing 09:23 Collider Geo Setup 11:09 Flip Solver Setup 16:19 Adding Colliders 22:00 Volume Loss Causes 27:00 Fixing Volume Loss 32:07 Particle Attributes…",
+   "tags": [
+    "YouTube",
+    "FLIP"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:DJfkTV3Pivc",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-ninebetween",
+   "source": "Nine Between",
+   "title": "Houdini is HIP - Part 14: Flip Fluids I",
+   "url": "https://www.youtube.com/watch?v=DJfkTV3Pivc",
+   "published": "2023-10-30T15:00:08Z",
+   "excerpt": "00:00 Intro 00:47 Lagrangian Solving 04:45 Eulerian Solving 08:36 Euler/Lagrange Solving 13:45 Flip Fluid Sourcing and Setup 22:18 Sticking on Collision 25:47 Continuous Particle Sourcing 29:44 Volum…",
+   "tags": [
+    "YouTube",
+    "FLIP"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:kYCT743alVI",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-ninebetween",
+   "source": "Nine Between",
+   "title": "Houdini is HIP - Part 13: Destruction (RBD and Pyro)",
+   "url": "https://www.youtube.com/watch?v=kYCT743alVI",
+   "published": "2023-10-20T15:00:41Z",
+   "excerpt": "00:00 Intro 01:04 Asset Download 02:45 RBD Asset Setup 15:12 Affecting Glue Strength with VEX 18:31 Setting Up Deforming Colliders 24:05 Making Pieces Inactive 29:04 Debris Sourcing 32:45 Debris Part…",
+   "tags": [
+    "YouTube",
+    "VEX",
+    "Pyro",
+    "RBD"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:F7_B-BA6C1o",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-ninebetween",
+   "source": "Nine Between",
+   "title": "Houdini is HIP - Part 12: Pyro II",
+   "url": "https://www.youtube.com/watch?v=F7_B-BA6C1o",
+   "published": "2023-09-28T18:00:09Z",
+   "excerpt": "00:00 Intro 00:53 Setting Up Sources 10:11 Pyro Solver Setup 14:56 Temperature Settings and Shaping 17:18 Adding Velocity 19:58 Caching The Simulation 24:35 Pyro Bake and Rendering 33:30 Pyro Presets…",
+   "tags": [
+    "YouTube",
+    "Pyro",
+    "Rendering"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:kJKiCAPcomg",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-ninebetween",
+   "source": "Nine Between",
+   "title": "Houdini is HIP - Part 11: Pyro I",
+   "url": "https://www.youtube.com/watch?v=kJKiCAPcomg",
+   "published": "2023-08-25T14:00:36Z",
+   "excerpt": "00:00 Intro 01:45 Volume Basics 08:50 Pyro Solver Setup 13:08 Smoke Shaping 16:05 Attributes to Volumes 23:10 Using Temperature 26:45 Outro",
+   "tags": [
+    "YouTube",
+    "Pyro"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:d_8EEfIe1Lk",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-ninebetween",
+   "source": "Nine Between",
+   "title": "Houdini is HIP - Part 10: Destruction II",
+   "url": "https://www.youtube.com/watch?v=d_8EEfIe1Lk",
+   "published": "2023-08-23T14:00:21Z",
+   "excerpt": "00:00 Intro 00:50 Recap of RBD Concepts 04:28 RBD Simulation Points 06:35 Saving Simulations to Disk 10:00 Efficient Caching Techniques 12:23 Rendering RBD Simulations 16:08 Using the Inside and Outs…",
+   "tags": [
+    "YouTube",
+    "RBD",
+    "Rendering"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:cE-Bbdspu_8",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-ninebetween",
+   "source": "Nine Between",
+   "title": "3D USD Masterclass: Scene Assembly and Rendering",
+   "url": "https://www.youtube.com/watch?v=cE-Bbdspu_8",
+   "published": "2023-07-31T14:00:32Z",
+   "excerpt": "File Download: https://bit.ly/SolarisIsSweet This series is a condensed version of a workshop which we taught in London for SideFX Houdini. Scene assembly and rendering are undergoing a major shift d…",
+   "tags": [
+    "YouTube",
+    "Solaris",
+    "Rendering"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:ul85ejWgnvY",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-ninebetween",
+   "source": "Nine Between",
+   "title": "Houdini is HIP - Part 9: Destruction",
+   "url": "https://www.youtube.com/watch?v=ul85ejWgnvY",
+   "published": "2023-07-14T14:00:50Z",
+   "excerpt": "00:00 Intro 01:25 Points and Constraints 03:20 Packed Geometry 07:55 Methods of Packing 09:29 Fracturing Geometry 12:12 Creating an RBD Simulation 17:42 Constraints 20:35 Proxies 22:42 Adding Sources…",
+   "tags": [
+    "YouTube",
+    "RBD"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:OfPoK_T3XNU",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-ninebetween",
+   "source": "Nine Between",
+   "title": "Houdini is HIP - Part 8: Vellum II - Cloth, Soft Bodies and Fluids",
+   "url": "https://www.youtube.com/watch?v=OfPoK_T3XNU",
+   "published": "2023-07-03T15:00:27Z",
+   "excerpt": "0:00 Intro 01:26 Cloth Simulations 09:30 Strut Soft Body Simulations 13:27 Tetrahedral Soft Body Simulations 16:33 Deforming Original Geometry 23:15 Vellum Fluids 30:11 Two-way Vellum Interaction 36:…",
+   "tags": [
+    "YouTube",
+    "Vellum",
+    "FLIP"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:nQuVoXEAziU",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-ninebetween",
+   "source": "Nine Between",
+   "title": "Houdini is HIP - Part 7: Vellum I - Basics",
+   "url": "https://www.youtube.com/watch?v=nQuVoXEAziU",
+   "published": "2023-05-24T19:00:30Z",
+   "excerpt": "00:00 Intro 00:57 Solvers Explained 06:07 Creating Grain Sources 09:42 The Vellum Solver 12:30 Grain Settings 18:16 Clustering Points 19:20 Adding Glue Constraints 24:21 Adding Colliders 26:23 Faking…",
+   "tags": [
+    "YouTube",
+    "Vellum"
+   ],
+   "first_seen": "2026-11-18T07:04:11Z"
+  }
+ ]
+}

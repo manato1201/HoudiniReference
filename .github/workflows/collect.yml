@@ -1,0 +1,39 @@
+# 毎日の自動収集。このファイルは「用意するだけ」です。Actions を有効にするかは運営者が決める。
+# secrets は任意: YOUTUBE_API_KEY(無くても動く。無い経路は黙ってスキップ)。
+# X_BEARER_TOKEN は参照しない: 公開リポジトリでは X は手元でだけ動かす(X の抜粋を公開しないため)。
+name: Collect
+
+on:
+  schedule:
+    - cron: "17 21 * * *"   # UTC 21:17 = JST 06:17(毎日 1 回)
+  workflow_dispatch:
+
+permissions:
+  contents: write           # data/ と site/data/ をコミットするため
+
+concurrency:
+  group: collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test
+        run: python -m unittest discover -s tests -t .
+      - name: Collect
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: python -m collector
+      - name: Commit data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data site/data
+          git diff --cached --quiet || git commit -m "data: daily collect"
+          git push

@@ -1,0 +1,23 @@
+{
+  "updated": "2026-11-18",
+  "note": "公式ドキュメントの主要な入口。手で整えたリンク集で、本文は取らない。2026-11-18 に到達を確認(200)。",
+  "groups": [
+    {"title": "ドキュメント", "links": [
+      {"title": "Houdini ヘルプ(トップ)", "url": "https://www.sidefx.com/docs/houdini/", "note": "公式ドキュメントの入口"},
+      {"title": "ノードリファレンス", "url": "https://www.sidefx.com/docs/houdini/nodes/", "note": "SOP / DOP / LOP などノード別"},
+      {"title": "VEX", "url": "https://www.sidefx.com/docs/houdini/vex/", "note": "言語の解説"},
+      {"title": "VEX 関数一覧", "url": "https://www.sidefx.com/docs/houdini/vex/functions/index.html", "note": "関数のリファレンス"},
+      {"title": "Python (HOM)", "url": "https://www.sidefx.com/docs/houdini/hom/", "note": "hou モジュール"},
+      {"title": "Solaris / USD", "url": "https://www.sidefx.com/docs/houdini/solaris/", "note": "LOPs の入口"},
+      {"title": "Copernicus", "url": "https://www.sidefx.com/docs/houdini/copernicus/", "note": "COPs の入口"},
+      {"title": "HDK", "url": "https://www.sidefx.com/docs/hdk/", "note": "C++ SDK"}
+    ]},
+    {"title": "公式サイト", "links": [
+      {"title": "変更履歴", "url": "https://www.sidefx.com/changelog/", "note": "ビルドごとの修正"},
+      {"title": "22 の新機能", "url": "https://www.sidefx.com/products/whats-new-in-h22/", "note": "リリース概要"},
+      {"title": "チュートリアル", "url": "https://www.sidefx.com/tutorials/", "note": "公式の学習コンテンツ"},
+      {"title": "フォーラム", "url": "https://www.sidefx.com/forum/", "note": "質問と回答"},
+      {"title": "ダウンロード", "url": "https://www.sidefx.com/download/", "note": "ビルドの入手(ログインが必要な場合あり)"}
+    ]}
+  ]
+}
