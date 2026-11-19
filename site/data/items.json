@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-18T07:04:11Z",
+ "generated_at": "2026-11-19T02:36:36Z",
  "sources": [
   {
    "id": "sidefx-news",
@@ -10,7 +10,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-18T07:04:11Z"
+   "last_ok": "2026-11-19T02:36:36Z"
   },
   {
    "id": "sidefx-forum",
@@ -20,7 +20,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-18T07:04:11Z"
+   "last_ok": "2026-11-19T02:36:36Z"
   },
   {
    "id": "sidefx-changelog-22",
@@ -28,9 +28,9 @@
    "kind": "rss",
    "tab": "reference",
    "ok": true,
-   "fetched": 18,
+   "fetched": 17,
    "not_modified": false,
-   "last_ok": "2026-11-18T07:04:11Z"
+   "last_ok": "2026-11-19T02:36:36Z"
   },
   {
    "id": "sidefx-changelog-21",
@@ -40,7 +40,7 @@
    "ok": true,
    "fetched": 1,
    "not_modified": false,
-   "last_ok": "2026-11-18T07:04:11Z"
+   "last_ok": "2026-11-19T02:36:36Z"
   },
   {
    "id": "youtube-sidefx",
@@ -50,7 +50,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-18T07:04:11Z"
+   "last_ok": "2026-11-19T02:36:36Z"
   },
   {
    "id": "youtube-entagma",
@@ -60,7 +60,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-18T07:04:11Z"
+   "last_ok": "2026-11-19T02:36:36Z"
   },
   {
    "id": "youtube-horikawa",
@@ -70,7 +70,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-18T07:04:11Z"
+   "last_ok": "2026-11-19T02:36:36Z"
   },
   {
    "id": "youtube-ninebetween",
@@ -80,7 +80,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-18T07:04:11Z"
+   "last_ok": "2026-11-19T02:36:36Z"
   },
   {
    "id": "x",
@@ -91,6 +91,134 @@
   }
  ],
  "items": [
+  {
+   "id": "yt:cVp0j_Ei1lg",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "Basic Uses of Linear Algebra in VFX | Jordan Walsh | Sydney HIVE 2026",
+   "url": "https://www.youtube.com/watch?v=cVp0j_Ei1lg",
+   "published": "2026-11-18T21:01:51Z",
+   "excerpt": "In this talk, I will introduce and demystify some topics of Linear Algebra and show their use in 3D visual effects. I will cover the use of Dot Products and how to manipulate vectors as well as break…",
+   "tags": [
+    "YouTube",
+    "SideFX"
+   ],
+   "first_seen": "2026-11-19T02:36:36Z"
+  },
+  {
+   "id": "yt:uUciuxeEAqU",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "Oh Behave, Agents! Harness Engineering for VFX Production | Andrew Graham | Sydney HIVE 2026",
+   "url": "https://www.youtube.com/watch?v=uUciuxeEAqU",
+   "published": "2026-11-18T21:01:46Z",
+   "excerpt": "What does it take to get agents to behave in VFX? Multiphase harnesses, context engineering, test writers, linters, grilling, static typing: I’ll take you through a journey for what it takes to produ…",
+   "tags": [
+    "YouTube",
+    "SideFX"
+   ],
+   "first_seen": "2026-11-19T02:36:36Z"
+  },
+  {
+   "id": "yt:ozZIQH5DAuw",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "Inside the Black Box: Licensing, Distribution, and a Hair Deformer | Ben Andersen | Sydney HIVE 2026",
+   "url": "https://www.youtube.com/watch?v=ozZIQH5DAuw",
+   "published": "2026-11-18T21:01:42Z",
+   "excerpt": "A brief look at a hair deformation tool, the problem it solves and what sets it apart, then a dive into black-boxing, licensing, and the development tooling that makes iteration and distribution easy…",
+   "tags": [
+    "YouTube",
+    "SideFX"
+   ],
+   "first_seen": "2026-11-19T02:36:36Z"
+  },
+  {
+   "id": "yt:L4ISGkfrIZk",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "Procedural Modelling at Netflix Animation Studio | James Hardy & Anna Molamphy | Sydney HIVE 2026",
+   "url": "https://www.youtube.com/watch?v=L4ISGkfrIZk",
+   "published": "2026-11-18T21:01:39Z",
+   "excerpt": "Netflix Animation Studios continues to be on the cutting edge of tools and technology within Houdini. The procedural modelling pipelines that have been created blends artistic creativity with smooth…",
+   "tags": [
+    "YouTube",
+    "SideFX"
+   ],
+   "first_seen": "2026-11-19T02:36:36Z"
+  },
+  {
+   "id": "yt:2bVJ9-KaxW0",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "Large Format Production | Matthew Tilman | Sydney HIVE 2026",
+   "url": "https://www.youtube.com/watch?v=2bVJ9-KaxW0",
+   "published": "2026-11-18T21:01:35Z",
+   "excerpt": "Approaches to rendering for large displays with larger resolutions. How independent artists and small studios can learn to squeeze the most pixels out of the hardware they have. Helpful tips learned…",
+   "tags": [
+    "YouTube",
+    "SideFX",
+    "Rendering"
+   ],
+   "first_seen": "2026-11-19T02:36:36Z"
+  },
+  {
+   "id": "9158230a19f68174",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum",
+   "source": "SideFX フォーラム",
+   "title": "Houdini 22 is so buggy that it's practically unusable",
+   "url": "https://www.sidefx.com/forum/topic/104785/",
+   "published": "2026-11-18T18:08:43Z",
+   "excerpt": "I've been working with Houdini 22, and I have to say that I'm extremely disappointed with its overall stability and reliability. The issues aren't limited to one specific tool. I've encountered probl…",
+   "tags": [
+    "Forum"
+   ],
+   "first_seen": "2026-11-19T02:36:36Z"
+  },
+  {
+   "id": "yt:r73B3JU2xBc",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-entagma",
+   "source": "Entagma",
+   "title": "Vellum201 - Ep11: Custom Constraints",
+   "url": "https://www.youtube.com/watch?v=r73B3JU2xBc",
+   "published": "2026-11-18T15:48:19Z",
+   "excerpt": "Tomorrow on Vellum 201: Custom Constraints! Chris rebuilds an old setup, that got so much easier with new Houdini versions. We will learn how to create a line growth with just a single line of VEX. S…",
+   "tags": [
+    "YouTube",
+    "VEX",
+    "Vellum"
+   ],
+   "first_seen": "2026-11-19T02:36:36Z"
+  },
+  {
+   "id": "c2e714db8271d656",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum",
+   "source": "SideFX フォーラム",
+   "title": "New ShadingLanguageX Houdini Plugin",
+   "url": "https://www.sidefx.com/forum/topic/104783/",
+   "published": "2026-11-18T12:05:47Z",
+   "excerpt": "Hi all, posting this here in case someone is interested. ShadingLanguageX (SLX) is a high level programming language for MaterialX that makes it easier to express complex shading algorithms. The synt…",
+   "tags": [
+    "Forum"
+   ],
+   "first_seen": "2026-11-19T02:36:36Z"
+  },
   {
    "id": "6702aab2c002c27d",
    "tab": "tips",
