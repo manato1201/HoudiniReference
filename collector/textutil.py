@@ -98,3 +98,19 @@ def canonical_url(url: str) -> str:
     ]
     path = parts.path or "/"
     return urlunsplit((parts.scheme.lower(), parts.netloc.lower(), path, urlencode(query), ""))
+
+
+_JA = re.compile(r"[぀-ヿ㐀-䶿一-鿿ｦ-ﾟ]")
+
+
+def detect_lang(text: str | None) -> str:
+    """かな・漢字を含めば "ja"、無ければ "en"(補助。2 言語の表示用で、精度は保証しない)。"""
+    return "ja" if text and _JA.search(text) else "en"
+
+
+_TITLE_KEY_DROP = re.compile(r"[\W_]+", re.UNICODE)
+
+
+def title_key(title: str | None) -> str:
+    """題名の重複判定用キー(大文字小文字・記号・空白の違いを無視)。"""
+    return _TITLE_KEY_DROP.sub("", (title or "").casefold())

@@ -16,6 +16,7 @@
   --k-rss: #3b4a5a;
   --k-youtube: #b42318;
   --k-x: #1c1917;
+  --k-github: #2f6b3a;
 
   --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 40px;
   --fs-0: 0.8125rem; --fs-1: 0.9375rem; --fs-2: 1.0625rem; --fs-3: 1.375rem; --fs-4: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
@@ -28,14 +29,14 @@
     color-scheme: dark;
     --bg: #14110e; --surface: #1d1915; --surface-2: #27211b; --text: #f1ebe3; --muted: #b9afa3; --border: #3a322a;
     --accent: #ff8a4c; --accent-ink: #1a0e05; --accent-soft: #3a2316; --focus: #8ab4ff;
-    --warn-bg: #3b2f08; --warn-ink: #ffe9a8; --k-rss: #a9bacb; --k-youtube: #ff8f84; --k-x: #f1ebe3;
+    --warn-bg: #3b2f08; --warn-ink: #ffe9a8; --k-rss: #a9bacb; --k-youtube: #ff8f84; --k-x: #f1ebe3; --k-github: #8fd19e;
   }
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
   --bg: #14110e; --surface: #1d1915; --surface-2: #27211b; --text: #f1ebe3; --muted: #b9afa3; --border: #3a322a;
   --accent: #ff8a4c; --accent-ink: #1a0e05; --accent-soft: #3a2316; --focus: #8ab4ff;
-  --warn-bg: #3b2f08; --warn-ink: #ffe9a8; --k-rss: #a9bacb; --k-youtube: #ff8f84; --k-x: #f1ebe3;
+  --warn-bg: #3b2f08; --warn-ink: #ffe9a8; --k-rss: #a9bacb; --k-youtube: #ff8f84; --k-x: #f1ebe3; --k-github: #8fd19e;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -99,7 +100,8 @@ input[type="search"], select { font: inherit; font-size: var(--fs-1); color: var
 .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: var(--s4); display: flex; flex-direction: column; gap: var(--s2); min-width: 0; }
 .meta { display: flex; flex-wrap: wrap; gap: var(--s2) var(--s3); align-items: center; font-size: var(--fs-0); color: var(--muted); }
 .badge { font-weight: 700; font-size: 0.75rem; letter-spacing: .04em; border: 1.5px solid currentColor; border-radius: 6px; padding: 0 6px; line-height: 1.5; }
-.badge.rss { color: var(--k-rss); } .badge.youtube { color: var(--k-youtube); } .badge.x { color: var(--k-x); }
+.badge.rss { color: var(--k-rss); } .badge.youtube { color: var(--k-youtube); } .badge.x { color: var(--k-x); } .badge.github { color: var(--k-github); }
+.lang { font-size: 0.6875rem; letter-spacing: .06em; border: 1px solid var(--border); border-radius: 4px; padding: 0 5px; line-height: 1.5; }
 .src { color: var(--text); font-weight: 600; }
 .card h3 { margin: 0; font-size: var(--fs-2); line-height: 1.4; overflow-wrap: anywhere; }
 .card h3 a { text-decoration: none; }

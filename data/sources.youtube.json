@@ -1,10 +1,15 @@
 {
-  "_comment": "チャンネル ID は、実際にフィードを GET して取れることを確認したものだけ(2026-11-18)。推測で足さない。追加は channel_id を確認してから。",
+  "_comment": "チャンネル ID は、`@ハンドル` のページ(externalId)から取り、フィードを実際に GET して題名が一致し Houdini の動画が並ぶことを確認したものだけ(2026-11-18/19)。推測で足さない。追加は channel_id を確認してから。lang は省略すると題名・抜粋から判定。",
   "channels": [
     {"slug": "sidefx", "name": "Houdini (SideFX)", "id": "UCegWLyW4CYzph4dYW-gYy0g", "tags": ["SideFX"], "tab": "tips"},
     {"slug": "entagma", "name": "Entagma", "id": "UCWu6SQmC6nAZ-reuj3lF2eQ", "tags": [], "tab": "tips"},
     {"slug": "horikawa", "name": "Junichiro Horikawa", "id": "UC5NStd0QmACnWs9DzqJ3vHg", "tags": [], "tab": "tips"},
-    {"slug": "ninebetween", "name": "Nine Between", "id": "UCRVaHP-vsYOeuZnn2DTutpQ", "tags": [], "tab": "tips"}
+    {"slug": "ninebetween", "name": "Nine Between", "id": "UCRVaHP-vsYOeuZnn2DTutpQ", "tags": [], "tab": "tips"},
+    {"slug": "indyzone", "name": "IndyZone", "id": "UCD3p-9JAuJ-A34TNbmn8dOQ", "tags": [], "tab": "tips", "lang": "ja"},
+    {"slug": "usdvfx", "name": "USD VFXパイプライン解説と各種インタビュー", "id": "UCN2wg0lZFIjS7q1V-WsI85A", "tags": [], "tab": "tips", "lang": "ja"},
+    {"slug": "magnus", "name": "Konstantin Magnus", "id": "UCTzSJn2MxpIU4PHOp_vie0A", "tags": [], "tab": "tips", "lang": "en"},
+    {"slug": "dalvi", "name": "Rohan Dalvi", "id": "UCfGN9OlJF9KakdyUK04M3cA", "tags": [], "tab": "tips", "lang": "en"},
+    {"slug": "radu", "name": "Radu Cius", "id": "UC1Avewug9ZPCLx1URXVEw4g", "tags": [], "tab": "tips", "lang": "en"}
   ],
   "api_search": {
     "enabled": false,

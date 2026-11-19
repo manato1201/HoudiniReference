@@ -4,7 +4,8 @@
 
   var TABS = ["news", "tips", "reference"];
   var X_NOTE = "X の投稿は削除・変更されることがあります。元の投稿で確認してください。";
-  var KIND_LABEL = { rss: "Web", youtube: "YouTube", x: "X" };
+  var KIND_LABEL = { rss: "Web", youtube: "YouTube", github: "GitHub", x: "X" };
+  var LANG_LABEL = { ja: "JA", en: "EN" };
   /* 関連サイト(フッター)。URL はここ 1 か所だけ。自サイトの url はデプロイ後に埋める(空なら名前だけ出す)。
      自サイトは self: true または url の origin が現在地と一致する時に「いま見ているサイト」として出し、リンクにしない。 */
   var RELATED_SITES = [
@@ -16,7 +17,7 @@
   var FAV_KEY = "hr.fav", THEME_KEY = "hr.theme";
 
   var state = { items: [], sources: [], refs: null, generated: null, loaded: false, failed: false,
-                tab: "news", q: "", kind: "", source: "", period: 0, favOnly: false, favs: {} };
+                tab: "news", q: "", kind: "", lang: "", source: "", period: 0, favOnly: false, favs: {} };
   var $ = function (id) { return document.getElementById(id); };
 
   /* ---- localStorage(読み書きは try/catch。無くても動く) ---- */
@@ -100,6 +101,7 @@
     return allForTab().filter(function (i) {
       if (state.favOnly && !state.favs[i.id]) return false;
       if (state.kind && i.kind !== state.kind) return false;
+      if (state.lang && i.lang !== state.lang) return false;
       if (state.source && i.source !== state.source) return false;
       if (minTime && new Date(i.published).getTime() < minTime) return false;
       var h = haystack(i);
@@ -113,6 +115,7 @@
     var meta = el("div", "meta");
     meta.appendChild(el("span", "badge " + (KIND_LABEL[i.kind] ? i.kind : "rss"), KIND_LABEL[i.kind] || "Web"));
     meta.appendChild(el("span", "src", i.source || ""));
+    if (LANG_LABEL[i.lang]) { var lg = el("span", "lang mono", LANG_LABEL[i.lang]); lg.setAttribute("lang", i.lang); lg.title = i.lang === "ja" ? "日本語" : "English"; meta.appendChild(lg); }
     if (i.kind === "x" && i.handle) meta.appendChild(el("span", "mono", "@" + i.handle));
     var d = fmtDate(i.published);
     if (d) { var t = el("time", "mono", d); t.setAttribute("datetime", i.published); meta.appendChild(t); }
@@ -149,7 +152,7 @@
 
   function toggleFav(i) {
     if (state.favs[i.id]) { delete state.favs[i.id]; }
-    else { state.favs[i.id] = { id: i.id, tab: i.tab, kind: i.kind, source: i.source, handle: i.handle || "", title: i.title, url: i.url, published: i.published, excerpt: i.excerpt || "", tags: i.tags || [] }; }
+    else { state.favs[i.id] = { id: i.id, tab: i.tab, kind: i.kind, source: i.source, handle: i.handle || "", title: i.title, url: i.url, published: i.published, excerpt: i.excerpt || "", tags: i.tags || [], lang: i.lang || "" }; }
     saveFavs();
     render(false);
   }
@@ -165,7 +168,7 @@
     state.refs.groups.forEach(function (g) {
       var links = (g.links || []).filter(function (l) {
         var h = ((l.title || "") + " " + (l.note || "") + " " + (g.title || "")).toLowerCase();
-        return !state.kind && !state.source && !state.favOnly && terms.every(function (t) { return h.indexOf(t) >= 0; });
+        return !state.kind && !state.lang && !state.source && !state.favOnly && terms.every(function (t) { return h.indexOf(t) >= 0; });
       });
       if (!links.length) return;
       any = true;
@@ -224,18 +227,27 @@
     });
     $("list").setAttribute("aria-labelledby", "tab-" + state.tab);
 
-    // 出典の選択肢(現在のタブにあるもの)
-    var sel = $("source"), cur = state.source, names = {};
-    state.items.forEach(function (i) { if (i.tab === state.tab) names[i.source] = true; });
+    // 出典の選択肢(現在のタブにあるもの)。種別ごとにグループ化(情報源が増えても探しやすいように)
+    var sel = $("source"), cur = state.source, names = {}, kindOf = {};
+    state.items.forEach(function (i) { if (i.tab === state.tab) { names[i.source] = true; kindOf[i.source] = i.kind; } });
     if (cur && !names[cur]) { cur = ""; state.source = ""; }
     clear(sel);
     var o0 = el("option", null, "すべて"); o0.value = ""; sel.appendChild(o0);
-    Object.keys(names).sort().forEach(function (n) { var o = el("option", null, n); o.value = n; sel.appendChild(o); });
+    ["rss", "youtube", "github", "x"].forEach(function (k) {
+      var group = Object.keys(names).filter(function (n) { return kindOf[n] === k; }).sort();
+      if (!group.length) return;
+      var og = el("optgroup"); og.label = KIND_LABEL[k] || k;
+      group.forEach(function (n) { var o = el("option", null, n); o.value = n; og.appendChild(o); });
+      sel.appendChild(og);
+    });
     sel.value = cur;
 
-    // 種別・お気に入りボタン
+    // 種別・言語・お気に入りボタン
     Array.prototype.forEach.call($("kind").querySelectorAll("button"), function (b) {
       b.setAttribute("aria-pressed", b.getAttribute("data-kind") === state.kind ? "true" : "false");
+    });
+    Array.prototype.forEach.call($("lang").querySelectorAll("button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-lang") === state.lang ? "true" : "false");
     });
     var fb = $("favonly");
     fb.setAttribute("aria-pressed", state.favOnly ? "true" : "false");
@@ -262,7 +274,7 @@
   }
 
   function resetFilters() {
-    state.q = ""; state.kind = ""; state.source = ""; state.period = 0; state.favOnly = false;
+    state.q = ""; state.kind = ""; state.lang = ""; state.source = ""; state.period = 0; state.favOnly = false;
     $("q").value = ""; $("period").value = "0";
     render(false);
   }
@@ -341,6 +353,9 @@
     $("period").addEventListener("change", function (e) { state.period = parseInt(e.target.value, 10) || 0; render(false); });
     Array.prototype.forEach.call($("kind").querySelectorAll("button"), function (b) {
       b.addEventListener("click", function () { state.kind = b.getAttribute("data-kind") || ""; render(false); });
+    });
+    Array.prototype.forEach.call($("lang").querySelectorAll("button"), function (b) {
+      b.addEventListener("click", function () { state.lang = b.getAttribute("data-lang") || ""; render(false); });
     });
     $("favonly").addEventListener("click", function () { state.favOnly = !state.favOnly; render(false); });
     $("theme").addEventListener("click", function () {

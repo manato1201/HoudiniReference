@@ -9,10 +9,10 @@ from urllib.parse import urlencode
 from .feeds import is_video_id, parse_date, parse_feed
 from .httpclient import FetchError, Fetcher
 from .tagging import auto_tags
-from .textutil import canonical_url, clean_title, excerpt, safe_url
+from .textutil import canonical_url, clean_title, detect_lang, excerpt, safe_url, title_key
 
 TABS = ("news", "tips", "reference")
-KINDS = ("rss", "youtube", "x")
+KINDS = ("rss", "youtube", "x", "github")
 
 
 def iso(dt: datetime) -> str:
@@ -23,7 +23,7 @@ def url_id(url: str) -> str:
     return hashlib.sha1(canonical_url(url).encode("utf-8")).hexdigest()[:16]
 
 
-def make_item(*, item_id, tab, kind, source_id, source, title, url, published, exc, tags, now, handle=None) -> dict:
+def make_item(*, item_id, tab, kind, source_id, source, title, url, published, exc, tags, now, handle=None, lang=None) -> dict:
     item = {
         "id": item_id,
         "tab": tab if tab in TABS else "tips",
@@ -35,6 +35,7 @@ def make_item(*, item_id, tab, kind, source_id, source, title, url, published, e
         "published": published,
         "excerpt": exc,
         "tags": tags,
+        "lang": lang if lang in ("ja", "en") else detect_lang(f"{title} {exc}"),
         "first_seen": iso(now),
     }
     if handle:
@@ -67,7 +68,7 @@ def normalize_entry(raw: dict, src: dict, now: datetime) -> dict | None:
         tags = (tags + [version])[:6]
     return make_item(
         item_id=item_id, tab=src.get("tab", "tips"), kind=kind, source_id=src["id"], source=src["name"],
-        title=title, url=url, published=published, exc=exc, tags=tags, now=now,
+        title=title, url=url, published=published, exc=exc, tags=tags, now=now, lang=src.get("lang"),
     )
 
 
@@ -87,10 +88,17 @@ def fetch_feed_source(fetcher: Fetcher, src: dict, now: datetime) -> tuple[list[
     entries = parse_feed(res.body)
     limit = int(src.get("limit", 30))
     items: list[dict] = []
+    seen_titles: set[str] = set()
     for raw in entries[:limit]:
         it = normalize_entry(raw, src, now)
-        if it:
-            items.append(it)
+        if not it:
+            continue
+        if src.get("dedupe_title"):  # 投稿単位のフィード(フォーラム)は同じ題名が並ぶ。新しい方だけ残す
+            key = title_key(it["title"])
+            if key in seen_titles:
+                continue
+            seen_titles.add(key)
+        items.append(it)
     return items, False
 
 

@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-19T02:36:36Z",
+ "generated_at": "2026-11-19T06:33:46Z",
  "sources": [
   {
    "id": "sidefx-news",
@@ -10,7 +10,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-19T02:36:36Z"
+   "last_ok": "2026-11-19T06:33:46Z"
   },
   {
    "id": "sidefx-forum",
@@ -20,7 +20,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-19T02:36:36Z"
+   "last_ok": "2026-11-19T06:33:46Z"
   },
   {
    "id": "sidefx-changelog-22",
@@ -28,9 +28,9 @@
    "kind": "rss",
    "tab": "reference",
    "ok": true,
-   "fetched": 17,
+   "fetched": 19,
    "not_modified": false,
-   "last_ok": "2026-11-19T02:36:36Z"
+   "last_ok": "2026-11-19T06:33:46Z"
   },
   {
    "id": "sidefx-changelog-21",
@@ -38,9 +38,69 @@
    "kind": "rss",
    "tab": "reference",
    "ok": true,
-   "fetched": 1,
+   "fetched": 2,
    "not_modified": false,
-   "last_ok": "2026-11-19T02:36:36Z"
+   "last_ok": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "sidefx-forum-learning",
+   "name": "SideFX フォーラム: 学習資料",
+   "kind": "rss",
+   "tab": "tips",
+   "ok": true,
+   "fetched": 8,
+   "not_modified": false,
+   "last_ok": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "sidefx-forum-solaris-karma",
+   "name": "SideFX フォーラム: Solaris と Karma",
+   "kind": "rss",
+   "tab": "tips",
+   "ok": true,
+   "fetched": 8,
+   "not_modified": false,
+   "last_ok": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "sidefx-forum-copernicus",
+   "name": "SideFX フォーラム: Copernicus",
+   "kind": "rss",
+   "tab": "tips",
+   "ok": true,
+   "fetched": 6,
+   "not_modified": false,
+   "last_ok": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "sidefx-forum-ja",
+   "name": "SideFX 日本語フォーラム",
+   "kind": "rss",
+   "tab": "tips",
+   "ok": true,
+   "fetched": 9,
+   "not_modified": false,
+   "last_ok": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "qiita-houdini",
+   "name": "Qiita #Houdini",
+   "kind": "rss",
+   "tab": "tips",
+   "ok": true,
+   "fetched": 4,
+   "not_modified": false,
+   "last_ok": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "zenn-houdini",
+   "name": "Zenn トピック Houdini",
+   "kind": "rss",
+   "tab": "tips",
+   "ok": true,
+   "fetched": 20,
+   "not_modified": false,
+   "last_ok": "2026-11-19T06:33:46Z"
   },
   {
    "id": "youtube-sidefx",
@@ -50,7 +110,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-19T02:36:36Z"
+   "last_ok": "2026-11-19T06:33:46Z"
   },
   {
    "id": "youtube-entagma",
@@ -60,7 +120,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-19T02:36:36Z"
+   "last_ok": "2026-11-19T06:33:46Z"
   },
   {
    "id": "youtube-horikawa",
@@ -70,7 +130,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-19T02:36:36Z"
+   "last_ok": "2026-11-19T06:33:46Z"
   },
   {
    "id": "youtube-ninebetween",
@@ -80,7 +140,97 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-19T02:36:36Z"
+   "last_ok": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "youtube-indyzone",
+   "name": "IndyZone",
+   "kind": "youtube",
+   "tab": "tips",
+   "ok": true,
+   "fetched": 15,
+   "not_modified": false,
+   "last_ok": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "youtube-usdvfx",
+   "name": "USD VFXパイプライン解説と各種インタビュー",
+   "kind": "youtube",
+   "tab": "tips",
+   "ok": true,
+   "fetched": 15,
+   "not_modified": false,
+   "last_ok": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "youtube-magnus",
+   "name": "Konstantin Magnus",
+   "kind": "youtube",
+   "tab": "tips",
+   "ok": true,
+   "fetched": 15,
+   "not_modified": false,
+   "last_ok": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "youtube-dalvi",
+   "name": "Rohan Dalvi",
+   "kind": "youtube",
+   "tab": "tips",
+   "ok": true,
+   "fetched": 15,
+   "not_modified": false,
+   "last_ok": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "youtube-radu",
+   "name": "Radu Cius",
+   "kind": "youtube",
+   "tab": "tips",
+   "ok": true,
+   "fetched": 15,
+   "not_modified": false,
+   "last_ok": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "github-sideeffects-sidefxlabs",
+   "name": "SideFX Labs",
+   "kind": "github",
+   "tab": "reference",
+   "ok": true,
+   "fetched": 8,
+   "not_modified": false,
+   "last_ok": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "github-sideeffects-houdiniengineforunreal",
+   "name": "Houdini Engine for Unreal",
+   "kind": "github",
+   "tab": "reference",
+   "ok": true,
+   "fetched": 10,
+   "not_modified": false,
+   "last_ok": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "github-sideeffects-houdiniengineforunity",
+   "name": "Houdini Engine for Unity",
+   "kind": "github",
+   "tab": "reference",
+   "ok": true,
+   "fetched": 1,
+   "not_modified": false,
+   "last_ok": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "github-sideeffects-houdininiagara",
+   "name": "Houdini Niagara",
+   "kind": "github",
+   "tab": "reference",
+   "ok": true,
+   "fetched": 8,
+   "not_modified": false,
+   "last_ok": "2026-11-19T06:33:46Z"
   },
   {
    "id": "x",
@@ -91,6 +241,44 @@
   }
  ],
  "items": [
+  {
+   "id": "be2842ab5696a089",
+   "tab": "reference",
+   "kind": "github",
+   "source_id": "github-sideeffects-sidefxlabs",
+   "source": "SideFX Labs",
+   "title": "SideFX Labs: 22.0.508",
+   "url": "https://github.com/sideeffects/SideFXLabs/releases/tag/22.0.508",
+   "published": "2026-11-19T05:01:04Z",
+   "excerpt": "",
+   "tags": [
+    "GitHub",
+    "Release notes",
+    "Labs",
+    "H22.0",
+    "Pre-release"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "543c3e788a1b7eb4",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.508: Fixed a bug in karma's built...",
+   "url": "https://www.sidefx.com/changelog/entry/1005807446/",
+   "published": "2026-11-18T21:43:15Z",
+   "excerpt": "Fixed a bug in karma's built-in slapcomp for Background Plate LOP where compositing over custom AOV (via `export_backgroundplate` shader export) would produce incorrect alpha and display incorrectly…",
+   "tags": [
+    "Release notes",
+    "Karma",
+    "H22.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
   {
    "id": "yt:cVp0j_Ei1lg",
    "tab": "tips",
@@ -105,6 +293,7 @@
     "YouTube",
     "SideFX"
    ],
+   "lang": "en",
    "first_seen": "2026-11-19T02:36:36Z"
   },
   {
@@ -121,6 +310,7 @@
     "YouTube",
     "SideFX"
    ],
+   "lang": "en",
    "first_seen": "2026-11-19T02:36:36Z"
   },
   {
@@ -137,6 +327,7 @@
     "YouTube",
     "SideFX"
    ],
+   "lang": "en",
    "first_seen": "2026-11-19T02:36:36Z"
   },
   {
@@ -151,8 +342,10 @@
    "excerpt": "Netflix Animation Studios continues to be on the cutting edge of tools and technology within Houdini. The procedural modelling pipelines that have been created blends artistic creativity with smooth…",
    "tags": [
     "YouTube",
-    "SideFX"
+    "SideFX",
+    "Procedural"
    ],
+   "lang": "en",
    "first_seen": "2026-11-19T02:36:36Z"
   },
   {
@@ -170,6 +363,7 @@
     "SideFX",
     "Rendering"
    ],
+   "lang": "en",
    "first_seen": "2026-11-19T02:36:36Z"
   },
   {
@@ -185,7 +379,26 @@
    "tags": [
     "Forum"
    ],
+   "lang": "en",
    "first_seen": "2026-11-19T02:36:36Z"
+  },
+  {
+   "id": "29430139195c1048",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.508: Fixed a bug where Houdini Hair Pr...",
+   "url": "https://www.sidefx.com/changelog/entry/1005807447/",
+   "published": "2026-11-18T16:47:23Z",
+   "excerpt": "Fixed a bug where Houdini Hair Procedural LOP and Houdini Feather Procedural LOP showed incorrect tooltips.",
+   "tags": [
+    "Release notes",
+    "Procedural",
+    "H22.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "yt:r73B3JU2xBc",
@@ -202,7 +415,43 @@
     "VEX",
     "Vellum"
    ],
+   "lang": "en",
    "first_seen": "2026-11-19T02:36:36Z"
+  },
+  {
+   "id": "5eee49c58b76a4a2",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.508: Added missing keyboard shortcuts...",
+   "url": "https://www.sidefx.com/changelog/entry/1005807448/",
+   "published": "2026-11-18T13:22:45Z",
+   "excerpt": "Added missing keyboard shortcuts (Ctrl+A to select all, Ctrl+C/Ctrl+Insert to copy, Esc to close, and Alt button mnemonics) to the Houdini Console window on Windows, and fixed Tab navigation order an…",
+   "tags": [
+    "Release notes",
+    "H22.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "11076e69e46cf0d4",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.508: Fixed an intermittent hang when s...",
+   "url": "https://www.sidefx.com/changelog/entry/1005807449/",
+   "published": "2026-11-18T12:21:29Z",
+   "excerpt": "Fixed an intermittent hang when shutting down Houdini while Live Renders were still active.",
+   "tags": [
+    "Release notes",
+    "Rendering",
+    "H22.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "c2e714db8271d656",
@@ -217,7 +466,63 @@
    "tags": [
     "Forum"
    ],
+   "lang": "en",
    "first_seen": "2026-11-19T02:36:36Z"
+  },
+  {
+   "id": "e74405c0c0ae9d8b",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-21",
+   "source": "SideFX 変更履歴 21.0",
+   "title": "21.0.904: Fixed an intermittent hanging con...",
+   "url": "https://www.sidefx.com/changelog/entry/1005848201/",
+   "published": "2026-11-18T11:15:16Z",
+   "excerpt": "Fixed an intermittent hanging condition when shutting down Houdini with Live Renders still active.",
+   "tags": [
+    "Release notes",
+    "Rendering",
+    "H21.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "2c24d32812e61559",
+   "tab": "reference",
+   "kind": "github",
+   "source_id": "github-sideeffects-sidefxlabs",
+   "source": "SideFX Labs",
+   "title": "SideFX Labs: 22.0.507",
+   "url": "https://github.com/sideeffects/SideFXLabs/releases/tag/22.0.507",
+   "published": "2026-11-18T05:01:05Z",
+   "excerpt": "",
+   "tags": [
+    "GitHub",
+    "Release notes",
+    "Labs",
+    "H22.0",
+    "Pre-release"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:uSd-GDR7mFQ",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-radu",
+   "source": "Radu Cius",
+   "title": "Star Destroyer destruction",
+   "url": "https://www.youtube.com/watch?v=uSd-GDR7mFQ",
+   "published": "2026-11-18T04:09:29Z",
+   "excerpt": "I recreated the Holdo Maneuver from Star Wars: The Last Jedi in Houdini. I supplied the visual references and two prompts. Houdini AI Assistant built the high-poly Imperial Star Destroyer and set up…",
+   "tags": [
+    "YouTube",
+    "RBD"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "6702aab2c002c27d",
@@ -233,7 +538,24 @@
     "Forum",
     "Rendering"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "1cecb54fe3838515",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "qiita-houdini",
+   "source": "Qiita #Houdini",
+   "title": "[Houdini] Implicit Surfaceと陰関数（Implicit Function）",
+   "url": "https://qiita.com/maxima_hikky/items/c5795aa98a4857d45b9c",
+   "published": "2026-11-17T21:57:14Z",
+   "excerpt": "はじめに Houdini 22で追加された Implicit Surface を触っていて、そもそも「陰関数（Implicit Function）」とは何なのかが気になりました。 参考動画 https://www.youtube.com/watch?v=sb2g1gw7...",
+   "tags": [
+    "Qiita"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "3490556be59d2010",
@@ -248,6 +570,7 @@
    "tags": [
     "Forum"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -264,6 +587,7 @@
     "Forum",
     "VEX"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -280,6 +604,7 @@
     "Forum",
     "Rendering"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -297,7 +622,8 @@
     "APEX",
     "H22.0"
    ],
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "lang": "en"
   },
   {
    "id": "8092c9727995a146",
@@ -312,6 +638,7 @@
    "tags": [
     "Forum"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -328,7 +655,8 @@
     "Release notes",
     "H22.0"
    ],
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "lang": "en"
   },
   {
    "id": "ba2933b2731c6c0a",
@@ -344,7 +672,8 @@
     "Release notes",
     "H22.0"
    ],
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "lang": "en"
   },
   {
    "id": "7dd6d590946e52bc",
@@ -360,6 +689,7 @@
     "Forum",
     "Rendering"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -376,6 +706,7 @@
     "Forum",
     "RBD"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -394,7 +725,28 @@
     "Karma",
     "Rendering"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "8987e95984ccde9a",
+   "tab": "reference",
+   "kind": "github",
+   "source_id": "github-sideeffects-sidefxlabs",
+   "source": "SideFX Labs",
+   "title": "SideFX Labs: 22.0.506",
+   "url": "https://github.com/sideeffects/SideFXLabs/releases/tag/22.0.506",
+   "published": "2026-11-17T05:01:05Z",
+   "excerpt": "",
+   "tags": [
+    "GitHub",
+    "Release notes",
+    "Labs",
+    "H22.0",
+    "Pre-release"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "df103d02b479800f",
@@ -410,7 +762,8 @@
     "Release notes",
     "H22.0"
    ],
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "lang": "en"
   },
   {
    "id": "d375f16c260d3bc8",
@@ -426,7 +779,8 @@
     "Release notes",
     "H22.0"
    ],
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "lang": "en"
   },
   {
    "id": "90b8c5f7a5d7ba45",
@@ -442,7 +796,8 @@
     "Release notes",
     "H22.0"
    ],
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "lang": "en"
   },
   {
    "id": "yt:XJt4t_ExMMA",
@@ -458,6 +813,7 @@
     "YouTube",
     "SideFX"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -474,7 +830,8 @@
     "Release notes",
     "H22.0"
    ],
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "lang": "en"
   },
   {
    "id": "20ad28b3226a4a55",
@@ -490,7 +847,8 @@
     "Release notes",
     "H22.0"
    ],
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "lang": "en"
   },
   {
    "id": "d222d3ec339aada0",
@@ -506,7 +864,8 @@
     "Release notes",
     "H21.0"
    ],
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "lang": "en"
   },
   {
    "id": "ccfb7731009581dc",
@@ -522,7 +881,8 @@
     "Release notes",
     "H22.0"
    ],
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "lang": "en"
   },
   {
    "id": "f21240607c1cbea4",
@@ -537,6 +897,7 @@
    "tags": [
     "Forum"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -553,7 +914,8 @@
     "Release notes",
     "H22.0"
    ],
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "lang": "en"
   },
   {
    "id": "e03e59dbd85d4493",
@@ -568,7 +930,24 @@
    "tags": [
     "Forum"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:x22PrwmnfX8",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-indyzone",
+   "source": "IndyZone",
+   "title": "【11月22日(日) 13:00〜】Houdiniに関するみなさまからのご質問にお答えします！",
+   "url": "https://www.youtube.com/watch?v=x22PrwmnfX8",
+   "published": "2026-11-16T14:31:47Z",
+   "excerpt": "▼ご質問募集フォーム https://forms.gle/6bNi8nFsq5PAfPCV9 みなさまからのHoudiniに関するご質問にお答えします！ Houdiniを現在勉強中の方はもちろん、昔からHoudiniを使っている方も、ぜひお気軽にご参加ください！ ▼配信終了後アンケートフォーム ※準備中 ▼Houdini 初級講座についてはこちら https://houdinifx.jp/blo…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "c88d535b46234550",
@@ -585,7 +964,81 @@
     "Karma",
     "Rendering"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "9d28b45b86a22d1c",
+   "tab": "reference",
+   "kind": "github",
+   "source_id": "github-sideeffects-sidefxlabs",
+   "source": "SideFX Labs",
+   "title": "SideFX Labs: 22.0.505",
+   "url": "https://github.com/sideeffects/SideFXLabs/releases/tag/22.0.505",
+   "published": "2026-11-16T05:01:05Z",
+   "excerpt": "",
+   "tags": [
+    "GitHub",
+    "Release notes",
+    "Labs",
+    "H22.0",
+    "Pre-release"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "93b7cef532d4e178",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "qiita-houdini",
+   "source": "Qiita #Houdini",
+   "title": "[Houdini] CopernicusのBlock・Invoke Block・SOP Invokeの使い方 ── Blockを「関数の定義」として理解する",
+   "url": "https://qiita.com/maxima_hikky/items/b0c17dc74876ed5d0c34",
+   "published": "2026-11-15T23:10:58Z",
+   "excerpt": "はじめに HoudiniのCopernicusで、Block Begin と Block End に囲まれたノードを見て、「この範囲がFor-Eachになっているのかな？」と思ったことはありませんか？ 私は、ブロック内のTransformから反復番号を取得しようとして、c...",
+   "tags": [
+    "Qiita",
+    "Copernicus"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:-O08PfpHYw0",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-radu",
+   "source": "Radu Cius",
+   "title": "Surface-Driven Infection in Houdini #houdini #blender #3danimation #3d",
+   "url": "https://www.youtube.com/watch?v=-O08PfpHYw0",
+   "published": "2026-11-15T11:04:59Z",
+   "excerpt": "From reference images to a refined effect in 16 minutes. Read the full step-by-step guide on Gumroad, including the prompt and all four reference images https://rart.gumroad.com/tommy-infection",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "ccd41bca4608db59",
+   "tab": "reference",
+   "kind": "github",
+   "source_id": "github-sideeffects-sidefxlabs",
+   "source": "SideFX Labs",
+   "title": "SideFX Labs: 22.0.504",
+   "url": "https://github.com/sideeffects/SideFXLabs/releases/tag/22.0.504",
+   "published": "2026-11-15T05:01:10Z",
+   "excerpt": "",
+   "tags": [
+    "GitHub",
+    "Release notes",
+    "Labs",
+    "H22.0",
+    "Pre-release"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "7905f0352444be8a",
@@ -601,7 +1054,8 @@
     "Release notes",
     "H22.0"
    ],
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "lang": "en"
   },
   {
    "id": "7b82d69eb05efcde",
@@ -618,7 +1072,44 @@
     "Solaris",
     "Python"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:-05LoJrNQ_I",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-indyzone",
+   "source": "IndyZone",
+   "title": "【Houdini MCP × Codex 応用編】AIだけでどこまでエフェクトを作れる？",
+   "url": "https://www.youtube.com/watch?v=-05LoJrNQ_I",
+   "published": "2026-11-14T08:00:38Z",
+   "excerpt": "今回の動画では、Houdini MCPとCodexを使って、AIだけでどこまでエフェクトを制作できるのか検証します！ 文章だけの指示によるエフェクト制作に加え、画像生成AIで作成した参考画像をもとにした制作にも挑戦。 実際の制作過程や修正の様子を通して、AIを活用したHoudiniでのエフェクト制作の可能性と課題をご紹介します！ ---------------------------------…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "880a8d869055dd78",
+   "tab": "reference",
+   "kind": "github",
+   "source_id": "github-sideeffects-sidefxlabs",
+   "source": "SideFX Labs",
+   "title": "SideFX Labs: 22.0.503",
+   "url": "https://github.com/sideeffects/SideFXLabs/releases/tag/22.0.503",
+   "published": "2026-11-14T05:01:04Z",
+   "excerpt": "",
+   "tags": [
+    "GitHub",
+    "Release notes",
+    "Labs",
+    "H22.0",
+    "Pre-release"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "b6769aad141e4049",
@@ -634,7 +1125,24 @@
     "Forum",
     "VEX"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:NMCQQtvtDW8",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-radu",
+   "source": "Radu Cius",
+   "title": "Can AI Recreate a Dune Battle Shot?",
+   "url": "https://www.youtube.com/watch?v=NMCQQtvtDW8",
+   "published": "2026-11-13T18:30:38Z",
+   "excerpt": "I used Houdini AI Assistant to recreate a battle shot from Dune in two runs. Get Houdini AI Assistant https://rart.gumroad.com/l/HoudiniAIAssistant I started with a reference video and a prompt for o…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "024ddde778cc9d80",
@@ -650,7 +1158,8 @@
     "Release notes",
     "H22.0"
    ],
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "lang": "en"
   },
   {
    "id": "yt:rzjFc3xgGp4",
@@ -666,6 +1175,7 @@
     "YouTube",
     "SideFX"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -682,6 +1192,7 @@
     "YouTube",
     "SideFX"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -698,7 +1209,8 @@
     "YouTube",
     "SideFX"
    ],
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "lang": "en"
   },
   {
    "id": "yt:mjhH0YScYa0",
@@ -715,7 +1227,8 @@
     "SideFX",
     "PDG/TOPs"
    ],
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "lang": "en"
   },
   {
    "id": "yt:lBUhNn87LfQ",
@@ -731,7 +1244,8 @@
     "YouTube",
     "SideFX"
    ],
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "lang": "en"
   },
   {
    "id": "yt:juI-3kINitc",
@@ -747,7 +1261,8 @@
     "YouTube",
     "SideFX"
    ],
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "lang": "en"
   },
   {
    "id": "yt:gsdBT6g0AzA",
@@ -763,7 +1278,8 @@
     "YouTube",
     "SideFX"
    ],
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "lang": "en"
   },
   {
    "id": "yt:gDN6P_suFV4",
@@ -779,6 +1295,7 @@
     "YouTube",
     "SideFX"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -795,6 +1312,7 @@
     "YouTube",
     "SideFX"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -811,6 +1329,7 @@
     "YouTube",
     "SideFX"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -827,6 +1346,7 @@
     "YouTube",
     "SideFX"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -844,6 +1364,7 @@
     "SideFX",
     "Terrain"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -860,6 +1381,7 @@
     "YouTube",
     "SideFX"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -876,6 +1398,7 @@
     "YouTube",
     "SideFX"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -893,7 +1416,44 @@
     "Copernicus",
     "H22.0"
    ],
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "lang": "en"
+  },
+  {
+   "id": "6117244d4e4fd9b8",
+   "tab": "reference",
+   "kind": "github",
+   "source_id": "github-sideeffects-sidefxlabs",
+   "source": "SideFX Labs",
+   "title": "SideFX Labs: 22.0.502",
+   "url": "https://github.com/sideeffects/SideFXLabs/releases/tag/22.0.502",
+   "published": "2026-11-13T05:01:05Z",
+   "excerpt": "",
+   "tags": [
+    "GitHub",
+    "Release notes",
+    "Labs",
+    "H22.0",
+    "Pre-release"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:icC7pNVr76A",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-radu",
+   "source": "Radu Cius",
+   "title": "I Rebuilt Dune’s Falling Embers in Houdini with Fable 5.2",
+   "url": "https://www.youtube.com/watch?v=icC7pNVr76A",
+   "published": "2026-11-13T00:28:05Z",
+   "excerpt": "I tested Fable 5.2 inside Houdini AI Assistant by recreating a falling-embers effect from Dune. Learn more about Houdini AI Assistant https://rart.gumroad.com/l/HoudiniAIAssistant The setup uses POP…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "ea0cebb2dc3185e5",
@@ -909,7 +1469,8 @@
     "Release notes",
     "H22.0"
    ],
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "lang": "en"
   },
   {
    "id": "acbafdc01a697b98",
@@ -925,7 +1486,45 @@
     "Release notes",
     "H22.0"
    ],
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "lang": "en"
+  },
+  {
+   "id": "a5ac552d45305771",
+   "tab": "reference",
+   "kind": "github",
+   "source_id": "github-sideeffects-sidefxlabs",
+   "source": "SideFX Labs",
+   "title": "SideFX Labs: 22.0.501",
+   "url": "https://github.com/sideeffects/SideFXLabs/releases/tag/22.0.501",
+   "published": "2026-11-12T05:01:06Z",
+   "excerpt": "",
+   "tags": [
+    "GitHub",
+    "Release notes",
+    "Labs",
+    "H22.0",
+    "Pre-release"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:gpbFR9v4bog",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-dalvi",
+   "source": "Rohan Dalvi",
+   "title": "Spaghetti Render Cycles Blender",
+   "url": "https://www.youtube.com/watch?v=gpbFR9v4bog",
+   "published": "2026-11-12T04:38:38Z",
+   "excerpt": "Patreon link for file https://www.patreon.com/rohandalvicreates/posts/blendder-render-175092606?",
+   "tags": [
+    "YouTube",
+    "Rendering"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "869ad5697c6bf9b3",
@@ -942,24 +1541,8 @@
     "Copernicus",
     "H22.0"
    ],
-   "first_seen": "2026-11-18T07:04:11Z"
-  },
-  {
-   "id": "2b5d9d648440da4f",
-   "tab": "reference",
-   "kind": "rss",
-   "source_id": "sidefx-changelog-22",
-   "source": "SideFX 変更履歴 22.0",
-   "title": "22.0.501: Fix calculation of Luminosity ble...",
-   "url": "https://www.sidefx.com/changelog/entry/1005579932/",
-   "published": "2026-11-12T03:14:36Z",
-   "excerpt": "Fix calculation of Luminosity blend mode in COP Blend which was preventing the blend mode from acting as a passthrough for the background when the foreground colour is (0,0,0,0).",
-   "tags": [
-    "Release notes",
-    "Copernicus",
-    "H22.0"
-   ],
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "lang": "en"
   },
   {
    "id": "fb4426dfa9e6d873",
@@ -975,7 +1558,26 @@
     "Forum",
     "HDA"
    ],
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "lang": "en"
+  },
+  {
+   "id": "0c88db22fdb77f3d",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum-solaris-karma",
+   "source": "SideFX フォーラム: Solaris と Karma",
+   "title": "Gaussian Splat works in Karma, but only partial in viewport",
+   "url": "https://www.sidefx.com/forum/post/464019/",
+   "published": "2026-11-11T17:22:34Z",
+   "excerpt": "In case anyone is reading this, updating to the latest Houdini fixed this. 22.0.459 had the issue",
+   "tags": [
+    "Forum",
+    "Karma",
+    "H22.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "72c98c20a1e91508",
@@ -991,7 +1593,8 @@
     "Forum",
     "VEX"
    ],
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "lang": "en"
   },
   {
    "id": "44a0226914d5f4c9",
@@ -1007,7 +1610,165 @@
     "Release notes",
     "H22.0"
    ],
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "lang": "en"
+  },
+  {
+   "id": "53ce9de7d380b756",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum-solaris-karma",
+   "source": "SideFX フォーラム: Solaris と Karma",
+   "title": "Texture material library export location",
+   "url": "https://www.sidefx.com/forum/post/463991/",
+   "published": "2026-11-09T22:16:30Z",
+   "excerpt": "I think you can use output processors to define the output directory: https://www.sidefx.com/docs/houdini/solaris/output.html#processors [www.sidefx.com]",
+   "tags": [
+    "Forum",
+    "Solaris"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "3df86926a8407dc7",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum-solaris-karma",
+   "source": "SideFX フォーラム: Solaris と Karma",
+   "title": "importing usd material as a completely new material?",
+   "url": "https://www.sidefx.com/forum/post/463990/",
+   "published": "2026-11-09T22:12:44Z",
+   "excerpt": "Edit Material Network tries to author only delta-edits, rather than authoring everything over the incoming stage. That's why there are those __activate__ checkboxes. But you can indeed remove them to…",
+   "tags": [
+    "Forum",
+    "Solaris"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "dbc6765a342d0cd5",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum-solaris-karma",
+   "source": "SideFX フォーラム: Solaris と Karma",
+   "title": "Compute Normals for Volumes in Karma AOV",
+   "url": "https://www.sidefx.com/forum/post/463978/",
+   "published": "2026-11-07T21:28:53Z",
+   "excerpt": "Hi did you find a way to achieve it ?",
+   "tags": [
+    "Forum",
+    "Karma"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:mxw8n7Is-I8",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-indyzone",
+   "source": "IndyZone",
+   "title": "【Houdini 22新機能】SOP Particle FXを解説｜花火や魔法のエフェクトがラクに完成!?【シェルフツール】",
+   "url": "https://www.youtube.com/watch?v=mxw8n7Is-I8",
+   "published": "2026-11-07T01:12:49Z",
+   "excerpt": "今回の動画では、Houdini 22から追加された新しいシェルフ「SOP Particle FX」を紹介します！ 「SOP Particle FX」には、パーティクルを使ったさまざまなエフェクトを手軽に作成できるツールが用意されています。 SOPでパーティクルを生成し、LOPでレンダリング、COPで加工・合成することで、魔法のようなキラキラしたエフェクトや花火、光の粒が舞うような華やかな表現を作…",
+   "tags": [
+    "YouTube",
+    "Copernicus",
+    "Rendering"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:4jaizBENyRQ",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-radu",
+   "source": "Radu Cius",
+   "title": "Procedural Urban Building Generator for Houdini (HDA) #houdini #proceduralmodeling #architecture",
+   "url": "https://www.youtube.com/watch?v=4jaizBENyRQ",
+   "published": "2026-11-06T15:36:16Z",
+   "excerpt": "Build a street of different urban buildings from one Houdini asset, without modelling a single window. Key features - Independent seeds for silhouette, facade, mechanical/prop details and materials.…",
+   "tags": [
+    "YouTube",
+    "HDA",
+    "Procedural"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "c2f11049e279c487",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "qiita-houdini",
+   "source": "Qiita #Houdini",
+   "title": "[Houdini] CopernicsでVDBを扱うための基礎 VDB編②",
+   "url": "https://qiita.com/maxima_hikky/items/f0a0b0c8009711569c17",
+   "published": "2026-11-05T22:30:13Z",
+   "excerpt": "はじめに 今回説明しきれなかったTransformや、COP内でVoxelを可視化する仕組みについては、ここからhipファイルをダウンロードして確認できます。 参考になれば幸いです！ 前回の記事では、CopernicusでVDBのボクセルをアクティブ化し、2DのSDF...",
+   "tags": [
+    "Qiita",
+    "Copernicus"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "62bb7ede5cee1fd3",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum-solaris-karma",
+   "source": "SideFX フォーラム: Solaris と Karma",
+   "title": "Solaris Karma hair error about Bound Set",
+   "url": "https://www.sidefx.com/forum/post/463959/",
+   "published": "2026-11-05T15:00:23Z",
+   "excerpt": "Seeing this error in H22.0.466 using a Karma Room Map setup following this tutorial https://www.youtube.com/watch?v=zCkP3MKQNcM [www.youtube.com]",
+   "tags": [
+    "Forum",
+    "Solaris",
+    "Karma",
+    "H22.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "2a416fd707fa871e",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum-solaris-karma",
+   "source": "SideFX フォーラム: Solaris と Karma",
+   "title": "UV/ST difference between UsdPreview and MaterialX?",
+   "url": "https://www.sidefx.com/forum/post/463952/",
+   "published": "2026-11-04T22:10:28Z",
+   "excerpt": "Okay, this is weird. Getting rid of the $HOME variable in the texture paths seems to have fixed the issue. I'm not sure why $HOME was being used...",
+   "tags": [
+    "Forum"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:WI6gi4hmzwY",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-radu",
+   "source": "Radu Cius",
+   "title": "Procedural Building Generator for Houdini #houdini #proceduralmodeling #architecture",
+   "url": "https://www.youtube.com/watch?v=WI6gi4hmzwY",
+   "published": "2026-11-04T18:38:50Z",
+   "excerpt": "Create detailed urban buildings with one Houdini HDA. 9 editable presets, 4 independent seeds and 63 controls from facades and balconies to rooftop details. Houdini 19–22.",
+   "tags": [
+    "YouTube",
+    "HDA",
+    "Procedural"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "yt:SwjsWmIZtAo",
@@ -1022,7 +1783,125 @@
    "tags": [
     "YouTube"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:oCj05Fp0tyc",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-magnus",
+   "source": "Konstantin Magnus",
+   "title": "Guiding Curves Through Volumes – Houdini Tutorial",
+   "url": "https://www.youtube.com/watch?v=oCj05Fp0tyc",
+   "published": "2026-11-03T11:00:07Z",
+   "excerpt": "Trailing paths inside volumes using the volume arrival time and volume analysis node. FILE: https://procegen.konstantinmagnus.de/guiding-paths-through-volumes PATREON: https://www.patreon.com/konstan…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "5d7ce2fce19467b2",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "qiita-houdini",
+   "source": "Qiita #Houdini",
+   "title": "[Houdini] CopernicsでVDBを扱うための基礎 VDB編①",
+   "url": "https://qiita.com/maxima_hikky/items/563f32663a5eb88f51f5",
+   "published": "2026-11-02T23:04:21Z",
+   "excerpt": "概要 はじめに 前回の記事では、SDF（Signed Distance Field）は、空間上のある位置から形状の表面までの距離を、符号付きの数値で表現する仕組みだと説明しました。 では、ここで一つ疑問が生まれます。 空間には無数の位置が存在しますが、SDFはその...",
+   "tags": [
+    "Qiita",
+    "Copernicus"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:l_Ns35jvQGc",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-radu",
+   "source": "Radu Cius",
+   "title": "Houdini Procedural Building Generator",
+   "url": "https://www.youtube.com/watch?v=l_Ns35jvQGc",
+   "published": "2026-11-02T22:33:07Z",
+   "excerpt": "Get it here: https://rart.gumroad.com/l/civgek One Houdini HDA that builds complete urban building exteriors — massing, facade grammar, balconies, awnings, storefronts, service pipes, HVAC, signage,…",
+   "tags": [
+    "YouTube",
+    "HDA",
+    "Procedural"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "860dd95adc5048dc",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum-learning",
+   "source": "SideFX フォーラム: 学習資料",
+   "title": "NEW Character Creation Request (lowpoly, Anime, Realistic)",
+   "url": "https://www.sidefx.com/forum/post/463932/",
+   "published": "2026-11-02T20:52:51Z",
+   "excerpt": "My system can't currently handle the FX simulation capabilities of Houdini at a decent level, only characters and things that are optimized for real-time. So investing my time in this software wouldn…",
+   "tags": [
+    "Forum",
+    "Simulation"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:x-1jx0rObeA",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-radu",
+   "source": "Radu Cius",
+   "title": "Prompt to Animated Mecha | Houdini AI Assistant",
+   "url": "https://www.youtube.com/watch?v=x-1jx0rObeA",
+   "published": "2026-11-02T12:08:54Z",
+   "excerpt": "",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:kOg4AF82xzg",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-indyzone",
+   "source": "IndyZone",
+   "title": "【10月31日(土) 13:00〜】Houdini ちょっと便利なおすすめノードを紹介! & Houdiniに関するみなさまからのご質問にお答えします！",
+   "url": "https://www.youtube.com/watch?v=kOg4AF82xzg",
+   "published": "2026-10-31T18:52:43Z",
+   "excerpt": "▼ご質問募集フォーム https://forms.gle/eWdwKAB6nUKEaUMk7 Houdiniにはたくさんのノードがありますが、今回は知っているとちょっと便利なおすすめノードを紹介します！ また、みなさまからのHoudiniに関するご質問にお答えします！ Houdiniを現在勉強中の方はもちろん、昔からHoudiniを使っている方も、ぜひお気軽にご参加ください！ ▼配信終了後アンケ…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "6a3dd3ae3c3ac712",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum-copernicus",
+   "source": "SideFX フォーラム: Copernicus",
+   "title": "How to processes texture mask paint volumes through COPs?",
+   "url": "https://www.sidefx.com/forum/post/463891/",
+   "published": "2026-10-28T21:43:36Z",
+   "excerpt": "Thank you Tomas! This is very informative and helpful.",
+   "tags": [
+    "Forum",
+    "Copernicus"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "yt:VDIsRIsVgsw",
@@ -1037,7 +1916,25 @@
    "tags": [
     "YouTube"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "c0966b14baad808c",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum-copernicus",
+   "source": "SideFX フォーラム: Copernicus",
+   "title": "Material Library for Copernicus",
+   "url": "https://www.sidefx.com/forum/post/463864/",
+   "published": "2026-10-25T21:36:09Z",
+   "excerpt": "Hi guys, any news about material library for copernicus? I have to deal with substance painter and would prefer to keep working in Houdini for the entire process with fast setup. Thank you.",
+   "tags": [
+    "Forum",
+    "Copernicus"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "yt:D18uUJHykMI",
@@ -1052,7 +1949,58 @@
    "tags": [
     "YouTube"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:PeeAvnOyaa4",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-radu",
+   "source": "Radu Cius",
+   "title": "Houdini Mecha Generaor & Hangar - GPT-6.1",
+   "url": "https://www.youtube.com/watch?v=PeeAvnOyaa4",
+   "published": "2026-10-24T23:44:07Z",
+   "excerpt": "A demo of Houdini AI Assistant showing how image references, prompts, and feedback can guide the creation of an editable 3D scene inside Houdini. TRY HOUDINI AI ASSISTANT https://rart.gumroad.com/l/H…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:pOeuG24PUZ8",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-radu",
+   "source": "Radu Cius",
+   "title": "Houdini AI Assistant 0.3.0: Build & Explain Node Networks",
+   "url": "https://www.youtube.com/watch?v=pOeuG24PUZ8",
+   "published": "2026-10-22T21:33:00Z",
+   "excerpt": "Build Houdini node networks with AI and understand how your setups work. Houdini AI Assistant v0.3.0 brings scene analysis, procedural creation and reference-driven workflows directly into Houdini. G…",
+   "tags": [
+    "YouTube",
+    "Procedural"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "465dc940d01d8456",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum-copernicus",
+   "source": "SideFX フォーラム: Copernicus",
+   "title": "Having trouble with Scatter and Align SOP + Stamp Points COP",
+   "url": "https://www.sidefx.com/forum/post/463845/",
+   "published": "2026-10-22T16:13:02Z",
+   "excerpt": "Gaalvk I’m not sure what the purpose of adjacency is then, since we get the same result by simply copying points based on the UV layout. To be honest, the correct way to utilize adjacency still elude…",
+   "tags": [
+    "Forum",
+    "Copernicus"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "yt:f1T3s4v30HU",
@@ -1068,7 +2016,176 @@
     "YouTube",
     "Vellum"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:Y03l5nxwA00",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-dalvi",
+   "source": "Rohan Dalvi",
+   "title": "Intro to Octane (free version) for Blender for Houdini users who know Octane #blender #octanerender",
+   "url": "https://www.youtube.com/watch?v=Y03l5nxwA00",
+   "published": "2026-10-22T09:04:05Z",
+   "excerpt": "patreon https://www.patreon.com/rohandalvicreates",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "b02bfb3d1b5404cd",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum-learning",
+   "source": "SideFX フォーラム: 学習資料",
+   "title": "opening param window",
+   "url": "https://www.sidefx.com/forum/post/463779/",
+   "published": "2026-10-19T15:11:41Z",
+   "excerpt": "I just started learning Houdini 2 days ago and have been following the 'getting started' guides. While conducting the 'Soccerball' tutorial I was advised to close the parameters window and reopen it…",
+   "tags": [
+    "Forum"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:3nHVKL8LqeM",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-dalvi",
+   "source": "Rohan Dalvi",
+   "title": "Houdini Project - Spaghetti 2 - Render",
+   "url": "https://www.youtube.com/watch?v=3nHVKL8LqeM",
+   "published": "2026-10-19T14:19:35Z",
+   "excerpt": "Purchase file https://www.patreon.com/rohandalvicreates/posts/spaghetti-scene-172802087?",
+   "tags": [
+    "YouTube",
+    "Rendering"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:GE4DH4N2D0c",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-indyzone",
+   "source": "IndyZone",
+   "title": "【Houdini MCP × Codex 導入編】AIにHoudiniを操作させるとどんなことができる？",
+   "url": "https://www.youtube.com/watch?v=GE4DH4N2D0c",
+   "published": "2026-10-19T03:07:05Z",
+   "excerpt": "今回の動画では、AIからHoudiniを直接操作できる「Houdini MCP」を使用して、OpenAIのCodexから自然言語でHoudiniを操作する方法をご紹介します。 MCP（Model Context Protocol）の基本的な仕組みから、fxhoudinimcpのインストール、Codexとの接続方法までを解説し、実際にAIからHoudiniのNode Networkを構築していきま…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:QoiBoltVDjs",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-dalvi",
+   "source": "Rohan Dalvi",
+   "title": "Houdini Project - Spaghetti 1 - Modeling",
+   "url": "https://www.youtube.com/watch?v=QoiBoltVDjs",
+   "published": "2026-10-16T09:31:36Z",
+   "excerpt": "for more houdini lesson please visit my patreon https://www.patreon.com/c/rohandalvicreates",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "cf6b5e8cf34f3c89",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum-ja",
+   "source": "SideFX 日本語フォーラム",
+   "title": "Bypass以外のオブジェクト非表示方法について",
+   "url": "https://www.sidefx.com/forum/post/463693/",
+   "published": "2026-10-12T23:07:27Z",
+   "excerpt": "Object Mergeにおいて、Create Point Groupsパラメーターをオンにすることによって、シミュレーション後にSplitを使って、簡単にパーティクルと分別できます。参考に更新されたファイルを投稿尾に添付しました。 DOP Network内でそもそも容器を隠したいのであれば、DisplayウィンドウのHide Other Objects（Local Space）設定（Displ…",
+   "tags": [
+    "Forum",
+    "Simulation"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "6f68e6b243405bb6",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum-copernicus",
+   "source": "SideFX フォーラム: Copernicus",
+   "title": "The Transform3D node's perspective view is weird.",
+   "url": "https://www.sidefx.com/forum/post/463685/",
+   "published": "2026-10-10T23:59:20Z",
+   "excerpt": "I've submitted a bug about the revert-to-factory. Default screen window size is 1,1 in the camera cop itself. Default ortho cameras (which a random layer will have if you've not done default canvas)…",
+   "tags": [
+    "Forum",
+    "Copernicus"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "d74660d62ec07bc9",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum-copernicus",
+   "source": "SideFX フォーラム: Copernicus",
+   "title": "Area Smoothing in Distort",
+   "url": "https://www.sidefx.com/forum/post/463679/",
+   "published": "2026-10-09T18:43:58Z",
+   "excerpt": "Gaalvk . However, I can easily look up the original X/Y coordinates of the neighbors via the deformed UV map, calculate the rectangle effectively hidden within the current pixel, and compute the aver…",
+   "tags": [
+    "Forum"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "c84224f6cd8ddc87",
+   "tab": "reference",
+   "kind": "github",
+   "source_id": "github-sideeffects-houdiniengineforunreal",
+   "source": "Houdini Engine for Unreal",
+   "title": "Houdini Engine for Unreal: Version 4.0.3 - Houdini 22.0.466",
+   "url": "https://github.com/sideeffects/HoudiniEngineForUnreal/releases/tag/v4.0.3",
+   "published": "2026-10-09T17:32:48Z",
+   "excerpt": "",
+   "tags": [
+    "GitHub",
+    "Release notes",
+    "Houdini Engine",
+    "Unreal",
+    "H22.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "6f532abdc80ab249",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum-copernicus",
+   "source": "SideFX フォーラム: Copernicus",
+   "title": "Extra noises for COPs?",
+   "url": "https://www.sidefx.com/forum/post/463677/",
+   "published": "2026-10-09T16:18:38Z",
+   "excerpt": "https://copshop.gumroad.com/l/noisesv1 [copshop.gumroad.com] // Rich",
+   "tags": [
+    "Forum",
+    "Copernicus"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "1c77f170005c7e8c",
@@ -1084,7 +2201,24 @@
     "SideFX",
     "H22.0"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:lkZU3pLEX4U",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-radu",
+   "source": "Radu Cius",
+   "title": "Who Builds Better VFX in Houdini?",
+   "url": "https://www.youtube.com/watch?v=lkZU3pLEX4U",
+   "published": "2026-10-06T17:45:03Z",
+   "excerpt": "GPT-6 Astra vs Claude Opus 5.5: which AI agent builds the better flamethrower effect in Houdini? I gave both agents the same prompt using Houdini AI Assistant and compared their workflow, progress, a…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "f0b05eb4ee408f43",
@@ -1099,7 +2233,24 @@
    "tags": [
     "SideFX"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:YLNDzi10qKI",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-magnus",
+   "source": "Konstantin Magnus",
+   "title": "Smooth Paths on Mesh Surfaces – Houdini Tutorial",
+   "url": "https://www.youtube.com/watch?v=YLNDzi10qKI",
+   "published": "2026-10-06T10:00:22Z",
+   "excerpt": "Tracing points along a distance-based tangent field of a mesh surface using the walk on surface-node. FILE: https://procegen.konstantinmagnus.de/smooth-paths-on-mesh-surfaces PATREON: https://www.pat…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "yt:WdHFQF3pZA0",
@@ -1114,7 +2265,60 @@
    "tags": [
     "YouTube"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:4aKv3Pkyj8Y",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-indyzone",
+   "source": "IndyZone",
+   "title": "【10月3日(土) 13:00〜】まだまだあります！Houdini 22 新機能紹介！ ＆ AIでHoudiniを操作してどこまで制作できる？ みなさまからのご質問にもお答えします！",
+   "url": "https://www.youtube.com/watch?v=4aKv3Pkyj8Y",
+   "published": "2026-10-03T18:02:39Z",
+   "excerpt": "▼本日解説した内容のブログ（全文）はこちらです。ご興味があればぜひお読みください。 https://indyzone.co.jp/archives/23113 今回の配信では、「まだまだあります！Houdini 22 新機能紹介！！」と題して、Houdini 22で追加・強化されたさまざまな新機能についてご紹介します！ これまでのアップデート紹介では取り上げきれなかった機能や、実際に触ってみて気…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "85d60a0243c87c39",
+   "tab": "reference",
+   "kind": "github",
+   "source_id": "github-sideeffects-houdiniengineforunreal",
+   "source": "Houdini Engine for Unreal",
+   "title": "Houdini Engine for Unreal: Version 4.0.2 - Houdini 22.0.459",
+   "url": "https://github.com/sideeffects/HoudiniEngineForUnreal/releases/tag/v4.0.2",
+   "published": "2026-10-02T15:44:53Z",
+   "excerpt": "",
+   "tags": [
+    "GitHub",
+    "Release notes",
+    "Houdini Engine",
+    "Unreal",
+    "H22.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:G68-5_lHOno",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-indyzone",
+   "source": "IndyZone",
+   "title": "【Houdini 22】最新アップデート！ 3D Gaussian Splattingの撮影方法から応用まで",
+   "url": "https://www.youtube.com/watch?v=G68-5_lHOno",
+   "published": "2026-10-02T08:00:13Z",
+   "excerpt": "Houdini 22からネイティブ対応した、話題の技術「3D Gaussian Splatting（3DGS）」！ 現実の世界を3DCGとして取り込むことができる、新しい技術です。 今回の動画では、スマートフォンなどで撮影した写真から3DGSを作成し、Houdiniならではの加工や応用まで、次の5つのステップに分けてご紹介します。 STEP 1：撮影する STEP 2：COLMAPで解析 STE…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "ab1ad67848b61437",
@@ -1130,7 +2334,25 @@
     "SideFX",
     "H22.0"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:IrG3UDxKcJ4",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-dalvi",
+   "source": "Rohan Dalvi",
+   "title": "Houdini Project - NPR shading in COPs",
+   "url": "https://www.youtube.com/watch?v=IrG3UDxKcJ4",
+   "published": "2026-10-01T08:56:14Z",
+   "excerpt": "patreon https://www.patreon.com/c/rohandalvicreates",
+   "tags": [
+    "YouTube",
+    "Copernicus"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "yt:lVL5qz9v23k",
@@ -1145,7 +2367,59 @@
    "tags": [
     "YouTube"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:R_MoYhQ_AmE",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-usdvfx",
+   "source": "USD VFXパイプライン解説と各種インタビュー",
+   "title": "【USD/VFX最新ニュース】HoudiniのKarmaクラッシュ修正＆Nuke 17.1v2ネスト一括出力！現場の実用性を高めるアップデート解説（2026/9/27）",
+   "url": "https://www.youtube.com/watch?v=R_MoYhQ_AmE",
+   "published": "2026-09-27T06:00:38Z",
+   "excerpt": "本日のアジェンダ 1. オープニング（USD制作の実用性を底上げする各種アップデートの概要） 2. Houdini：USDカメラ取り込み修正・Karma安定化・大量インスタンス性能改善 3. Nuke 17.1v2：入れ子Writeノードの一括出力（--all）＆OTIO連携・Intel Macサポート方針 4. Autodesk (Maya USD)：Component Creator / V…",
+   "tags": [
+    "YouTube",
+    "Solaris",
+    "Karma"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:T_92ZlfNINA",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-dalvi",
+   "source": "Rohan Dalvi",
+   "title": "Houdini tip - Transform Normal map",
+   "url": "https://www.youtube.com/watch?v=T_92ZlfNINA",
+   "published": "2026-09-25T09:08:12Z",
+   "excerpt": "patreon https://www.patreon.com/c/rohandalvicreates website http://www.rohandalvi.net/",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:u5CXPmnVwYw",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-radu",
+   "source": "Radu Cius",
+   "title": "Procedural Japanese Building Generator - Houdini AI Assistant",
+   "url": "https://www.youtube.com/watch?v=u5CXPmnVwYw",
+   "published": "2026-09-24T17:15:50Z",
+   "excerpt": "",
+   "tags": [
+    "YouTube",
+    "Procedural"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "yt:KYgzXSRfVsw",
@@ -1160,7 +2434,41 @@
    "tags": [
     "YouTube"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:2T34relmbm8",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-indyzone",
+   "source": "IndyZone",
+   "title": "【Cinema 4D入門】はじめての3Dモーション｜基本操作からMoGraphまで",
+   "url": "https://www.youtube.com/watch?v=2T34relmbm8",
+   "published": "2026-09-23T03:30:05Z",
+   "excerpt": "はじめてのCinema 4Dで、文字や図形を動かしてみませんか？ 基本操作からMoGraphを使ったモーショングラフィックスまで、実際の操作画面を見ながら学ぶ初心者向けセミナー動画です。 「3Dに興味はあるけれど、何から始めればいいか分からない」 「After Effectsは使っているけれど、3Dにも挑戦してみたい」 そんな方に向けて、Cinema 4Dで形をつくり、色を付け、動かす楽しさをご…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:7aWE-3T_3NA",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-radu",
+   "source": "Radu Cius",
+   "title": "Procedural Japanese Building Generator with Houdini AI Assistant",
+   "url": "https://www.youtube.com/watch?v=7aWE-3T_3NA",
+   "published": "2026-09-22T19:36:23Z",
+   "excerpt": "This started with 17 reference images and a prompt. The result is a procedural Japanese building generator with editable interior, exterior, structure, roofs, and architectural details. TRY HOUDINI A…",
+   "tags": [
+    "YouTube",
+    "Procedural"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "631b56b5abfb97a6",
@@ -1175,7 +2483,78 @@
    "tags": [
     "SideFX"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "77162cbb39090089",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum-learning",
+   "source": "SideFX フォーラム: 学習資料",
+   "title": "H22 Cedric facial rig",
+   "url": "https://www.sidefx.com/forum/post/463390/",
+   "published": "2026-09-17T07:35:06Z",
+   "excerpt": "I am also still hoping to see a proper tutorial on the face rig as well, so little is available anywhere about it, it seems to be an ultimate game changer for character animation, well done to the gr…",
+   "tags": [
+    "Forum"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:18_mMPyhbRQ",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-radu",
+   "source": "Radu Cius",
+   "title": "GPT-6 Astra — Procedural RBD Destruction",
+   "url": "https://www.youtube.com/watch?v=18_mMPyhbRQ",
+   "published": "2026-09-16T16:30:29Z",
+   "excerpt": "GPT Astra inside SideFX Houdini using Houdini AI Assistant an AI-powered Houdini Agent for procedural modeling, VFX, simulations, and scene building. 🚀 TRY HOUDINI AI ASSISTANT: https://rart.gumroad.…",
+   "tags": [
+    "YouTube",
+    "RBD",
+    "Simulation",
+    "Procedural"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:XDWnekoVCG4",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-dalvi",
+   "source": "Rohan Dalvi",
+   "title": "Houdini 22 Paint node - 3d Painting",
+   "url": "https://www.youtube.com/watch?v=XDWnekoVCG4",
+   "published": "2026-09-14T14:44:17Z",
+   "excerpt": "Patreon https://www.patreon.com/c/rohandalvicreates",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:UqB52SmNvXw",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-indyzone",
+   "source": "IndyZone",
+   "title": "【Houdini 22】GPUで高速シミュレーション！COP Pyroで炎を作る",
+   "url": "https://www.youtube.com/watch?v=UqB52SmNvXw",
+   "published": "2026-09-12T08:00:05Z",
+   "excerpt": "今回の動画では、Houdini 22のCOP Pyroに用意されている「Pyro Configure Fire」のRecipeを参考にしながら、空のCopernicusネットワークから炎のシミュレーションを一から構築していきます。 Pyro Block 2.0を中心とした基本構成や、Source・Collision・各種Forceの設定、Live Simulation、Lighting、Rast…",
+   "tags": [
+    "YouTube",
+    "Pyro",
+    "Copernicus",
+    "Simulation"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "yt:mlBO92dOdkk",
@@ -1191,7 +2570,78 @@
     "YouTube",
     "Vellum"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:idEyn3DNEqI",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-radu",
+   "source": "Radu Cius",
+   "title": "Can GPT-6 Astra Build Complex VFX in Houdini?",
+   "url": "https://www.youtube.com/watch?v=idEyn3DNEqI",
+   "published": "2026-09-08T06:37:33Z",
+   "excerpt": "What happens when GPT-6 Astra works inside SideFX Houdini? Watch an AI agent turn prompts and image references into procedural 3D assets, editable node networks, and VFX setups. TRY HOUDINI AI ASSIST…",
+   "tags": [
+    "YouTube",
+    "Procedural"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:Kti2mHBfyCc",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-indyzone",
+   "source": "IndyZone",
+   "title": "【9月5日(土) 13:00〜】HoudiniのUIを振り返る｜5.5～22まで & Houdiniのモチベが上がらない理由10選 みなさまからのご質問にもお答えします！",
+   "url": "https://www.youtube.com/watch?v=Kti2mHBfyCc",
+   "published": "2026-09-05T18:05:58Z",
+   "excerpt": "8月29日予定しておりましたライブ配信につきまして、延期となってしまい楽しみにしてくださっていた皆さまにはご迷惑をおかけし、申し訳ございませんでした。 改めまして、今回の配信では、Houdini 5.5から最新のHoudini 22まで、歴代バージョンのUI（ユーザーインターフェース）がどのように変化してきたのかを振り返ります！ 長い歴史を持つHoudiniですが、昔のバージョンと現在のバージョ…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "7da382d7dc780ce7",
+   "tab": "reference",
+   "kind": "github",
+   "source_id": "github-sideeffects-houdiniengineforunreal",
+   "source": "Houdini Engine for Unreal",
+   "title": "Houdini Engine for Unreal: Version 4.0.1 - Houdini 22.0.429",
+   "url": "https://github.com/sideeffects/HoudiniEngineForUnreal/releases/tag/v4.0.1",
+   "published": "2026-09-03T20:01:58Z",
+   "excerpt": "",
+   "tags": [
+    "GitHub",
+    "Release notes",
+    "Houdini Engine",
+    "Unreal",
+    "H22.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "6606530f4faf5414",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum-learning",
+   "source": "SideFX フォーラム: 学習資料",
+   "title": "Pragmatic VEX: Volume 1 [4K] [H20]",
+   "url": "https://www.sidefx.com/forum/post/463210/",
+   "published": "2026-09-03T08:46:02Z",
+   "excerpt": "https://www.patreon.com/animatrix/posts/opencl-intrinsic-168438241 [www.patreon.com] I've been developing a custom OpenCL point relaxation solver for surface distributions. The input geometry is firs…",
+   "tags": [
+    "Forum",
+    "VEX"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "b1f4fa0a5ec82dc6",
@@ -1206,6 +2656,7 @@
    "tags": [
     "SideFX"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -1222,7 +2673,57 @@
     "SideFX",
     "H22.0"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:m7RXsfv4fkc",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-magnus",
+   "source": "Konstantin Magnus",
+   "title": "Segmenting Implicit Surface Models – Houdini Tutorial",
+   "url": "https://www.youtube.com/watch?v=m7RXsfv4fkc",
+   "published": "2026-08-31T22:00:28Z",
+   "excerpt": "Segmenting, indexing, and naming pieces of a kettlebell model created from implicit surfaces. FILE: https://procegen.konstantinmagnus.de/segmenting-implicit-surfaces PATREON: https://www.patreon.com/…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:6mgiWm5B6iw",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-indyzone",
+   "source": "IndyZone",
+   "title": "【Houdini 22】注目の最新アップデート！ 気になる新機能・UIをプロが紹介",
+   "url": "https://www.youtube.com/watch?v=6mgiWm5B6iw",
+   "published": "2026-08-28T08:00:17Z",
+   "excerpt": "Houdini22を実際に触ってみたファーストインプレッション！ Houdini22のリリースから約1ヶ月、仕事などで実際に触る機会も増えてきたので、 今回は、Houdini22を使ってみて感じた第一印象と、個人的に気になった新機能をざっくり紹介します。 Houdini22では、新しいUIをはじめ、Copernicusの大幅な強化やGaussian Splatting関連機能など、さまざまな新機…",
+   "tags": [
+    "YouTube",
+    "Copernicus"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "9fabd938ded32c00",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum-ja",
+   "source": "SideFX 日本語フォーラム",
+   "title": "volume big block noise in lop",
+   "url": "https://www.sidefx.com/forum/post/463099/",
+   "published": "2026-08-28T04:26:41Z",
+   "excerpt": "hello In SOP, the volume looks clean. However, in LOP, there is significant block noise in the volume. I’m applying color using KarmapyroFireMaterial, but even when the color is quite faint, the bloc…",
+   "tags": [
+    "Forum"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "yt:nQDrdU3jhjw",
@@ -1236,9 +2737,44 @@
    "excerpt": "Philipp is back with his Honey setup for another round of FLIP. He will show you how to add deforming bubbles to any viscous fluid without having to resim or other complicated additions. For Links to…",
    "tags": [
     "YouTube",
-    "FLIP"
+    "FLIP",
+    "Simulation"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:G8iXWqyJKiM",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-dalvi",
+   "source": "Rohan Dalvi",
+   "title": "Mini Houdini Project - Depth Scatter",
+   "url": "https://www.youtube.com/watch?v=G8iXWqyJKiM",
+   "published": "2026-08-24T08:55:36Z",
+   "excerpt": "",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "5908be68841f12d7",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum-learning",
+   "source": "SideFX フォーラム: 学習資料",
+   "title": "rbdconstraintsfromrules1/switch_use_proxy - Error",
+   "url": "https://www.sidefx.com/forum/post/462997/",
+   "published": "2026-08-23T20:08:34Z",
+   "excerpt": "Hey folks, I'm working through Steven Knipping's Applied Houdini Rigids III – Vehicle Deformation v2, which was recorded in Houdini 18.5. I'm on Houdini 22. No matter what I try, I end up at the same…",
+   "tags": [
+    "Forum",
+    "H18.5"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "yt:EC7IskaPXYA",
@@ -1252,8 +2788,10 @@
    "excerpt": "You wished for a part 2, so we brought Philipp back! On Monday he will show you how to add deforming bubbles to any vicous liquid without having to resim to keep your setup as flexible as possible.",
    "tags": [
     "YouTube",
-    "FLIP"
+    "FLIP",
+    "Simulation"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -1268,9 +2806,177 @@
    "excerpt": "Tomorrow we are fixing cloth sims! Chris will show you an emergency technique for upressing vellum cloth and adding additional details! See you there! #houdini #3d #vellum #cloth #simulation",
    "tags": [
     "YouTube",
-    "Vellum"
+    "Vellum",
+    "Simulation"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:3uXYs0RHqDA",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-dalvi",
+   "source": "Rohan Dalvi",
+   "title": "Mini Houdini Project - Tomato Slice",
+   "url": "https://www.youtube.com/watch?v=3uXYs0RHqDA",
+   "published": "2026-08-19T08:42:46Z",
+   "excerpt": "download file https://www.patreon.com/rohandalvicreates/posts/mini-houdini-167090099?",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "730a60485a47ef72",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum-learning",
+   "source": "SideFX フォーラム: 学習資料",
+   "title": "Fur Lookdev making mask for materialX",
+   "url": "https://www.sidefx.com/forum/post/462889/",
+   "published": "2026-08-18T04:44:17Z",
+   "excerpt": "Thank you for sharing a very clear and throughout approach. I have succeeded in masking grooming area of my own in MaterialX. My understanding is that transfer the uv of the skin to the grooming guid…",
+   "tags": [
+    "Forum"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:VMRvvSHO2CQ",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-dalvi",
+   "source": "Rohan Dalvi",
+   "title": "Houdini Mini Project - Burger Render",
+   "url": "https://www.youtube.com/watch?v=VMRvvSHO2CQ",
+   "published": "2026-08-14T14:04:52Z",
+   "excerpt": "download file https://www.patreon.com/rohandalvicreates/posts/houdini-mini-166670081?",
+   "tags": [
+    "YouTube",
+    "Rendering"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:QaVzISbXwys",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-indyzone",
+   "source": "IndyZone",
+   "title": "【ChatGPTはどこまで進化した？】GPT-5.6でHoudini学習",
+   "url": "https://www.youtube.com/watch?v=QaVzISbXwys",
+   "published": "2026-08-14T08:00:16Z",
+   "excerpt": "今回の動画では、約1年半前に公開した「Houdini×ChatGPT」の内容と比較しながら、最新のGPT-5.6によってHoudiniでのAI活用がどこまで進化したのかを実際に検証します。 炎を作るためのノード構成の相談から、VEXコードの生成・修正、Pythonによるノードの自動生成、さらに実際のHoudiniファイルをもとにしたシミュレーションの改善提案まで、ChatGPTの回答をHoudi…",
+   "tags": [
+    "YouTube",
+    "VEX",
+    "Pyro",
+    "Python",
+    "Simulation"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "5a2ce48084ec4a31",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum-learning",
+   "source": "SideFX フォーラム: 学習資料",
+   "title": "Retime node causes cached particles to jump around",
+   "url": "https://www.sidefx.com/forum/post/462729/",
+   "published": "2026-08-13T15:52:11Z",
+   "excerpt": "So apparently you need to change the Storage Type to Points in the Fluid Compress node. I did not realize there were comments on the tutorial pages. User Balonich figured it out and posted the fix.",
+   "tags": [
+    "Forum",
+    "FLIP"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:N_9RhG5MjeI",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-dalvi",
+   "source": "Rohan Dalvi",
+   "title": "Houdini Mini Project - Burger model",
+   "url": "https://www.youtube.com/watch?v=N_9RhG5MjeI",
+   "published": "2026-08-12T13:07:58Z",
+   "excerpt": "Download file https://www.patreon.com/rohandalvicreates/posts/mini-houdini-166479702?",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "c5a4dcc87d02561d",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "zenn-houdini",
+   "source": "Zenn トピック Houdini",
+   "title": "GitHub Copilot CLIをMaya,Houdiniへ接続させて操作したら思ったより便利だった話",
+   "url": "https://zenn.dev/fukaunabara/articles/c09ffc9786d413",
+   "published": "2026-08-12T12:36:15Z",
+   "excerpt": "はじめに AI に Maya や Houdini などの DCC ツールを操作させるとき、その結果はどう確認していますか。 2026年8月時点で、私は GitHub Copilot CLI を Houdini と Maya に接続し、GUI で確認しながら AI に開発してもらう形で運用しています。以前は hython 経由で編集していました。しかし、編集のたびにノードの状態を目視で確認できず、…",
+   "tags": [
+    "Zenn"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "8050bbebb57ace58",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum-ja",
+   "source": "SideFX 日本語フォーラム",
+   "title": "DisplayOptions のParticlesの設定「Display particles as」について",
+   "url": "https://www.sidefx.com/forum/post/462689/",
+   "published": "2026-08-12T00:00:31Z",
+   "excerpt": "表題の通りパーティクルをスフィアで表示するために、 DisplayOptions のParticlesの設定「Display particles as」をLitSpheresに変更したのですが、 Sphereになっていないように見えます。 どのようにすればSohereが表示されますでしょうか？ 参考： 以下動画の37：40前後 https://www.youtube.com/watch?v=c9…",
+   "tags": [
+    "Forum"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "d15b4aebc0c9db96",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "zenn-houdini",
+   "source": "Zenn トピック Houdini",
+   "title": "入門者Houdini勉強譚その4",
+   "url": "https://zenn.dev/mattya3713/articles/0305f6ab9251ca",
+   "published": "2026-08-11T15:28:11Z",
+   "excerpt": "※本記事はHoudini入門者が、書籍「理論と実践で学ぶHoudini」に基づいて学習した内容を整理したメモです。 実際の操作・解釈は筆者の理解に基づいて再構成しているため、表現や解釈に一部簡略化・独自整理を含みます。 正確性は一切ないのでご注意ください。 数学と力学 4-1 座標系 直交座標（Cartesian Coordinates） 普通の座標 (x, y) 極座標（Polar Coord…",
+   "tags": [
+    "Zenn"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "dbe5686b2c4ec93d",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum-ja",
+   "source": "SideFX 日本語フォーラム",
+   "title": "SteamからHoudiniを立ち上げた際のエラーについて（Fossilize Error Fossilize INFO",
+   "url": "https://www.sidefx.com/forum/post/462675/",
+   "published": "2026-08-11T01:00:29Z",
+   "excerpt": "該当項目を無効にしたところ問題が解決しました。 ありがとうございました。",
+   "tags": [
+    "Forum"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "yt:2wAMuIsVD0c",
@@ -1287,7 +2993,24 @@
     "Copernicus",
     "Terrain"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:oSiMSvm8OZ0",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-dalvi",
+   "source": "Rohan Dalvi",
+   "title": "Houdini mini project - Marshmallows",
+   "url": "https://www.youtube.com/watch?v=oSiMSvm8OZ0",
+   "published": "2026-08-10T09:08:57Z",
+   "excerpt": "download file https://www.patreon.com/rohandalvicreates/posts/mini-houdini-166267006?",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "yt:27EsQjdUy64",
@@ -1304,7 +3027,57 @@
     "Copernicus",
     "Terrain"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:Mypavnx92tw",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-magnus",
+   "source": "Konstantin Magnus",
+   "title": "Edge Bundling / Bundling Curves – Houdini Tutorial",
+   "url": "https://www.youtube.com/watch?v=Mypavnx92tw",
+   "published": "2026-08-04T10:00:23Z",
+   "excerpt": "Bundling edges / curves using attribute blur in proximity mode, smooth, and resample inside a for loop or solver. FILE: https://procegen.konstantinmagnus.de/edge-bundling PATREON: https://www.patreon…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:NJSNt653z-I",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-dalvi",
+   "source": "Rohan Dalvi",
+   "title": "Houdini training - Dusty Trails promo",
+   "url": "https://www.youtube.com/watch?v=NJSNt653z-I",
+   "published": "2026-08-03T07:50:27Z",
+   "excerpt": "A full breakdown of modeling and rendering a a full scene in Houdini and making it look like a 2d illustration. patreon link https://www.patreon.com/collection/2305770",
+   "tags": [
+    "YouTube",
+    "Rendering"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:hax6m20SuqY",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-indyzone",
+   "source": "IndyZone",
+   "title": "【7月31日(金) 18:00〜】Pixarで使われているCG制作の考え方 & Houdini パラメーターエディタのあれこれよもやま話・番外編",
+   "url": "https://www.youtube.com/watch?v=hax6m20SuqY",
+   "published": "2026-07-31T11:13:50Z",
+   "excerpt": "今回の配信では、Pixar in a Boxを題材に、ピクサー作品で使われているCG制作の考え方やSTEAM教育の視点をご紹介するとともに、Houdiniのパラメーターエディタを便利に使いこなすための小ネタやTipsをいくつかご紹介します。 普段何気なく使っているパラメーターエディタにも、作業効率を向上させる便利な機能が数多く用意されています。ちょっとした工夫で作業スピードや操作性が大きく変わる…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "d98576edb322cb0e",
@@ -1320,6 +3093,7 @@
     "SideFX",
     "H21.0"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -1336,7 +3110,24 @@
     "YouTube",
     "FLIP"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "5857cafb9655fc52",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum-learning",
+   "source": "SideFX フォーラム: 学習資料",
+   "title": "Tutorial Guidelines",
+   "url": "https://www.sidefx.com/forum/post/462440/",
+   "published": "2026-07-30T10:46:55Z",
+   "excerpt": "Any tutorial that teaches about the code you write on parameter section, like I want to understand syntax and the language itself so I can interact with the software more deeply. Thank you",
+   "tags": [
+    "Forum"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "yt:tlRCivECyNY",
@@ -1352,7 +3143,24 @@
     "YouTube",
     "FLIP"
    ],
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "lang": "en"
+  },
+  {
+   "id": "0b018bd452093435",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "zenn-houdini",
+   "source": "Zenn トピック Houdini",
+   "title": "Houdini: 背景ドラッグで選択ノードを動かす",
+   "url": "https://zenn.dev/kickbase/articles/099e5e8e4bb6de",
+   "published": "2026-07-28T11:33:30Z",
+   "excerpt": "分かる～! と思ったので実装してみました。 標準操作だと、選択中のどれかノード本体を掴んでドラッグすればまとめて動きます。これはこれで正しいのですが、密集したネットワークだと「掴みたいノードがワイヤの下にある」「フラグ付近をクリックしてフラグが飛ぶ」「せっかくの空き背景をドラッグしたらボックス選択が始まる」といった、ちょっとしたストレスが積み上がります。 というわけで作ったツールはこちら。 Mを…",
+   "tags": [
+    "Zenn"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "be052efca6805f83",
@@ -1367,7 +3175,58 @@
    "tags": [
     "SideFX"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "1c3f13986cb6f7c2",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "zenn-houdini",
+   "source": "Zenn トピック Houdini",
+   "title": "【Houdini】アトリビュート値別にワークアイテムを作成したい",
+   "url": "https://zenn.dev/yuzutarou/articles/542e111b1013e3",
+   "published": "2026-07-25T13:17:16Z",
+   "excerpt": "調べたこと 以下のように、各アセットごとにnameアトリビュートを設定し、パーツ別にFBXを出力する方法について、忘れるのでまとめました。 サンプルファイル： export_pdg_fbx.hiplc https://github.com/yuzutarou-maru/Houdini_Sample/tree/main/houdini/PDG Houdiniバージョン Houdini Indie…",
+   "tags": [
+    "Zenn",
+    "PDG/TOPs"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:BiK07akrvxs",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-indyzone",
+   "source": "IndyZone",
+   "title": "【GPT-5.6】Codexを活用してHeightField 自動生成する手順を解説",
+   "url": "https://www.youtube.com/watch?v=BiK07akrvxs",
+   "published": "2026-07-25T08:00:32Z",
+   "excerpt": "今回の動画では、OpenAIのコーディングエージェント「Codex」とGPT-5.6を活用し、HoudiniのHeightField地形生成を自動化する方法をご紹介します。 ChatGPTとの違いやCodexの基本的な使い方、ChatGPTデスクトップアプリでのセットアップ方法、無料プランでどこまで試せるのかもあわせて解説します。 実際にCodexへプロンプトを入力し、Houdini用のPyth…",
+   "tags": [
+    "YouTube",
+    "Terrain"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "3487ca281f160f7b",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "zenn-houdini",
+   "source": "Zenn トピック Houdini",
+   "title": "セミナー「続・挫折させないHoudiniドリル」に寄せて",
+   "url": "https://zenn.dev/kickbase/articles/eb92f94a1541a6",
+   "published": "2026-07-25T02:55:33Z",
+   "excerpt": "Houdiniセミナー開催！計4日間の集中コース https://academy.cgworld.jp/contents/2139 CGWORLDさまにてHoudiniのセミナーを開催させていただく運びとなりました。内容については上記URLをご参考いただくこととして、本記事では開催にあたって私の心境や思いをポエムとしてしたためます。 ご参加予定の方や興味がある方はご覧いただくとモチベーションアッ…",
+   "tags": [
+    "Zenn"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "4dc536118a2d4761",
@@ -1382,7 +3241,44 @@
    "tags": [
     "SideFX"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:A0gOZWh9db8",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-dalvi",
+   "source": "Rohan Dalvi",
+   "title": "Houdini 22 - COPs heightfields",
+   "url": "https://www.youtube.com/watch?v=A0gOZWh9db8",
+   "published": "2026-07-20T09:15:15Z",
+   "excerpt": "for more houdini training https://www.patreon.com/c/rohandalvicreates https://www.rohandalvi.net/",
+   "tags": [
+    "YouTube",
+    "Copernicus",
+    "Terrain"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:MuPo6tK8mPs",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-dalvi",
+   "source": "Rohan Dalvi",
+   "title": "COPs terrain in Houdini 22",
+   "url": "https://www.youtube.com/watch?v=MuPo6tK8mPs",
+   "published": "2026-07-17T08:56:54Z",
+   "excerpt": "",
+   "tags": [
+    "YouTube",
+    "Copernicus",
+    "Terrain"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "ddad1bd37958ff14",
@@ -1398,7 +3294,265 @@
     "SideFX",
     "H22.0"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "7e4d6de237f3a6db",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum-ja",
+   "source": "SideFX 日本語フォーラム",
+   "title": "流体シミュレーションにおける液面の低下",
+   "url": "https://www.sidefx.com/forum/post/461883/",
+   "published": "2026-07-14T07:19:07Z",
+   "excerpt": "コリジョンの設定が正しくできていなかったため、Collision Source を使って Volume コリジョンを設定しなおしました。 シミュレーション解像度が粗すぎたので、Flip Object から解像度を倍にしたところ、最後まで水が残るようになりました。",
+   "tags": [
+    "Forum",
+    "FLIP",
+    "Simulation"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:GUbNnFkQp2Q",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-indyzone",
+   "source": "IndyZone",
+   "title": "【Houdini超入門】コンポーネントって何？ Part.２：アトリビュートとの関係｜Point・Vertex・Primitiveの使い分け",
+   "url": "https://www.youtube.com/watch?v=GUbNnFkQp2Q",
+   "published": "2026-07-10T08:00:19Z",
+   "excerpt": "「アトリビュートはどのコンポーネントに入れるの？」 「コンポーネントの優先順位って？」 Houdiniを始めたばかりの人が最初につまずきやすい「コンポーネント（Point / Vertex / Primitive / Detail）」について、全2回で解説する動画シリーズの第2弾です。 この第2回目の動画では、 コンポーネントとアトリビュートの関係 Attribute Promote SOPによ…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:N99DmHlZ4wU",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-magnus",
+   "source": "Konstantin Magnus",
+   "title": "Drawing Perspectives as 2D Triangles – Houdini Tutorial",
+   "url": "https://www.youtube.com/watch?v=N99DmHlZ4wU",
+   "published": "2026-07-07T10:00:31Z",
+   "excerpt": "Displaying a 3D mesh as a lit and shaded perspective view in the form of 2D triangles. FILE: https://procegen.konstantinmagnus.de/lighting-2d-triangles-from-3d-mesh PATREON: https://www.patreon.com/k…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "5414dc364fa67279",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum-ja",
+   "source": "SideFX 日本語フォーラム",
+   "title": "Houdini20.5 Solarisで描画出来ていたUSDが、Houdini21.0 Solarisで描画されない。",
+   "url": "https://www.sidefx.com/forum/post/461551/",
+   "published": "2026-07-02T19:39:38Z",
+   "excerpt": "こちらは USD で修正が施され、これは H22 から入ってきます。",
+   "tags": [
+    "Forum",
+    "Solaris",
+    "H20.5"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "010c6dfbd9f9f43f",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "zenn-houdini",
+   "source": "Zenn トピック Houdini",
+   "title": "Windows上のHoudiniにRedshiftプラグインを入れる（2026年）",
+   "url": "https://zenn.dev/ryo_a/articles/1e1743988e0eb5",
+   "published": "2026-06-19T18:08:38Z",
+   "excerpt": "前提 この解説は以下の前提のもとで進めます Houdini Launcherがインストールされており、Houdiniが利用できる状態であること また、Houdini Indie以上を利用していること（無料版のHoudini Apprenticeではサードパーティのレンダラーがサポートされていません） Redshiftの有効なライセンスがあり、MAXON Appがインストールされていること 手順…",
+   "tags": [
+    "Zenn",
+    "Rendering"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "c994eb4813f5a077",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum-ja",
+   "source": "SideFX 日本語フォーラム",
+   "title": "RBDシュミレーションしたオブジェクトをKarmaXPUでモーションブラー付きで書き出す最適な方法はなんですか？",
+   "url": "https://www.sidefx.com/forum/post/460720/",
+   "published": "2026-06-10T15:45:19Z",
+   "excerpt": "rbdbulletsolverでシュミレーションしたオブジェクトのレンダリングをKarmaXPUでする際に、そのままシュミレーションしたオブジェクトをSOPimportで読み込んだ際に重くて動かなかったので、メッシュ情報だけのものとトランスフォーム情報の入ったポイントのキャッシュをとり、pointxformで破片を動かすというアプローチをとったのですが、このやり方だとモーションブラーを付けること…",
+   "tags": [
+    "Forum",
+    "RBD",
+    "Rendering"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "c1b7279453e5be5e",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "zenn-houdini",
+   "source": "Zenn トピック Houdini",
+   "title": "入門者Houdini勉強譚その3",
+   "url": "https://zenn.dev/mattya3713/articles/581c59f539db0e",
+   "published": "2026-06-10T13:59:13Z",
+   "excerpt": "※本記事はHoudini入門者が、書籍「理論と実践で学ぶHoudini」に基づいて学習した内容を整理したメモです。 実際の操作・解釈は筆者の理解に基づいて再構成しているため、表現や解釈に一部簡略化・独自整理を含みます。 正確性は一切ないのでご注意ください。 実際に作ってみよう パスを設定し、モデルを作成 急須モデルに法線アトリビュートを設定 急須の向きをZに合わせ、球のポイントにCopyToPo…",
+   "tags": [
+    "Zenn"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "0c75b974a32d406e",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "zenn-houdini",
+   "source": "Zenn トピック Houdini",
+   "title": "Houdini: デフォルトカラーに戻したくない？（右クリックメニューを添えて）",
+   "url": "https://zenn.dev/kickbase/articles/28adb7194178b8",
+   "published": "2026-06-10T10:00:08Z",
+   "excerpt": "ノードカラーを変更した後、元の色に戻したくなる時ないですか？ 皆さんはプロジェクトによって入出力や参照元のノードなどに色をつける運用などをされていると思います。メッシュは黄色、ボリュームは緑、対になる処理には青…など様々なルールがあるかと思います。 一度色を付けて作業を進めて、「やっぱりこのノードの色を元に戻したいな～」と思うことありません？ 僕はあります。 しかしそこでちょっとした問題が起こり…",
+   "tags": [
+    "Zenn"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "6c69baae4bcb3ea0",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum-ja",
+   "source": "SideFX 日本語フォーラム",
+   "title": "karmaレンダラーでEXRをelementごとに分けてレンダリングしたい。",
+   "url": "https://www.sidefx.com/forum/post/460626/",
+   "published": "2026-06-08T12:21:57Z",
+   "excerpt": "3dsmax、vrayの、separate render channels のような、EXRをelementごとに分け出力する方法はありますでしょうか？",
+   "tags": [
+    "Forum",
+    "Karma",
+    "Rendering"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "0a5962569c8952ab",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "zenn-houdini",
+   "source": "Zenn トピック Houdini",
+   "title": "【Houdini】TextureVEXを使った.tgaのPremultiplyについて",
+   "url": "https://zenn.dev/yuzutarou/articles/d3c2d6044df81c",
+   "published": "2026-06-08T07:59:53Z",
+   "excerpt": "調べたこと ゲームにおいて、RGBAにそれぞれRoughness、Metallicなどのfloatカラーを格納して「.tga」を活用するケースがあると思う。しかしtgaをTexture VEXで読み込むとAlpha部分のカラーが以下のように失われてしまうケースがある。 SideFX社に問い合わせしたところ教えて頂いたのでそれを防ぐための方法について記載。 サンプルファイル：texture_vex…",
+   "tags": [
+    "Zenn",
+    "VEX"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "1acedf0fb809ce1d",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "zenn-houdini",
+   "source": "Zenn トピック Houdini",
+   "title": "入門者Houdini勉強譚その2",
+   "url": "https://zenn.dev/mattya3713/articles/710d8f99998d57",
+   "published": "2026-06-03T08:54:00Z",
+   "excerpt": "※本記事はHoudini入門者が、書籍「理論と実践で学ぶHoudini」に基づいて学習した内容を整理したメモです。 実際の操作・解釈は筆者の理解に基づいて再構成しているため、表現や解釈に一部簡略化・独自整理を含みます。 正確性は一切ないのでご注意ください。 2章 ポイント、頂点、プリミティブ 1. Point（ポイント） ポリゴンやカーブを構成する基本単位 Point自体は「3D空間上の位置情報…",
+   "tags": [
+    "Zenn"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "4df1833ca2648d17",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "zenn-houdini",
+   "source": "Zenn トピック Houdini",
+   "title": "入門者Houdini勉強譚その1",
+   "url": "https://zenn.dev/mattya3713/articles/65ec2d344acc0d",
+   "published": "2026-06-03T05:49:47Z",
+   "excerpt": "※本記事はHoudini入門者が、書籍「理論と実践で学ぶHoudini」に基づいて学習した内容を整理したメモです。 実際の操作・解釈は筆者の理解に基づいて再構成しているため、表現や解釈に一部簡略化・独自整理を含みます。 正確性は一切ないのでご注意ください。 1章Houdiniとは プロシージャルな制作ができることが強味 基本の単語 オペレーター(ノード)をつなげた構造のことをネットワーク オペレ…",
+   "tags": [
+    "Zenn",
+    "Procedural"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:yTm-IX049zE",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-magnus",
+   "source": "Konstantin Magnus",
+   "title": "Modeling a Fruit Bowl – Houdini Tutorial",
+   "url": "https://www.youtube.com/watch?v=yTm-IX049zE",
+   "published": "2026-06-01T22:00:30Z",
+   "excerpt": "A procedure to fill an ellipsoid with fruits and shaping a bowl from it. FILE: https://procegen.konstantinmagnus.de/fruit-bowl PATREON: https://patreon.com/konstantinmagnus 00:00 Intro 00:10 Sphere 0…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "c86b7bebab2c8ac6",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum-ja",
+   "source": "SideFX 日本語フォーラム",
+   "title": "rbdでの破壊シミュレーションにコンストレインを追加するとforceが反映されなくなる",
+   "url": "https://www.sidefx.com/forum/post/460287/",
+   "published": "2026-05-29T13:42:13Z",
+   "excerpt": "ご回答ありがとうございます すみません 回答いただく前にglueがforceの影響を受けないという点については自己解決しました 添付してくださった動画も見ていたのですが sopsolverを用いてのフォースの管理と崩壊の管理についてはまだできていません ともあれご回答ありがとうございます。",
+   "tags": [
+    "Forum",
+    "RBD",
+    "Simulation"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "9fa81d18b880d43c",
+   "tab": "reference",
+   "kind": "github",
+   "source_id": "github-sideeffects-houdiniengineforunreal",
+   "source": "Houdini Engine for Unreal",
+   "title": "Houdini Engine for Unreal: Version 3.0.7 - Houdini 21.0.729",
+   "url": "https://github.com/sideeffects/HoudiniEngineForUnreal/releases/tag/v3.0.7",
+   "published": "2026-05-28T22:22:35Z",
+   "excerpt": "",
+   "tags": [
+    "GitHub",
+    "Release notes",
+    "Houdini Engine",
+    "Unreal",
+    "H21.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "8fb91ed65247c008",
@@ -1414,7 +3568,41 @@
     "SideFX",
     "H21.0"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "caeaa888bf080bdd",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "zenn-houdini",
+   "source": "Zenn トピック Houdini",
+   "title": "【Houdini】Copernicsの基本とノードの使い方備忘録",
+   "url": "https://zenn.dev/yuzutarou/articles/98a2f3c79d3faa",
+   "published": "2026-05-25T23:20:43Z",
+   "excerpt": "調べたこと 以下の動画をメインとしてCopernicsの基本とノードの使い方をメモとしてまとめる。 動画は5時間あって内容的にもかなり充実している。 https://www.youtube.com/watch?v=ZPL215vfNwg&t=2929s 動画でも伝えられていますが、ノードすべてを網羅する必要もなく必要になったタイミングで調べていきます。まだまとめ終わっていないので続きはこのページ…",
+   "tags": [
+    "Zenn",
+    "Copernicus"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "d4a495c0af44b6e5",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "zenn-houdini",
+   "source": "Zenn トピック Houdini",
+   "title": "Archive Projectを使ってみる（第30回 Houdiniゆるゆる会）",
+   "url": "https://zenn.dev/kickbase/articles/df5df0ebfda74a",
+   "published": "2026-05-19T10:01:05Z",
+   "excerpt": "第30回Houdiniゆるゆる会の振り返りと発表資料の紹介です。 だいたい月イチでやってる勉強会も30回を重ねました。いやあ、感慨深いですね。 では振り返りを行ってみましょう。 今回のお題 「使ったことがないノード・機能」 今回のテーマは「使ったことがないノード」をテーマとしました。新搭載されたノードはもちろん、昔からあるけど使ったことないな。どう使うんだろ？のような疑問にチャレンジしてもよいも…",
+   "tags": [
+    "Zenn"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "5f06d239115728ca",
@@ -1429,7 +3617,62 @@
    "tags": [
     "SideFX"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:y9u8hNIFf-4",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-magnus",
+   "source": "Konstantin Magnus",
+   "title": "Boolean Operations with VEX – Houdini Tutorial",
+   "url": "https://www.youtube.com/watch?v=y9u8hNIFf-4",
+   "published": "2026-05-05T12:31:17Z",
+   "excerpt": "Clipping intersecting meshes for boolean geometry operations such as union, intersect and subtract. FILE: https://procegen.konstantinmagnus.de/boolean-operations-with-vex PATREON: https://patreon.com…",
+   "tags": [
+    "YouTube",
+    "VEX"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "bd89413b29bddf19",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "zenn-houdini",
+   "source": "Zenn トピック Houdini",
+   "title": "【Houdini】COPで作成したテクスチャーをモデルやUV画面で表示する",
+   "url": "https://zenn.dev/yuzutarou/articles/ea3fe4e50836a0",
+   "published": "2026-05-04T15:11:45Z",
+   "excerpt": "調べたこと Copernicsで作成したテクスチャーをモデルやUV画面でプレビューする方法について Houdiniバージョン Houdini Indie 21.0440で確認 モデルにテクスチャを表示する方法について モデルにテクスチャを適用した状態を確認する方法についてまとめた。 今回はCOPで下のようなOUT_Textureノードの見た目をテクスチャとして読み込み表示したいとする。 COPP…",
+   "tags": [
+    "Zenn",
+    "Copernicus"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "52f0db676d7c6040",
+   "tab": "reference",
+   "kind": "github",
+   "source_id": "github-sideeffects-houdiniengineforunreal",
+   "source": "Houdini Engine for Unreal",
+   "title": "Houdini Engine for Unreal: Version 3.0.6 - Houdini 21.0.700",
+   "url": "https://github.com/sideeffects/HoudiniEngineForUnreal/releases/tag/v3.0.6",
+   "published": "2026-04-30T21:04:16Z",
+   "excerpt": "",
+   "tags": [
+    "GitHub",
+    "Release notes",
+    "Houdini Engine",
+    "Unreal",
+    "H21.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "fd41dfb153c1b74c",
@@ -1445,7 +3688,131 @@
     "SideFX",
     "H21.0"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "cb4ebf8ad6ee5786",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "zenn-houdini",
+   "source": "Zenn トピック Houdini",
+   "title": "Houdiniの設定まとめ 2026",
+   "url": "https://zenn.dev/kickbase/articles/e123193447c549",
+   "published": "2026-04-22T10:00:05Z",
+   "excerpt": "新しいバージョンのHoudiniを入れた直後に、僕がまず触る設定を軽くまとめます。 今回はGeneral User InterfaceとHUDとNotificationsだけに絞って、作業しやすさに直結するところをメモします。 先に結論 General User InterfaceのGlobal UI Scaleでアイコンをちょっと大きくしとこう。寄る年波には勝てない。 ビューポートをすっきり使…",
+   "tags": [
+    "Zenn"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "ead1a351b4bbcdea",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "zenn-houdini",
+   "source": "Zenn トピック Houdini",
+   "title": "【Houdini】xyzdistを複数回実行したい",
+   "url": "https://zenn.dev/yuzutarou/articles/04ca113e1d912c",
+   "published": "2026-04-14T15:29:58Z",
+   "excerpt": "調べたこと xyzdistを複数回実行し、入力２番目の近いPrimを複数とりたかったので調べました。 ブタさんの周辺にポイントを配置し、ポイントから近いPrimを複数取得してポイントとラインを引いた処理になります。 サンプルファイル: near_prims.hiplc https://github.com/yuzutarou-maru/Houdini_Sample/tree/main/houdi…",
+   "tags": [
+    "Zenn"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "a2b007e578821c34",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "zenn-houdini",
+   "source": "Zenn トピック Houdini",
+   "title": "【Houdini】HeightFieldのVolumeIndexとその値の取得など",
+   "url": "https://zenn.dev/yuzutarou/articles/451d20ed8b9678",
+   "published": "2026-04-13T14:48:10Z",
+   "excerpt": "調べたこと VolumeWrangle（VEX）を使ったボリュームのインデックスの取得とそのインデックスのボリュームの値の取得方法がよく理解できていない部分があったので備忘録としてまとめました。 サンプルファイル: HF_index.hiplc https://github.com/yuzutarou-maru/Houdini_Sample/tree/main/houdini/HeightFie…",
+   "tags": [
+    "Zenn",
+    "VEX",
+    "Terrain"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "2d25553b8cb81ef4",
+   "tab": "reference",
+   "kind": "github",
+   "source_id": "github-sideeffects-houdininiagara",
+   "source": "Houdini Niagara",
+   "title": "Houdini Niagara Plugin v2.8.0",
+   "url": "https://github.com/sideeffects/HoudiniNiagara/releases/tag/v2.8.0",
+   "published": "2026-04-07T15:05:30Z",
+   "excerpt": "",
+   "tags": [
+    "GitHub",
+    "Release notes",
+    "Unreal"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:2sTPx9UZlIY",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-magnus",
+   "source": "Konstantin Magnus",
+   "title": "Lining up Books on a Shelf – Houdini Tutorial",
+   "url": "https://www.youtube.com/watch?v=2sTPx9UZlIY",
+   "published": "2026-04-07T08:00:07Z",
+   "excerpt": "Lining up books using the UV layout-node. FILE: https://procegen.konstantinmagnus.de/lining-up-books-on-the-shelf PATREON: https://www.patreon.com/konstantinmagnus",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "c76120b704fea2da",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "zenn-houdini",
+   "source": "Zenn トピック Houdini",
+   "title": "[UE][Houdini] RegexActorSelectorツール",
+   "url": "https://zenn.dev/kickbase/articles/50877940269bc5",
+   "published": "2026-04-02T10:00:06Z",
+   "excerpt": "UnrealEngineエディタ Unreal Engine（以下 UE）で Houdini Engine for Unreal を使用している時、もっと楽にHDAにアクターを渡してえと思うことがありませんか。僕はあります。 そこでOutlinerラベルを正規表現フィルタし、Houdini Engineの入力へ渡すツールがあると便利そうですね。 というわけで作りました。 本記事ではエディタ専用…",
+   "tags": [
+    "Zenn",
+    "HDA",
+    "Houdini Engine",
+    "Unreal"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "34b5c85d545cd9d7",
+   "tab": "reference",
+   "kind": "github",
+   "source_id": "github-sideeffects-houdiniengineforunreal",
+   "source": "Houdini Engine for Unreal",
+   "title": "Houdini Engine for Unreal: Version 3.0.5 - Houdini 21.0.671",
+   "url": "https://github.com/sideeffects/HoudiniEngineForUnreal/releases/tag/v3.0.5",
+   "published": "2026-04-01T23:00:14Z",
+   "excerpt": "",
+   "tags": [
+    "GitHub",
+    "Release notes",
+    "Houdini Engine",
+    "Unreal",
+    "H21.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "b187aada3199713b",
@@ -1461,6 +3828,7 @@
     "SideFX",
     "H21.0"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -1476,7 +3844,287 @@
    "tags": [
     "SideFX"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "234084a0365955ad",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "zenn-houdini",
+   "source": "Zenn トピック Houdini",
+   "title": "Houdini: 古いノードを一発で追加。「Add Old Node」ツール",
+   "url": "https://zenn.dev/kickbase/articles/d4409b6d1acbfb",
+   "published": "2026-03-14T07:41:47Z",
+   "excerpt": "古いチュートリアルや書籍で学んでいると、手順に登場するノードが TAB メニューにない……という経験はありませんか。本記事では、TAB に表示されない（hidden）ノードや非推奨（deprecated）ノードを、現在のコンテキストに合わせて検索・追加できる Python ツール「Add Old Node」の概要・使い方・ホットキー設定、そしてコードのポイントを解説します。 どんな課題を解決する…",
+   "tags": [
+    "Zenn",
+    "Python"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:WX4WugqTGo0",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-magnus",
+   "source": "Konstantin Magnus",
+   "title": "Morphing Meshes with Conformal Maps – Houdini Tutorial",
+   "url": "https://www.youtube.com/watch?v=WX4WugqTGo0",
+   "published": "2026-03-03T09:00:42Z",
+   "excerpt": "Smoothly blending mesh surfaces by interpolating corresponding surface positions via conformal parameterizations. FILE: https://procegen.konstantinmagnus.de/morphing-meshes-with-conformal-maps PATREO…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "f013c57819d7e9bd",
+   "tab": "reference",
+   "kind": "github",
+   "source_id": "github-sideeffects-houdiniengineforunreal",
+   "source": "Houdini Engine for Unreal",
+   "title": "Houdini Engine for Unreal: Version 3.0.4 - Houdini 21.0.631",
+   "url": "https://github.com/sideeffects/HoudiniEngineForUnreal/releases/tag/v3.0.4",
+   "published": "2026-02-19T21:59:20Z",
+   "excerpt": "",
+   "tags": [
+    "GitHub",
+    "Release notes",
+    "Houdini Engine",
+    "Unreal",
+    "H21.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "8c5a634f7ae45b62",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "zenn-houdini",
+   "source": "Zenn トピック Houdini",
+   "title": "Houdini: 公式サイトを高速に表示しよう",
+   "url": "https://zenn.dev/kickbase/articles/58c8f5d52f1c30",
+   "published": "2026-02-15T10:00:02Z",
+   "excerpt": "アドベントカレンダーの記事にしようかなと思ってたんですけど、流石に気が長い話なので公開しちゃいます。 今回はHoudiniそのもののお話ではなく、SideFX公式サイト（日本語ドキュメント）をストレスなく閲覧する方法についてのTipsです。 SideFX 公式サイトをフォント読み込みなしで高速表示する Chrome 拡張を作った話 SideFX公式サイトは情報量が多く、フォントなどのリソース読み…",
+   "tags": [
+    "Zenn",
+    "Rendering"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:BcDR7vD2lyM",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-magnus",
+   "source": "Konstantin Magnus",
+   "title": "Smooth Tangential Boolean Unions – Houdini Tutorial",
+   "url": "https://www.youtube.com/watch?v=BcDR7vD2lyM",
+   "published": "2026-02-03T09:00:26Z",
+   "excerpt": "Smooth Tangential Boolean Union Transitions using volume SDFs. FILE: https://procegen.konstantinmagnus.de/smooth-boolean-unions PATREON: https://www.patreon.com/konstantinmagnus 0:00 Setup 1:51 Trimi…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "4c39e1e1ff055623",
+   "tab": "reference",
+   "kind": "github",
+   "source_id": "github-sideeffects-houdiniengineforunreal",
+   "source": "Houdini Engine for Unreal",
+   "title": "Houdini Engine for Unreal: Version 3.0.3 - Houdini 21.0.596",
+   "url": "https://github.com/sideeffects/HoudiniEngineForUnreal/releases/tag/v3.0.3",
+   "published": "2026-01-15T21:25:46Z",
+   "excerpt": "",
+   "tags": [
+    "GitHub",
+    "Release notes",
+    "Houdini Engine",
+    "Unreal",
+    "H21.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:_3CCjPXKeO0",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-magnus",
+   "source": "Konstantin Magnus",
+   "title": "Smooth Boolean Unions – Houdini Tutorial",
+   "url": "https://www.youtube.com/watch?v=_3CCjPXKeO0",
+   "published": "2026-01-06T11:01:09Z",
+   "excerpt": "Smooth non-tangential transitions between intersecting mesh surfaces. FILE: https://procegen.konstantinmagnus.de/smooth-boolean-unions PATREON: https://www.patreon.com/konstantinmagnus",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "58bfe7687c284384",
+   "tab": "reference",
+   "kind": "github",
+   "source_id": "github-sideeffects-houdininiagara",
+   "source": "Houdini Niagara",
+   "title": "Houdini Niagara Plugin v2.7.4",
+   "url": "https://github.com/sideeffects/HoudiniNiagara/releases/tag/v2.7.4",
+   "published": "2025-12-10T01:13:44Z",
+   "excerpt": "",
+   "tags": [
+    "GitHub",
+    "Release notes",
+    "Unreal"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "50086e621bb81267",
+   "tab": "reference",
+   "kind": "github",
+   "source_id": "github-sideeffects-houdiniengineforunreal",
+   "source": "Houdini Engine for Unreal",
+   "title": "Houdini Engine for Unreal: Version 3.0.2 - Houdini 21.0.559",
+   "url": "https://github.com/sideeffects/HoudiniEngineForUnreal/releases/tag/v3.0.2",
+   "published": "2025-12-10T01:03:43Z",
+   "excerpt": "",
+   "tags": [
+    "GitHub",
+    "Release notes",
+    "Houdini Engine",
+    "Unreal",
+    "H21.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:npHkMAMBeWU",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-magnus",
+   "source": "Konstantin Magnus",
+   "title": "Cutting Gaps into Meshes – Houdini Tutorial",
+   "url": "https://www.youtube.com/watch?v=npHkMAMBeWU",
+   "published": "2025-12-02T14:01:26Z",
+   "excerpt": "Cutting gaps into meshes by clipping across a signed scalar attribute. FILE: https://procegen.konstantinmagnus.de/cutting-gaps-into-meshes PATREON: https://patreon.com/konstantinmagnus",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:1UaFqGRZJC0",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-magnus",
+   "source": "Konstantin Magnus",
+   "title": "Tracing Height Field Contours – Houdini Tutorial",
+   "url": "https://www.youtube.com/watch?v=1UaFqGRZJC0",
+   "published": "2025-11-05T11:00:03Z",
+   "excerpt": "Architectural site models based on tracing height fields in a for each loop. LINK: \"Cutting Height Field Contours\": https://youtu.be/LJ53O9eola0 FILE: https://procegen.konstantinmagnus.de/topographic…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "844715d970798402",
+   "tab": "reference",
+   "kind": "github",
+   "source_id": "github-sideeffects-houdiniengineforunreal",
+   "source": "Houdini Engine for Unreal",
+   "title": "Houdini Engine for Unreal: Version 3.0.1 - Houdini 21.0.512",
+   "url": "https://github.com/sideeffects/HoudiniEngineForUnreal/releases/tag/v3.0.1",
+   "published": "2025-10-24T19:22:07Z",
+   "excerpt": "",
+   "tags": [
+    "GitHub",
+    "Release notes",
+    "Houdini Engine",
+    "Unreal",
+    "H21.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:i_Sm-5nNtq8",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-magnus",
+   "source": "Konstantin Magnus",
+   "title": "Custom Height Field Visibility Mask – Houdini Tutorial",
+   "url": "https://www.youtube.com/watch?v=i_Sm-5nNtq8",
+   "published": "2025-10-07T10:01:18Z",
+   "excerpt": "Creating a custom visibility mask for height fields in Houdini. FILE: https://procegen.konstantinmagnus.de/height-field-visibility PATREON: https://patreon.com/konstantinmagnus",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:Lwgev4hG2IM",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-usdvfx",
+   "source": "USD VFXパイプライン解説と各種インタビュー",
+   "title": "USDの基礎とレイヤー編集入門｜Houdini Solarisで学ぶ「Merge LOP / Graft Stages」の使い分け",
+   "url": "https://www.youtube.com/watch?v=Lwgev4hG2IM",
+   "published": "2025-10-03T01:13:17Z",
+   "excerpt": "USD（Universal Scene Description）の基本構成とレイヤー編集を、Houdini Solaris（LOPs）で実践的に解説します。レイヤー／シーングラフ／リファレンスの考え方から、Merge LOPとGraft Stages LOPの違い・使いどころまで、テーブルセットのサンプルを使って分かりやすく比較します。 本動画は note 記事「SolarisとUSDを用いたワ…",
+   "tags": [
+    "YouTube",
+    "Solaris"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "f1da71140e113c03",
+   "tab": "reference",
+   "kind": "github",
+   "source_id": "github-sideeffects-houdininiagara",
+   "source": "Houdini Niagara",
+   "title": "Houdini Niagara Plugin v2.7.3",
+   "url": "https://github.com/sideeffects/HoudiniNiagara/releases/tag/v2.7.3",
+   "published": "2025-09-08T19:39:46Z",
+   "excerpt": "",
+   "tags": [
+    "GitHub",
+    "Release notes",
+    "Unreal"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:XLGcpWE6uKE",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-magnus",
+   "source": "Konstantin Magnus",
+   "title": "Curvature-Driven Curve Growth – Houdini Tutorial",
+   "url": "https://www.youtube.com/watch?v=XLGcpWE6uKE",
+   "published": "2025-09-02T09:00:56Z",
+   "excerpt": "Growing curves by their curvature using for loops and/or solvers. FILE: https://procegen.konstantinmagnus.de/growing-2d-curves PATREON: https://patreon.com/konstantinmagnus",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "yt:FTS46d06EzI",
@@ -1491,6 +4139,7 @@
    "tags": [
     "YouTube"
    ],
+   "lang": "ja",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -1507,6 +4156,7 @@
     "YouTube",
     "Copernicus"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -1522,6 +4172,7 @@
    "tags": [
     "YouTube"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -1537,7 +4188,26 @@
    "tags": [
     "YouTube"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "ab4460a2cc7cedaa",
+   "tab": "reference",
+   "kind": "github",
+   "source_id": "github-sideeffects-houdininiagara",
+   "source": "Houdini Niagara",
+   "title": "Houdini Niagara Plugin v2.7.2",
+   "url": "https://github.com/sideeffects/HoudiniNiagara/releases/tag/v2.7.2",
+   "published": "2025-07-10T16:05:24Z",
+   "excerpt": "",
+   "tags": [
+    "GitHub",
+    "Release notes",
+    "Unreal"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "yt:SDy0A323lfs",
@@ -1550,8 +4220,10 @@
    "published": "2025-07-05T19:52:21Z",
    "excerpt": "This is a tutorial livestream for Houdini to introduce some of the interesting algorithmic design process. In this livestream I'm going to create a procedural apartment complex using Houdini. I've al…",
    "tags": [
-    "YouTube"
+    "YouTube",
+    "Procedural"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -1565,8 +4237,10 @@
    "published": "2025-06-28T17:28:59Z",
    "excerpt": "This is a tutorial livestream for Houdini to introduce some of the interesting algorithmic design process. In this livestream I'm planning to do a 3d procedural modeling to achieve spiral carving by…",
    "tags": [
-    "YouTube"
+    "YouTube",
+    "Procedural"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -1583,6 +4257,7 @@
     "YouTube",
     "Copernicus"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -1598,6 +4273,7 @@
    "tags": [
     "YouTube"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -1611,8 +4287,10 @@
    "published": "2025-06-07T18:39:49Z",
    "excerpt": "This is a tutorial livestream for Houdini to introduce some of the interesting algorithmic design process. In this livestream I'm going to create a procedural road network using L-System. I've also s…",
    "tags": [
-    "YouTube"
+    "YouTube",
+    "Procedural"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -1626,8 +4304,10 @@
    "published": "2025-05-31T16:11:24Z",
    "excerpt": "This is a tutorial livestream for Houdini to introduce some of the interesting algorithmic design process. In this livestream I'm going to show how you can create a procedural aerial overpass. I've a…",
    "tags": [
-    "YouTube"
+    "YouTube",
+    "Procedural"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -1644,6 +4324,7 @@
     "YouTube",
     "Vellum"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -1659,6 +4340,7 @@
    "tags": [
     "YouTube"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -1672,9 +4354,31 @@
    "published": "2025-05-03T17:45:50Z",
    "excerpt": "This is a tutorial livestream for Houdini to introduce some of the interesting algorithmic design process. In this livestream I'm planning to create procedural jade vine model which grows over time.…",
    "tags": [
-    "YouTube"
+    "YouTube",
+    "Procedural"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "08aa5f2528670804",
+   "tab": "reference",
+   "kind": "github",
+   "source_id": "github-sideeffects-houdiniengineforunity",
+   "source": "Houdini Engine for Unity",
+   "title": "Houdini Engine for Unity: Houdini 20.5.584",
+   "url": "https://github.com/sideeffects/HoudiniEngineForUnity/releases/tag/Houdini20.5.584",
+   "published": "2025-05-02T20:47:06Z",
+   "excerpt": "",
+   "tags": [
+    "GitHub",
+    "Release notes",
+    "Houdini Engine",
+    "Unity",
+    "H20.5"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "yt:axDm-5ezM6E",
@@ -1689,6 +4393,7 @@
    "tags": [
     "YouTube"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -1702,9 +4407,146 @@
    "published": "2025-04-20T03:42:31Z",
    "excerpt": "This is a tutorial livestream for Houdini to introduce some of the interesting algorithmic design process. For this livestream I'm going to create a simple procedural disco ball with some volumetric…",
    "tags": [
+    "YouTube",
+    "Procedural"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:VAXzuJl_hOY",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-usdvfx",
+   "source": "USD VFXパイプライン解説と各種インタビュー",
+   "title": "USDシーケンスファイルの読み込み方 【Tips付き】",
+   "url": "https://www.youtube.com/watch?v=VAXzuJl_hOY",
+   "published": "2025-04-15T01:14:17Z",
+   "excerpt": "この動画では、Houdiniを使用した場合のUSDシーケンスファイルインポートについて焦点を当てています。SubLayerとしてインポートした際に、プレビューが重い、クラッシュしてしまう、表示されている警告が気になるという方は是非ご覧ください。 noteの連載 SolarisとUSDを用いたワークフロー導入について (Part3)も併せてご覧ください。 https://note.com/foru…",
+   "tags": [
+    "YouTube",
+    "Solaris"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:6BHqUWGyZlg",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-usdvfx",
+   "source": "USD VFXパイプライン解説と各種インタビュー",
+   "title": "Houdiniを使ってOpenUSDを編集しよう！【Tipsあり】noteは概要欄にて",
+   "url": "https://www.youtube.com/watch?v=6BHqUWGyZlg",
+   "published": "2025-03-31T10:40:53Z",
+   "excerpt": "これまでHoudiniを使ってきて、そろそろSolarisを使ってみたいけど、いまいち使い方がよくわからないと感じている、そんなSolaris初心者ユーザー向けに「Solarisとは」というところからUSDの概要やUSDを使用するメリットなどをご紹介しています。 ※noteに連載中のSolarisとUSDを用いたワークフロー導入について (Part2)に連動する動画です。 URL：https:/…",
+   "tags": [
+    "YouTube",
+    "Solaris"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "9dcc259995ed5a64",
+   "tab": "reference",
+   "kind": "github",
+   "source_id": "github-sideeffects-houdininiagara",
+   "source": "Houdini Niagara",
+   "title": "Houdini Niagara Plugin v2.7.1",
+   "url": "https://github.com/sideeffects/HoudiniNiagara/releases/tag/v2.7.1",
+   "published": "2025-01-07T16:52:55Z",
+   "excerpt": "",
+   "tags": [
+    "GitHub",
+    "Release notes",
+    "Unreal"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:fa9_yvnBNqc",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-usdvfx",
+   "source": "USD VFXパイプライン解説と各種インタビュー",
+   "title": "【東京開催】SIGGRAPH Asia 2024に参加してきた！ #cg #vfx #usd",
+   "url": "https://www.youtube.com/watch?v=fa9_yvnBNqc",
+   "published": "2024-12-25T04:00:22Z",
+   "excerpt": "本編はこちら →【必見】３年ぶりに東京で開催されたSIGGRAPH Asia 2024に参加してきた！https://youtu.be/Rve8IKzVWkI",
+   "tags": [
+    "YouTube",
+    "Solaris"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:JhTrGMA0p7E",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-usdvfx",
+   "source": "USD VFXパイプライン解説と各種インタビュー",
+   "title": "【ガンダム×VR】SIGGRAPH Asia 2024に参加してきた！ #ガンダム #vfx #vr",
+   "url": "https://www.youtube.com/watch?v=JhTrGMA0p7E",
+   "published": "2024-12-24T03:46:36Z",
+   "excerpt": "本編はこちら →【必見】３年ぶりに東京で開催されたSIGGRAPH Asia 2024に参加してきた！https://youtu.be/Rve8IKzVWkI",
+   "tags": [
     "YouTube"
    ],
-   "first_seen": "2026-11-18T07:04:11Z"
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:YGnp1Cwdf0c",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-usdvfx",
+   "source": "USD VFXパイプライン解説と各種インタビュー",
+   "title": "【RenderMan】SIGGRAPH Asia 2024に参加してきた！ #pixar #vfx #renderman",
+   "url": "https://www.youtube.com/watch?v=YGnp1Cwdf0c",
+   "published": "2024-12-23T02:22:00Z",
+   "excerpt": "本編はこちら →【必見】３年ぶりに東京で開催されたSIGGRAPH Asia 2024に参加してきた！https://youtu.be/Rve8IKzVWkI",
+   "tags": [
+    "YouTube",
+    "Rendering"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:RTpOO-RkoQ0",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-usdvfx",
+   "source": "USD VFXパイプライン解説と各種インタビュー",
+   "title": "【OpenUSD】SIGGRAPH Asia 2024に参加してきた！ #nvidia #vfx #usd",
+   "url": "https://www.youtube.com/watch?v=RTpOO-RkoQ0",
+   "published": "2024-12-20T06:35:53Z",
+   "excerpt": "本編はこちら →【必見】３年ぶりに東京で開催されたSIGGRAPH Asia 2024に参加してきた！https://youtu.be/Rve8IKzVWkI",
+   "tags": [
+    "YouTube",
+    "Solaris"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:Rve8IKzVWkI",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-usdvfx",
+   "source": "USD VFXパイプライン解説と各種インタビュー",
+   "title": "【必見】３年ぶりに東京で開催されたSIGGRAPH Asia 2024に参加してきた！",
+   "url": "https://www.youtube.com/watch?v=Rve8IKzVWkI",
+   "published": "2024-12-17T08:20:27Z",
+   "excerpt": "こちらの動画では2024年12月3日～6日の４日間にわたって開催された SIGGRAPH Asia 2024のイベントの様子をお伝えしていきます。 SIGGRAPH Asiaとは… イベントHP：https://asia.siggraph.org/2024/ja/ 1974年にアメリカで開催され以降、毎年夏に北米で開催されるコンピュータ グラフィックスとインタラクティブ技術に関する国際的なイベン…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "yt:FyhR1VYJ3N4",
@@ -1721,7 +4563,145 @@
     "Copernicus",
     "H20.5"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "yt:9B-H1U6BMeg",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-usdvfx",
+   "source": "USD VFXパイプライン解説と各種インタビュー",
+   "title": "【Houdini最新情報】MPMと銀河の作成事例-About MPM and examples of galaxy #houdinihive #vfx #houdinihive",
+   "url": "https://www.youtube.com/watch?v=9B-H1U6BMeg",
+   "published": "2024-11-22T04:27:19Z",
+   "excerpt": "本編はこちら → 【③SOLARIS/USDの最新情報】Houdini Hive Horizon in トロントに行ってきた！https://youtu.be/DUVRdv073IA",
+   "tags": [
+    "YouTube",
+    "Solaris"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:_hpNgRs8aTQ",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-usdvfx",
+   "source": "USD VFXパイプライン解説と各種インタビュー",
+   "title": "【Houdini最新情報】USD/Solarisマテリアルの構成-USD/Solaris Material Composition #houdinihive #vfx #usd",
+   "url": "https://www.youtube.com/watch?v=_hpNgRs8aTQ",
+   "published": "2024-11-18T03:10:16Z",
+   "excerpt": "本編はこちら → 【③SOLARIS/USDの最新情報】Houdini Hive Horizon in トロントに行ってきた！https://youtu.be/DUVRdv073IA",
+   "tags": [
+    "YouTube",
+    "Solaris"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:eWZD-n3L7-A",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-usdvfx",
+   "source": "USD VFXパイプライン解説と各種インタビュー",
+   "title": "【Houdini最新情報】AI画像生成とHoudiniについて-About Generative AI image and Houdini #houdinihive #vfx #ai",
+   "url": "https://www.youtube.com/watch?v=eWZD-n3L7-A",
+   "published": "2024-11-13T01:30:17Z",
+   "excerpt": "本編はこちら → 【②APEXやAIの最新情報】Houdini Hive Horizon in トロントに行ってきた！ https://youtu.be/eBPhbu9QeOE",
+   "tags": [
+    "YouTube",
+    "APEX"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:XKHuEbuiE9E",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-usdvfx",
+   "source": "USD VFXパイプライン解説と各種インタビュー",
+   "title": "【Houdini最新情報】Solarisを最適化する方法 -How to optimize Solaris #houdinihive #vfx #solaris",
+   "url": "https://www.youtube.com/watch?v=XKHuEbuiE9E",
+   "published": "2024-11-11T03:21:55Z",
+   "excerpt": "本編はこちら 【Houdini最新情報】Solarisを最適化する方法 https://youtu.be/DUVRdv073IA",
+   "tags": [
+    "YouTube",
+    "Solaris"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:VX_K3RDX230",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-usdvfx",
+   "source": "USD VFXパイプライン解説と各種インタビュー",
+   "title": "【Houdini最新情報】『SHOGUN 将軍』インスタンステクニック -“SHOGUN” Instance Technique #houdinihive #vfx #shogun #houdini",
+   "url": "https://www.youtube.com/watch?v=VX_K3RDX230",
+   "published": "2024-11-09T07:30:14Z",
+   "excerpt": "本編はこちら → https://www.youtube.com/watch?v=eBPhbu9QeOE",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:W4SG-OXoJtc",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-usdvfx",
+   "source": "USD VFXパイプライン解説と各種インタビュー",
+   "title": "【APEXの最新情報】Houdini Hive Horizon in トロント- Houdini Hive Horizon in Toronto. #houdinihive #vfx #apex",
+   "url": "https://www.youtube.com/watch?v=W4SG-OXoJtc",
+   "published": "2024-11-08T07:25:28Z",
+   "excerpt": "本編はこちら I went to Houdini Hive Horizon in Toronto → https://youtu.be/eBPhbu9QeOE",
+   "tags": [
+    "YouTube",
+    "APEX"
+   ],
+   "lang": "ja",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "7fe6179c8f3e0bf2",
+   "tab": "reference",
+   "kind": "github",
+   "source_id": "github-sideeffects-houdininiagara",
+   "source": "Houdini Niagara",
+   "title": "Houdini Niagara Plugin v2.7.0",
+   "url": "https://github.com/sideeffects/HoudiniNiagara/releases/tag/v2.7.0",
+   "published": "2024-06-27T21:11:39Z",
+   "excerpt": "",
+   "tags": [
+    "GitHub",
+    "Release notes",
+    "Unreal"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "e504d90cf320df1e",
+   "tab": "reference",
+   "kind": "github",
+   "source_id": "github-sideeffects-houdininiagara",
+   "source": "Houdini Niagara",
+   "title": "Houdini Niagara Plugin v2.6.0 - UE5.4",
+   "url": "https://github.com/sideeffects/HoudiniNiagara/releases/tag/v2.6.0-UE5.4",
+   "published": "2024-05-09T00:41:49Z",
+   "excerpt": "",
+   "tags": [
+    "GitHub",
+    "Release notes",
+    "Unreal"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "yt:6J9uQSVXZgA",
@@ -1735,8 +4715,10 @@
    "excerpt": "00:00 Intro and Explanation 03:02 Flat Tank Example 08:35 Guided Ocean Layer 18:15 Simulation Meshing And Ocean Extension 23:45 Ocean Extended Rendering",
    "tags": [
     "YouTube",
+    "Simulation",
     "Rendering"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -1752,8 +4734,10 @@
    "tags": [
     "YouTube",
     "Karma",
+    "Simulation",
     "Rendering"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -1770,6 +4754,7 @@
     "YouTube",
     "Solaris"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -1784,8 +4769,10 @@
    "excerpt": "https://bit.ly/carbonated_p2 00:00 Intro 00:42 Reference Material Analysis 03:00 Collider Corrections 05:30 Fluid Simulation Adjustments 06:00 Time, FPS and Age 11:30 Reaping Foam Particles 18:50 Set…",
    "tags": [
     "YouTube",
-    "FLIP"
+    "FLIP",
+    "Simulation"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -1802,7 +4789,26 @@
     "YouTube",
     "FLIP"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
+  },
+  {
+   "id": "d9f9b8ad0cca7997",
+   "tab": "reference",
+   "kind": "github",
+   "source_id": "github-sideeffects-houdininiagara",
+   "source": "Houdini Niagara",
+   "title": "Houdini Niagara Plugin v2.6.0 - UE5.3/5.2",
+   "url": "https://github.com/sideeffects/HoudiniNiagara/releases/tag/v2.6.0",
+   "published": "2023-11-23T16:21:11Z",
+   "excerpt": "",
+   "tags": [
+    "GitHub",
+    "Release notes",
+    "Unreal"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:33:46Z"
   },
   {
    "id": "yt:DJfkTV3Pivc",
@@ -1818,6 +4824,7 @@
     "YouTube",
     "FLIP"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -1836,6 +4843,7 @@
     "Pyro",
     "RBD"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -1851,8 +4859,10 @@
    "tags": [
     "YouTube",
     "Pyro",
+    "Simulation",
     "Rendering"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -1869,6 +4879,7 @@
     "YouTube",
     "Pyro"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -1884,8 +4895,10 @@
    "tags": [
     "YouTube",
     "RBD",
+    "Simulation",
     "Rendering"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -1903,6 +4916,7 @@
     "Solaris",
     "Rendering"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -1917,8 +4931,10 @@
    "excerpt": "00:00 Intro 01:25 Points and Constraints 03:20 Packed Geometry 07:55 Methods of Packing 09:29 Fracturing Geometry 12:12 Creating an RBD Simulation 17:42 Constraints 20:35 Proxies 22:42 Adding Sources…",
    "tags": [
     "YouTube",
-    "RBD"
+    "RBD",
+    "Simulation"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -1934,8 +4950,10 @@
    "tags": [
     "YouTube",
     "Vellum",
-    "FLIP"
+    "FLIP",
+    "Simulation"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
@@ -1952,6 +4970,7 @@
     "YouTube",
     "Vellum"
    ],
+   "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z"
   }
  ]

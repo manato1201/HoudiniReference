@@ -1,9 +1,15 @@
 {
-  "_comment": "RSS/Atom の情報源。収集は公式が提供するフィードの範囲だけ。sidefx.com は robots.txt の Crawl-delay: 5 を守る(コード側で 5 秒間隔)。",
+  "_comment": "RSS/Atom の情報源。収集は公式が提供するフィードの範囲だけ。sidefx.com は robots.txt の Crawl-delay: 5 を守る(コード側で 5 秒間隔)。lang は省略すると題名・抜粋から判定。dedupe_title は投稿単位のフィード(同じ話題が並ぶ)で同じ題名を 1 件にする。2026-11-19 に各フィードを実際に GET して確認した(設計書 §2)。",
   "sources": [
     {"id": "sidefx-news", "name": "SideFX ニュース", "url": "https://www.sidefx.com/forum/feeds/forum/70/", "tab": "news", "tags": ["SideFX"], "limit": 30, "keep": 200},
     {"id": "sidefx-forum", "name": "SideFX フォーラム", "url": "https://www.sidefx.com/forum/feeds/topics/", "tab": "tips", "tags": ["Forum"], "limit": 30, "keep": 150},
     {"id": "sidefx-changelog-22", "name": "SideFX 変更履歴 22.0", "url": "https://www.sidefx.com/changelog/rss/22_0/", "tab": "reference", "tags": ["Release notes"], "limit": 40, "keep": 120},
-    {"id": "sidefx-changelog-21", "name": "SideFX 変更履歴 21.0", "url": "https://www.sidefx.com/changelog/rss/21_0/", "tab": "reference", "tags": ["Release notes"], "limit": 20, "keep": 60}
+    {"id": "sidefx-changelog-21", "name": "SideFX 変更履歴 21.0", "url": "https://www.sidefx.com/changelog/rss/21_0/", "tab": "reference", "tags": ["Release notes"], "limit": 20, "keep": 60},
+    {"id": "sidefx-forum-learning", "name": "SideFX フォーラム: 学習資料", "url": "https://www.sidefx.com/forum/feeds/forum/10/", "tab": "tips", "tags": ["Forum"], "lang": "en", "limit": 15, "keep": 40, "dedupe_title": true},
+    {"id": "sidefx-forum-solaris-karma", "name": "SideFX フォーラム: Solaris と Karma", "url": "https://www.sidefx.com/forum/feeds/forum/82/", "tab": "tips", "tags": ["Forum"], "lang": "en", "limit": 15, "keep": 40, "dedupe_title": true},
+    {"id": "sidefx-forum-copernicus", "name": "SideFX フォーラム: Copernicus", "url": "https://www.sidefx.com/forum/feeds/forum/114/", "tab": "tips", "tags": ["Forum"], "lang": "en", "limit": 15, "keep": 40, "dedupe_title": true},
+    {"id": "sidefx-forum-ja", "name": "SideFX 日本語フォーラム", "url": "https://www.sidefx.com/forum/feeds/forum/71/", "tab": "tips", "tags": ["Forum"], "lang": "ja", "limit": 15, "keep": 40, "dedupe_title": true},
+    {"id": "qiita-houdini", "name": "Qiita #Houdini", "url": "https://qiita.com/tags/houdini/feed", "tab": "tips", "tags": ["Qiita"], "lang": "ja", "limit": 20, "keep": 40},
+    {"id": "zenn-houdini", "name": "Zenn トピック Houdini", "url": "https://zenn.dev/topics/houdini/feed", "tab": "tips", "tags": ["Zenn"], "lang": "ja", "limit": 20, "keep": 40}
   ]
 }

@@ -1,32 +1,51 @@
-"""キーワードによる簡易タグ付け(補助。精度は保証しない)。"""
+"""キーワードによる簡易タグ付け(補助。精度は保証しない)。英語と日本語の語彙の両方を見る。"""
 from __future__ import annotations
 
 import re
 
-# タグ名 -> 正規表現(大文字小文字を区別しない)
+# タグ名 -> 正規表現(大文字小文字を区別しない)。`\b` は _ascii_boundaries で ASCII の英数字との境界に直される。
 TAG_RULES: dict[str, str] = {
-    "VEX": r"\bvex\b|\bwrangle",
-    "Solaris": r"\bsolaris\b|\blops\b|\busd\b",
-    "Karma": r"\bkarma\b",
+    "VEX": r"\bvex\b|\bwrangle|ベックス",
+    "Solaris": r"\bsolaris\b|\blops\b|\busd\b|ソラリス",
+    "Karma": r"\bkarma\b|カルマ",
     "APEX": r"\bapex\b",
-    "KineFX": r"\bkinefx\b|\brigging\b",
-    "Vellum": r"\bvellum\b",
-    "Pyro": r"\bpyro\b|\bsmoke\b|\bfire\b",
-    "FLIP": r"\bflip\b|\bfluid",
-    "RBD": r"\brbd\b|\bbullet\b|\bdestruction",
-    "Copernicus": r"\bcopernicus\b|\bcops?\b",
-    "Terrain": r"\bheightfield|\bterrain",
-    "HDA": r"\bhda\b|digital asset",
+    "KineFX": r"\bkinefx\b|\brigging\b|リギング|リグ",
+    "Vellum": r"\bvellum\b|ベラム|ヴェラム|クロスシミュ",
+    "Pyro": r"\bpyro\b|\bsmoke\b|\bfire\b|パイロ|煙|炎",
+    "FLIP": r"\bflip\b|\bfluid|流体",
+    "RBD": r"\brbd\b|\bbullet\b|\bdestruction|破壊|リジッドボディ",
+    "Copernicus": r"\bcopernic\w*|\bcops?\b|コペルニクス",
+    "Terrain": r"\bheightfield|\bterrain|ハイトフィールド|地形",
+    "HDA": r"\bhda\b|digital asset|デジタルアセット",
     "PDG/TOPs": r"\bpdg\b|\btops\b",
-    "Python": r"\bpython\b|\bhou\.",
-    "Houdini Engine": r"houdini engine|\bhengine\b",
-    "Unreal": r"\bunreal\b|\bue5\b",
-    "Unity": r"\bunity\b",
+    "Python": r"\bpython\b|\bhou\.|パイソン",
+    "Houdini Engine": r"houdini engine|\bhengine\b|ヒューディニエンジン",
+    "Unreal": r"\bunreal\b|\bue[45]\b|アンリアル",
+    "Unity": r"\bunity\b|ユニティ",
     "Labs": r"\blabs\b",
-    "Rendering": r"\bmantra\b|\brenderman\b|\bredshift\b|\barnold\b|\bocto\w*|\brender",
+    "Simulation": r"\bsimulat|\bsim\b|シミュレーション",
+    "Procedural": r"\bprocedural|プロシージャル|プロシージャ",
+    "Rendering": r"\bmantra\b|\brenderman\b|\bredshift\b|\barnold\b|\bocto\w*|\brender|レンダ",
 }
-_COMPILED = {tag: re.compile(rx, re.IGNORECASE) for tag, rx in TAG_RULES.items()}
-_VERSION = re.compile(r"\b(?:h(?:oudini)?\s?)?(1[89]|2\d)\.(0|5)(?:\.\d+)?\b", re.IGNORECASE)
+
+
+def _ascii_boundaries(rx: str) -> str:
+    r"""`\b` は日本語の直前直後(「VEXの」「22.0の」など)で働かないので、ASCII の英数字との境界に置き換える。"""
+    out: list[str] = []
+    i = 0
+    while i < len(rx):
+        if rx.startswith("\\b", i):
+            leading = not out or out[-1] in "|("
+            out.append("(?<![A-Za-z0-9_])" if leading else "(?![A-Za-z0-9_])")
+            i += 2
+        else:
+            out.append(rx[i])
+            i += 1
+    return "".join(out)
+
+
+_COMPILED = {tag: re.compile(_ascii_boundaries(rx), re.IGNORECASE) for tag, rx in TAG_RULES.items()}
+_VERSION = re.compile(_ascii_boundaries(r"\b(?:h(?:oudini)?\s?)?(1[89]|2\d)\.(0|5)(?:\.\d+)?\b"), re.IGNORECASE)
 MAX_TAGS = 6
 
 

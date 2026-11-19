@@ -1,0 +1,10 @@
+{
+  "_comment": "GitHub の公式 REST API(認証なし・60 回/時)の releases だけ。題名・URL・日付・タグだけを保存し、本文は読まない。リポジトリ名は 2026-11-19 に API で実在と releases の有無を確認したものだけ(推測で足さない)。github.com の releases.atom は robots.txt が Disallow(/*.atom$)なので使わない。",
+  "api_base": "https://api.github.com",
+  "repos": [
+    {"repo": "sideeffects/SideFXLabs", "label": "SideFX Labs", "tags": ["Labs"], "limit": 8, "keep": 12},
+    {"repo": "sideeffects/HoudiniEngineForUnreal", "label": "Houdini Engine for Unreal", "tags": ["Houdini Engine", "Unreal"], "limit": 10, "keep": 20},
+    {"repo": "sideeffects/HoudiniEngineForUnity", "label": "Houdini Engine for Unity", "tags": ["Houdini Engine", "Unity"], "limit": 10, "keep": 20},
+    {"repo": "sideeffects/HoudiniNiagara", "label": "Houdini Niagara", "tags": ["Unreal"], "limit": 8, "keep": 15}
+  ]
+}

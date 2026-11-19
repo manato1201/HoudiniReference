@@ -7,10 +7,13 @@ import shutil
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from urllib.parse import urlsplit
 
 from .feeds import FeedError
+from .github import fetch_github_releases, github_sources
 from .httpclient import FetchError, Fetcher, redact
 from .items import fetch_feed_source, iso, youtube_api_search
+from .textutil import detect_lang, title_key
 from .xapi import TOKEN_ENV, XCollector
 
 SCHEMA_VERSION = 1
@@ -46,7 +49,7 @@ def load_x_items(data_dir: Path, public_items: list[dict]) -> list[dict]:
 
 
 def feed_sources(data_dir: Path) -> list[dict]:
-    """sources.json の RSS/Atom + sources.youtube.json の公式フィード(チャンネル)。"""
+    """sources.json の RSS/Atom + sources.youtube.json の公式フィード(チャンネル)+ sources.github.json(リリース API)。"""
     out = []
     for s in load_json(data_dir / "sources.json", {}).get("sources", []):
         if s.get("enabled", True) and s.get("id") and s.get("url"):
@@ -58,8 +61,41 @@ def feed_sources(data_dir: Path) -> list[dict]:
                 "id": f"youtube-{ch.get('slug') or cid[-6:].lower()}", "name": ch.get("name", "YouTube"), "kind": "youtube",
                 "url": f"https://www.youtube.com/feeds/videos.xml?channel_id={cid}", "tab": ch.get("tab", "tips"),
                 "tags": ["YouTube", *ch.get("tags", [])], "limit": ch.get("limit", 15), "keep": ch.get("keep", 100),
+                "lang": ch.get("lang"),
             })
+    out += github_sources(load_json(data_dir / "sources.github.json", {}))
     return out
+
+
+def interleave_by_host(sources: list[dict]) -> list[dict]:
+    """取得の順番だけを、ホストを交互にする(待ち時間の重ね合わせ)。sidefx.com は 5 秒あけるので、その間に他のホストを取る。"""
+    queues: dict[str, list[dict]] = {}
+    for s in sources:
+        queues.setdefault(urlsplit(s["url"]).netloc, []).append(s)
+    out: list[dict] = []
+    while any(queues.values()):
+        for q in queues.values():
+            if q:
+                out.append(q.pop(0))
+    return out
+
+
+def dedupe_titles(items: list[dict], order: dict[str, int]) -> list[dict]:
+    """Web(rss)の項目で、題名が同じ(記号・大文字小文字の違いは無視)ものを 1 件にする。
+    同じ話題が複数の情報源(フォーラムのトピックと分類別、Qiita と Zenn の転載など)から来ても重複しない。
+    残すのは、情報源の並び順が先のもの → 同じ情報源なら新しいもの。YouTube・GitHub・X は題名では判定しない。"""
+    groups: dict[str, list[dict]] = {}
+    for it in items:
+        key = title_key(it.get("title"))
+        if it.get("kind") == "rss" and len(key) >= 6:  # 短すぎる題名は別物の可能性が高いので対象外
+            groups.setdefault(key, []).append(it)
+    drop: set[int] = set()
+    for group in groups.values():
+        if len(group) > 1:
+            group.sort(key=lambda i: i.get("published", ""), reverse=True)
+            group.sort(key=lambda i: order.get(i.get("source_id"), 10_000))  # 安定ソート: 情報源の順が優先
+            drop.update(id(i) for i in group[1:])
+    return [i for i in items if id(i) not in drop]
 
 
 def merge(existing: list[dict], new: list[dict]) -> list[dict]:
@@ -145,11 +181,13 @@ def run(
             st["last_ok"] = prev["last_ok"]
         statuses.append(st)
 
-    for src in sources:
+    config_order = {s["id"]: n for n, s in enumerate(sources)}
+    for src in interleave_by_host(sources):
         st = {"id": src["id"], "name": src["name"], "kind": src["kind"], "tab": src.get("tab", "tips")}
         attempted += 1
         try:
-            items, not_mod = fetch_feed_source(fetcher, src, now)
+            fetch = fetch_github_releases if src["kind"] == "github" else fetch_feed_source
+            items, not_mod = fetch(fetcher, src, now)
             st.update(ok=True, fetched=len(items), not_modified=not_mod)
             new_items += items
             ok_count += 1
@@ -158,6 +196,7 @@ def run(
         except Exception as exc:  # 想定外でも他の情報源は続ける
             st.update(ok=False, error=f"unexpected {type(exc).__name__}")
         record(st)
+    statuses.sort(key=lambda st: config_order.get(st["id"], 0))  # 画面の表示は設定ファイルの並び順
 
     # YouTube Data API(任意)
     api = yt_cfg.get("api_search", {})
@@ -196,7 +235,11 @@ def run(
     for i in items:
         if i["id"] in updated:
             i["excerpt"] = updated[i["id"]]
-    items = apply_retention(merge(items, new_items), now, keep_by_source)
+    items = dedupe_titles(merge(items, new_items), config_order)
+    for i in items:  # 過去に保存した項目にも言語を付ける
+        if i.get("lang") not in ("ja", "en"):
+            i["lang"] = detect_lang(f"{i.get('title', '')} {i.get('excerpt', '')}")
+    items = apply_retention(items, now, keep_by_source)
 
     x_items = [i for i in items if i.get("kind") == "x"]
     if publish_x:
