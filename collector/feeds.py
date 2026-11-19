@@ -82,8 +82,20 @@ def _summary(entry: ET.Element) -> str:
     return ""
 
 
+_VIEWS = re.compile(r"^[0-9]{1,12}$")  # 半角数字だけ(全角・符号・小数・指数は不可)。12 桁まで
+
+
+def _views(node: ET.Element) -> int | None:
+    """YouTube: <media:group><media:community><media:statistics views="N"/>。無い・数字以外は None。"""
+    group = _first(node, "group")
+    community = _first(group, "community") if group is not None else None
+    stats = _first(community, "statistics") if community is not None else None
+    value = (stats.get("views") or "").strip() if stats is not None else ""
+    return int(value) if _VIEWS.match(value) else None
+
+
 def parse_feed(data: bytes | str) -> list[dict]:
-    """エントリの生の辞書 (title, url, published, summary, video_id, categories) を返す。"""
+    """エントリの生の辞書 (title, url, published, summary, video_id, views, categories) を返す。"""
     if isinstance(data, str):
         data = data.encode("utf-8")
     if not data or not data.strip():
@@ -129,6 +141,7 @@ def parse_feed(data: bytes | str) -> list[dict]:
                 "published": published,
                 "summary": _summary(node),
                 "video_id": _text(video_el) if video_el is not None else "",
+                "views": _views(node),
                 "categories": [c.get("term") or _text(c) for c in _children(node, "category")],
             }
         )

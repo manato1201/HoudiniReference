@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" width="320" height="240" role="img">
+<rect width="320" height="240" rx="10" fill="#23262d"/>
+<polygon points="280.1,120.0 264.4,147.1 248.8,174.3 233.1,201.4 214.8,224.0 183.5,224.0 152.2,224.0 120.8,224.0 94.7,215.0 79.1,187.8 63.4,160.7 47.7,133.6 47.7,106.4 63.4,79.3 79.1,52.2 94.7,25.0 120.8,16.0 152.2,16.0 183.5,16.0 214.8,16.0 233.1,38.6 248.8,65.7 264.4,92.9" fill="none" stroke="#8d97a8" stroke-width="0.8" stroke-linejoin="round"/>
+<circle cx="280.1" cy="120.0" r="3.0" fill="#ffcc66"/>
+<circle cx="264.4" cy="147.1" r="3.0" fill="#ffcc66"/>
+<circle cx="248.8" cy="174.3" r="3.0" fill="#ffcc66"/>
+<circle cx="233.1" cy="201.4" r="3.0" fill="#ffcc66"/>
+<circle cx="214.8" cy="224.0" r="3.0" fill="#ffcc66"/>
+<circle cx="183.5" cy="224.0" r="3.0" fill="#ffcc66"/>
+<circle cx="152.2" cy="224.0" r="3.0" fill="#ffcc66"/>
+<circle cx="120.8" cy="224.0" r="3.0" fill="#ffcc66"/>
+<circle cx="94.7" cy="215.0" r="3.0" fill="#ffcc66"/>
+<circle cx="79.1" cy="187.8" r="3.0" fill="#ffcc66"/>
+<circle cx="63.4" cy="160.7" r="3.0" fill="#ffcc66"/>
+<circle cx="47.7" cy="133.6" r="3.0" fill="#ffcc66"/>
+<circle cx="47.7" cy="106.4" r="3.0" fill="#ffcc66"/>
+<circle cx="63.4" cy="79.3" r="3.0" fill="#ffcc66"/>
+<circle cx="79.1" cy="52.2" r="3.0" fill="#ffcc66"/>
+<circle cx="94.7" cy="25.0" r="3.0" fill="#ffcc66"/>
+<circle cx="120.8" cy="16.0" r="3.0" fill="#ffcc66"/>
+<circle cx="152.2" cy="16.0" r="3.0" fill="#ffcc66"/>
+<circle cx="183.5" cy="16.0" r="3.0" fill="#ffcc66"/>
+<circle cx="214.8" cy="16.0" r="3.0" fill="#ffcc66"/>
+<circle cx="233.1" cy="38.6" r="3.0" fill="#ffcc66"/>
+<circle cx="248.8" cy="65.7" r="3.0" fill="#ffcc66"/>
+<circle cx="264.4" cy="92.9" r="3.0" fill="#ffcc66"/>
+</svg>

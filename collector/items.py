@@ -23,7 +23,7 @@ def url_id(url: str) -> str:
     return hashlib.sha1(canonical_url(url).encode("utf-8")).hexdigest()[:16]
 
 
-def make_item(*, item_id, tab, kind, source_id, source, title, url, published, exc, tags, now, handle=None, lang=None) -> dict:
+def make_item(*, item_id, tab, kind, source_id, source, title, url, published, exc, tags, now, handle=None, lang=None, views=None) -> dict:
     item = {
         "id": item_id,
         "tab": tab if tab in TABS else "tips",
@@ -40,6 +40,8 @@ def make_item(*, item_id, tab, kind, source_id, source, title, url, published, e
     }
     if handle:
         item["handle"] = handle
+    if isinstance(views, int) and not isinstance(views, bool) and views >= 0:
+        item["views"] = views  # YouTube の再生数(公開フィードの media:statistics)。無ければ省略
     return item
 
 
@@ -69,6 +71,7 @@ def normalize_entry(raw: dict, src: dict, now: datetime) -> dict | None:
     return make_item(
         item_id=item_id, tab=src.get("tab", "tips"), kind=kind, source_id=src["id"], source=src["name"],
         title=title, url=url, published=published, exc=exc, tags=tags, now=now, lang=src.get("lang"),
+        views=raw.get("views") if kind == "youtube" else None,
     )
 
 

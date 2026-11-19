@@ -1,0 +1,2225 @@
+{
+ "schema_version": 1,
+ "updated": "2026-11-19",
+ "note": "ノードの説明はすべて自作の文章。公式ドキュメントの文章は写さず、doc_url で公式へリンクするだけ。ノード名・パラメータ名はローカルの Houdini 22.0.506(hython)で確認(verified: true)。画像は hython で cook したジオメトリを点・面の簡易 SVG に描いたもの(tools/node_previews.py)。",
+ "nodes": [
+  {
+   "id": "grid",
+   "name": "Grid",
+   "type": "grid",
+   "context": "SOP",
+   "category": "生成",
+   "what": "平らな格子(平面)を作る、いちばん基本の素材ノード。点だけ・ポリゴン・メッシュなど、並べ方も選べる。",
+   "how": "Size で大きさ、Rows / Columns で点の数を決める。Orientation で向き(既定は ZX 平面)、Center / Rotate で位置を調整する。後ろに Mountain や Attribute Wrangle をつなげて、地形や波に育てることが多い。",
+   "example_points": [
+    "Rows と Columns は「点」の数。10 なら面は 9 マス",
+    "Primitive Type を points にすると、面のない点だけの格子になる",
+    "Size は全体の幅で、分割数を変えても大きさは変わらない"
+   ],
+   "use_cases": [
+    "地形・布・水面などの土台",
+    "Scatter や Copy to Points の撒く先",
+    "アトリビュートの動きを試すテスト素材"
+   ],
+   "combos": [
+    {
+     "title": "地形の土台",
+     "chain": [
+      "Grid",
+      "Mountain",
+      "Attribute Wrangle"
+     ],
+     "note": "Grid の面を Mountain で凸凹にし、Wrangle で高さや色を微調整する。"
+    },
+    {
+     "title": "面に物を撒く",
+     "chain": [
+      "Grid",
+      "Scatter",
+      "Copy to Points"
+     ],
+     "note": "Grid 上に点を散らし、その点へ別のモデルを複製する。"
+    }
+   ],
+   "before_after": {
+    "before": "Rows と Columns を 3 にすると、3×3 の点(2×2 の面)だけの粗い格子。",
+    "after": "Rows と Columns を 9 にすると、9×9 の点(8×8 の面)に増える。大きさはそのままで、細かくなる。",
+    "image": {
+     "before": "img/nodes/grid-before.svg",
+     "after": "img/nodes/grid-after.svg",
+     "alt": "3×3 の粗い格子が、9×9 の細かい格子になる"
+    }
+   },
+   "params": [
+    {
+     "name": "size",
+     "note": "全体の幅と奥行き"
+    },
+    {
+     "name": "rows",
+     "note": "行の点の数"
+    },
+    {
+     "name": "cols",
+     "note": "列の点の数"
+    },
+    {
+     "name": "orient",
+     "note": "向き(xy / yz / zx)"
+    },
+    {
+     "name": "type",
+     "note": "Primitive Type(poly / mesh / points など)"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/grid.html",
+   "verified": true
+  },
+  {
+   "id": "scatter",
+   "name": "Scatter",
+   "type": "scatter::2.0",
+   "context": "SOP",
+   "category": "配置・コピー",
+   "what": "面(ポリゴン)やボリュームの上に、ランダムに点を撒くノード。面積に比例して点を置くので、大きな面ほど多く並ぶ。",
+   "how": "Generate が bydensity のときは Density Scale で密度を決める。総数を決めたいときは Force Total Count をオンにして、npts に数を入れる。Global Seed で撒き方が変わる。Relax Points をオンにすると、点同士の間隔が整う。出力は点だけで、元の面は残らない。",
+   "example_points": [
+    "総数を決めたいときは Force Total Count をオンにする",
+    "Global Seed を変えると撒き方が変わる(同じ値なら毎回同じ)",
+    "Relax Points で点の固まりをならし、自然な間隔にできる"
+   ],
+   "use_cases": [
+    "草・石・木などの配置位置を作る",
+    "パーティクルやシミュレーションの初期の点",
+    "ランダムな破片や雨粒の元"
+   ],
+   "combos": [
+    {
+     "title": "撒いて複製",
+     "chain": [
+      "Grid",
+      "Scatter",
+      "Copy to Points"
+     ],
+     "note": "撒いた点を Copy to Points のターゲットにして、物を一面に置く。"
+    },
+    {
+     "title": "向きを整える",
+     "chain": [
+      "Scatter",
+      "Attribute Wrangle",
+      "Copy to Points"
+     ],
+     "note": "Wrangle で pscale や N を足してからコピーすると、大きさ・向きがばらつく。"
+    }
+   ],
+   "before_after": {
+    "before": "点のない、1 枚の格子。",
+    "after": "指定した数(この例では 140 点)の点が面の上にランダムに散る。面そのものは出力されない。",
+    "image": {
+     "before": "img/nodes/scatter-before.svg",
+     "after": "img/nodes/scatter-after.svg",
+     "alt": "平らな格子の上に、点がランダムに散らばる"
+    }
+   },
+   "params": [
+    {
+     "name": "generateby",
+     "note": "Generate(bydensity / countperprimitive / texturespace)"
+    },
+    {
+     "name": "forcetotal",
+     "note": "総数を指定するスイッチ"
+    },
+    {
+     "name": "npts",
+     "note": "総数の値"
+    },
+    {
+     "name": "densityscale",
+     "note": "密度の倍率"
+    },
+    {
+     "name": "seed",
+     "note": "Global Seed"
+    },
+    {
+     "name": "relaxpoints",
+     "note": "点の間隔をならす"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/scatter.html",
+   "verified": true
+  },
+  {
+   "id": "copytopoints",
+   "name": "Copy to Points",
+   "type": "copytopoints::2.0",
+   "context": "SOP",
+   "category": "配置・コピー",
+   "what": "1 つ目の入力のモデルを、2 つ目の入力にある点の位置に複製して並べるノード。点の属性で、大きさ・向き・色を変えられる。",
+   "how": "左の入力にコピーしたい形、右の入力にターゲットの点をつなぐ。ターゲットの点が pscale・scale・N・up・orient・Cd などを持っていると、それに従って大きさ・向き・色が付く(Transform Using Target Point Orientations がオンのとき)。数が多いときは Pack and Instance をオンにすると、パックされた軽い状態で出せる。",
+   "example_points": [
+    "N と up で向きが決まる。orient があればそれが優先される",
+    "pscale は一様な大きさ、scale は軸ごとの大きさ",
+    "Piece Attribute(name など)を使うと、点ごとに別の形を選んで置ける"
+   ],
+   "use_cases": [
+    "森・草原・瓦礫の配置",
+    "ライン上に並べる(柵・スタッド)",
+    "パーティクルの 1 つ 1 つに形を持たせる"
+   ],
+   "combos": [
+    {
+     "title": "面一面に配置",
+     "chain": [
+      "Grid",
+      "Scatter",
+      "Copy to Points"
+     ],
+     "note": "格子に撒いた点を、Copy to Points の右の入力につなぐ。"
+    },
+    {
+     "title": "ばらつきを足す",
+     "chain": [
+      "Scatter",
+      "Attribute Wrangle",
+      "Copy to Points"
+     ],
+     "note": "Wrangle で pscale と N をランダムに作ってからコピーする。"
+    }
+   ],
+   "before_after": {
+    "before": "ボックス 1 つと、ばらばらに散った 14 個の点があるだけ。",
+    "after": "14 個の点それぞれの位置に、ボックスのコピーが置かれる。",
+    "image": {
+     "before": "img/nodes/copytopoints-before.svg",
+     "after": "img/nodes/copytopoints-after.svg",
+     "alt": "ボックスと点だけの状態から、各点にボックスが置かれる"
+    }
+   },
+   "params": [
+    {
+     "name": "sourcegroup",
+     "note": "コピー元のグループ"
+    },
+    {
+     "name": "targetgroup",
+     "note": "ターゲット点のグループ"
+    },
+    {
+     "name": "pack",
+     "note": "Pack and Instance"
+    },
+    {
+     "name": "transform",
+     "note": "ターゲット点の向きで変形するスイッチ"
+    },
+    {
+     "name": "useidattrib",
+     "note": "Piece Attribute を使うスイッチ"
+    },
+    {
+     "name": "idattrib",
+     "note": "対応づける属性名(既定 name)"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/copytopoints.html",
+   "verified": true
+  },
+  {
+   "id": "attribwrangle",
+   "name": "Attribute Wrangle",
+   "type": "attribwrangle",
+   "context": "SOP",
+   "category": "VEX・アトリビュート",
+   "what": "VEX(Houdini の高速な記述言語)で、ジオメトリの属性を直接書き換えるノード。小さな処理を 1 ノードで書けるので、使用頻度が高い。",
+   "how": "Run Over で処理の単位(点・プリミティブ・頂点・ディテール)を選び、VEXpression の欄に @P や @Cd などを書く。例: @P.y = sin(@P.x * 2) * 0.6; のように、点ごとに同じ式が走る。入力は最大 4 つで、2 つ目以降は point(1, ...) などで読み取れる。",
+   "example_points": [
+    "Run Over が point なら、点ごとに実行される",
+    "@ptnum や @primnum で番号、@P で位置、@Cd で色を扱える",
+    "式の中の ch(\"名前\") から、スライダーを作れる"
+   ],
+   "use_cases": [
+    "波・ノイズなど、式による変形",
+    "条件に応じた色付け・グループ分け",
+    "他のノードに無い細かい計算"
+   ],
+   "combos": [
+    {
+     "title": "波打つ面",
+     "chain": [
+      "Grid",
+      "Attribute Wrangle",
+      "Normal"
+     ],
+     "note": "高さを式で決め、法線を作り直して見た目を整える。"
+    },
+    {
+     "title": "色分け",
+     "chain": [
+      "Connectivity",
+      "Attribute Wrangle",
+      "Copy to Points"
+     ],
+     "note": "つながりごとの番号から色を作る。"
+    }
+   ],
+   "before_after": {
+    "before": "平らな格子。",
+    "after": "式 @P.y = sin(@P.x * 2.0) * 0.6 を実行した結果、x 方向に波打つ面になる。",
+    "image": {
+     "before": "img/nodes/attribwrangle-before.svg",
+     "after": "img/nodes/attribwrangle-after.svg",
+     "alt": "平らな格子が、式で x 方向に波打つ"
+    }
+   },
+   "params": [
+    {
+     "name": "class",
+     "note": "Run Over(detail / primitive / point / vertex / number)"
+    },
+    {
+     "name": "snippet",
+     "note": "VEXpression 本体"
+    },
+    {
+     "name": "group",
+     "note": "処理するグループ"
+    },
+    {
+     "name": "vex_inplace",
+     "note": "Compute Results In Place"
+    },
+    {
+     "name": "bindname#",
+     "note": "Autobind 用の属性名"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/attribwrangle.html",
+   "verified": true
+  },
+  {
+   "id": "attribnoise",
+   "name": "Attribute Noise",
+   "type": "attribnoise::2.0",
+   "context": "SOP",
+   "category": "VEX・アトリビュート",
+   "what": "属性(色・位置・法線など)にノイズを足したり、ノイズで置き換えたりするノード。式を書かずに、ノイズの種類や細かさを選べる。",
+   "how": "Attribute Names に対象の属性(既定は Cd)を入れ、Attribute Class で点・面などを選ぶ。Noise Type(basis)でノイズの種類、Element Size で粒の大きさ、Amplitude で強さを決める。Operation で「置き換え」か「加算」などを選ぶ。Noise Along Vector をオンにすると、法線などの方向に沿って位置を動かせる。",
+   "example_points": [
+    "Element Size を大きくすると、ゆるやかなノイズになる",
+    "Fractal Type と Max Octaves で、細かい凸凹を重ねられる",
+    "Range Values で、0〜1 などの範囲に収められる"
+   ],
+   "use_cases": [
+    "地面の色むら・草の色のばらつき",
+    "位置をわずかに揺らして、人工的な印象を消す",
+    "マスク属性(0〜1)のもと"
+   ],
+   "combos": [
+    {
+     "title": "色むら",
+     "chain": [
+      "Grid",
+      "Attribute Noise",
+      "Copy to Points"
+     ],
+     "note": "点にノイズの色を付けてから、モデルを複製する。"
+    },
+    {
+     "title": "揺らぎ",
+     "chain": [
+      "Resample",
+      "Attribute Noise",
+      "Sweep"
+     ],
+     "note": "曲線の位置を少しずらして、有機的な管にする。"
+    }
+   ],
+   "before_after": {
+    "before": "全部の点が同じ灰色(Cd)の格子。",
+    "after": "点ごとにノイズが加わり、色にむらが出る。",
+    "image": {
+     "before": "img/nodes/attribnoise-before.svg",
+     "after": "img/nodes/attribnoise-after.svg",
+     "alt": "灰色の点が、ノイズで色むらのある点に変わる"
+    }
+   },
+   "params": [
+    {
+     "name": "attribs",
+     "note": "対象の属性名(既定 Cd)"
+    },
+    {
+     "name": "class",
+     "note": "Attribute Class"
+    },
+    {
+     "name": "basis",
+     "note": "Noise Type"
+    },
+    {
+     "name": "elementsize",
+     "note": "ノイズの粒の大きさ"
+    },
+    {
+     "name": "amplitude",
+     "note": "強さ"
+    },
+    {
+     "name": "operation",
+     "note": "set / add / sub / mult / min / max"
+    },
+    {
+     "name": "displace",
+     "note": "Noise Along Vector"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/attribnoise.html",
+   "verified": true
+  },
+  {
+   "id": "blast",
+   "name": "Blast",
+   "type": "blast",
+   "context": "SOP",
+   "category": "選択・削除",
+   "what": "指定したグループの点・面などを、ジオメトリから取り除く単純な削除ノード。",
+   "how": "Group に削除したい要素(例: 0-11)を書き、Group Type で点か面かを選ぶ。Delete Non Selected をオンにすると、逆に選んだ要素だけを残す。条件の細かい選択が必要なときは、Delete や Group Create と組み合わせる。",
+   "example_points": [
+    "Group Type を間違えると、点番号と面番号がずれる",
+    "Delete Non Selected で「残す」側にできる",
+    "Delete Unused Groups で、使われなくなったグループが消える"
+   ],
+   "use_cases": [
+    "不要な面や点を取り除く",
+    "グループ分けしたパーツを取り出す",
+    "穴あけ・欠けの表現"
+   ],
+   "combos": [
+    {
+     "title": "グループで切り出す",
+     "chain": [
+      "Group Create",
+      "Blast",
+      "Merge"
+     ],
+     "note": "条件で作ったグループだけを削除、または抽出する。"
+    },
+    {
+     "title": "穴をあける",
+     "chain": [
+      "Grid",
+      "Blast",
+      "PolyExtrude"
+     ],
+     "note": "一部の面を消してから、周りを押し出す。"
+    }
+   ],
+   "before_after": {
+    "before": "7×7 の点でできた、6×6 の面の格子。",
+    "after": "面 0〜11 を指定して削除した結果、1〜2 列分が抜ける。",
+    "image": {
+     "before": "img/nodes/blast-before.svg",
+     "after": "img/nodes/blast-after.svg",
+     "alt": "格子の一部の面が削除される"
+    }
+   },
+   "params": [
+    {
+     "name": "group",
+     "note": "削除する要素"
+    },
+    {
+     "name": "grouptype",
+     "note": "Group Type"
+    },
+    {
+     "name": "negate",
+     "note": "Delete Non Selected(残す側にする)"
+    },
+    {
+     "name": "removegrp",
+     "note": "Delete Unused Groups"
+    },
+    {
+     "name": "fillhole",
+     "note": "Fill Simple Holes"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/blast.html",
+   "verified": true
+  },
+  {
+   "id": "merge",
+   "name": "Merge",
+   "type": "merge",
+   "context": "SOP",
+   "category": "統合",
+   "what": "複数のジオメトリを 1 つにまとめるノード。点・面・属性をすべて足し合わせて出力する。",
+   "how": "入力に束ねたい各ノードをつなぐだけで、設定する項目は無い。属性の名前が違うものは、片方に無い場合に既定値(0 など)が入る。位置は変わらず、同じ空間のまま重なる。",
+   "example_points": [
+    "点や面の番号は、入力の順に連番になる",
+    "属性は、入力間で名前が揃っているとそのままつながる",
+    "後ろに Fuse をつなぐと、重なった点を 1 つにできる"
+   ],
+   "use_cases": [
+    "パーツを 1 つにして、後段で処理する",
+    "Boolean や Copy to Points の前にまとめる",
+    "複数のカーブをまとめて Sweep にかける"
+   ],
+   "combos": [
+    {
+     "title": "パーツを束ねる",
+     "chain": [
+      "Box",
+      "Sphere",
+      "Merge"
+     ],
+     "note": "別々に作ったモデルを 1 つにする。"
+    },
+    {
+     "title": "溶接する",
+     "chain": [
+      "Grid",
+      "Merge",
+      "Fuse"
+     ],
+     "note": "つなぎ目の重なった点を、Fuse で 1 つにする。"
+    }
+   ],
+   "before_after": {
+    "before": "ボックスだけ。",
+    "after": "球を Merge でつなぐと、ボックスと球が 1 つのジオメトリとして出てくる。",
+    "image": {
+     "before": "img/nodes/merge-before.svg",
+     "after": "img/nodes/merge-after.svg",
+     "alt": "ボックス 1 つが、ボックスと球の 2 つに増える"
+    }
+   },
+   "params": [
+    {
+     "name": "(パラメータなし)",
+     "note": "入力をつなぐだけで動く。入力の数が増えても設定は無い(Houdini 22 で確認)"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/merge.html",
+   "verified": true
+  },
+  {
+   "id": "xform",
+   "name": "Transform",
+   "type": "xform",
+   "context": "SOP",
+   "category": "変形",
+   "what": "ジオメトリを移動・回転・拡大縮小するノード。オブジェクトのトランスフォームとは別に、中身(点の位置)自体を動かす。",
+   "how": "Translate・Rotate・Scale・Shear で変形し、Uniform Scale で全体を拡大縮小する。Pivot Translate で回転の中心を動かす。Transform Order(srt など)で、移動・回転・スケールの順序を選べる。法線も一緒に直したいときは、Recompute Point Normals を使う。",
+   "example_points": [
+    "Transform Order で結果が変わる",
+    "Move Centroid to Origin で、中心を原点に合わせられる",
+    "Group で一部の点・面だけを動かせる"
+   ],
+   "use_cases": [
+    "モデルの位置合わせ・縮尺の調整",
+    "Copy to Points の前後の微調整",
+    "部分的に傾ける・潰す"
+   ],
+   "combos": [
+    {
+     "title": "置き直す",
+     "chain": [
+      "Box",
+      "Transform",
+      "Merge"
+     ],
+     "note": "ずらしてから、他のパーツと統合する。"
+    },
+    {
+     "title": "向きを変える",
+     "chain": [
+      "Line",
+      "Transform",
+      "Sweep"
+     ],
+     "note": "曲線を傾けてから、Sweep で管にする。"
+    }
+   ],
+   "before_after": {
+    "before": "原点に置かれた立方体。",
+    "after": "移動・Y 回転 40 度・Y 方向に 0.6 倍のスケールで、横にずれて潰れた箱になる。",
+    "image": {
+     "before": "img/nodes/xform-before.svg",
+     "after": "img/nodes/xform-after.svg",
+     "alt": "立方体が、移動・回転・潰しで平たい箱になる"
+    }
+   },
+   "params": [
+    {
+     "name": "t",
+     "note": "Translate"
+    },
+    {
+     "name": "r",
+     "note": "Rotate"
+    },
+    {
+     "name": "s",
+     "note": "Scale"
+    },
+    {
+     "name": "scale",
+     "note": "Uniform Scale"
+    },
+    {
+     "name": "p",
+     "note": "Pivot Translate"
+    },
+    {
+     "name": "xOrd",
+     "note": "Transform Order"
+    },
+    {
+     "name": "movecentroid",
+     "note": "Move Centroid to Origin"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/xform.html",
+   "verified": true
+  },
+  {
+   "id": "polyextrude",
+   "name": "PolyExtrude",
+   "type": "polyextrude::2.0",
+   "context": "SOP",
+   "category": "モデリング",
+   "what": "選んだ面を押し出して、厚みや段差を作るノード。内側へ縮めるインセットと組み合わせると、窓や出っ張りが作れる。",
+   "how": "Group に面を指定し、Distance で押し出す距離、Inset で面を縮める量を決める。Divisions で途中の分割、Twist でひねりも加えられる。Extrusion Mode(primnormal / pointnormal)で、面の法線か点の法線かを選ぶ。Output Front / Back / Side で、前面・背面・側面を別グループに出せる。",
+   "example_points": [
+    "Distance が負だと凹む",
+    "Inset をつけると面が縮み、側面ができる",
+    "Output Front などのグループは、後の処理での選択に便利"
+   ],
+   "use_cases": [
+    "ビルの窓・扉の凹み・パネル",
+    "ブロック状の地形・階段",
+    "面を押し出して、後で別々に動かす"
+   ],
+   "combos": [
+    {
+     "title": "建物のパネル",
+     "chain": [
+      "Grid",
+      "PolyExtrude",
+      "PolyBevel"
+     ],
+     "note": "面を押し出してから、角を少し丸める。"
+    },
+    {
+     "title": "選んで凸",
+     "chain": [
+      "Group Create",
+      "PolyExtrude",
+      "Subdivide"
+     ],
+     "note": "条件で選んだ面だけ押し出し、全体をなめらかにする。"
+    }
+   ],
+   "before_after": {
+    "before": "4×4 の点でできた平らな格子(3×3 の面)。",
+    "after": "中央の面を距離 0.8・インセット 0.15 で押し出すと、台形の出っ張りができる。",
+    "image": {
+     "before": "img/nodes/polyextrude-before.svg",
+     "after": "img/nodes/polyextrude-after.svg",
+     "alt": "平らな格子の中央が、台形に押し出される"
+    }
+   },
+   "params": [
+    {
+     "name": "group",
+     "note": "押し出す面"
+    },
+    {
+     "name": "dist",
+     "note": "Distance"
+    },
+    {
+     "name": "inset",
+     "note": "Inset"
+    },
+    {
+     "name": "divs",
+     "note": "Divisions"
+    },
+    {
+     "name": "twist",
+     "note": "Twist"
+    },
+    {
+     "name": "extrusionmode",
+     "note": "面の法線 / 点の法線"
+    },
+    {
+     "name": "outputfront",
+     "note": "Output Front"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/polyextrude.html",
+   "verified": true
+  },
+  {
+   "id": "resample",
+   "name": "Resample",
+   "type": "resample",
+   "context": "SOP",
+   "category": "曲線",
+   "what": "曲線(や辺)に沿って、点を等間隔(または指定の数)に打ち直すノード。点の数や並びを整える。",
+   "how": "Maximum Segment Length をオンにして Length を設定すると、その長さごとに点を置く。Maximum Segments をオンにして Segments を設定すると、全体を指定の数に分ける。Curve U や Tangent などの属性を作るスイッチもあり、あとの処理で便利になる。",
+   "example_points": [
+    "点の数を、減らすのにも増やすのにも使える",
+    "Create Only Points で、曲線を点だけにできる",
+    "Tangent Attribute で、曲線の向きが取り出せる"
+   ],
+   "use_cases": [
+    "粗い曲線を滑らかに細かくする",
+    "点の間隔を揃えてから Copy to Points",
+    "ノイズや Carve の前の準備"
+   ],
+   "combos": [
+    {
+     "title": "等間隔に並べる",
+     "chain": [
+      "Circle",
+      "Resample",
+      "Copy to Points"
+     ],
+     "note": "円周に等間隔の点を作り、その点に物を並べる。"
+    },
+    {
+     "title": "管にする",
+     "chain": [
+      "Resample",
+      "Attribute Noise",
+      "Sweep"
+     ],
+     "note": "点を整えて揺らし、Sweep の元にする。"
+    }
+   ],
+   "before_after": {
+    "before": "6 角形の閉じた曲線(6 点)。",
+    "after": "Length を 0.4 にすると、同じ形の上に、等間隔の細かい点が並ぶ。",
+    "image": {
+     "before": "img/nodes/resample-before.svg",
+     "after": "img/nodes/resample-after.svg",
+     "alt": "6 点の六角形が、等間隔の細かい点を持つ形に変わる"
+    }
+   },
+   "params": [
+    {
+     "name": "length",
+     "note": "Length(1 区間の長さ)"
+    },
+    {
+     "name": "dolength",
+     "note": "Length を使うスイッチ"
+    },
+    {
+     "name": "segs",
+     "note": "Segments(区間の数)"
+    },
+    {
+     "name": "dosegs",
+     "note": "Segments を使うスイッチ"
+    },
+    {
+     "name": "onlypoints",
+     "note": "Create Only Points"
+    },
+    {
+     "name": "dotangentattr",
+     "note": "Tangent 属性を作る"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/resample.html",
+   "verified": true
+  },
+  {
+   "id": "carve",
+   "name": "Carve",
+   "type": "carve",
+   "context": "SOP",
+   "category": "曲線",
+   "what": "曲線やサーフェスの一部を、U(長さ方向)の位置で切り出すノード。曲線の「どこからどこまで」を取り出せる。",
+   "how": "First U をオン(firstu)にして値(domainu1)を、Second U をオン(secondu)にして値(domainu2)を設定すると、その範囲だけが残る。0 が始点、1 が終点。Keep Inside / Keep Outside で、内側・外側のどちらを残すかを決める。値に時間でキーを打つと、描かれていく線が作れる。",
+   "example_points": [
+    "U は 0〜1 の、長さに沿った割合",
+    "First U だけ動かせば、片側から削れていく",
+    "Carve Curves by Relative Arc Length で、長さの割合で指定できる"
+   ],
+   "use_cases": [
+    "線が伸びる・描かれていくアニメ",
+    "曲線の一部だけ別処理",
+    "パスの区間を切り出して複製"
+   ],
+   "combos": [
+    {
+     "title": "線が描かれる",
+     "chain": [
+      "Circle",
+      "Carve",
+      "Sweep"
+     ],
+     "note": "Second U を 0〜1 でアニメーションして、管が伸びていく動きにする。"
+    },
+    {
+     "title": "部分を飾る",
+     "chain": [
+      "Resample",
+      "Carve",
+      "Copy to Points"
+     ],
+     "note": "曲線の一部だけに、物を並べる。"
+    }
+   ],
+   "before_after": {
+    "before": "閉じた円(24 点)。",
+    "after": "0 から 0.5 までの区間だけが残り、半円になる。",
+    "image": {
+     "before": "img/nodes/carve-before.svg",
+     "after": "img/nodes/carve-after.svg",
+     "alt": "円が、半分の弧だけになる"
+    }
+   },
+   "params": [
+    {
+     "name": "firstu",
+     "note": "First U を使うスイッチ"
+    },
+    {
+     "name": "domainu1",
+     "note": "First U の値(0〜1)"
+    },
+    {
+     "name": "secondu",
+     "note": "Second U を使うスイッチ"
+    },
+    {
+     "name": "domainu2",
+     "note": "Second U の値(0〜1)"
+    },
+    {
+     "name": "keepin",
+     "note": "Keep Inside"
+    },
+    {
+     "name": "keepout",
+     "note": "Keep Outside"
+    },
+    {
+     "name": "arclen",
+     "note": "Carve Curves by Relative Arc Length"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/carve.html",
+   "verified": true
+  },
+  {
+   "id": "vdbfrompolygons",
+   "name": "VDB from Polygons",
+   "type": "vdbfrompolygons",
+   "context": "SOP",
+   "category": "ボリューム(VDB)",
+   "what": "ポリゴンのモデルを、VDB(疎なボリューム)の距離場に変換するノード。メッシュの溶かし合わせ・作り直し・流体の入れ物の元になる。",
+   "how": "Voxel Size を小さくするほど細かいボリュームになるが、重くなる。Distance VDB(builddistance)で符号付き距離場(SDF)を、Fog VDB(buildfog)で密度のボリュームを作れる。穴のあるメッシュは、Fill Interior や Unsigned Distance Field で調整する。形をポリゴンに戻すには、Convert VDB で Poly に変換する。",
+   "example_points": [
+    "Voxel Size は小さいほど精細で、メモリを使う",
+    "Exterior / Interior Band Voxels は、表面の外側・内側の幅",
+    "閉じたメッシュを入れないと、内側の判定が期待どおりにならない"
+   ],
+   "use_cases": [
+    "溶け合うような形の結合",
+    "流体・煙のコリジョンや発生源",
+    "リメッシュして、均一なトポロジを得る"
+   ],
+   "combos": [
+    {
+     "title": "作り直し",
+     "chain": [
+      "Sphere",
+      "VDB from Polygons",
+      "Convert VDB"
+     ],
+     "note": "VDB を経由して、ポリゴンを均一なメッシュに作り直す。"
+    },
+    {
+     "title": "溶かす",
+     "chain": [
+      "Merge",
+      "VDB from Polygons",
+      "Convert VDB"
+     ],
+     "note": "結合した複数のモデルを、1 つのなめらかな形にする。"
+    }
+   ],
+   "before_after": {
+    "before": "三角形が粗い球のポリゴン。",
+    "after": "Voxel Size 0.3 で VDB にして、Convert VDB でポリゴンへ戻すと、均一な四角い面の球になる。",
+    "image": {
+     "before": "img/nodes/vdbfrompolygons-before.svg",
+     "after": "img/nodes/vdbfrompolygons-after.svg",
+     "alt": "粗い球が、VDB を経由して均一な格子状の球になる"
+    }
+   },
+   "params": [
+    {
+     "name": "voxelsize",
+     "note": "Voxel Size"
+    },
+    {
+     "name": "builddistance",
+     "note": "Distance VDB を作るスイッチ"
+    },
+    {
+     "name": "distancename",
+     "note": "Distance VDB の名前(既定 surface)"
+    },
+    {
+     "name": "buildfog",
+     "note": "Fog VDB を作るスイッチ"
+    },
+    {
+     "name": "fillinterior",
+     "note": "Fill Interior"
+    },
+    {
+     "name": "exteriorbandvoxels",
+     "note": "Exterior Band Voxels"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/vdbfrompolygons.html",
+   "verified": true
+  },
+  {
+   "id": "convertvdb",
+   "name": "Convert VDB",
+   "type": "convertvdb",
+   "context": "SOP",
+   "category": "ボリューム(VDB)",
+   "what": "VDB を別の形式(ポリゴン・ボリューム・VDB)に変換するノード。ポリゴンへ戻すときに、いちばんよく使う。",
+   "how": "Convert To で volume / vdb / poly / polysoup を選ぶ。poly のときは、Isovalue でどの値の面を取り出すか、Adaptivity で面の粗さ(大きいほど面が少ない)を決める。Transfer Surface Attributes を使うには、2 つ目の入力に元の表面をつなぐ。",
+   "example_points": [
+    "SDF から作るポリゴンは、既定の Isovalue 0 が表面",
+    "Adaptivity を上げると、平らな部分の面が減る",
+    "元のメッシュの属性を戻すときは、2 つ目の入力と Transfer を使う"
+   ],
+   "use_cases": [
+    "VDB を加工したあとに、メッシュへ戻す",
+    "VDB をボリュームレンダリング用にする",
+    "Boolean の代わりの結合の仕上げ"
+   ],
+   "combos": [
+    {
+     "title": "メッシュの作り直し",
+     "chain": [
+      "VDB from Polygons",
+      "VDB Smooth SDF",
+      "Convert VDB"
+     ],
+     "note": "ボリュームを滑らかにしてから、ポリゴンへ変換する。"
+    },
+    {
+     "title": "結合の仕上げ",
+     "chain": [
+      "Merge",
+      "VDB from Polygons",
+      "Convert VDB"
+     ],
+     "note": "複数のモデルを 1 つにしてから、まとめて変換する。"
+    }
+   ],
+   "before_after": {
+    "before": "VDB(距離場)。ビューポートではボリュームとして見える。",
+    "after": "Convert To を poly にすると、表面がポリゴンのメッシュになる。"
+   },
+   "params": [
+    {
+     "name": "conversion",
+     "note": "Convert To(volume / vdb / poly / polysoup)"
+    },
+    {
+     "name": "isovalue",
+     "note": "Isovalue"
+    },
+    {
+     "name": "adaptivity",
+     "note": "Adaptivity"
+    },
+    {
+     "name": "computenormals",
+     "note": "Compute Vertex Normals"
+    },
+    {
+     "name": "transferattributes",
+     "note": "Transfer Surface Attributes"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/convertvdb.html",
+   "verified": true
+  },
+  {
+   "id": "rbdmaterialfracture",
+   "name": "RBD Material Fracture",
+   "type": "rbdmaterialfracture::4.0",
+   "context": "SOP",
+   "category": "シミュレーション",
+   "what": "モデルを「素材らしく」砕いて、剛体シミュレーション(RBD)用の破片を作るノード。素材ごとの割れ方が内蔵されている。",
+   "how": "Material Type で concrete / glass / wood / custom / metal を選び、素材ごとの設定で割れ方を調整する。Random Seed で割れ方を変える。出力は 3 つで、破片のジオメトリ・Constraint Geometry・Proxy Geometry。Guide Geometry で、途中の過程を確認できる。重いので、まず低い解像度で試すとよい。",
+   "example_points": [
+    "素材ごとに設定が分かれている(concrete_ / glass_ / wood_ ...)",
+    "Fracture per Piece で、すでに割れた破片をさらに割れる",
+    "2 つ目の出力の Constraint Geometry は、RBD の結合に使う"
+   ],
+   "use_cases": [
+    "壁・柱・ガラスが割れる破壊エフェクト",
+    "素材ごとに違う割れ方の比較",
+    "ゲーム用に、事前に砕いたアセット"
+   ],
+   "combos": [
+    {
+     "title": "破壊のセットアップ",
+     "chain": [
+      "Box",
+      "RBD Material Fracture",
+      "RBD Configure"
+     ],
+     "note": "割った破片に剛体の設定を付けて、シミュレーションへ進める。"
+    },
+    {
+     "title": "破片を整える",
+     "chain": [
+      "RBD Material Fracture",
+      "Connectivity",
+      "Attribute Wrangle"
+     ],
+     "note": "つながりごとに、色や番号を付ける。"
+    }
+   ],
+   "before_after": {
+    "before": "割れていない 1 つの立方体。",
+    "after": "コンクリートとして割ると、不規則な破片に分かれる(図は破片ごとに色分け)。",
+    "image": {
+     "before": "img/nodes/rbdmaterialfracture-before.svg",
+     "after": "img/nodes/rbdmaterialfracture-after.svg",
+     "alt": "1 つの立方体が、素材らしい不規則な破片に割れる"
+    }
+   },
+   "params": [
+    {
+     "name": "materialtype",
+     "note": "Material Type"
+    },
+    {
+     "name": "randomseed",
+     "note": "Random Seed"
+    },
+    {
+     "name": "fractureperpiece",
+     "note": "Fracture per Piece"
+    },
+    {
+     "name": "pieceattrib",
+     "note": "Piece Attribute(既定 name)"
+    },
+    {
+     "name": "concrete_scatterpts#",
+     "note": "コンクリートの Scatter Points"
+    },
+    {
+     "name": "concrete_guidegeo",
+     "note": "コンクリート用の Guide Geometry"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/rbdmaterialfracture.html",
+   "verified": true
+  },
+  {
+   "id": "attribcreate",
+   "name": "Attribute Create",
+   "type": "attribcreate::2.0",
+   "context": "SOP",
+   "category": "VEX・アトリビュート",
+   "what": "新しい属性を、名前・種類・初期値を指定して作るノード。式を書くほどでもない、簡単な属性の追加に使う。",
+   "how": "Name に属性名(例: Cd)、Class で点・面などを選び、Type で float / int / vector などを選ぶ。Value に初期値(Cd なら RGB)を入れる。複数の属性を 1 つのノードで作れる。すでに同じ名前の属性があるときの動作は、Existing Name で選ぶ。",
+   "example_points": [
+    "Type Qualifier を color にすると、色として扱われる",
+    "既存の属性がある場合は、Existing Name で上書きや警告を選ぶ",
+    "Class を detail にすると、ジオメトリ全体の値になる"
+   ],
+   "use_cases": [
+    "全体に同じ色・ID・マスクを付ける",
+    "後の Wrangle で使うパラメータ用の属性",
+    "ゲーム向けの頂点カラーの下準備"
+   ],
+   "combos": [
+    {
+     "title": "色を付ける",
+     "chain": [
+      "Grid",
+      "Attribute Create",
+      "Copy to Points"
+     ],
+     "note": "全部の点に同じ色を付けてから、複製する。"
+    },
+    {
+     "title": "マスク",
+     "chain": [
+      "Attribute Create",
+      "Attribute Noise",
+      "Attribute Wrangle"
+     ],
+     "note": "0 のマスクを作り、ノイズや式で値を書き込む。"
+    }
+   ],
+   "before_after": {
+    "before": "属性のない格子(点は既定の色で表示)。",
+    "after": "全部の点に Cd(橙)が入り、点がすべて橙で表示される。",
+    "image": {
+     "before": "img/nodes/attribcreate-before.svg",
+     "after": "img/nodes/attribcreate-after.svg",
+     "alt": "属性のない格子が、全部の点に橙色の Cd を持つ"
+    }
+   },
+   "params": [
+    {
+     "name": "name#",
+     "note": "属性名"
+    },
+    {
+     "name": "class#",
+     "note": "Class(detail / primitive / point / vertex)"
+    },
+    {
+     "name": "type#",
+     "note": "Type(float / int / vector ...)"
+    },
+    {
+     "name": "typeinfo#",
+     "note": "Type Qualifier"
+    },
+    {
+     "name": "value#v",
+     "note": "値"
+    },
+    {
+     "name": "existing#",
+     "note": "Existing Name"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/attribcreate.html",
+   "verified": true
+  },
+  {
+   "id": "attribpromote",
+   "name": "Attribute Promote",
+   "type": "attribpromote",
+   "context": "SOP",
+   "category": "VEX・アトリビュート",
+   "what": "属性のクラスを、点・面・頂点・ディテールの間で移すノード。面の色を点の色にする、などができる。",
+   "how": "Original Name に対象の属性、Original Class と New Class で変換元・変換先を選ぶ。複数の値が 1 つにまとまる場合は、Promotion Method(平均・最大・最小・合計など)で選ぶ。Delete Original で、元の属性を消せる。",
+   "example_points": [
+    "面 → 点では、点を共有する面の値を、Promotion Method でまとめる",
+    "点 → 面も同様で、面を作る点の値をまとめる",
+    "Piece Attribute を使うと、パーツごとに値をまとめられる"
+   ],
+   "use_cases": [
+    "面ごとの色を、点の色にする(滑らかに見せる)",
+    "点のマスクを、面の判定に使う",
+    "ディテールに、最大値・平均値を取り出す"
+   ],
+   "combos": [
+    {
+     "title": "面から点へ",
+     "chain": [
+      "Attribute Wrangle",
+      "Attribute Promote",
+      "Copy to Points"
+     ],
+     "note": "面ごとに作った値を点に渡して、複製の色にする。"
+    },
+    {
+     "title": "まとめて消す",
+     "chain": [
+      "Attribute Noise",
+      "Attribute Promote",
+      "Blast"
+     ],
+     "note": "点のノイズを面にまとめてから、条件で消す。"
+    }
+   ],
+   "before_after": {
+    "before": "面ごとにランダムな色(Cd)を持つ格子。",
+    "after": "Cd を面から点に移すと、点ごとの色になる(図は点の色で表示)。",
+    "image": {
+     "before": "img/nodes/attribpromote-before.svg",
+     "after": "img/nodes/attribpromote-after.svg",
+     "alt": "面ごとの色が、点ごとの色に移る"
+    }
+   },
+   "params": [
+    {
+     "name": "inname",
+     "note": "Original Name"
+    },
+    {
+     "name": "inclass",
+     "note": "Original Class"
+    },
+    {
+     "name": "outclass",
+     "note": "New Class"
+    },
+    {
+     "name": "method",
+     "note": "Promotion Method"
+    },
+    {
+     "name": "deletein",
+     "note": "Delete Original"
+    },
+    {
+     "name": "usepieceattrib",
+     "note": "Use Piece Attribute"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/attribpromote.html",
+   "verified": true
+  },
+  {
+   "id": "delete",
+   "name": "Delete",
+   "type": "delete",
+   "context": "SOP",
+   "category": "選択・削除",
+   "what": "条件に合う点・面を削除するノード。番号の範囲・ランダム・範囲(ボリューム)・法線などで選べる。",
+   "how": "Entity で点・面・辺を選び、Operation で「選んだものを削除」か「選んだものを残す」を決める。Number のスイッチで番号のパターンや範囲、Random のスイッチで割合(Percent)や Global Seed を指定する。範囲(ボリューム)や法線の向きでも選べる。",
+   "example_points": [
+    "Entity を point にしないと、点が消えず面が消える場合がある",
+    "Random の Percent と Global Seed で、間引きを再現できる",
+    "Keep Points をオンにすると、面だけ消して点を残せる"
+   ],
+   "use_cases": [
+    "点を間引く(草・星・パーティクル)",
+    "範囲の外を切り落とす",
+    "特定の法線の面だけ消す"
+   ],
+   "combos": [
+    {
+     "title": "間引く",
+     "chain": [
+      "Grid",
+      "Scatter",
+      "Delete"
+     ],
+     "note": "撒いた点を約 50% に減らして、密度を下げる。"
+    },
+    {
+     "title": "領域で消す",
+     "chain": [
+      "Delete",
+      "Copy to Points",
+      "Merge"
+     ],
+     "note": "領域の外を消してから、別のパーツと統合する。"
+    }
+   ],
+   "before_after": {
+    "before": "120 点が撒かれた状態。",
+    "after": "Random・Percent 50 で、約半分の点が消える。",
+    "image": {
+     "before": "img/nodes/delete-before.svg",
+     "after": "img/nodes/delete-after.svg",
+     "alt": "点の約半分が消えて、まばらになる"
+    }
+   },
+   "params": [
+    {
+     "name": "entity",
+     "note": "Entity(primitive / point / edge)"
+    },
+    {
+     "name": "negate",
+     "note": "Operation(削除 / 残す)"
+    },
+    {
+     "name": "userandom",
+     "note": "Random のスイッチ"
+    },
+    {
+     "name": "percent",
+     "note": "割合"
+    },
+    {
+     "name": "globalseed",
+     "note": "Global Seed"
+    },
+    {
+     "name": "affectnumber",
+     "note": "Number のスイッチ"
+    },
+    {
+     "name": "keeppoints",
+     "note": "Keep Points"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/delete.html",
+   "verified": true
+  },
+  {
+   "id": "groupcreate",
+   "name": "Group Create",
+   "type": "groupcreate",
+   "context": "SOP",
+   "category": "選択・削除",
+   "what": "点・面などに、名前の付いたグループを作るノード。バウンディングボックスや法線の向きなど、条件で選べる。",
+   "how": "Group Name に名前を付け、Group Type で点か面かを選ぶ。Enable のスイッチをオンにして、Bounding(ボックスや球)・Normal(向き)・Edges などの条件を指定する。作ったグループは、後ろのノードの Group 欄に名前を書いて使う。Initial Merge で、既存のグループとの合成方法を決める。",
+   "example_points": [
+    "グループは見た目を変えない。確認には色付けなどが必要",
+    "Include Partially Contained Entities で、はみ出した面も含められる",
+    "Base Group で、既存のグループの中から選べる"
+   ],
+   "use_cases": [
+    "範囲を決めて、押し出す・消す・色付けする",
+    "向きが上向きの面だけ選ぶ",
+    "複数のノードで、同じ選択を使い回す"
+   ],
+   "combos": [
+    {
+     "title": "選んで押し出す",
+     "chain": [
+      "Grid",
+      "Group Create",
+      "PolyExtrude"
+     ],
+     "note": "選んだ面だけ押し出す。"
+    },
+    {
+     "title": "選んで消す",
+     "chain": [
+      "Group Create",
+      "Blast",
+      "Merge"
+     ],
+     "note": "グループを削除して、別のパーツと統合する。"
+    }
+   ],
+   "before_after": {
+    "before": "全部同じ色の格子(グループなし)。",
+    "after": "中央をボックスで選んで、g というグループを作る(図は、確認のために選ばれた面を橙で着色)。",
+    "image": {
+     "before": "img/nodes/groupcreate-before.svg",
+     "after": "img/nodes/groupcreate-after.svg",
+     "alt": "中央の面にグループが作られる(見やすいよう橙で着色)"
+    }
+   },
+   "params": [
+    {
+     "name": "groupname",
+     "note": "Group Name"
+    },
+    {
+     "name": "grouptype",
+     "note": "Group Type"
+    },
+    {
+     "name": "groupbounding",
+     "note": "Bounding のスイッチ"
+    },
+    {
+     "name": "boundtype",
+     "note": "Bounding Type"
+    },
+    {
+     "name": "size",
+     "note": "ボックスの大きさ"
+    },
+    {
+     "name": "groupnormal",
+     "note": "Normal のスイッチ"
+    },
+    {
+     "name": "mergeop",
+     "note": "Initial Merge"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/groupcreate.html",
+   "verified": true
+  },
+  {
+   "id": "sort",
+   "name": "Sort",
+   "type": "sort",
+   "context": "SOP",
+   "category": "選択・削除",
+   "what": "点や面の「並び順(番号)」を並べ替えるノード。形は変えず、番号だけが変わる。",
+   "how": "Point Sort で、X / Y / Z 順・ランダム・近さ・ベクトル沿い・属性順などを選ぶ。Primitive Sort も同様。Reverse Point Sort で逆順にできる。番号に依存する処理(順に並べる・Copy to Points の順番・アニメ)の準備に使う。",
+   "example_points": [
+    "見た目は変わらず、ptnum の割り当てだけが変わる",
+    "By X なら、左から右へ番号が付く",
+    "Proximity to Point で、ある点からの近さ順にできる"
+   ],
+   "use_cases": [
+    "番号順に動きを遅らせる(波のアニメ)",
+    "線をつなぐ順番を整える",
+    "Copy to Points の順序を決める"
+   ],
+   "combos": [
+    {
+     "title": "順にアニメ",
+     "chain": [
+      "Scatter",
+      "Sort",
+      "Attribute Wrangle"
+     ],
+     "note": "番号に比例して値を変え、順に動かす。"
+    },
+    {
+     "title": "並べ直し",
+     "chain": [
+      "Delete",
+      "Sort",
+      "Copy to Points"
+     ],
+     "note": "間引いた点を、決まった順番に並べてから複製する。"
+    }
+   ],
+   "before_after": {
+    "before": "ばらばらの順(破線の経路が絡んでいる)の 12 点。",
+    "after": "By X で並べ替えると、番号が左から右へ付き、破線が整う。",
+    "image": {
+     "before": "img/nodes/sort-before.svg",
+     "after": "img/nodes/sort-after.svg",
+     "alt": "番号の順が絡んだ点が、左から右へ整った順になる"
+    }
+   },
+   "params": [
+    {
+     "name": "ptsort",
+     "note": "Point Sort(byx / byy / byz / rev / seed / prox ...)"
+    },
+    {
+     "name": "primsort",
+     "note": "Primitive Sort"
+    },
+    {
+     "name": "pointreverse",
+     "note": "Reverse Point Sort"
+    },
+    {
+     "name": "pointseed",
+     "note": "ランダム時の Seed"
+    },
+    {
+     "name": "pointprox",
+     "note": "近さ順の基準点"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/sort.html",
+   "verified": true
+  },
+  {
+   "id": "fuse",
+   "name": "Fuse",
+   "type": "fuse::2.0",
+   "context": "SOP",
+   "category": "モデリング",
+   "what": "距離の近い点を 1 つにまとめる(溶接する)ノード。つなぎ目の重複や、離れたパーツのつなぎに使う。",
+   "how": "Snap To を distancesnap にして Use Snap Distance をオンにし、Snap Distance(例: 0.001)に近い点を合体させる。Snap Positions で、位置を平均にするか、最小・最大にするかを選べる。Snap To を gridsnap にすると、格子に点を吸着できる。スナップした点を 1 つにするのは Fuse Snapped Points のスイッチ。",
+   "example_points": [
+    "Snap Distance を大きくしすぎると、無関係な点まで潰れる",
+    "Fuse Snapped Points をオンにすると、重なった点が 1 つになる",
+    "2 つ目の入力(Target Geometry)を基準にもできる"
+   ],
+   "use_cases": [
+    "Merge した後のつなぎ目を溶接する",
+    "重なった点の掃除",
+    "格子へのスナップ"
+   ],
+   "combos": [
+    {
+     "title": "溶接",
+     "chain": [
+      "Grid",
+      "Merge",
+      "Fuse"
+     ],
+     "note": "2 枚の格子のつなぎ目を、1 つにする。"
+    },
+    {
+     "title": "掃除",
+     "chain": [
+      "Fuse",
+      "Blast",
+      "Normal"
+     ],
+     "note": "余分な点・面を消してから、法線を作り直す。"
+    }
+   ],
+   "before_after": {
+    "before": "つなぎ目で点が重なった 2 つのパーツ(静止画ではほぼ同じ見た目のため、画像なし)。",
+    "after": "Snap Distance 内の点が 1 つにまとまり、境目がつながる(点の数が減る)。"
+   },
+   "params": [
+    {
+     "name": "snaptype",
+     "note": "Snap To(distancesnap / gridsnap / specified)"
+    },
+    {
+     "name": "usetol3d",
+     "note": "Use Snap Distance"
+    },
+    {
+     "name": "tol3d",
+     "note": "Snap Distance"
+    },
+    {
+     "name": "positionsnapmethod",
+     "note": "Output Positions"
+    },
+    {
+     "name": "consolidatesnappedpoints",
+     "note": "Fuse Snapped Points"
+    },
+    {
+     "name": "querygroup",
+     "note": "Group"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/fuse.html",
+   "verified": true
+  },
+  {
+   "id": "subdivide",
+   "name": "Subdivide",
+   "type": "subdivide",
+   "context": "SOP",
+   "category": "モデリング",
+   "what": "ポリゴンを細かく分割して、なめらかな形に近づけるノード(サブディビジョンサーフェス)。",
+   "how": "Algorithm を osdcc(Catmull-Clark)などから選び、Depth(iterations)で分割回数を決める。回数が増えるごとに、面が約 4 倍になる。Creases の入力を使うと、角を残す折り目を作れる。形が大きく変わるので、元の形を丁寧に作っておく。",
+   "example_points": [
+    "Depth を 1 つ上げると、面の数が約 4 倍になる",
+    "Creases で、折り目(エッジの鋭さ)を残せる",
+    "Boundary の設定で、端の扱いを変えられる"
+   ],
+   "use_cases": [
+    "ローポリから、なめらかなモデルへ",
+    "PolyBevel の代わりに、角を丸くする",
+    "細かい素材の元"
+   ],
+   "combos": [
+    {
+     "title": "丸くする",
+     "chain": [
+      "Box",
+      "PolyExtrude",
+      "Subdivide"
+     ],
+     "note": "角張った形を押し出してから、なめらかにする。"
+    },
+    {
+     "title": "角を残す",
+     "chain": [
+      "Box",
+      "PolyBevel",
+      "Subdivide"
+     ],
+     "note": "ベベルで面を足してから、角のきつさを調整する。"
+    }
+   ],
+   "before_after": {
+    "before": "角張った立方体。",
+    "after": "Depth 2 の分割で、丸みを帯びた球に近い形になる。",
+    "image": {
+     "before": "img/nodes/subdivide-before.svg",
+     "after": "img/nodes/subdivide-after.svg",
+     "alt": "立方体が、分割されて丸い形になる"
+    }
+   },
+   "params": [
+    {
+     "name": "algorithm",
+     "note": "Algorithm(houdini / osdcc / osdloop ...)"
+    },
+    {
+     "name": "iterations",
+     "note": "Depth(分割回数)"
+    },
+    {
+     "name": "creases",
+     "note": "Creases のグループ"
+    },
+    {
+     "name": "surroundpoly",
+     "note": "Boundary"
+    },
+    {
+     "name": "updatenmls",
+     "note": "Recompute Point Normals"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/subdivide.html",
+   "verified": true
+  },
+  {
+   "id": "mountain",
+   "name": "Mountain",
+   "type": "mountain::2.0",
+   "context": "SOP",
+   "category": "変形",
+   "what": "点をノイズで上下(法線方向)に動かして、山や地形のような凸凹を作るノード。",
+   "how": "Height で高さ、Element Size でノイズの大きさ(大きいほどゆるやかな山)を決める。Offset でパターンを動かせる。Max Octaves と Roughness で、細かさを重ねる。Fold や Clipping Minimum / Maximum で、山の形の特徴を付けられる。点が少ないと粗くなるので、土台の格子は細かくしておく。",
+   "example_points": [
+    "土台の点が多いほど、形が細かく出る",
+    "Element Size を大きくすると、大きな起伏になる",
+    "Offset を変えると、同じ作りで別の地形になる"
+   ],
+   "use_cases": [
+    "簡易な地形・山・波",
+    "面の凸凹を、一括で作る",
+    "シミュレーションの地形の土台"
+   ],
+   "combos": [
+    {
+     "title": "地形",
+     "chain": [
+      "Grid",
+      "Mountain",
+      "Attribute Wrangle"
+     ],
+     "note": "起伏をつくってから、色や高さを式で調整する。"
+    },
+    {
+     "title": "山の配置",
+     "chain": [
+      "Mountain",
+      "Scatter",
+      "Copy to Points"
+     ],
+     "note": "起伏した面に点を撒き、木や岩を置く。"
+    }
+   ],
+   "before_after": {
+    "before": "平らな格子(26×26 の点)。",
+    "after": "Height 1.4・Element Size 3 でノイズを足すと、なだらかな凸凹の地形になる。",
+    "image": {
+     "before": "img/nodes/mountain-before.svg",
+     "after": "img/nodes/mountain-after.svg",
+     "alt": "平らな格子が、起伏のある地形になる"
+    }
+   },
+   "params": [
+    {
+     "name": "height",
+     "note": "Height"
+    },
+    {
+     "name": "elementsize",
+     "note": "Element Size"
+    },
+    {
+     "name": "offset",
+     "note": "Offset"
+    },
+    {
+     "name": "oct",
+     "note": "Max Octaves"
+    },
+    {
+     "name": "rough",
+     "note": "Roughness"
+    },
+    {
+     "name": "fold",
+     "note": "Fold"
+    },
+    {
+     "name": "updatenmls",
+     "note": "Recompute Normals"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/mountain.html",
+   "verified": true
+  },
+  {
+   "id": "polybevel",
+   "name": "PolyBevel",
+   "type": "polybevel::3.0",
+   "context": "SOP",
+   "category": "モデリング",
+   "what": "ポリゴンの角(エッジや点)を面取りして、丸みや斜めの面を付けるノード。",
+   "how": "Group で対象の面・エッジを選び、Distance(offset)で面取りの幅、Divisions で丸みの分割数を決める。Shape で none / solid / crease / chamfer / round を選べる。Slide on Ring Edges で、面取りの滑らせ方を変える。面取りした面は、後で Subdivide にかけても形を保ちやすい。",
+   "example_points": [
+    "Distance が大きすぎると、面が重なって破綻する",
+    "Divisions を増やすと、丸くなる",
+    "Ignore Flat Edges で、ほぼ平らな辺を無視できる"
+   ],
+   "use_cases": [
+    "ハードサーフェスの角の面取り",
+    "ハイライトの出る角を作る",
+    "Subdivide の前に、角を残す"
+   ],
+   "combos": [
+    {
+     "title": "丸みのある箱",
+     "chain": [
+      "Box",
+      "PolyBevel",
+      "Subdivide"
+     ],
+     "note": "角を面取りしてから分割し、丸さを調整する。"
+    },
+    {
+     "title": "面取りの前に選ぶ",
+     "chain": [
+      "Group Create",
+      "PolyBevel",
+      "Normal"
+     ],
+     "note": "選んだ辺だけ面取りして、法線を整える。"
+    }
+   ],
+   "before_after": {
+    "before": "鋭い角の立方体。",
+    "after": "Distance 0.22・Divisions 2 で、全部の角が丸く面取りされる。",
+    "image": {
+     "before": "img/nodes/polybevel-before.svg",
+     "after": "img/nodes/polybevel-after.svg",
+     "alt": "鋭い立方体の角が、丸く面取りされる"
+    }
+   },
+   "params": [
+    {
+     "name": "group",
+     "note": "対象のグループ"
+    },
+    {
+     "name": "grouptype",
+     "note": "Group Type"
+    },
+    {
+     "name": "offset",
+     "note": "Distance"
+    },
+    {
+     "name": "divisions",
+     "note": "Divisions"
+    },
+    {
+     "name": "filletshape",
+     "note": "Shape"
+    },
+    {
+     "name": "sliding",
+     "note": "Slide on Ring Edges"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/polybevel.html",
+   "verified": true
+  },
+  {
+   "id": "sweep",
+   "name": "Sweep",
+   "type": "sweep::2.0",
+   "context": "SOP",
+   "category": "曲線",
+   "what": "曲線(バックボーン)に沿って断面を押し出し、管・リボン・レールのような面を作るノード。",
+   "how": "1 つ目の入力に曲線、2 つ目の入力に断面形状をつなぐ。Surface Shape を tube にして Radius・Columns を決めれば、断面を作らずに管になる。square や ribbon も選べる。Apply Scale Along Curve のスケールランプで太さを変えたり、Apply Roll or Twist でねじったりできる。",
+   "example_points": [
+    "Surface Shape が input のとき、2 つ目の入力の形が断面になる",
+    "Columns は断面の分割数で、大きいほど丸い",
+    "End Cap Type で、端のふたを作れる"
+   ],
+   "use_cases": [
+    "ケーブル・パイプ・手すり",
+    "髪の毛や草の 1 本ごとの形",
+    "リボンや道のような帯"
+   ],
+   "combos": [
+    {
+     "title": "パイプ",
+     "chain": [
+      "Line",
+      "Attribute Wrangle",
+      "Sweep"
+     ],
+     "note": "式で曲げた線に、管をかぶせる。"
+    },
+    {
+     "title": "揺れる管",
+     "chain": [
+      "Resample",
+      "Attribute Noise",
+      "Sweep"
+     ],
+     "note": "点を整えて揺らしてから、管にする。"
+    }
+   ],
+   "before_after": {
+    "before": "波形の曲線(線)だけ。",
+    "after": "Surface Shape tube・Radius 0.15 で、曲線に沿った管ができる。",
+    "image": {
+     "before": "img/nodes/sweep-before.svg",
+     "after": "img/nodes/sweep-after.svg",
+     "alt": "線が、管になる"
+    }
+   },
+   "params": [
+    {
+     "name": "surfaceshape",
+     "note": "Surface Shape(input / tube / square / ribbon)"
+    },
+    {
+     "name": "radius",
+     "note": "Radius"
+    },
+    {
+     "name": "cols",
+     "note": "Columns"
+    },
+    {
+     "name": "endcaptype",
+     "note": "End Cap Type"
+    },
+    {
+     "name": "applyscale",
+     "note": "Apply Scale Along Curve"
+    },
+    {
+     "name": "applyroll",
+     "note": "Apply Roll or Twist"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/sweep.html",
+   "verified": true
+  },
+  {
+   "id": "boolean",
+   "name": "Boolean",
+   "type": "boolean::2.0",
+   "context": "SOP",
+   "category": "モデリング",
+   "what": "2 つの立体の和・差・共通部分を計算して、形を切り抜いたり合体させたりするノード。",
+   "how": "Geometry A と Geometry B の入力をつなぎ、Operation で union / intersect / subtract などを選ぶ。subtract は Subtract Choices(aminusb など)で「A − B」「B − A」を決める。Treat As を solid にすると、閉じた立体として扱う。切り口に、Seam のグループを作ることもできる。",
+   "example_points": [
+    "閉じた(穴のない)メッシュを入れないと、結果が不安定",
+    "Resolve Self-intersections で、自己交差を解消できる",
+    "切り口のグループを、後の処理(面取りなど)の選択に使える"
+   ],
+   "use_cases": [
+    "穴あけ・切り欠き・合体",
+    "ハードサーフェスのパーツの切り抜き",
+    "共通部分だけを取り出す"
+   ],
+   "combos": [
+    {
+     "title": "穴をあける",
+     "chain": [
+      "Box",
+      "Boolean",
+      "PolyBevel"
+     ],
+     "note": "切り抜いた後に、切り口を面取りする。"
+    },
+    {
+     "title": "合体して整える",
+     "chain": [
+      "Merge",
+      "Boolean",
+      "Fuse"
+     ],
+     "note": "重なる複数のパーツを、1 つにする。"
+    }
+   ],
+   "before_after": {
+    "before": "立方体と、その角に重なる球。",
+    "after": "subtract(A − B)で、立方体の角が球形に削れる。",
+    "image": {
+     "before": "img/nodes/boolean-before.svg",
+     "after": "img/nodes/boolean-after.svg",
+     "alt": "立方体と球が、立方体の角を球形に削った形になる"
+    }
+   },
+   "params": [
+    {
+     "name": "booleanop",
+     "note": "Operation(union / intersect / subtract ...)"
+    },
+    {
+     "name": "subtractchoices",
+     "note": "Subtract Choices(aminusb など)"
+    },
+    {
+     "name": "asurface",
+     "note": "A を solid / surface で扱う"
+    },
+    {
+     "name": "bsurface",
+     "note": "B を solid / surface で扱う"
+    },
+    {
+     "name": "resolvea",
+     "note": "Resolve Self-intersections"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/boolean.html",
+   "verified": true
+  },
+  {
+   "id": "connectivity",
+   "name": "Connectivity",
+   "type": "connectivity",
+   "context": "SOP",
+   "category": "選択・削除",
+   "what": "つながっている部分ごとに番号(属性)を付けるノード。バラバラのパーツを、それぞれ識別できるようになる。",
+   "how": "Connectivity Type で、点でつながるか面でつながるかを選ぶ。Attribute に指定した名前(既定 class)の属性に、パーツの番号が入る。Attribute Type は int か string。後ろの Wrangle で、その番号から色やランダムな値を作ったり、For-Each でパーツごとの処理をしたりできる。",
+   "example_points": [
+    "見た目は変わらない。番号で後処理する",
+    "UV でつながりを分けるときは、Use UV Connectivity",
+    "string にしたときは、Prefix が名前の先頭になる"
+   ],
+   "use_cases": [
+    "パーツごとに、色やランダム値を付ける",
+    "パーツごとに、別々に動かす・消す",
+    "破片の ID を付ける"
+   ],
+   "combos": [
+    {
+     "title": "色分け",
+     "chain": [
+      "Merge",
+      "Connectivity",
+      "Attribute Wrangle"
+     ],
+     "note": "パーツ番号から、パーツごとの色を作る。"
+    },
+    {
+     "title": "パーツごとの処理",
+     "chain": [
+      "Connectivity",
+      "Attribute Promote",
+      "Blast"
+     ],
+     "note": "番号を点に移して、特定のパーツだけを消す。"
+    }
+   ],
+   "before_after": {
+    "before": "1 つにまとまった、3 つのパーツ(球・箱・球)。",
+    "after": "class に 0・1・2 のパーツ番号が入る(図は番号ごとに色分けして表示)。",
+    "image": {
+     "before": "img/nodes/connectivity-before.svg",
+     "after": "img/nodes/connectivity-after.svg",
+     "alt": "3 つのパーツが、番号ごとに別の色になる(色分けの確認用)"
+    }
+   },
+   "params": [
+    {
+     "name": "connecttype",
+     "note": "Connectivity Type(point / prim)"
+    },
+    {
+     "name": "attribname",
+     "note": "番号を入れる属性(既定 class)"
+    },
+    {
+     "name": "attribtype",
+     "note": "int / string"
+    },
+    {
+     "name": "prefix",
+     "note": "string のときの接頭辞"
+    },
+    {
+     "name": "byuv",
+     "note": "Use UV Connectivity"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/connectivity.html",
+   "verified": true
+  },
+  {
+   "id": "solver",
+   "name": "Solver",
+   "type": "solver",
+   "context": "SOP",
+   "category": "シミュレーション",
+   "what": "前のフレームの結果を受け取りながら、毎フレーム加工を積み重ねる、SOP 上のシミュレーションの枠。",
+   "how": "ノードの中に入り、前のフレームのジオメトリを受け取る入力に好きなノード(Attribute Wrangle など)をつなげて、結果を出力にする。Start Frame から計算が始まり、フレームを進めるたびに、結果が前の状態から更新される。Reset Simulation で最初からやり直し、Cache Simulation で再生を速くできる。",
+   "example_points": [
+    "フレームを飛ばして見ると、結果が合わなくなる(順に再生する)",
+    "Start Frame の前のフレームは、初期のジオメトリがそのまま出る",
+    "Sub Steps で、1 フレームの計算を細かくできる"
+   ],
+   "use_cases": [
+    "ノードだけで作る、独自の成長・拡散・追跡の動き",
+    "前の状態を使う軽いシミュレーション",
+    "Vellum や RBD を使わない簡単な動き"
+   ],
+   "combos": [
+    {
+     "title": "成長する形",
+     "chain": [
+      "Scatter",
+      "Solver",
+      "Copy to Points"
+     ],
+     "note": "点が毎フレーム動き、その位置に形を複製する。"
+    },
+    {
+     "title": "拡散",
+     "chain": [
+      "Grid",
+      "Solver",
+      "Attribute Blur"
+     ],
+     "note": "値を、前のフレームから少しずつ広げる。"
+    }
+   ],
+   "before_after": {
+    "before": "最初のフレームは入力のまま(時間で変わるため、静止画の前後は無し)。",
+    "after": "再生すると、内部の処理が毎フレーム足されて動いていく。"
+   },
+   "params": [
+    {
+     "name": "startframe",
+     "note": "Start Frame"
+    },
+    {
+     "name": "resimulate",
+     "note": "Reset Simulation"
+    },
+    {
+     "name": "substep",
+     "note": "Sub Steps"
+    },
+    {
+     "name": "cacheenabled",
+     "note": "Cache Simulation"
+    },
+    {
+     "name": "useinitialsop",
+     "note": "Use Initial SOP"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/solver.html",
+   "verified": true
+  },
+  {
+   "id": "fit",
+   "name": "Fit Range",
+   "type": "fit",
+   "context": "VOP",
+   "category": "VEX・アトリビュート",
+   "what": "値を、ある範囲から別の範囲へ線形に写す VOP ノード。VEX の fit() に当たる。",
+   "how": "Input Value に値、Source Min / Max と Destination Min / Max を指定する。例えば 0〜1 の値を 2〜5 へ写す、といった使い方になる。範囲外の値は端の値に収められる(クランプ)。クランプしたくないときは、Fit Range Unclamped(efit)を使う。",
+   "example_points": [
+    "入力が範囲外のとき、結果は Destination の端の値になる",
+    "Signature で float / vector などの型を選ぶ",
+    "VEX では fit() / fit01() で同じことができる"
+   ],
+   "use_cases": [
+    "ノイズの 0〜1 を、高さや大きさの範囲へ",
+    "ランダム値を好きな範囲に変換",
+    "Attribute VOP の値の調整"
+   ],
+   "combos": [
+    {
+     "title": "ノイズの範囲",
+     "chain": [
+      "Turbulent Noise",
+      "Fit Range",
+      "Bind(Export)"
+     ],
+     "note": "ノイズ値を目的の範囲へ写してから、属性に出す。"
+    },
+    {
+     "title": "距離を色に",
+     "chain": [
+      "Bind",
+      "Fit Range",
+      "Ramp"
+     ],
+     "note": "距離を 0〜1 にしてから、ランプで色にする。"
+    }
+   ],
+   "before_after": {
+    "before": "(VOP の中の計算ノード。ジオメトリは変わらないため、画像なし)",
+    "after": "入力が Source の範囲を動くと、出力が Destination の範囲を同じ割合で動く。"
+   },
+   "params": [
+    {
+     "name": "srcmin",
+     "note": "Source Min"
+    },
+    {
+     "name": "srcmax",
+     "note": "Source Max"
+    },
+    {
+     "name": "destmin",
+     "note": "Destination Min"
+    },
+    {
+     "name": "destmax",
+     "note": "Destination Max"
+    },
+    {
+     "name": "signature",
+     "note": "型(default / float / vector ...)"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/vop/fit.html",
+   "verified": true
+  },
+  {
+   "id": "turbnoise",
+   "name": "Turbulent Noise",
+   "type": "turbnoise",
+   "context": "VOP",
+   "category": "VEX・アトリビュート",
+   "what": "位置などから、細かさを重ねた乱流(ターブランス)ノイズの値を作る VOP ノード。雲や煙のような不規則な模様の元になる。",
+   "how": "Position に位置(多くは P)、Frequency で細かさ、Amplitude で強さを決める。Turbulence は重ねる回数、Roughness と Attenuation で、重ねたときの細かさを調整する。Noise Type はノイズの種類。出力の noise を、Bind(Export)や Fit Range へつなぐ。",
+   "example_points": [
+    "Turbulence の値が大きいほど、細かい模様が重なる",
+    "Frequency を変えると、模様の大きさが変わる",
+    "Offset でパターンを動かせる(時間で動かすと流れる)"
+   ],
+   "use_cases": [
+    "色・密度・変位のノイズ",
+    "雲・煙・汚れのような模様",
+    "Attribute VOP でのノイズ付け"
+   ],
+   "combos": [
+    {
+     "title": "色にノイズ",
+     "chain": [
+      "Bind(P)",
+      "Turbulent Noise",
+      "Bind(Export)"
+     ],
+     "note": "位置からノイズを作って、色に出す。"
+    },
+    {
+     "title": "範囲を揃える",
+     "chain": [
+      "Turbulent Noise",
+      "Fit Range",
+      "Bind(Export)"
+     ],
+     "note": "ノイズの値を、目的の範囲に合わせる。"
+    }
+   ],
+   "before_after": {
+    "before": "(VOP の中の計算ノード。ジオメトリは変わらないため、画像なし)",
+    "after": "位置が少しずれても連続して変わる、なめらかな値が出る(周波数を上げると細かくなる)。"
+   },
+   "params": [
+    {
+     "name": "pos",
+     "note": "Position"
+    },
+    {
+     "name": "freq",
+     "note": "Frequency"
+    },
+    {
+     "name": "offset",
+     "note": "Offset"
+    },
+    {
+     "name": "amp",
+     "note": "Amplitude"
+    },
+    {
+     "name": "rough",
+     "note": "Roughness"
+    },
+    {
+     "name": "atten",
+     "note": "Attenuation"
+    },
+    {
+     "name": "turb",
+     "note": "Turbulence"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/vop/turbnoise.html",
+   "verified": true
+  },
+  {
+   "id": "sopimport",
+   "name": "SOP Import",
+   "type": "sopimport",
+   "context": "LOP",
+   "category": "USD 連携",
+   "what": "SOP のジオメトリを、Solaris(LOP)のシーン(USD ステージ)に取り込むノード。",
+   "how": "SOP Path に、取り込みたい SOP ノードのパスを入れる。Primitive Path で、ステージ上の置き場所(既定は /$OS)を決める。Import Group で、取り込むグループを絞れる。取り込んだジオメトリは、USD のプリム(メッシュなど)になる。",
+   "example_points": [
+    "Primitive Path が重なると、上書きされる",
+    "Load As Reference で、参照として取り込める",
+    "SOP を更新すれば、ステージ側も更新される"
+   ],
+   "use_cases": [
+    "Houdini で作ったモデルを、Solaris で配置・レンダリング",
+    "SOP で作った点群を、USD のインスタンスにする",
+    "SOP と LOP の間の橋渡し"
+   ],
+   "combos": [
+    {
+     "title": "モデルを取り込む",
+     "chain": [
+      "Box",
+      "SOP Import",
+      "Merge"
+     ],
+     "note": "SOP の形を、LOP 側の別のプリムと統合する。"
+    },
+    {
+     "title": "材質を付ける",
+     "chain": [
+      "SOP Import",
+      "Material Library",
+      "Assign Material"
+     ],
+     "note": "取り込んだ形に、マテリアルを割り当てる。"
+    }
+   ],
+   "before_after": {
+    "before": "(SOP と LOP をまたぐ処理で、静止画の前後は無し)",
+    "after": "SOP のジオメトリが、LOP のステージにプリムとして現れる。"
+   },
+   "params": [
+    {
+     "name": "soppath",
+     "note": "SOP Path"
+    },
+    {
+     "name": "primpath",
+     "note": "Primitive Path(既定 /$OS)"
+    },
+    {
+     "name": "asreference",
+     "note": "Load As Reference"
+    },
+    {
+     "name": "enable_group",
+     "note": "Import Group を使うスイッチ"
+    },
+    {
+     "name": "bindmaterials",
+     "note": "Bind Materials"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/lop/sopimport.html",
+   "verified": true
+  }
+ ]
+}

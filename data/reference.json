@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-18",
-  "note": "公式ドキュメントの主要な入口。手で整えたリンク集で、本文は取らない。2026-11-18 に到達を確認(200)。",
+  "updated": "2026-11-19",
+  "note": "公式ドキュメントの主要な入口。手で整えたリンク集で、本文は取らない。2026-11-18 に到達を確認(200)。学習ライブラリ・ラーニングパスは 2026-11-19 に確認(200)。",
   "groups": [
     {"title": "ドキュメント", "links": [
       {"title": "Houdini ヘルプ(トップ)", "url": "https://www.sidefx.com/docs/houdini/", "note": "公式ドキュメントの入口"},
@@ -16,6 +16,9 @@
       {"title": "変更履歴", "url": "https://www.sidefx.com/changelog/", "note": "ビルドごとの修正"},
       {"title": "22 の新機能", "url": "https://www.sidefx.com/products/whats-new-in-h22/", "note": "リリース概要"},
       {"title": "チュートリアル", "url": "https://www.sidefx.com/tutorials/", "note": "公式の学習コンテンツ"},
+      {"title": "ラーニングライブラリ: チュートリアル", "url": "https://www.sidefx.com/learn/learning-library/tutorials/", "note": "レベル・カテゴリで絞り込める学習資料"},
+      {"title": "ラーニングライブラリ: トーク・ウェビナー", "url": "https://www.sidefx.com/learn/learning-library/talks_webinars/", "note": "講演・ウェビナーの記録"},
+      {"title": "ラーニングパス", "url": "https://www.sidefx.com/learn/learning-paths/", "note": "順に学ぶための学習経路"},
       {"title": "フォーラム", "url": "https://www.sidefx.com/forum/", "note": "質問と回答"},
       {"title": "ダウンロード", "url": "https://www.sidefx.com/download/", "note": "ビルドの入手(ログインが必要な場合あり)"}
     ]}

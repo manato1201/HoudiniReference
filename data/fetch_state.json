@@ -52,7 +52,7 @@
   "last_modified": ""
  },
  "https://api.github.com/repos/sideeffects/HoudiniNiagara/releases?per_page=8": {
-  "etag": "W/\"2e290f38b37dcee0844ce87f67a5e68b0460c14e0c29d07b1a934f9ff3543ef4\"",
+  "etag": "W/\"20514b6db91692c8c1b0781f49892a562f543764fbb449756c991eaea3f42696\"",
   "last_modified": ""
  },
  "https://www.sidefx.com/forum/feeds/forum/10/": {
@@ -88,6 +88,30 @@
   "last_modified": ""
  },
  "https://www.youtube.com/feeds/videos.xml?channel_id=UC1Avewug9ZPCLx1URXVEw4g": {
+  "etag": "",
+  "last_modified": ""
+ },
+ "https://entagma.com/feed/": {
+  "etag": "",
+  "last_modified": "Thu, 05 Nov 2026 16:30:00 GMT"
+ },
+ "https://www.youtube.com/feeds/videos.xml?channel_id=UCkJxTflKEWfmoqlQA9QxTOA": {
+  "etag": "",
+  "last_modified": ""
+ },
+ "https://www.youtube.com/feeds/videos.xml?channel_id=UCvuT2bzBB0kzne16DBAtmLQ": {
+  "etag": "",
+  "last_modified": ""
+ },
+ "https://www.youtube.com/feeds/videos.xml?channel_id=UClfjGX5Cq2JaNGKSe7Eyazg": {
+  "etag": "",
+  "last_modified": ""
+ },
+ "https://www.youtube.com/feeds/videos.xml?channel_id=UCbGtHf3_s0hhZq2Os0NNvkg": {
+  "etag": "",
+  "last_modified": ""
+ },
+ "https://www.youtube.com/feeds/videos.xml?channel_id=UCspJjhEXwW_75wrTxHWl8uA": {
   "etag": "",
   "last_modified": ""
  }

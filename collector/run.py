@@ -37,6 +37,16 @@ def write_json(path: Path, data) -> None:
     os.replace(tmp, path)
 
 
+SITE_FILES = ("items.json", "reference.json", "nodes.json")  # サイトが読む公開データ(data/ → site/data/ へコピー)
+
+
+def sync_site_data(data_dir: Path, site_data_dir: Path) -> None:
+    site_data_dir.mkdir(parents=True, exist_ok=True)
+    for name in SITE_FILES:
+        if (data_dir / name).exists():
+            shutil.copyfile(data_dir / name, site_data_dir / name)
+
+
 def load_x_items(data_dir: Path, public_items: list[dict]) -> list[dict]:
     """保存済みの X 項目。ローカル専用ファイルと(過去に公開物へ入っていた分も)両方から集めて id で重複除去。"""
     local = load_json(data_dir / X_LOCAL_FILE, {})
@@ -106,6 +116,8 @@ def merge(existing: list[dict], new: list[dict]) -> list[dict]:
             if it["source_id"] == "youtube-api":
                 continue  # 公式フィード由来の項目を優先
             it = {**it, "first_seen": old.get("first_seen", it["first_seen"])}
+            if "views" not in it and isinstance(old.get("views"), int):
+                it["views"] = old["views"]  # 今回のフィードに再生数が無くても、前回の値を残す
         by_id[it["id"]] = it
     return list(by_id.values())
 
@@ -256,9 +268,6 @@ def run(
     write_json(data_dir / "items.json", doc)
     write_json(data_dir / "fetch_state.json", fetch_state)
     if site_data_dir:
-        site_data_dir.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(data_dir / "items.json", site_data_dir / "items.json")
-        if (data_dir / "reference.json").exists():
-            shutil.copyfile(data_dir / "reference.json", site_data_dir / "reference.json")
+        sync_site_data(data_dir, site_data_dir)
     out.write(json.dumps({"items": len(public_items), "x_items_local_only": 0 if publish_x else len(x_items), "sources": [{k: s.get(k) for k in ("id", "ok", "fetched", "skipped", "error")} for s in statuses]}, ensure_ascii=False, indent=1) + "\n")
     return 1 if attempted and ok_count == 0 else 0

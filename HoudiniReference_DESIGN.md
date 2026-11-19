@@ -1,6 +1,6 @@
 # HoudiniReference 設計書
 
-作成日: 2026-11-18 / 状態の語彙: 実装済み・設計のみ・未確認
+作成日: 2026-11-18 / 更新: 2026-11-19(サムネ・プレビュー・再生数・人気チャンネル・ノードタブ) / 状態の語彙: 実装済み・設計のみ・未確認
 
 **目的**: Houdini の **Tips・ニュース・リファレンスを自動で集めて、確認できる**こと。読んで学ぶ「図鑑」ではなく、**集めて見に行く場所**(SYSTEM_MAP §5 の「Houdini 特化」)。個人・少人数の閲覧用で、認証は作らない。DevRAG は「聞く場所」、ここは「毎日の新着を見る場所」。
 
@@ -8,10 +8,11 @@
 
 | 区分 | 内容 | 状態 |
 |---|---|---|
-| **入れる** | 3 タブ(ニュース / Tips / リファレンス)・検索(クライアント側・AND)・出典/種別/**言語(日本語・English)**/期間の絞り込み・お気に入り(localStorage、読み書きは try/catch)・ライト/ダーク・「最終更新」と情報源の状態の表示・動きは読み込み時の 1 回きり(opacity と transform だけ、`prefers-reduced-motion` で停止) | 実装済み |
+| **入れる** | 4 タブ(ニュース / Tips / リファレンス / **ノード**)・検索(クライアント側・AND)・出典/種別/**言語(日本語・English)**/期間の絞り込み・お気に入り(localStorage、読み書きは try/catch)・ライト/ダーク・「最終更新」と情報源の状態の表示・動きは読み込み時の 1 回きり(opacity と transform だけ、`prefers-reduced-motion` で停止) | 実装済み |
 | **入れる** | RSS/Atom(SideFX フォーラム・変更履歴・日本語の技術記事 Qiita/Zenn)・**YouTube の公開フィード**(公式+定評あるチャンネル、日本語・英語)・**GitHub の公式 REST API の releases**(題名・URL・日付・タグだけ) | 実装済み |
 | **入れる(任意・既定は無効)** | YouTube Data API の検索(`YOUTUBE_API_KEY`)・**X 公式 API v2**(`X_BEARER_TOKEN`、予算上限つき) | 実装済み・実機は**未確認**(キー/トークンが無い) |
-| **入れない** | スクレイピング(本文の丸ごと取得、HTML ページの解析)・Nitter 等の非公式の X 経路・全文/画像/動画/サムネイルの保存・認証・コメント・通知・AI 要約・他サイトのコード/文章/デザインの流用 | — |
+| **入れる(2026-11-19 に方針変更)** | **サムネイルの参照表示**(YouTube の `i.ytimg.com` の画像 URL を `yt:<id>` から組み立てて `<img loading="lazy">` で表示するだけ。**画像は保存しない**)・**押したときだけの埋め込みプレビュー**(`<dialog>` の中に `youtube-nocookie.com/embed/<id>` の iframe を作る。自動再生なし・閉じたら破棄・動画 ID は `^[A-Za-z0-9_-]{11}$` だけ)・**再生数**(YouTube 公開フィードの `media:statistics` の `views`)と「人気順」・グリッド/リスト切替・**ノードタブ**(§10) | 実装済み(テスト 84 件・Playwright で確認) |
+| **入れない** | スクレイピング(本文の丸ごと取得、HTML ページの解析)・Nitter 等の非公式の X 経路・全文/動画の保存・**画像の保存**(サムネは参照表示のみ)・認証・コメント・通知・AI 要約・他サイトのコード/文章/デザインの流用 | — |
 | **参考にするだけ** | 同種の他サイトの「ホーム→カテゴリ→一覧→検索」という**構造の考え方だけ**を参考にし、コード・文章・デザイン・デモは写さない | — |
 
 新しいライブラリは増やさない(収集は Python 3.12 標準ライブラリの `urllib` と `xml.etree`、サイトは静的 HTML/CSS/JS)。
@@ -29,6 +30,13 @@
 | Zenn のトピック `houdini` | RSS `zenn.dev/topics/houdini/feed` | 200・RSS 2.0・20 件(初回は 502 が 1 回、再試行で 200)。robots は `/search` だけ | **使う**(Tips・日本語) |
 | GitHub: SideFX Labs / Houdini Engine for Unreal / Houdini Engine for Unity / Houdini Niagara の releases | **REST API** `api.github.com/repos/sideeffects/<repo>/releases`(認証なし・60 回/時・ETag で条件付き) | 200・JSON・8 / 10 / 1 / 8 件。`sideeffects` 組織の 71 リポジトリを API で一覧し、releases がある公式リポジトリだけを選んだ | **使う**(リファレンス)。題名・URL・日付・タグだけ(本文は読まない)。Labs は毎日のプレリリース |
 | YouTube: IndyZone(日本語)・USD VFXパイプライン解説と各種インタビュー(日本語)・Konstantin Magnus・Rohan Dalvi・Radu Cius | `youtube.com/feeds/videos.xml?channel_id=…` | 200・各 15 件。ID は `@ハンドル` のページ→`externalId` で取り、**フィードの題名が一致し Houdini の動画が並ぶことを確認** | **使う**(Tips)。IndyZone と Magnus は 15/15 が Houdini、Dalvi 14/15、Radu 15/15、USD VFX は 10/15(USD・Solaris・Karma) |
+| **(2026-11-19 の人気チャンネル追加)** YouTube: CG Artist Academy(`@CGArtistAcademy`・登録者約 2.9 万)・Simon Houdini(`@simonhoudini5074`)・Tim van Helsdingen(`@TimvanHelsdingen3D`・約 2.5 万)・Adrien Lambert(`@AdrienLambertvfx`・約 2.8 万、ILM の環境スーパーバイザー)・Mark Fancher(`@MarkFancherFX`・約 1.2 万) | 各 `@ハンドル` のページ(`externalId`)から ID を取り、**フィードを GET して題名が一致し Houdini の動画が並ぶことを確認**。候補は 80.lv・Rebelway・3D リソース集の一覧から。登録者数はページ表示の概数(2026-11-19) | 200・各 15 件。Houdini の題名: CG Artist Academy 15/15(最新 2026-10-28)・Simon Houdini 14/15(最新 2025-12-22・15 件の合計 17.7 万回・最大 6.3 万)・Tim van Helsdingen 13/15(最新 2026-02-03)・Adrien Lambert 12/15(最新 2026-11-14・15 件の合計 21 万回)・Mark Fancher 14/15(最新 2026-07-02) | **使う**(Tips・英語) |
+| Entagma のサイト(`entagma.com/feed/`) | RSS(WordPress)。robots.txt は `/wp-admin/` だけ Disallow | 200・RSS 2.0・20 件(最新 2026-11-05。Vellum・Gaussian Splat・Heightfield など Houdini 中心) | **使う**(Tips・英語)。YouTube のフィードとは別 URL なので別の項目になる |
+| YouTube: Rebelway(`@Rebelway`・約 8.8 万) | 上と同じ | 200・15 件だが Houdini の題名は 7/15 で、講座の宣伝が多い | **使わない**(再生数は多いが Houdini 特化ではなく宣伝が中心) |
+| YouTube: Indie-Pixel(`@IndiePixel3D`)・John Kunz・WTTR Labs・Parker Coleman・What I Found・Kate(`@proceduralkate`)・Christopher Rutledge・regularmenthol・NotVeryDarkMagic・Varo School | 上と同じ | 200・各 15 件。Indie-Pixel は最新が 2021-08(止まっている)・John Kunz は最新 2024-05 で Houdini 7/15・WTTR Labs は Houdini 13/15 だが登録者約 4 千(小さい)・Parker Coleman は最新 2024-06・What I Found は最新 2023-07・Kate は 5/15・Rutledge は 3/15・regularmenthol は最新 2024-09・NotVeryDarkMagic は最新 2026-02 だが 7/15・Varo School は 1/15 | **使わない**(更新が止まっている・Houdini の割合が低い・小さい) |
+| YouTube: `@appliedhoudini`・`@SimonVerstraete` | 上と同じ | ハンドルは存在するが、フィードの `entry` が **0 件**(Applied Houdini 本人のチャンネルではなかった) | **使わない**(取れない) |
+| odforce(`odforce.net`) | HTML | 2026-11-19 に「メンテナンス中でオフライン」の表示のみ | **使わない**(再開したら再確認) |
+| **SideFX ラーニングライブラリ**(`/learn/learning-library/{tutorials,talks_webinars}/`) | 一覧の HTML は枠だけで、データは `$.post("/tutorials/get-tutorials/", {filters})` の **POST(Django の CSRF トークンとセッション Cookie が必要)** で読み込まれる。RSS/Atom なし(`/tutorials/rss/`・`/tutorials/feed/` は 404)。`GET /tutorials/get-tutorials/` は **405** | robots.txt はこのパスを Disallow していない(`Crawl-delay: 5`)。ただし公開された JSON/HTML の取得口ではなく、**サイト自身の画面用の内部 API を、トークンを真似て POST する形**になる | **使わない(撤退)**。下の「ラーニングライブラリを取らない理由」を参照。入口リンク 3 本を `data/reference.json` に置いた(到達 200) |
 | YouTube: bubblepins | 上と同じ | 200・15 件(Houdini 15/15)だが**最新が 2025-10 で 1 年更新なし** | **使わない**(古い。更新が再開したら足す) |
 | YouTube: Doxia Studio | 上と同じ | 200・15 件だが Houdini は 11/15(Illugen・リアルタイム VFX が主) | **使わない**(Houdini 特化ではない) |
 | YouTube: Studio Satsuki(SideFX の日本語講座の制作者) | 上と同じ | 200・15 件だが最近の動画は数学・実装配信が中心(Houdini は 6/15) | **使わない**(最近は Houdini 以外が多い) |
@@ -46,6 +54,7 @@
 | YouTube Data API 検索 | API(キー) | キーが無く実機は**未確認** | **任意・既定は無効**(`data/sources.youtube.json` の `api_search`) |
 | X(公式 API v2) | API(Bearer) | トークンが無く実機は**未確認** | **任意・既定は無効**(§8) |
 
+- **ラーニングライブラリを取らない理由(2026-11-19 の調査・実装せずに撤退)**: ①一覧のデータ元は公開フィードや GET の JSON ではなく、画面用の内部 API(`POST /tutorials/get-tutorials/`)。②取得にはセッション Cookie+CSRF トークンの取り回し(ページの GET → トークン抽出 → フォーム POST)が要り、既存の `httpclient`(GET だけ・Cookie なし)の範囲を超え、「公式が提供するフィード/API の範囲だけ」という本サイトの方針(§1)から外れる。③ヘッドレスブラウザは使わない方針。④利用規約の自動取得の扱いは要約確認でも明確ではない。以上から **取らず、入口リンクだけ**(learning-library のチュートリアル・トーク/ウェビナー・learning-paths の 3 本)をリファレンスタブに置いた。公式が公開の JSON/RSS を出したら再検討する。**POST は 1 度も試していない**(GET の 405 と、ページの JS で仕組みを確認しただけ。調査中の sidefx.com へのアクセスは 5 秒以上あけ、汎用 UA・個人情報なし)。
 - **sidefx.com の robots.txt は `Crawl-delay: 5`**。コードで同ホストへの取得を **5 秒以上あける**(`collector/httpclient.py`)。`/forum/search/` などの Disallow 対象は取らない。利用規約(`/legal/terms-and-conditions/`)に、フィードの自動取得を禁じる文言は見つからなかった(要約確認。法的な確認ではない)。変更履歴フィードの `description` には「Information is confidential…」という定型文があるが、サイトが公開しているフィードで、保存するのは題名・URL・短い抜粋だけ。
 - **拡張(2026-11-19)の確認**: 各フィードを**1 回ずつ**だけ GET(sidefx.com は 5 秒間隔)。qiita.com・zenn.dev・dev.to・api.github.com は robots.txt を読み、フィード/API のパスが Disallow でないことを確認(zenn.dev・qiita.com・dev.to は `/search` や `/api/` などだけ。api.github.com は robots.txt なし)。GitHub の上限は認証なし 60 回/時で、1 回の収集は 4 リクエスト(ETag の 304 は上限に数えない)。GitHub Actions の共有 IP では他の利用者の分と合算されて 403(上限)になることがあり、その場合は他の情報源を続けて失敗を記録する(`rate limited?`)。
 - **YouTube の robots の注意**: `youtube.com/robots.txt` は `User-agent: *` に `Disallow: /feeds/videos.xml` を書いている。フィードは購読用の公開機能だが、**robots の文言とは食い違う**。運営者の判断で使うが、1 日 1 回・15 件・汎用 UA・条件付き GET の低頻度に絞る。気になるなら `data/sources.youtube.json` の `channels` を空にすれば止まる(`api_search` に切り替える)。
@@ -58,13 +67,13 @@
                 "fetched", "not_modified", "error", "skipped", "last_ok" }],
   "items":   [{ "id", "tab": "news|tips|reference", "kind": "rss|youtube|github|x",
                 "source_id", "source", "title", "url", "published", "excerpt",
-                "tags": [], "lang": "ja|en", "first_seen", "handle"(X のみ) }] }
+                "tags": [], "lang": "ja|en", "first_seen", "handle"(X のみ), "views"(YouTube のみ・整数・省略あり) }] }
 ```
 
-- 保存するのは**題名(200 字以内)・URL・出典名・日付・抜粋(200 字以内)・タグ**だけ。X は加えて投稿 ID(`id` = `x:<ID>`)とハンドル。
+- 保存するのは**題名(200 字以内)・URL・出典名・日付・抜粋(200 字以内)・タグ**だけ(YouTube は加えて**再生数 `views`**。公開フィードの `media:statistics` の `views` が半角数字 12 桁以内のときだけ整数で入り、無い・数字以外は省略。今回のフィードに無ければ前回の値を残す)。**サムネイルの URL・画像は保存しない**(サイトが `yt:<id>` から組み立てる)。X は加えて投稿 ID(`id` = `x:<ID>`)とハンドル。
 - `id`: RSS は正規化 URL の SHA-1 先頭 16 桁、YouTube は `yt:<videoId>`、X は `x:<postId>`。
 - `lang` は設定(`lang`)があればそれ、無ければ題名・抜粋のかな・漢字の有無で判定(補助。過去に保存した項目にも収集のたびに付ける)。GitHub の `id` は正規化 URL の SHA-1。
-- `data/` の他のファイル: `sources.json`(RSS)・`sources.github.json`(GitHub のリリース。`repo` は `owner/name` の形だけ受け付ける)・`sources.youtube.json`(チャンネル・API 検索の設定)・`sources.x.json`(X の設定)・`reference.json`(§6)・`fetch_state.json`(ETag / Last-Modified)・`x_usage.json`(X の月ごとの使用量と `since_id`。使った時だけ作られる)。
+- `data/` の他のファイル: `sources.json`(RSS)・`sources.github.json`(GitHub のリリース。`repo` は `owner/name` の形だけ受け付ける)・`sources.youtube.json`(チャンネル・API 検索の設定)・`sources.x.json`(X の設定)・`reference.json`(§6)・`nodes.json`(§10。手書き)・`fetch_state.json`(ETag / Last-Modified)・`x_usage.json`(X の月ごとの使用量と `since_id`。使った時だけ作られる)。
 
 ## 4. 収集の流れ(`python -m collector`)
 
@@ -72,13 +81,13 @@
 
 **重複除去の追加(2026-11-19)**: Web(rss)の項目は、題名が同じなら(記号・大文字小文字の違いは無視。6 文字未満は対象外)別の情報源から来ても **1 件**にする(残すのは設定の並びが先の情報源 → 同じ情報源なら新しい方)。SideFX フォーラムの「最新トピック」と分類別、Qiita と Zenn の転載などが対象。投稿単位のフィード(フォーラムの分類別)は `dedupe_title` で、その 1 回の取得の中でも同じ題名を 1 件にする。YouTube は動画 ID、GitHub は URL で重複を判定し、題名では判定しない。**タグ**は英語に加え日本語の語彙(流体・破壊・コペルニクス・シミュレーション・プロシージャル…)でも付く(`VEXの` のように日本語が続いても境界が働く)。
 
-**所要時間**: 情報源は 23 本(YouTube API 検索と X は既定で無効)。**取得の順番はホストを交互にする**ので、sidefx.com の 5 秒の間隔の間に他のホスト(YouTube・Qiita・Zenn・GitHub)を取れて、全体は約 40 秒(2026-11-19 の実測 37 秒。sidefx.com は 8 リクエスト × 5 秒が下限)。1 つの情報源あたり 15〜20 件(Labs・Niagara は 8 件)の上限を設けている。
+**所要時間**: 情報源は 29 本(2026-11-19 に YouTube 5 本+Entagma のサイト 1 本を追加)(YouTube API 検索と X は既定で無効)。**取得の順番はホストを交互にする**ので、sidefx.com の 5 秒の間隔の間に他のホスト(YouTube・Qiita・Zenn・GitHub)を取れて、全体は約 40 秒(2026-11-19 の実測 37 秒、情報源を増やした後は約 42 秒。sidefx.com は 8 リクエスト × 5 秒が下限)。1 つの情報源あたり 15〜20 件(Labs・Niagara は 8 件)の上限を設けている。
 
 **失敗時の扱い**: 1 つの情報源が落ちても他は続ける。失敗は `sources[].error`(トークン/キー/URL のクエリを含まない短い文)と `last_ok` に記録し、**古いデータは消さない**(消えるのは、情報源ごとの保持上限を超えたものと、API 由来の保持期限(X・YouTube API は 30 日)を過ぎたもの、削除された X の投稿だけ)。全部が失敗した時だけ終了コード 1(Actions で気付ける)。XML は 2 MB 上限・DOCTYPE/ENTITY を拒否(実体展開攻撃の対策)。
 
 ## 5. サイトの構成(`site/`、静的・ビルド不要)
 
-`index.html` / `style.css` / `app.js`。ヘッダ(最終更新・テーマ)→ 3 タブ(URL ハッシュ `#news` `#tips` `#reference`)→ 検索と絞り込み(種別: すべて/Web/YouTube/GitHub/X、**言語: すべて/日本語/English**、出典(**種別ごとのグループ**)、期間、お気に入りのみ)→ カード一覧。各カードに**出典名・種別バッジ・言語(JA/EN)・日付・元ページへのリンク(`rel="noopener noreferrer"`)**。タブの振り分け: YouTube・フォーラム・Qiita・Zenn=Tips、SideFX ニュース=ニュース、変更履歴と GitHub のリリース=リファレンス、X は設定で Tips / ニュース。データが空・読み込み失敗・絞り込みの結果なしは、それぞれ別のエンプティステート。**データ中の文字列は `textContent` だけで入れる**(`innerHTML` 不使用、`javascript:` の URL はリンクにしない)。CSS は `:root` のトークン(色・余白・タイプスケール)+ダーク 2 通り。390px〜1900px で横スクロールなし。
+`index.html` / `style.css` / `app.js` / `nodes.js`(ノードタブ)。ヘッダ(最終更新・テーマ)→ 4 タブ(URL ハッシュ `#news` `#tips` `#reference` `#nodes`・`#nodes/<ノード id>`)→ 検索と絞り込み(種別: すべて/Web/YouTube/GitHub/X、**言語: すべて/日本語/English**、出典(**種別ごとのグループ**)、期間、お気に入りのみ)→ カード一覧。各カードに**16:9 のサムネ枠(YouTube は画像を参照表示、それ以外は出典の頭文字のプレースホルダー。枠の高さは固定なので、読み込み前・失敗・YouTube 以外でもレイアウトが跳ねない)・出典名・種別バッジ・言語(JA/EN)・日付・再生数(あれば)・元ページへのリンク(`rel="noopener noreferrer"`)**。並べ替えは「新しい順/人気順(再生数)」、表示は「グリッド/リスト」(選択は localStorage)。YouTube の項目は、サムネか「▶ プレビュー」でプレビュー枠(§8)を開く。タブの振り分け: YouTube・フォーラム・Qiita・Zenn=Tips、SideFX ニュース=ニュース、変更履歴と GitHub のリリース=リファレンス、X は設定で Tips / ニュース。データが空・読み込み失敗・絞り込みの結果なしは、それぞれ別のエンプティステート。**データ中の文字列は `textContent` だけで入れる**(`innerHTML` 不使用、`javascript:` の URL はリンクにしない)。CSS は `:root` のトークン(色・余白・タイプスケール)+ダーク 2 通り。390px〜1900px で横スクロールなし。
 
 ## 6. リファレンスの扱い
 
@@ -94,7 +103,7 @@
 
 ## 8. YouTube と X
 
-**YouTube**: 基本は公開フィード(キー不要)。任意で Data API 検索(「Houdini tutorial」「Houdini tips」の直近 7 日、`max_requests_per_run` 既定 5。`search.list` は **1 回 100 ユニット・無料枠は 1 日 10,000 = 1 日 100 回まで**。この収集は 5 回 = 500 ユニット)。保存は題名・動画 URL・チャンネル名・公開日・説明の先頭 200 字・タグだけ。サムネイルは使わない。API 由来のデータは **30 日で消す**(YouTube API Services の保存期間の規定は**未確認**。実装は安全側)。
+**YouTube**: 基本は公開フィード(キー不要)。任意で Data API 検索(「Houdini tutorial」「Houdini tips」の直近 7 日、`max_requests_per_run` 既定 5。`search.list` は **1 回 100 ユニット・無料枠は 1 日 10,000 = 1 日 100 回まで**。この収集は 5 回 = 500 ユニット)。保存は題名・動画 URL・チャンネル名・公開日・説明の先頭 200 字・タグ(・フィード由来は再生数)だけ。サムネイルは参照表示だけで、画像は保存しない(§1・§5・下の「プレビュー」)。API 由来のデータは **30 日で消す**(YouTube API Services の保存期間の規定は**未確認**。実装は安全側)。
 
 **X(公式 API v2 のみ。スクレイピング・Nitter・非公式の中継は使わない)**
 - **公開しない既定**: 公開リポジトリでは X の抜粋を公開しない。出したいときは `publish_public: true`(自己責任・規約を確認)。false の間の置き場は `data/items.x.local.json`(§7)。
@@ -112,15 +121,33 @@
 3. 手元で試す: `python -m collector --dry-run`(取得しない)→ `$env:X_BEARER_TOKEN="…"`(PowerShell。履歴に残さない)→ `data/sources.x.json` の `enabled` を `true` → `python -m collector`。
 4. Actions では X を動かさない(`collect.yml` は `X_BEARER_TOKEN` を参照しない)。X は手元でだけ動かす。公開物にも載せたい場合だけ `publish_public: true`(自己責任)。
 
+**プレビュー枠(2026-11-19)**: カードのサムネか「▶ プレビュー」を押すと `<dialog>` が開き、**そのときだけ** `https://www.youtube-nocookie.com/embed/<id>` の iframe を作る(押すまで作らない)。`allow="picture-in-picture; fullscreen"`・`referrerpolicy="strict-origin-when-cross-origin"`(YouTube の埋め込みはリファラが必要)・`sandbox`(scripts・same-origin・presentation・popups)。`autoplay` は付けない。動画 ID は `^[A-Za-z0-9_-]{11}$` に合うものだけ(合わない項目はサムネもプレビューも出さない)。「元の動画を見る」リンク・お気に入り・前へ/次へ(今の絞り込みの YouTube 項目の中で)・閉じる(Esc・ボタン・枠の外)。**閉じたら iframe を破棄**する。`i.ytimg.com`(サムネ)と `youtube-nocookie.com`(押したとき)は閲覧者のブラウザが直接読みに行く。
+
 ## 9. 状態
 
 | 項目 | 状態 |
 |---|---|
-| 収集器(RSS/Atom・YouTube フィード・GitHub リリース API・正規化・重複除去(URL・動画 ID・題名)・日英のタグと言語・失敗に強い・条件付き GET・ホスト交互の取得) | 実装済み(実フィード/実 API で確認、63 テスト) |
+| 収集器(RSS/Atom・YouTube フィード・GitHub リリース API・正規化・重複除去(URL・動画 ID・題名)・日英のタグと言語・失敗に強い・条件付き GET・ホスト交互の取得) | 実装済み(実フィード/実 API で確認、84 テスト) |
 | YouTube Data API 検索 | 実装済み(偽サーバーでテスト)・実機は**未確認** |
 | X 公式 API | 実装済み(偽サーバーでテスト)・実機は**未確認**(トークン無し) |
-| サイト(3 タブ・検索・絞り込み・お気に入り・テーマ・エンプティ・XSS 対策) | 実装済み(Playwright で確認) |
+| サイト(4 タブ・検索・絞り込み・お気に入り・テーマ・エンプティ・XSS 対策・サムネ・プレビュー枠・人気順・ノードタブ) | 実装済み(Playwright で確認。サムネ・iframe はネットワークを止めた偽の応答で検証。実 YouTube の再生は実ブラウザで確認した範囲のみ。下の注意) |
 | Actions のワークフロー(`collect.yml`・`ci.yml`) | ファイルのみ・**未確認**(有効化していない) |
-| X の公開物からの除外(`publish_public`)・関連サイトのフッター | 実装済み(テスト 63 件・Playwright で確認) |
+| X の公開物からの除外(`publish_public`)・関連サイトのフッター | 実装済み(テスト 84 件・Playwright で確認) |
 | ホスティング | **実装済み**(Vercel。`site/` を公開ディレクトリにして Git 連携) |
 | `git init` 済み・commit なし | — |
+
+## 10. ノードタブ(2026-11-19)
+
+**目的**: 「今日のノード」の形式で、**1 ノード = 6 項目**(①何をするか ②どう使うか ③実例のポイント ④使いどころ ⑤他のノードとの組み合わせ例 ⑥使う前と後の違い)を読めるようにする。
+
+- **データ**: `data/nodes.json`(手書き。`python -m collector` の最後に `site/data/nodes.json` へコピー)。1 件 = `id`・`name`・`type`(Houdini の内部タイプ名。例 `scatter::2.0`)・`context`(SOP/VOP/LOP/…)・`category`・`what`・`how`・`example_points`・`use_cases`・`combos`(`[{title, chain:[ノード名…], note}]`)・`before_after`(`{before, after, image?}`)・`params`(確認した主なパラメータ名と短い説明)・`doc_url`・`verified`。**増やすときは JSON に 1 件足すだけ**で、`tests/test_nodes.py` が形を検査する。
+- **文章は自作**。公式ドキュメントの文章・画像は写さず、`doc_url`(`https://www.sidefx.com/docs/houdini/nodes/<コンテキスト>/<名前>.html`。版つきパスは robots が禁止なので使わない)で公式へリンクするだけ。`doc_url` は 30 件すべてに **HEAD で 200 を確認**(2026-11-19、5.5 秒間隔・汎用 UA。本文は取っていない)。
+- **確認(`verified: true`)**: ローカルの **Houdini 22.0.506 の `hython`**(ライセンス: Education)で、ノードの型名・入力名・パラメータ名・メニューの値を実際に列挙して確認してから書いた。30 件すべて `verified: true`。パラメータの**挙動の説明**は筆者の理解で、公式の文章は写していない(挙動のうち、画像の例で cook して確かめたものは、前後の図と一致している)。
+- **第 1 弾の 30 ノード**: SOP 27(grid・scatter・copytopoints・attribwrangle・attribnoise・blast・merge・xform・polyextrude・resample・carve・vdbfrompolygons・convertvdb・rbdmaterialfracture・attribcreate・attribpromote・delete・groupcreate・sort・fuse・subdivide・mountain・polybevel・sweep・boolean・connectivity・solver)+VOP 2(fit・turbnoise)+LOP 1(sopimport)。
+- **前後の図(⑥)**: 文章は全件。画像は **24 件**(下の 6 件は文章のみ: convertvdb・solver・fuse・fit・turbnoise・sopimport。静止画で前後が出ない/ほぼ変わらないため)。`tools/node_previews.py`(hython で実行する開発用スクリプト)が、ノードを実際に cook して**点・面を 2D に投影した簡易 SVG**(`site/img/nodes/<id>-{before,after}.svg`)を書き出す。Houdini のビューポートの画像(PNG)ではない(ヘッドレスで GL/Karma を回さず、ライセンスと環境の依存を避けた)。再生成: `hython tools/node_previews.py`。
+- **画面**: 4 つ目のタブ「ノード」(`#nodes`、詳細は `#nodes/<id>`)。左(狭い画面では上)にコンテキスト/カテゴリの絞り込み(件数つき)と検索、右にカード → 詳細(6 項目の見出し・主なパラメータ・公式へのリンク・前へ/次へ)。⑤の接続例は**データの `chain` から SVG を自動で描く**(`site/nodes.js` の `renderChain`。縦に流す。`createElementNS` と `textContent` だけ。ライブラリなし)。データ中の文字列は `textContent` だけで入れ、画像のパスは `img/nodes/<名前>.svg|png` の形だけ、`doc_url` は https だけ通す。
+
+## 11. 2026-11-19 の改善で決めたこと・残した課題
+
+- **決めたこと**: サムネは参照表示のみ(保存しない)・押したときだけ埋め込み・人気は公開フィードの再生数・人気チャンネルは「ハンドル→フィード確認」を通したものだけ・ラーニングライブラリは撤退(§2)・ノードは自作の文章+`hython` で確認+簡易 SVG。
+- **残した課題**: ①実 YouTube の iframe 再生は、実ブラウザの確認範囲を超える(ネットワークを止めた検査では偽の応答)。②`sandbox` の有無で一部の環境のプレーヤー(広告ブロック等)に影響が出る可能性は**未確認**。③再生数は「フィードの 15 件」だけで、古い動画の再生数は更新されない(新しいフィードに出ないため、保存済みの値が残る)。④ノードは 30 件。増やすときは JSON に足し、必要なら `tools/node_previews.py` に例を足す。⑤`nodes.json` は手書きで、収集のたびに `site/data/` へコピーされる(`collect.yml` は `git add data site/data` なので一緒にコミットされる)。⑥ラーニングライブラリは取っていない(§2)。

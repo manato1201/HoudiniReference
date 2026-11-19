@@ -37,6 +37,7 @@
     <button role="tab" id="tab-news" data-tab="news" aria-controls="list" aria-selected="false">ニュース <span class="count" data-count="news"></span></button>
     <button role="tab" id="tab-tips" data-tab="tips" aria-controls="list" aria-selected="false">Tips <span class="count" data-count="tips"></span></button>
     <button role="tab" id="tab-reference" data-tab="reference" aria-controls="list" aria-selected="false">リファレンス <span class="count" data-count="reference"></span></button>
+    <button role="tab" id="tab-nodes" data-tab="nodes" aria-controls="nodes-panel" aria-selected="false">ノード <span class="count" data-count="nodes"></span></button>
   </div>
 
   <form class="toolbar" id="filters" role="search" onsubmit="return false">
@@ -59,6 +60,13 @@
     <label class="field"><span class="lbl">出典</span><select id="source"><option value="">すべて</option></select></label>
     <label class="field"><span class="lbl">期間</span>
       <select id="period"><option value="0">全期間</option><option value="7">7 日</option><option value="30">30 日</option><option value="90">90 日</option></select></label>
+    <label class="field"><span class="lbl">並べ替え</span>
+      <select id="sort"><option value="new">新しい順</option><option value="popular">人気順(再生数)</option></select></label>
+    <div class="field"><span class="lbl" id="view-lbl">表示</span>
+      <div class="seg" role="group" aria-labelledby="view-lbl" id="view">
+        <button type="button" data-view="grid" aria-pressed="true">グリッド</button>
+        <button type="button" data-view="list" aria-pressed="false">リスト</button>
+      </div></div>
     <div class="field"><span class="lbl">&nbsp;</span><button id="favonly" class="btn" type="button" aria-pressed="false">☆ お気に入りのみ</button></div>
   </form>
 
@@ -67,6 +75,8 @@
   <p id="status" class="status" role="status" aria-live="polite"></p>
   <ol id="list" class="list" tabindex="-1"></ol>
   <div id="empty" class="empty" hidden></div>
+
+  <section id="nodes-panel" class="nodes-panel" role="tabpanel" aria-labelledby="tab-nodes" hidden></section>
 </main>
 
 <footer class="wrap foot">
@@ -76,8 +86,25 @@
     <p class="fine">お気に入り・テーマ・設定はサイトごとに別々に保存され、共有されません。</p>
   </nav>
   <details id="health"><summary>情報源の状態</summary><ul id="health-list"></ul></details>
-  <p class="fine">収集は公式のフィード/API の範囲だけ。保存するのは題名・URL・出典名・日付・短い抜粋・タグで、全文は保存しません。各項目の出典名と元ページのリンクから元の内容を確認してください。X の投稿は削除・変更されることがあります。</p>
+  <p class="fine">「ノード」タブの説明は自作の文章です(公式ドキュメントの文章は載せず、リンクだけを置いています)。収集は公式のフィード/API の範囲だけ。保存するのは題名・URL・出典名・日付・短い抜粋・タグ(YouTube は再生数も)で、全文・画像は保存しません。YouTube のサムネイルは YouTube の画像を表示するだけで、動画は押したときだけ埋め込みます(自動再生しません)。各項目の出典名と元ページのリンクから元の内容を確認してください。X の投稿は削除・変更されることがあります。</p>
 </footer>
+
+<dialog id="preview" class="preview" aria-labelledby="pv-title">
+  <div class="pv-head">
+    <div class="pv-meta" id="pv-meta"></div>
+    <button type="button" class="btn pv-close" id="pv-close" aria-label="閉じる(Esc)">閉じる ✕</button>
+  </div>
+  <h2 id="pv-title" class="pv-title"></h2>
+  <div class="pv-stage" id="pv-stage"></div>
+  <div class="pv-actions">
+    <button type="button" class="btn" id="pv-prev">← 前へ</button>
+    <button type="button" class="btn" id="pv-next">次へ →</button>
+    <a class="btn pv-open" id="pv-open" target="_blank" rel="noopener noreferrer">元の動画を見る</a>
+    <button type="button" class="btn" id="pv-fav" aria-pressed="false">☆ お気に入り</button>
+    <span class="pv-pos mono" id="pv-pos"></span>
+  </div>
+</dialog>
+<script src="nodes.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

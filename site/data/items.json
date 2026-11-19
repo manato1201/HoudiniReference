@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-19T06:33:46Z",
+ "generated_at": "2026-11-19T06:56:50Z",
  "sources": [
   {
    "id": "sidefx-news",
@@ -10,7 +10,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-19T06:33:46Z"
+   "last_ok": "2026-11-19T06:56:50Z"
   },
   {
    "id": "sidefx-forum",
@@ -20,7 +20,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-19T06:33:46Z"
+   "last_ok": "2026-11-19T06:56:50Z"
   },
   {
    "id": "sidefx-changelog-22",
@@ -30,7 +30,7 @@
    "ok": true,
    "fetched": 19,
    "not_modified": false,
-   "last_ok": "2026-11-19T06:33:46Z"
+   "last_ok": "2026-11-19T06:56:50Z"
   },
   {
    "id": "sidefx-changelog-21",
@@ -40,7 +40,7 @@
    "ok": true,
    "fetched": 2,
    "not_modified": false,
-   "last_ok": "2026-11-19T06:33:46Z"
+   "last_ok": "2026-11-19T06:56:50Z"
   },
   {
    "id": "sidefx-forum-learning",
@@ -50,7 +50,7 @@
    "ok": true,
    "fetched": 8,
    "not_modified": false,
-   "last_ok": "2026-11-19T06:33:46Z"
+   "last_ok": "2026-11-19T06:56:50Z"
   },
   {
    "id": "sidefx-forum-solaris-karma",
@@ -60,7 +60,7 @@
    "ok": true,
    "fetched": 8,
    "not_modified": false,
-   "last_ok": "2026-11-19T06:33:46Z"
+   "last_ok": "2026-11-19T06:56:50Z"
   },
   {
    "id": "sidefx-forum-copernicus",
@@ -70,7 +70,7 @@
    "ok": true,
    "fetched": 6,
    "not_modified": false,
-   "last_ok": "2026-11-19T06:33:46Z"
+   "last_ok": "2026-11-19T06:56:50Z"
   },
   {
    "id": "sidefx-forum-ja",
@@ -80,7 +80,17 @@
    "ok": true,
    "fetched": 9,
    "not_modified": false,
-   "last_ok": "2026-11-19T06:33:46Z"
+   "last_ok": "2026-11-19T06:56:50Z"
+  },
+  {
+   "id": "entagma-site",
+   "name": "Entagma(サイト)",
+   "kind": "rss",
+   "tab": "tips",
+   "ok": true,
+   "fetched": 20,
+   "not_modified": false,
+   "last_ok": "2026-11-19T06:56:50Z"
   },
   {
    "id": "qiita-houdini",
@@ -88,9 +98,9 @@
    "kind": "rss",
    "tab": "tips",
    "ok": true,
-   "fetched": 4,
-   "not_modified": false,
-   "last_ok": "2026-11-19T06:33:46Z"
+   "fetched": 0,
+   "not_modified": true,
+   "last_ok": "2026-11-19T06:56:50Z"
   },
   {
    "id": "zenn-houdini",
@@ -98,9 +108,9 @@
    "kind": "rss",
    "tab": "tips",
    "ok": true,
-   "fetched": 20,
-   "not_modified": false,
-   "last_ok": "2026-11-19T06:33:46Z"
+   "fetched": 0,
+   "not_modified": true,
+   "last_ok": "2026-11-19T06:56:50Z"
   },
   {
    "id": "youtube-sidefx",
@@ -110,7 +120,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-19T06:33:46Z"
+   "last_ok": "2026-11-19T06:56:50Z"
   },
   {
    "id": "youtube-entagma",
@@ -120,7 +130,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-19T06:33:46Z"
+   "last_ok": "2026-11-19T06:56:50Z"
   },
   {
    "id": "youtube-horikawa",
@@ -130,7 +140,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-19T06:33:46Z"
+   "last_ok": "2026-11-19T06:56:50Z"
   },
   {
    "id": "youtube-ninebetween",
@@ -140,7 +150,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-19T06:33:46Z"
+   "last_ok": "2026-11-19T06:56:50Z"
   },
   {
    "id": "youtube-indyzone",
@@ -150,7 +160,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-19T06:33:46Z"
+   "last_ok": "2026-11-19T06:56:50Z"
   },
   {
    "id": "youtube-usdvfx",
@@ -160,7 +170,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-19T06:33:46Z"
+   "last_ok": "2026-11-19T06:56:50Z"
   },
   {
    "id": "youtube-magnus",
@@ -170,7 +180,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-19T06:33:46Z"
+   "last_ok": "2026-11-19T06:56:50Z"
   },
   {
    "id": "youtube-dalvi",
@@ -180,7 +190,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-19T06:33:46Z"
+   "last_ok": "2026-11-19T06:56:50Z"
   },
   {
    "id": "youtube-radu",
@@ -190,7 +200,57 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-19T06:33:46Z"
+   "last_ok": "2026-11-19T06:56:50Z"
+  },
+  {
+   "id": "youtube-cgartistacademy",
+   "name": "CG Artist Academy",
+   "kind": "youtube",
+   "tab": "tips",
+   "ok": true,
+   "fetched": 15,
+   "not_modified": false,
+   "last_ok": "2026-11-19T06:56:50Z"
+  },
+  {
+   "id": "youtube-simonhoudini",
+   "name": "Simon Houdini",
+   "kind": "youtube",
+   "tab": "tips",
+   "ok": true,
+   "fetched": 15,
+   "not_modified": false,
+   "last_ok": "2026-11-19T06:56:50Z"
+  },
+  {
+   "id": "youtube-timvanh",
+   "name": "Tim van Helsdingen",
+   "kind": "youtube",
+   "tab": "tips",
+   "ok": true,
+   "fetched": 15,
+   "not_modified": false,
+   "last_ok": "2026-11-19T06:56:50Z"
+  },
+  {
+   "id": "youtube-adrienlambert",
+   "name": "Adrien Lambert",
+   "kind": "youtube",
+   "tab": "tips",
+   "ok": true,
+   "fetched": 15,
+   "not_modified": false,
+   "last_ok": "2026-11-19T06:56:50Z"
+  },
+  {
+   "id": "youtube-fancher",
+   "name": "Mark Fancher",
+   "kind": "youtube",
+   "tab": "tips",
+   "ok": true,
+   "fetched": 15,
+   "not_modified": false,
+   "last_ok": "2026-11-19T06:56:50Z"
   },
   {
    "id": "github-sideeffects-sidefxlabs",
@@ -198,9 +258,9 @@
    "kind": "github",
    "tab": "reference",
    "ok": true,
-   "fetched": 8,
-   "not_modified": false,
-   "last_ok": "2026-11-19T06:33:46Z"
+   "fetched": 0,
+   "not_modified": true,
+   "last_ok": "2026-11-19T06:56:50Z"
   },
   {
    "id": "github-sideeffects-houdiniengineforunreal",
@@ -208,9 +268,9 @@
    "kind": "github",
    "tab": "reference",
    "ok": true,
-   "fetched": 10,
-   "not_modified": false,
-   "last_ok": "2026-11-19T06:33:46Z"
+   "fetched": 0,
+   "not_modified": true,
+   "last_ok": "2026-11-19T06:56:50Z"
   },
   {
    "id": "github-sideeffects-houdiniengineforunity",
@@ -218,9 +278,9 @@
    "kind": "github",
    "tab": "reference",
    "ok": true,
-   "fetched": 1,
-   "not_modified": false,
-   "last_ok": "2026-11-19T06:33:46Z"
+   "fetched": 0,
+   "not_modified": true,
+   "last_ok": "2026-11-19T06:56:50Z"
   },
   {
    "id": "github-sideeffects-houdininiagara",
@@ -230,7 +290,7 @@
    "ok": true,
    "fetched": 8,
    "not_modified": false,
-   "last_ok": "2026-11-19T06:33:46Z"
+   "last_ok": "2026-11-19T06:56:50Z"
   },
   {
    "id": "x",
@@ -294,7 +354,8 @@
     "SideFX"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T02:36:36Z"
+   "first_seen": "2026-11-19T02:36:36Z",
+   "views": 1640
   },
   {
    "id": "yt:uUciuxeEAqU",
@@ -311,7 +372,8 @@
     "SideFX"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T02:36:36Z"
+   "first_seen": "2026-11-19T02:36:36Z",
+   "views": 933
   },
   {
    "id": "yt:ozZIQH5DAuw",
@@ -328,7 +390,8 @@
     "SideFX"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T02:36:36Z"
+   "first_seen": "2026-11-19T02:36:36Z",
+   "views": 738
   },
   {
    "id": "yt:L4ISGkfrIZk",
@@ -346,7 +409,8 @@
     "Procedural"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T02:36:36Z"
+   "first_seen": "2026-11-19T02:36:36Z",
+   "views": 3033
   },
   {
    "id": "yt:2bVJ9-KaxW0",
@@ -364,7 +428,8 @@
     "Rendering"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T02:36:36Z"
+   "first_seen": "2026-11-19T02:36:36Z",
+   "views": 1209
   },
   {
    "id": "9158230a19f68174",
@@ -416,7 +481,8 @@
     "Vellum"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T02:36:36Z"
+   "first_seen": "2026-11-19T02:36:36Z",
+   "views": 1858
   },
   {
    "id": "5eee49c58b76a4a2",
@@ -522,7 +588,8 @@
     "RBD"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 3957
   },
   {
    "id": "6702aab2c002c27d",
@@ -814,7 +881,8 @@
     "SideFX"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 9217
   },
   {
    "id": "60d7554f0a8ce511",
@@ -947,7 +1015,8 @@
     "YouTube"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 0
   },
   {
    "id": "c88d535b46234550",
@@ -1018,7 +1087,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 1791
   },
   {
    "id": "ccd41bca4608db59",
@@ -1076,6 +1146,23 @@
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
+   "id": "yt:g0PiwV_MsTU",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-adrienlambert",
+   "source": "Adrien Lambert",
+   "title": "Unrest | Part II – Retargeting & Animation (Houdini Breakdown)",
+   "url": "https://www.youtube.com/watch?v=g0PiwV_MsTU",
+   "published": "2026-11-14T15:36:43Z",
+   "excerpt": "In this second chapter, we're looking at the animation side of the scene: a rather sinister cadaver coming out of the cauldron. In this part of the Unrest project I show how I imported Mixamo mocap,…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 1117
+  },
+  {
    "id": "yt:-05LoJrNQ_I",
    "tab": "tips",
    "kind": "youtube",
@@ -1089,7 +1176,8 @@
     "YouTube"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 1968
   },
   {
    "id": "880a8d869055dd78",
@@ -1142,7 +1230,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 1231
   },
   {
    "id": "024ddde778cc9d80",
@@ -1176,7 +1265,8 @@
     "SideFX"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 4427
   },
   {
    "id": "yt:jGdQLSxWmBM",
@@ -1193,7 +1283,8 @@
     "SideFX"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 1870
   },
   {
    "id": "yt:tHEZNoEK8oc",
@@ -1296,7 +1387,8 @@
     "SideFX"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 494
   },
   {
    "id": "yt:YaKR3qlmDG0",
@@ -1313,7 +1405,8 @@
     "SideFX"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 1802
   },
   {
    "id": "yt:PANNC5Haxww",
@@ -1330,7 +1423,8 @@
     "SideFX"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 649
   },
   {
    "id": "yt:NP1WXwV1Q_4",
@@ -1347,7 +1441,8 @@
     "SideFX"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 692
   },
   {
    "id": "yt:Jab4zQc3CGc",
@@ -1365,7 +1460,8 @@
     "Terrain"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 731
   },
   {
    "id": "yt:BQmSLV1qIqA",
@@ -1382,7 +1478,8 @@
     "SideFX"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 7362
   },
   {
    "id": "yt:3B7OphQf_l0",
@@ -1399,7 +1496,8 @@
     "SideFX"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 1137
   },
   {
    "id": "efff7e762a49ef63",
@@ -1453,7 +1551,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 2032
   },
   {
    "id": "ea0cebb2dc3185e5",
@@ -1524,7 +1623,8 @@
     "Rendering"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 970
   },
   {
    "id": "869ad5697c6bf9b3",
@@ -1680,7 +1780,8 @@
     "Rendering"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 1943
   },
   {
    "id": "yt:4jaizBENyRQ",
@@ -1698,7 +1799,8 @@
     "Procedural"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 1709
   },
   {
    "id": "c2f11049e279c487",
@@ -1716,6 +1818,23 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "d6039fd099442c66",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "entagma-site",
+   "source": "Entagma(サイト)",
+   "title": "Vellum 201 – Ep. 10: Breaking Constraints and Ripping Cloth",
+   "url": "https://entagma.com/vellum-201-ep-10-breaking-constraints-and-ripping-cloth/",
+   "published": "2026-11-05T16:30:00Z",
+   "excerpt": "To view this content, you must be a member of Entagma's Patreon at $29 or more",
+   "tags": [
+    "Entagma",
+    "Vellum"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z"
   },
   {
    "id": "62bb7ede5cee1fd3",
@@ -1768,7 +1887,8 @@
     "Procedural"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 920
   },
   {
    "id": "yt:SwjsWmIZtAo",
@@ -1784,7 +1904,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 2842
   },
   {
    "id": "yt:oCj05Fp0tyc",
@@ -1800,7 +1921,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 6756
   },
   {
    "id": "5d7ce2fce19467b2",
@@ -1835,7 +1957,8 @@
     "Procedural"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 5774
   },
   {
    "id": "860dd95adc5048dc",
@@ -1868,7 +1991,42 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 940
+  },
+  {
+   "id": "yt:9Y8dUr99Gv4",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-adrienlambert",
+   "source": "Adrien Lambert",
+   "title": "Unrest | Part 01 – The Skulls & Cauldron (Houdini Breakdown)",
+   "url": "https://www.youtube.com/watch?v=9Y8dUr99Gv4",
+   "published": "2026-11-02T03:18:30Z",
+   "excerpt": "Welcome to the first breakdown of Unrest, my latest personal animation project created in Houdini. In this first chapter, we're looking at the foundations of the scene: a rather sinister cauldron sit…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 4343
+  },
+  {
+   "id": "yt:KKBR3o38GK4",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-adrienlambert",
+   "source": "Adrien Lambert",
+   "title": "Unrest - SideFX Houdini #houdini #vfx #digitalart",
+   "url": "https://www.youtube.com/watch?v=KKBR3o38GK4",
+   "published": "2026-11-01T01:51:33Z",
+   "excerpt": "It's spooky season, and apparently even skeletons need a little help getting back on their feet. This Halloween, I've been experimenting with some rather questionable necromancy in Houdini. A pile of…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 1898
   },
   {
    "id": "yt:kOg4AF82xzg",
@@ -1884,7 +2042,8 @@
     "YouTube"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 757
   },
   {
    "id": "6a3dd3ae3c3ac712",
@@ -1904,6 +2063,27 @@
    "first_seen": "2026-11-19T06:33:46Z"
   },
   {
+   "id": "yt:xIlXjMHfAZ4",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-cgartistacademy",
+   "source": "CG Artist Academy",
+   "title": "Houdini 22 Fire Tornado - Procedural Setup (Project Files Included)",
+   "url": "https://www.youtube.com/watch?v=xIlXjMHfAZ4",
+   "published": "2026-10-28T18:37:08Z",
+   "excerpt": "#Houdini #Houdini22 #HoudiniFX #Pyro #PyroFX #SmokeSimulation #VFX #ProceduralFX #VEX #Solaris #KarmaXPU #HoudiniTutorial #SideFX In this project, I created a custom fire tornado effect in Houdini 22…",
+   "tags": [
+    "YouTube",
+    "VEX",
+    "Solaris",
+    "Pyro",
+    "Procedural"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 935
+  },
+  {
    "id": "yt:VDIsRIsVgsw",
    "tab": "tips",
    "kind": "youtube",
@@ -1917,7 +2097,24 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 19336
+  },
+  {
+   "id": "c64fafdfebba0221",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "entagma-site",
+   "source": "Entagma(サイト)",
+   "title": "Houdini Tutorial: GSplats from a single image (MoGe-2 & SHARP",
+   "url": "https://entagma.com/houdini-tutorial-gsplats-from-a-single-image-moge-2-sharp/",
+   "published": "2026-10-26T15:30:00Z",
+   "excerpt": "Gaussian splats are fun, but they need time to train and at least 100 images for good results. Enter MoGe-2 & SHARP, two machine learning models promising Splats from a single photo. Let’s see how to…",
+   "tags": [
+    "Entagma"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z"
   },
   {
    "id": "c0966b14baad808c",
@@ -1950,7 +2147,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 2021
   },
   {
    "id": "yt:PeeAvnOyaa4",
@@ -1966,7 +2164,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 2453
   },
   {
    "id": "yt:pOeuG24PUZ8",
@@ -1983,7 +2182,8 @@
     "Procedural"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 2982
   },
   {
    "id": "465dc940d01d8456",
@@ -2003,6 +2203,23 @@
    "first_seen": "2026-11-19T06:33:46Z"
   },
   {
+   "id": "732a4262e4fff09c",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "entagma-site",
+   "source": "Entagma(サイト)",
+   "title": "Vellum 201 – Ep. 09: Autostitcher: Building a better (?) Clo3d",
+   "url": "https://entagma.com/vellum-201-ep-09-autostitcher-building-a-better-clo3d/",
+   "published": "2026-10-22T15:30:00Z",
+   "excerpt": "To view this content, you must be a member of Entagma's Patreon at $29 or more",
+   "tags": [
+    "Entagma",
+    "Vellum"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z"
+  },
+  {
    "id": "yt:f1T3s4v30HU",
    "tab": "tips",
    "kind": "youtube",
@@ -2017,7 +2234,8 @@
     "Vellum"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 3547
   },
   {
    "id": "yt:Y03l5nxwA00",
@@ -2033,7 +2251,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 1601
   },
   {
    "id": "b02bfb3d1b5404cd",
@@ -2066,7 +2285,8 @@
     "Rendering"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 1181
   },
   {
    "id": "yt:GE4DH4N2D0c",
@@ -2082,7 +2302,8 @@
     "YouTube"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 3604
   },
   {
    "id": "yt:QoiBoltVDjs",
@@ -2098,7 +2319,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 2493
   },
   {
    "id": "cf6b5e8cf34f3c89",
@@ -2116,6 +2338,27 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:ieQOjZ8MiHg",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-cgartistacademy",
+   "source": "CG Artist Academy",
+   "title": "Houdini 22 Custom Smoke Pyro Tutorial (Project Files Include)",
+   "url": "https://www.youtube.com/watch?v=ieQOjZ8MiHg",
+   "published": "2026-10-11T12:54:41Z",
+   "excerpt": "#Houdini #Houdini22 #HoudiniFX #Pyro #PyroFX #SmokeSimulation #VFX #ProceduralFX #VEX #Solaris #KarmaXPU #HoudiniTutorial #sidefxhoudini Full Overview Tutorial In this project, I created a custom pro…",
+   "tags": [
+    "YouTube",
+    "VEX",
+    "Solaris",
+    "Pyro",
+    "Procedural"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 742
   },
   {
    "id": "6f68e6b243405bb6",
@@ -2205,6 +2448,22 @@
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
+   "id": "f771b5270ef37cc2",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "entagma-site",
+   "source": "Entagma(サイト)",
+   "title": "Big Setups – Ep.01: Taking the logarithm of a 3d scene (Escher’s Print Gallery)",
+   "url": "https://entagma.com/big-setups-ep-01-taking-the-logarithm-of-a-3d-scene-eschers-print-gallery/",
+   "published": "2026-10-08T15:00:00Z",
+   "excerpt": "To view this content, you must be a member of Entagma's Patreon at $29 or more",
+   "tags": [
+    "Entagma"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z"
+  },
+  {
    "id": "yt:lkZU3pLEX4U",
    "tab": "tips",
    "kind": "youtube",
@@ -2218,7 +2477,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 4357
   },
   {
    "id": "f0b05eb4ee408f43",
@@ -2250,7 +2510,24 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 5182
+  },
+  {
+   "id": "6ef6efe747f4f4e4",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "entagma-site",
+   "source": "Entagma(サイト)",
+   "title": "Gaussian Splat Segmentation",
+   "url": "https://entagma.com/gaussian-splat-segmentation/",
+   "published": "2026-10-05T16:30:00Z",
+   "excerpt": "Chris got a request from Kay John Yim at HIVEalt26 to build a tool for gaussian splat segmentation. And Chris did exactly that. He will show you how to create a 2D Mask from your gaussian splats, tha…",
+   "tags": [
+    "Entagma"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z"
   },
   {
    "id": "yt:WdHFQF3pZA0",
@@ -2266,7 +2543,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 12603
   },
   {
    "id": "yt:4aKv3Pkyj8Y",
@@ -2282,7 +2560,8 @@
     "YouTube"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 1171
   },
   {
    "id": "85d60a0243c87c39",
@@ -2318,7 +2597,8 @@
     "YouTube"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 1471
   },
   {
    "id": "ab1ad67848b61437",
@@ -2352,7 +2632,8 @@
     "Copernicus"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 2006
   },
   {
    "id": "yt:lVL5qz9v23k",
@@ -2368,7 +2649,29 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 2091
+  },
+  {
+   "id": "yt:8oUbY4aww0s",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-cgartistacademy",
+   "source": "CG Artist Academy",
+   "title": "Houdini 22 Custom Smoke Pyro - Procedural Setup (Project Files Included)",
+   "url": "https://www.youtube.com/watch?v=8oUbY4aww0s",
+   "published": "2026-09-29T18:49:28Z",
+   "excerpt": "#Houdini #Houdini22 #HoudiniFX #Pyro #PyroFX #SmokeSimulation #VFX #ProceduralFX #VEX #Solaris #KarmaXPU #HoudiniTutorial #SideFX Full Tutorial Coming Soon!! In this project, I created a custom proce…",
+   "tags": [
+    "YouTube",
+    "VEX",
+    "Solaris",
+    "Pyro",
+    "Procedural"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 1301
   },
   {
    "id": "yt:R_MoYhQ_AmE",
@@ -2386,7 +2689,8 @@
     "Karma"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 246
   },
   {
    "id": "yt:T_92ZlfNINA",
@@ -2402,7 +2706,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 1728
   },
   {
    "id": "yt:u5CXPmnVwYw",
@@ -2419,7 +2724,45 @@
     "Procedural"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 443
+  },
+  {
+   "id": "726174fd6c02b0d5",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "entagma-site",
+   "source": "Entagma(サイト)",
+   "title": "Advanced Setups – pt. 32: SDF Hacks from HIVEalt 26",
+   "url": "https://entagma.com/advanced-setups-pt-32-sdf-hacks-from-hivealt-26/",
+   "published": "2026-09-24T15:30:00Z",
+   "excerpt": "To view this content, you must be a member of Entagma's Patreon at $29 or more",
+   "tags": [
+    "Entagma"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z"
+  },
+  {
+   "id": "yt:lWNhgvOE9Zo",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-cgartistacademy",
+   "source": "CG Artist Academy",
+   "title": "Houdini 22 Abstract smoke Pyro - Procedural Setup (Project files Included)",
+   "url": "https://www.youtube.com/watch?v=lWNhgvOE9Zo",
+   "published": "2026-09-23T18:13:49Z",
+   "excerpt": "#Houdini #Houdini22 #Pyro #PyroFX #SmokeSimulation #HoudiniFX #Solaris #KarmaXPU #VFX #ProceduralFX #SideFX #CGI #VisualEffects Abstract Smoke - Houdini 22 | Pyro FX | Karma XPU In this project, I cr…",
+   "tags": [
+    "YouTube",
+    "Solaris",
+    "Karma",
+    "Pyro",
+    "Procedural"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 1325
   },
   {
    "id": "yt:KYgzXSRfVsw",
@@ -2435,7 +2778,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 2752
   },
   {
    "id": "yt:2T34relmbm8",
@@ -2451,7 +2795,8 @@
     "YouTube"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 532
   },
   {
    "id": "yt:7aWE-3T_3NA",
@@ -2468,7 +2813,8 @@
     "Procedural"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 6682
   },
   {
    "id": "631b56b5abfb97a6",
@@ -2519,7 +2865,8 @@
     "Procedural"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 3392
   },
   {
    "id": "yt:XDWnekoVCG4",
@@ -2535,7 +2882,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 5479
   },
   {
    "id": "yt:UqB52SmNvXw",
@@ -2554,7 +2902,8 @@
     "Simulation"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 1835
   },
   {
    "id": "yt:mlBO92dOdkk",
@@ -2571,7 +2920,25 @@
     "Vellum"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 1456
+  },
+  {
+   "id": "bed0ac79753a7521",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "entagma-site",
+   "source": "Entagma(サイト)",
+   "title": "Vellum 201 – Ep.08: Creating Studio Drift’s Shylight in Houdini",
+   "url": "https://entagma.com/vellum-201-ep-08-creating-studio-drifts-shylight-in-houdini/",
+   "published": "2026-09-10T15:03:36Z",
+   "excerpt": "To view this content, you must be a member of Entagma's Patreon at $29 or more",
+   "tags": [
+    "Entagma",
+    "Vellum"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z"
   },
   {
    "id": "yt:idEyn3DNEqI",
@@ -2588,7 +2955,8 @@
     "Procedural"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 28814
   },
   {
    "id": "yt:Kti2mHBfyCc",
@@ -2604,7 +2972,8 @@
     "YouTube"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 1366
   },
   {
    "id": "7da382d7dc780ce7",
@@ -2660,6 +3029,24 @@
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
+   "id": "yt:1ta7puYe1BY",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-adrienlambert",
+   "source": "Adrien Lambert",
+   "title": "Houdini Solaris : Instance on instances / Secondary scatters without Unpack",
+   "url": "https://www.youtube.com/watch?v=1ta7puYe1BY",
+   "published": "2026-09-02T03:49:03Z",
+   "excerpt": "In this video I'm showing you practical ways to scatter secondary details (small rocks, bushes, debris…) on top of an existing scatter in Houdini Solaris, all of that without doing the classic unpack…",
+   "tags": [
+    "YouTube",
+    "Solaris"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 6019
+  },
+  {
    "id": "dc79171e4adbad03",
    "tab": "news",
    "kind": "rss",
@@ -2690,7 +3077,29 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 6020
+  },
+  {
+   "id": "yt:joU1tumWb7Y",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-cgartistacademy",
+   "source": "CG Artist Academy",
+   "title": "Houdini 22 Fur Simulation advect by Pyro Tutorial - Part 1 | Vellum + Hairgen(Project file Included)",
+   "url": "https://www.youtube.com/watch?v=joU1tumWb7Y",
+   "published": "2026-08-29T15:03:13Z",
+   "excerpt": "#Houdini #HoudiniFX #Houdini22 #FurSimulation #Hairgen #Vellum #Pyro #KarmaRenderer #Procedural #cgi Full Tutorial!! This is a complete step-by-step tutorial, covering the procedural setup, fur gener…",
+   "tags": [
+    "YouTube",
+    "Vellum",
+    "Pyro",
+    "Simulation",
+    "Procedural"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 1398
   },
   {
    "id": "yt:6mgiWm5B6iw",
@@ -2707,7 +3116,8 @@
     "Copernicus"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 7886
   },
   {
    "id": "9fabd938ded32c00",
@@ -2741,7 +3151,26 @@
     "Simulation"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 6586
+  },
+  {
+   "id": "2f61ea4a363b6da3",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "entagma-site",
+   "source": "Entagma(サイト)",
+   "title": "Guest Tutorial: Adding Deforming Bubbles to your Viscous FLIP Simulation",
+   "url": "https://entagma.com/guest-tutorial-adding-deforming-bubbles-to-your-vicous-flip-simulation/",
+   "published": "2026-08-24T15:30:00Z",
+   "excerpt": "Philipp is back with his Honey setup for another round of FLIP. He will show you how to add deforming bubbles to any viscous fluid without having to resim or other complicated additions. Meshes, Ligh…",
+   "tags": [
+    "Entagma",
+    "FLIP",
+    "Simulation"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z"
   },
   {
    "id": "yt:G8iXWqyJKiM",
@@ -2757,7 +3186,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 1974
   },
   {
    "id": "5908be68841f12d7",
@@ -2792,7 +3222,25 @@
     "Simulation"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 1292
+  },
+  {
+   "id": "167f74951e401f4d",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "entagma-site",
+   "source": "Entagma(サイト)",
+   "title": "Vellum 201 – Ep.07: Cloth Upressing & Wrinkle Postprocessing",
+   "url": "https://entagma.com/vellum-201-ep-07-cloth-upressing-wrinkle-postprocessing/",
+   "published": "2026-08-20T15:30:00Z",
+   "excerpt": "To view this content, you must be a member of Entagma's Patreon at $29 or more",
+   "tags": [
+    "Entagma",
+    "Vellum"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z"
   },
   {
    "id": "yt:v34huo3wkNY",
@@ -2810,7 +3258,8 @@
     "Simulation"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 2913
   },
   {
    "id": "yt:3uXYs0RHqDA",
@@ -2826,7 +3275,29 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 1348
+  },
+  {
+   "id": "yt:O5bQoAyO7hY",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-cgartistacademy",
+   "source": "CG Artist Academy",
+   "title": "Houdini 22 Procedural Fur Simulation | Pyro-Advection + Vellum + Hairgen (Project files Included)",
+   "url": "https://www.youtube.com/watch?v=O5bQoAyO7hY",
+   "published": "2026-08-18T17:57:09Z",
+   "excerpt": "#Houdini #HoudiniFX #Houdini22 #FurSimulation #Hairgen #Vellum #Pyro #KarmaRenderer #Procedural #cgi Full Tutorial Coming Soon!! In this project, I explored a fully procedural fur simulation in Houdi…",
+   "tags": [
+    "YouTube",
+    "Vellum",
+    "Pyro",
+    "Simulation",
+    "Procedural"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 637
   },
   {
    "id": "730a60485a47ef72",
@@ -2859,7 +3330,8 @@
     "Rendering"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 403
   },
   {
    "id": "yt:QaVzISbXwys",
@@ -2879,7 +3351,8 @@
     "Simulation"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 1041
   },
   {
    "id": "5a2ce48084ec4a31",
@@ -2912,7 +3385,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 777
   },
   {
    "id": "c5a4dcc87d02561d",
@@ -2994,7 +3468,26 @@
     "Terrain"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 10750
+  },
+  {
+   "id": "9ca0bb1ac0e2bcd0",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "entagma-site",
+   "source": "Entagma(サイト)",
+   "title": "Heightfields on 3D Objects (Modding Houdini 22)",
+   "url": "https://entagma.com/heightfields-on-3d-objects-modding-houdini-22/",
+   "published": "2026-08-10T15:00:00Z",
+   "excerpt": "Chris has been playing with the new Adjacency and Heightfield workflows in Copernicus. Both work really well on their own, so why not combine them to put Heightfields on any uv unwrapped object, not…",
+   "tags": [
+    "Entagma",
+    "Copernicus",
+    "Terrain"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z"
   },
   {
    "id": "yt:oSiMSvm8OZ0",
@@ -3010,7 +3503,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 955
   },
   {
    "id": "yt:27EsQjdUy64",
@@ -3028,7 +3522,8 @@
     "Terrain"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 2877
   },
   {
    "id": "yt:Mypavnx92tw",
@@ -3044,7 +3539,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 3605
   },
   {
    "id": "yt:NJSNt653z-I",
@@ -3061,7 +3557,8 @@
     "Rendering"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 959
   },
   {
    "id": "yt:hax6m20SuqY",
@@ -3077,7 +3574,30 @@
     "YouTube"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 411
+  },
+  {
+   "id": "yt:f_oCe5trByM",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-cgartistacademy",
+   "source": "CG Artist Academy",
+   "title": "Houdini Cream Flip Simulation - Procedural Setup (Project files Included)",
+   "url": "https://www.youtube.com/watch?v=f_oCe5trByM",
+   "published": "2026-07-30T18:29:08Z",
+   "excerpt": "#Houdini #SideFX #FLIP #FluidSimulation #ViscousFluid #CreamSimulation #CGI #Procedural #KarmaRenderer #KarmaXPU #FXArtist #VFX #3DAnimation #Simulation #Rendering #USD #Solaris #ComputerGraphics #Ho…",
+   "tags": [
+    "YouTube",
+    "Solaris",
+    "FLIP",
+    "Simulation",
+    "Procedural",
+    "Rendering"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 573
   },
   {
    "id": "d98576edb322cb0e",
@@ -3111,7 +3631,25 @@
     "FLIP"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 4398
+  },
+  {
+   "id": "1e7804a00cf3a902",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "entagma-site",
+   "source": "Entagma(サイト)",
+   "title": "Big Setups – Ep.00: FLIP based Foam",
+   "url": "https://entagma.com/big-setups-ep-00-flip-based-foam/",
+   "published": "2026-07-30T15:30:00Z",
+   "excerpt": "To view this content, you must be a member of Entagma's Patreon at $29 or more",
+   "tags": [
+    "Entagma",
+    "FLIP"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z"
   },
   {
    "id": "5857cafb9655fc52",
@@ -3210,7 +3748,8 @@
     "Terrain"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 445
   },
   {
    "id": "3487ca281f160f7b",
@@ -3245,6 +3784,22 @@
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
+   "id": "15f409ce339cd7d7",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "entagma-site",
+   "source": "Entagma(サイト)",
+   "title": "New in Houdini 22: Training Gaussian Splats from Infrared Photos",
+   "url": "https://entagma.com/new-in-houdini-22-gsplats-as-fast-as-possible/",
+   "published": "2026-07-20T15:30:00Z",
+   "excerpt": "Chris converted his camera into a infrared camera and the release of Houdini 22 created the perfect opportunity to cook up some infrared Gaussian Splats! There won’t be as many Houdini release as usu…",
+   "tags": [
+    "Entagma"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z"
+  },
+  {
    "id": "yt:A0gOZWh9db8",
    "tab": "tips",
    "kind": "youtube",
@@ -3260,7 +3815,28 @@
     "Terrain"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 1506
+  },
+  {
+   "id": "yt:nDPUM8B0vcc",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-cgartistacademy",
+   "source": "CG Artist Academy",
+   "title": "Houdini Viscous Liquid Flip Simulation - Procedural Setup (Project files Included)",
+   "url": "https://www.youtube.com/watch?v=nDPUM8B0vcc",
+   "published": "2026-07-19T16:05:21Z",
+   "excerpt": "#Houdini #SideFX #FLIP #FluidSimulation #ViscousLiquid #Procedural #CGI #VFX #FXArtist #KarmaRenderer #KarmaXPU #3DAnimation #Simulation #ProductVisualization #ProceduralWorkflow #ComputerGraphics Pr…",
+   "tags": [
+    "YouTube",
+    "FLIP",
+    "Simulation",
+    "Procedural"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 845
   },
   {
    "id": "yt:MuPo6tK8mPs",
@@ -3278,7 +3854,8 @@
     "Terrain"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 1292
   },
   {
    "id": "ddad1bd37958ff14",
@@ -3329,7 +3906,25 @@
     "YouTube"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 225
+  },
+  {
+   "id": "767727d4a19d5844",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "entagma-site",
+   "source": "Entagma(サイト)",
+   "title": "Vellum 201 – Ep. 06: Mastering Drag and Damping",
+   "url": "https://entagma.com/vellum-201-ep-06-mastering-drag-and-damping/",
+   "published": "2026-07-09T14:30:00Z",
+   "excerpt": "To view this content, you must be a member of Entagma's Patreon at $29 or more",
+   "tags": [
+    "Entagma",
+    "Vellum"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z"
   },
   {
    "id": "yt:N99DmHlZ4wU",
@@ -3345,7 +3940,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 1247
   },
   {
    "id": "5414dc364fa67279",
@@ -3366,6 +3962,341 @@
    "first_seen": "2026-11-19T06:33:46Z"
   },
   {
+   "id": "yt:z1dXRPJQ0lo",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-fancher",
+   "source": "Mark Fancher",
+   "title": "00A - Welcome to STOP BEING AFRAID OF HOUDINI",
+   "url": "https://www.youtube.com/watch?v=z1dXRPJQ0lo",
+   "published": "2026-07-02T06:03:51Z",
+   "excerpt": "Get the project files here: https://markfancher.gumroad.com/l/SBAOH Welcome to Stop Being Afraid of Houdini",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 2702
+  },
+  {
+   "id": "yt:SGqXg7kZkNY",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-fancher",
+   "source": "Mark Fancher",
+   "title": "00B - Before You Begin - STOP BEING AFRAID OF HOUDINI",
+   "url": "https://www.youtube.com/watch?v=SGqXg7kZkNY",
+   "published": "2026-07-02T06:03:15Z",
+   "excerpt": "Get the project files here: https://markfancher.gumroad.com/l/SBAOH Just a couple thoughts to keep in mind before beginning this course.",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 633
+  },
+  {
+   "id": "yt:Tv04GDBCeEU",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-fancher",
+   "source": "Mark Fancher",
+   "title": "00C - Managing Course Project Files - STOP BEING AFRAID OF HOUDINI",
+   "url": "https://www.youtube.com/watch?v=Tv04GDBCeEU",
+   "published": "2026-07-02T06:02:35Z",
+   "excerpt": "Get the project files here: https://markfancher.gumroad.com/l/SBAOH This lesson can be skipped until needed. This video teaches you how to manage downloaded project files from certain chapters. It us…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 586
+  },
+  {
+   "id": "yt:T0ZHRYSSg04",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-fancher",
+   "source": "Mark Fancher",
+   "title": "1 - Part 1 Primer - STOP BEING AFRAID OF HOUDINI",
+   "url": "https://www.youtube.com/watch?v=T0ZHRYSSg04",
+   "published": "2026-07-02T06:02:02Z",
+   "excerpt": "Get the project files here: https://markfancher.gumroad.com/l/SBAOH Part 1 of the course will cover the very basics, all the things you’ll need to know before we jump into the cool stuff, which comes…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 430
+  },
+  {
+   "id": "yt:4P3LGNlWDjg",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-fancher",
+   "source": "Mark Fancher",
+   "title": "1A - Introduction - STOP BEING AFRAID OF HOUDINI",
+   "url": "https://www.youtube.com/watch?v=4P3LGNlWDjg",
+   "published": "2026-07-02T06:01:12Z",
+   "excerpt": "Get the project files here: https://markfancher.gumroad.com/l/SBAOH Introduction to Chapter 1",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 379
+  },
+  {
+   "id": "yt:4bdPYraXYiE",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-fancher",
+   "source": "Mark Fancher",
+   "title": "1B - First Exposure - STOP BEING AFRAID OF HOUDINI",
+   "url": "https://www.youtube.com/watch?v=4bdPYraXYiE",
+   "published": "2026-07-02T06:00:09Z",
+   "excerpt": "Get the project files here: https://markfancher.gumroad.com/l/SBAOH Sitting in front of Houdini for the first time, first impressions and things to note. We’ll explore a little bit of the Houdini int…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 529
+  },
+  {
+   "id": "yt:-lPQdcthqVM",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-fancher",
+   "source": "Mark Fancher",
+   "title": "1C - Interface - STOP BEING AFRAID OF HOUDINI",
+   "url": "https://www.youtube.com/watch?v=-lPQdcthqVM",
+   "published": "2026-07-02T05:59:37Z",
+   "excerpt": "Get the project files here: https://markfancher.gumroad.com/l/SBAOH Here we’ll really dive into the interface and talk about all the various panes and toolbars and what they generally do. We’ll cover…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 406
+  },
+  {
+   "id": "yt:DVwaVl0FlKI",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-fancher",
+   "source": "Mark Fancher",
+   "title": "2A - Geometry Selection & Manipulation - STOP BEING AFRAID OF HOUDINI",
+   "url": "https://www.youtube.com/watch?v=DVwaVl0FlKI",
+   "published": "2026-07-02T05:59:06Z",
+   "excerpt": "Get the project files here: https://markfancher.gumroad.com/l/SBAOH Here we’ll explore the basic ways managing geometry and moving it around in Houdini: Transformation, pivoting, copying, parenting,…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 324
+  },
+  {
+   "id": "yt:BW4XnSjtQAo",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-fancher",
+   "source": "Mark Fancher",
+   "title": "2B - Animation Editor & Timeline - STOP BEING AFRAID OF HOUDINI",
+   "url": "https://www.youtube.com/watch?v=BW4XnSjtQAo",
+   "published": "2026-07-02T05:58:04Z",
+   "excerpt": "Get the project files here: https://markfancher.gumroad.com/l/SBAOH In this section we cover how to set animation keyframes, as well as how to adjust your curves and animation in the curve editor and…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 470
+  },
+  {
+   "id": "yt:hCCX9O3WaMc",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-fancher",
+   "source": "Mark Fancher",
+   "title": "2C - Project Setup & Autosave - STOP BEING AFRAID OF HOUDINI",
+   "url": "https://www.youtube.com/watch?v=hCCX9O3WaMc",
+   "published": "2026-07-02T05:57:29Z",
+   "excerpt": "Get the project files here: https://markfancher.gumroad.com/l/SBAOH In this lesson we go over how to setup and edit your project directories as well as setting up Auto Save to always be on on both PC…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 241
+  },
+  {
+   "id": "yt:fsxUascfN-8",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-fancher",
+   "source": "Mark Fancher",
+   "title": "2D - Expressions, Relative References & Editing the Parameter Interface - SBAOH",
+   "url": "https://www.youtube.com/watch?v=fsxUascfN-8",
+   "published": "2026-07-02T05:56:58Z",
+   "excerpt": "Get the project files here: https://markfancher.gumroad.com/l/SBAOH There’s no escaping it, expressions are a thing… But if there’s any app out there that was made to make expression writing as fun a…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 179
+  },
+  {
+   "id": "yt:4PidKtpCvA8",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-fancher",
+   "source": "Mark Fancher",
+   "title": "2F - Shelf Revisited: Melt A Cube - STOP BEING AFRAID OF HOUDINI",
+   "url": "https://www.youtube.com/watch?v=4PidKtpCvA8",
+   "published": "2026-07-02T05:56:21Z",
+   "excerpt": "Get the project files here: https://markfancher.gumroad.com/l/SBAOH In this lesson, we'll demonstrate the power of the shelf by getting a quick object melting rig set up.",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 241
+  },
+  {
+   "id": "yt:Z-LqqO-aYVo",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-fancher",
+   "source": "Mark Fancher",
+   "title": "2G - Houdini vs. C4D Comparison - STOP BEING AFRAID OF HOUDINI",
+   "url": "https://www.youtube.com/watch?v=Z-LqqO-aYVo",
+   "published": "2026-07-02T05:55:48Z",
+   "excerpt": "Get the project files here: https://markfancher.gumroad.com/l/SBAOH This is a short discussion on the differences between Houdini and other apps. We’ll be comparing two nearly identical setups, one c…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 303
+  },
+  {
+   "id": "yt:Mv1HlOX_LAg",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-fancher",
+   "source": "Mark Fancher",
+   "title": "2.5 A - Building Render Geo - STOP BEING AFRAID OF HOUDINI",
+   "url": "https://www.youtube.com/watch?v=Mv1HlOX_LAg",
+   "published": "2026-07-02T05:54:43Z",
+   "excerpt": "Get the project files here: https://markfancher.gumroad.com/l/SBAOH Here, we'll create a simple procedural animation that we'll render in the various engines we go over in the rest of this chapter.",
+   "tags": [
+    "YouTube",
+    "Procedural",
+    "Rendering"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 160
+  },
+  {
+   "id": "yt:Gc89LLzq_PE",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-fancher",
+   "source": "Mark Fancher",
+   "title": "2.5 B - Mantra Rendering - STOP BEING AFRAID OF HOUDINI",
+   "url": "https://www.youtube.com/watch?v=Gc89LLzq_PE",
+   "published": "2026-07-02T05:54:03Z",
+   "excerpt": "Get the project files here: https://markfancher.gumroad.com/l/SBAOH This method is ancient, but in this section we will go over how to render our scene with the built in Mantra renderer that comes wi…",
+   "tags": [
+    "YouTube",
+    "Rendering"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 351
+  },
+  {
+   "id": "yt:WbR8k_yOrRw",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-cgartistacademy",
+   "source": "CG Artist Academy",
+   "title": "Houdini MPM disintegration effect - Procedural Setup (Project files Included)",
+   "url": "https://www.youtube.com/watch?v=WbR8k_yOrRw",
+   "published": "2026-06-30T18:48:25Z",
+   "excerpt": "#Houdini #SideFX #MPM #Simulation #Disintegration #VFX #CGI #Procedural #KarmaXPU #Rendering #MotionGraphics #FXArtist #3DAnimation #ComputerGraphics #HoudiniFX Houdini MPM Disintegration Effect | Ma…",
+   "tags": [
+    "YouTube",
+    "Simulation",
+    "Procedural",
+    "Rendering"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 833
+  },
+  {
+   "id": "44a20e5237daa6c0",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "entagma-site",
+   "source": "Entagma(サイト)",
+   "title": "Guest Tutorial: Creating realistic honey with FLIP",
+   "url": "https://entagma.com/guest-tutorial-creating-realistic-honey-with-flip/",
+   "published": "2026-06-29T14:30:00Z",
+   "excerpt": "In this Guest Tutorial Philipp Denghel lets us in on how he creates honey. He goes into detail about his approach and will show you how he created just the right amount of viscosity that distinguishe…",
+   "tags": [
+    "Entagma",
+    "FLIP"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z"
+  },
+  {
+   "id": "yt:2cAiy6OQusU",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-cgartistacademy",
+   "source": "CG Artist Academy",
+   "title": "Houdini Vellum Grain explosion - Procedural Setup (Project Files Included)",
+   "url": "https://www.youtube.com/watch?v=2cAiy6OQusU",
+   "published": "2026-06-27T15:23:11Z",
+   "excerpt": "#Houdini #SideFX #Vellum #VellumSolver #Grains #ParticleSimulation #Procedural #MotionGraphics #CGI #VFX #FXArtist #Simulation #Karma #KarmaXPU #ProceduralAnimation #HoudiniFX #CGArt #3D #Rendering #…",
+   "tags": [
+    "YouTube",
+    "Karma",
+    "Vellum",
+    "Simulation",
+    "Procedural",
+    "Rendering"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 478
+  },
+  {
+   "id": "2057dca3e7fa3e1e",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "entagma-site",
+   "source": "Entagma(サイト)",
+   "title": "Vellum 201 – Ep. 05: FLIP + Vellum – Spawning with animated Pins",
+   "url": "https://entagma.com/vellum-201-ep-05-flip-vellum-spawning-with-animated-pins/",
+   "published": "2026-06-25T14:30:00Z",
+   "excerpt": "To view this content, you must be a member of Entagma's Patreon at $29 or more",
+   "tags": [
+    "Entagma",
+    "Vellum",
+    "FLIP"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z"
+  },
+  {
    "id": "010c6dfbd9f9f43f",
    "tab": "tips",
    "kind": "rss",
@@ -3381,6 +4312,23 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "75652a4a6423329d",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "entagma-site",
+   "source": "Entagma(サイト)",
+   "title": "Vellum 201 – Ep. 04: Cloth Popcorn: Spawning Objects And Constraints",
+   "url": "https://entagma.com/vellum-201-ep-04-cloth-popcorn-spawning-objects-and-constraints/",
+   "published": "2026-06-11T15:00:00Z",
+   "excerpt": "To view this content, you must be a member of Entagma's Patreon at $29 or more",
+   "tags": [
+    "Entagma",
+    "Vellum"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z"
   },
   {
    "id": "c994eb4813f5a077",
@@ -3433,6 +4381,44 @@
    "first_seen": "2026-11-19T06:33:46Z"
   },
   {
+   "id": "yt:QeK5pW8dvCs",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-cgartistacademy",
+   "source": "CG Artist Academy",
+   "title": "Houdini MPM smudge effect Tutorial (Project files Included - Patreon)",
+   "url": "https://www.youtube.com/watch?v=QeK5pW8dvCs",
+   "published": "2026-06-08T18:44:32Z",
+   "excerpt": "#Houdini #SideFX #MPM #KarmaXPU #CGI #VFX #MotionDesign #Particles #Simulation #Procedural #HoudiniFX #3DArt #FXArtist #DigitalArt #Grains #SimulationFX #Rendering #ProceduralAnimation MPM grain smud…",
+   "tags": [
+    "YouTube",
+    "Simulation",
+    "Procedural",
+    "Rendering"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 766
+  },
+  {
+   "id": "d74e338f72aef8f2",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "entagma-site",
+   "source": "Entagma(サイト)",
+   "title": "Chladni Patterns – POP Forces from Copernicus",
+   "url": "https://entagma.com/chladni-patterns-pop-forces-from-copernicus/",
+   "published": "2026-06-08T15:45:15Z",
+   "excerpt": "Copernicus and Vellum is still our thing right now! And for good reason, since Copernicus now has a node that generates Chladni Patterns with just a few clicks. Chris uses them to drive POP Forces in…",
+   "tags": [
+    "Entagma",
+    "Vellum",
+    "Copernicus"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z"
+  },
+  {
    "id": "6c69baae4bcb3ea0",
    "tab": "tips",
    "kind": "rss",
@@ -3466,6 +4452,26 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:4oWRxgZQ28g",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-cgartistacademy",
+   "source": "CG Artist Academy",
+   "title": "Houdini Floating Cloth - Vellum Solver (Project Files Included)",
+   "url": "https://www.youtube.com/watch?v=4oWRxgZQ28g",
+   "published": "2026-06-04T18:28:46Z",
+   "excerpt": "#Houdini #HoudiniFX #Vellum #ClothSimulation #CGI #FXArtist #ProceduralAnimation #Simulation #3DAnimation #SideFX #VFX #TechnicalArtist #KarmaRenderer #ComputerGraphics #MotionDesign In this project,…",
+   "tags": [
+    "YouTube",
+    "Vellum",
+    "Simulation",
+    "Procedural"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 507
   },
   {
    "id": "1acedf0fb809ce1d",
@@ -3514,7 +4520,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 873
   },
   {
    "id": "c86b7bebab2c8ac6",
@@ -3572,6 +4579,23 @@
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
+   "id": "b317d6ae6c4ec152",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "entagma-site",
+   "source": "Entagma(サイト)",
+   "title": "Vellum 201 – Ep. 03: Automated nudging: Solving problems with Jacobi solvers",
+   "url": "https://entagma.com/vellum-201-ep-03-automated-nudging-solving-problems-with-jacobi-solvers/",
+   "published": "2026-05-28T14:30:00Z",
+   "excerpt": "To view this content, you must be a member of Entagma's Patreon at $29 or more",
+   "tags": [
+    "Entagma",
+    "Vellum"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z"
+  },
+  {
    "id": "caeaa888bf080bdd",
    "tab": "tips",
    "kind": "rss",
@@ -3587,6 +4611,26 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z"
+  },
+  {
+   "id": "yt:b6rAp9zEzGs",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-cgartistacademy",
+   "source": "CG Artist Academy",
+   "title": "Houdini MPM smudge effect - Procedural Setup (Project files Included)",
+   "url": "https://www.youtube.com/watch?v=b6rAp9zEzGs",
+   "published": "2026-05-21T17:52:11Z",
+   "excerpt": "#Houdini #SideFX #MPM #KarmaXPU #CGI #VFX #MotionDesign #Particles #Simulation #Procedural #HoudiniFX #3DArt #FXArtist #DigitalArt #Grains #SimulationFX #Rendering #ProceduralAnimation Experimental M…",
+   "tags": [
+    "YouTube",
+    "Simulation",
+    "Procedural",
+    "Rendering"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 987
   },
   {
    "id": "d4a495c0af44b6e5",
@@ -3621,6 +4665,80 @@
    "first_seen": "2026-11-18T07:04:11Z"
   },
   {
+   "id": "4216fa8c0afd68e1",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "entagma-site",
+   "source": "Entagma(サイト)",
+   "title": "Vellum 201 – Ep. 02: Mastering Substeps, Constraint-, Smoothing- & Collision-Iterations",
+   "url": "https://entagma.com/vellum-201-ep-02-mastering-substeps-constraint-smoothing-collision-iterations/",
+   "published": "2026-05-14T13:30:00Z",
+   "excerpt": "To view this content, you must be a member of Entagma's Patreon at $29 or more",
+   "tags": [
+    "Entagma",
+    "Vellum"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z"
+  },
+  {
+   "id": "yt:H2CtnqYL6EE",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-cgartistacademy",
+   "source": "CG Artist Academy",
+   "title": "Houdini Sand disintegration - grains based disintegration setup (Project files Included)",
+   "url": "https://www.youtube.com/watch?v=H2CtnqYL6EE",
+   "published": "2026-05-11T16:47:40Z",
+   "excerpt": "#Houdini #SideFX #VFX #FX #Particles #Grains #SandEffect #Simulation #Procedural #CGI #3D #HoudiniFX #VFXArtist #DigitalArt #FXSimulation #ProceduralWorkflow #SandDisintegration #DOPs #Pyro #MotionDe…",
+   "tags": [
+    "YouTube",
+    "Pyro",
+    "Simulation",
+    "Procedural"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 553
+  },
+  {
+   "id": "dd8b62063e02c560",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "entagma-site",
+   "source": "Entagma(サイト)",
+   "title": "Easy Houdini: Inkblots – Steal from Touchdesigner",
+   "url": "https://entagma.com/easy-houdini-inkblots-steal-from-touchdesigner/",
+   "published": "2026-05-11T13:30:00Z",
+   "excerpt": "We are stealing from Touchdesigner! Chris took a look at a Touchdesigner Tutorial by elekktronaut and recreated it in Houdini, creating this inkblot animation using Copernicus and Vellum. Chris Inspi…",
+   "tags": [
+    "Entagma",
+    "Vellum",
+    "Copernicus"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z"
+  },
+  {
+   "id": "yt:dO8iqZyfYOc",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-cgartistacademy",
+   "source": "CG Artist Academy",
+   "title": "Houdini Pyro Wind Tunnel Tutorial (Free Project File Included - Gumroad)",
+   "url": "https://www.youtube.com/watch?v=dO8iqZyfYOc",
+   "published": "2026-05-09T16:33:47Z",
+   "excerpt": "#Houdini #PyroFX #VFX #CGI #FluidSimulation #SideFX #HoudiniFX #SmokeSimulation #VDB #MotionGraphics #fxartist In this tutorial, we’ll create a stylised Wind Tunnel effect in Houdini using Pyro, VDB…",
+   "tags": [
+    "YouTube",
+    "Pyro",
+    "FLIP"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 1633
+  },
+  {
    "id": "yt:y9u8hNIFf-4",
    "tab": "tips",
    "kind": "youtube",
@@ -3635,7 +4753,8 @@
     "VEX"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 1021
   },
   {
    "id": "bd89413b29bddf19",
@@ -3773,7 +4892,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 2503
   },
   {
    "id": "c76120b704fea2da",
@@ -3878,7 +4998,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 6032
   },
   {
    "id": "f013c57819d7e9bd",
@@ -3918,6 +5039,23 @@
    "first_seen": "2026-11-19T06:33:46Z"
   },
   {
+   "id": "yt:oxijboIBjug",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-timvanh",
+   "source": "Tim van Helsdingen",
+   "title": "A Noobs Guide to Linux (I am the noob)",
+   "url": "https://www.youtube.com/watch?v=oxijboIBjug",
+   "published": "2026-02-03T12:01:11Z",
+   "excerpt": "I switched to Linux! Here are my thoughts after just over a month of using it daily. Support me on patreon: https://www.patreon.com/posts/121570261 Links to stuff i'm talkin about in the video: https…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 1687
+  },
+  {
    "id": "yt:BcDR7vD2lyM",
    "tab": "tips",
    "kind": "youtube",
@@ -3931,7 +5069,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 3729
   },
   {
    "id": "4c39e1e1ff055623",
@@ -3967,7 +5106,42 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 4969
+  },
+  {
+   "id": "yt:aAF46gH5JCU",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-simonhoudini",
+   "source": "Simon Houdini",
+   "title": "Modular Dungeon Generator || Houdini tutorial",
+   "url": "https://www.youtube.com/watch?v=aAF46gH5JCU",
+   "published": "2025-12-22T17:27:22Z",
+   "excerpt": "This Video goes into a detailed breakdown of making a dungeon generator that supports height variations. Get File: https://siver.gumroad.com/l/wmdbts Tutorial is for intermediate users. The tool will…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 7918
+  },
+  {
+   "id": "yt:jZ5I9nNQ75w",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-timvanh",
+   "source": "Tim van Helsdingen",
+   "title": "Leaving VFX?! My thoughts on the industry and the future of this channel",
+   "url": "https://www.youtube.com/watch?v=jZ5I9nNQ75w",
+   "published": "2025-12-19T20:33:56Z",
+   "excerpt": "I don't feel like the VFX industry has a future. So what's next for me and the channel? Here are my thoughts on the VFX industry, AI, and a bunch more.",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 14666
   },
   {
    "id": "58bfe7687c284384",
@@ -4021,7 +5195,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 2043
   },
   {
    "id": "yt:1UaFqGRZJC0",
@@ -4037,7 +5212,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 1752
   },
   {
    "id": "844715d970798402",
@@ -4060,6 +5236,25 @@
    "first_seen": "2026-11-19T06:33:46Z"
   },
   {
+   "id": "yt:Kna5JW8Brrc",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-adrienlambert",
+   "source": "Adrien Lambert",
+   "title": "Houdini Solaris / Renderman : Cookies and Milk 🍪🥛",
+   "url": "https://www.youtube.com/watch?v=Kna5JW8Brrc",
+   "published": "2025-10-11T15:37:06Z",
+   "excerpt": "Bonjour y'all, I’m diving here into Pixar’s RenderMan with a fresh take on Harsh Agrawal’s \"Cookies & Milk\" tutorial, but this time with a Solaris gravy! 🥛🍪 I’m experimenting with RenderMan 26 XPU on…",
+   "tags": [
+    "YouTube",
+    "Solaris",
+    "Rendering"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 4191
+  },
+  {
    "id": "yt:i_Sm-5nNtq8",
    "tab": "tips",
    "kind": "youtube",
@@ -4073,7 +5268,27 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 838
+  },
+  {
+   "id": "yt:hayD5tw73EY",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-simonhoudini",
+   "source": "Simon Houdini",
+   "title": "Use Terrain flowmaps in Copernicus || Houdini tutorial",
+   "url": "https://www.youtube.com/watch?v=hayD5tw73EY",
+   "published": "2025-10-04T13:01:31Z",
+   "excerpt": "Wondering how to use flow data from terrain/heightfield to wrap your textures? Then here is the perfect video for you. The video goes fast but should cover most info you need to get started. In this…",
+   "tags": [
+    "YouTube",
+    "Copernicus",
+    "Terrain"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 2399
   },
   {
    "id": "yt:Lwgev4hG2IM",
@@ -4090,7 +5305,117 @@
     "Solaris"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 544
+  },
+  {
+   "id": "yt:m2-nviiuUo4",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-adrienlambert",
+   "source": "Adrien Lambert",
+   "title": "Houdini 21 - A smarter lookdev workflow !",
+   "url": "https://www.youtube.com/watch?v=m2-nviiuUo4",
+   "published": "2025-09-28T08:48:11Z",
+   "excerpt": "REUPLOAD - Default language was imported as french somehow, resulting in Youtube doing weird auto AI voice dub... seriously, tf with this platform. Let's try that again. Bonjour y'all ! I've just kic…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 7864
+  },
+  {
+   "id": "yt:IoFcjhoxDJc",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-simonhoudini",
+   "source": "Simon Houdini",
+   "title": "Houdini COPs terrain texturing tutorial Basics",
+   "url": "https://www.youtube.com/watch?v=IoFcjhoxDJc",
+   "published": "2025-09-27T13:50:38Z",
+   "excerpt": "Learn more about how to texture terrains in Houdini using the Copernicus nodes inside of Houdini. The main setup will be simple and you will see how easy it is to make better terrain textures now. Th…",
+   "tags": [
+    "YouTube",
+    "Copernicus",
+    "Terrain"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 9119
+  },
+  {
+   "id": "yt:gbTGTgqdKGI",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-timvanh",
+   "source": "Tim van Helsdingen",
+   "title": "A New Houdini Renderfarm: Drop and Render",
+   "url": "https://www.youtube.com/watch?v=gbTGTgqdKGI",
+   "published": "2025-09-27T11:50:09Z",
+   "excerpt": "I've been helping Drop & Render out to bring Houdini support to their renderfarm, and it's now finally out for public use! Give it a whirl and let me know what you think! https://dropandrender.com/ho…",
+   "tags": [
+    "YouTube",
+    "Rendering"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 2011
+  },
+  {
+   "id": "yt:nMqSRDNWkfI",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-simonhoudini",
+   "source": "Simon Houdini",
+   "title": "Worklights in Houdini 21!!!",
+   "url": "https://www.youtube.com/watch?v=nMqSRDNWkfI",
+   "published": "2025-09-25T16:01:27Z",
+   "excerpt": "Quick tip on using the new Houdini 21 worklights! This will make viewing your 3D model way nicer! The rendering is improved and has default options for good setups to start with",
+   "tags": [
+    "YouTube",
+    "Rendering"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 2211
+  },
+  {
+   "id": "yt:ZcXKWAUx2fE",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-simonhoudini",
+   "source": "Simon Houdini",
+   "title": "Axe Texturing: full breakdown of COPs texturing in Houdini",
+   "url": "https://www.youtube.com/watch?v=ZcXKWAUx2fE",
+   "published": "2025-09-15T16:11:34Z",
+   "excerpt": "In this video you will learn more about texturing an asset for games using COPs in Houdini 21. This will be a full overview with a PBR workflow in mind. This means it will tackle Color, Roughness, Me…",
+   "tags": [
+    "YouTube",
+    "Copernicus"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 8909
+  },
+  {
+   "id": "yt:RB7D0Pxfrvs",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-simonhoudini",
+   "source": "Simon Houdini",
+   "title": "Axe Texturing: Short Overview COPs Texturing Houdini",
+   "url": "https://www.youtube.com/watch?v=RB7D0Pxfrvs",
+   "published": "2025-09-15T16:11:24Z",
+   "excerpt": "Full Video here: This video will quickly show the idea and process of making the setup for procedural texturing assets in Houdini 21 with the Copernicus network. We are going to use the new features…",
+   "tags": [
+    "YouTube",
+    "Copernicus",
+    "Procedural"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 1266
   },
   {
    "id": "f1da71140e113c03",
@@ -4124,7 +5449,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 3073
   },
   {
    "id": "yt:FTS46d06EzI",
@@ -4140,7 +5466,8 @@
     "YouTube"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 7945
   },
   {
    "id": "yt:w57jDzNMqOU",
@@ -4157,7 +5484,8 @@
     "Copernicus"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 4122
   },
   {
    "id": "yt:1Ti6O6Yfp7U",
@@ -4173,7 +5501,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 2514
   },
   {
    "id": "yt:r2753HA-7RA",
@@ -4189,7 +5518,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 2574
   },
   {
    "id": "ab4460a2cc7cedaa",
@@ -4224,7 +5554,8 @@
     "Procedural"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 6966
   },
   {
    "id": "yt:fZUXruQH9E0",
@@ -4241,7 +5572,8 @@
     "Procedural"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 2214
   },
   {
    "id": "yt:eEetQznX0XA",
@@ -4258,7 +5590,8 @@
     "Copernicus"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 2604
   },
   {
    "id": "yt:SzrhSG2Ll0I",
@@ -4274,7 +5607,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 2720
   },
   {
    "id": "yt:I7i5rrjAc8c",
@@ -4291,7 +5625,8 @@
     "Procedural"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 3431
   },
   {
    "id": "yt:TYx6zx4kbG8",
@@ -4308,7 +5643,8 @@
     "Procedural"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 2274
   },
   {
    "id": "yt:GHRuXuEb6S0",
@@ -4325,7 +5661,8 @@
     "Vellum"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 2245
   },
   {
    "id": "yt:JhoCyubec_g",
@@ -4341,7 +5678,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 3066
   },
   {
    "id": "yt:ylbU8_PbcBI",
@@ -4358,7 +5696,8 @@
     "Procedural"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 3269
   },
   {
    "id": "08aa5f2528670804",
@@ -4394,7 +5733,8 @@
     "YouTube"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 2637
   },
   {
    "id": "yt:sa7HS-oSCzI",
@@ -4411,7 +5751,8 @@
     "Procedural"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 2369
   },
   {
    "id": "yt:VAXzuJl_hOY",
@@ -4428,7 +5769,8 @@
     "Solaris"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 416
   },
   {
    "id": "yt:6BHqUWGyZlg",
@@ -4445,7 +5787,147 @@
     "Solaris"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 811
+  },
+  {
+   "id": "yt:uaBDFjlgsCg",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-adrienlambert",
+   "source": "Adrien Lambert",
+   "title": "Chasms'Call | Colosseum of the fallen Flame - Breakdown",
+   "url": "https://www.youtube.com/watch?v=uaBDFjlgsCg",
+   "published": "2025-03-12T03:21:47Z",
+   "excerpt": "Here’s my breakdown for @pwnisher Challenge, Chasm’s Call. I’m calling my entry Colosseum of the Fallen Flame. Wasn’t sure I’d finish, but by sneaking in a few hours here and there over the past mont…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 25433
+  },
+  {
+   "id": "yt:G7SnVk4Jj8U",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-timvanh",
+   "source": "Tim van Helsdingen",
+   "title": "Vellum Fundamentals - Week 5: Cell Splitting Part 2",
+   "url": "https://www.youtube.com/watch?v=G7SnVk4Jj8U",
+   "published": "2025-02-13T14:00:17Z",
+   "excerpt": "In this part 2 you learn how to implement the knowledge from the previous video to build a cool cell splitting effect. Neat! Download the source files & support the channel: https://timvanhelsdingen.…",
+   "tags": [
+    "YouTube",
+    "Vellum"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 2872
+  },
+  {
+   "id": "yt:Q4R7AeCf-Os",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-timvanh",
+   "source": "Tim van Helsdingen",
+   "title": "Vellum Fundamentals - Week 5: Cell Splitting Part 1",
+   "url": "https://www.youtube.com/watch?v=Q4R7AeCf-Os",
+   "published": "2025-02-06T14:19:23Z",
+   "excerpt": "It's been a year since week 4, but who's counting? In this episode i'll teach you something really exciting: How to split your vellum simulations! this is not normally possible, so we need to do some…",
+   "tags": [
+    "YouTube",
+    "Vellum",
+    "Simulation"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 5325
+  },
+  {
+   "id": "yt:MHDL1hekOq0",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-timvanh",
+   "source": "Tim van Helsdingen",
+   "title": "PathSequencer for Houdini - Basics04 - Sprite sequences on particles? Easy!",
+   "url": "https://www.youtube.com/watch?v=MHDL1hekOq0",
+   "published": "2025-01-17T15:00:27Z",
+   "excerpt": "Get it here: https://www.patreon.com/posts/119904421 https://timvanhelsdingen.gumroad.com/l/pathsequencer Meet Pathsequencer for Houdini. Want to apply sprite sequences to particles and easily contro…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 852
+  },
+  {
+   "id": "yt:0_NnCTxhah4",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-timvanh",
+   "source": "Tim van Helsdingen",
+   "title": "PathSequencer for Houdini - Basics03 - Practical Examples",
+   "url": "https://www.youtube.com/watch?v=0_NnCTxhah4",
+   "published": "2025-01-16T15:00:02Z",
+   "excerpt": "Get it here: https://www.patreon.com/posts/119904421 https://timvanhelsdingen.gumroad.com/l/pathsequencer Meet Pathsequencer for Houdini. The easiest way to instance and retime geometry with just a f…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 537
+  },
+  {
+   "id": "yt:wi10Vkqndds",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-timvanh",
+   "source": "Tim van Helsdingen",
+   "title": "PathSequencer for Houdini - Basics02 - Retiming Instances",
+   "url": "https://www.youtube.com/watch?v=wi10Vkqndds",
+   "published": "2025-01-15T15:01:15Z",
+   "excerpt": "Get it here: https://www.patreon.com/posts/119904421 https://timvanhelsdingen.gumroad.com/l/pathsequencer Meet Pathsequencer for Houdini. The easiest way to instance and retime geometry with just a f…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 1200
+  },
+  {
+   "id": "yt:zdGscqhXhts",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-timvanh",
+   "source": "Tim van Helsdingen",
+   "title": "PathSequencer for Houdini - Basics01 - Static Instancing",
+   "url": "https://www.youtube.com/watch?v=zdGscqhXhts",
+   "published": "2025-01-14T15:01:20Z",
+   "excerpt": "Get it here: https://www.patreon.com/posts/119904421 https://timvanhelsdingen.gumroad.com/l/pathsequencer Meet Pathsequencer for Houdini. The easiest way to instance and retime geometry with just a f…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 985
+  },
+  {
+   "id": "yt:sw3DmyCYNRA",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-timvanh",
+   "source": "Tim van Helsdingen",
+   "title": "PathSequencer for Houdini - The Easiest Way to Instance & Retime",
+   "url": "https://www.youtube.com/watch?v=sw3DmyCYNRA",
+   "published": "2025-01-13T13:28:07Z",
+   "excerpt": "Get it here: https://www.patreon.com/posts/119904421 https://timvanhelsdingen.gumroad.com/l/pathsequencer Meet Pathsequencer for Houdini. The easiest way to instance and retime geometry with just a f…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 4291
   },
   {
    "id": "9dcc259995ed5a64",
@@ -4480,7 +5962,8 @@
     "Solaris"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 612
   },
   {
    "id": "yt:JhTrGMA0p7E",
@@ -4496,7 +5979,8 @@
     "YouTube"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 1042
   },
   {
    "id": "yt:YGnp1Cwdf0c",
@@ -4513,7 +5997,8 @@
     "Rendering"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 642
   },
   {
    "id": "yt:RTpOO-RkoQ0",
@@ -4530,7 +6015,8 @@
     "Solaris"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 630
   },
   {
    "id": "yt:Rve8IKzVWkI",
@@ -4546,7 +6032,8 @@
     "YouTube"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 1760
   },
   {
    "id": "yt:FyhR1VYJ3N4",
@@ -4564,7 +6051,8 @@
     "H20.5"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 15029
   },
   {
    "id": "yt:9B-H1U6BMeg",
@@ -4581,7 +6069,8 @@
     "Solaris"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 600
   },
   {
    "id": "yt:_hpNgRs8aTQ",
@@ -4598,7 +6087,8 @@
     "Solaris"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 765
   },
   {
    "id": "yt:eWZD-n3L7-A",
@@ -4615,7 +6105,8 @@
     "APEX"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 515
   },
   {
    "id": "yt:XKHuEbuiE9E",
@@ -4632,7 +6123,8 @@
     "Solaris"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 368
   },
   {
    "id": "yt:VX_K3RDX230",
@@ -4648,7 +6140,8 @@
     "YouTube"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 1131
   },
   {
    "id": "yt:W4SG-OXoJtc",
@@ -4665,7 +6158,30 @@
     "APEX"
    ],
    "lang": "ja",
-   "first_seen": "2026-11-19T06:33:46Z"
+   "first_seen": "2026-11-19T06:33:46Z",
+   "views": 282
+  },
+  {
+   "id": "yt:8Ivsd_zb1Q0",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-timvanh",
+   "source": "Tim van Helsdingen",
+   "title": "How to use the RBD Procedural in Houdini 20.5",
+   "url": "https://www.youtube.com/watch?v=8Ivsd_zb1Q0",
+   "published": "2024-08-19T14:55:29Z",
+   "excerpt": "I'M BACK! Was struggling to set this up, so figured I would record a video about how to do it now that i've figured it out. The RBD procedural is a way to render heavy rigid body dynamics in Solaris/…",
+   "tags": [
+    "YouTube",
+    "Solaris",
+    "RBD",
+    "Procedural",
+    "Rendering",
+    "H20.5"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 9094
   },
   {
    "id": "7fe6179c8f3e0bf2",
@@ -4686,6 +6202,23 @@
    "first_seen": "2026-11-19T06:33:46Z"
   },
   {
+   "id": "yt:j025CghVo7Q",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-adrienlambert",
+   "source": "Adrien Lambert",
+   "title": "SideFX Houdini / Vray : shading introduction ( old patreon)",
+   "url": "https://www.youtube.com/watch?v=j025CghVo7Q",
+   "published": "2024-05-25T11:47:12Z",
+   "excerpt": "(Old content offered to patreon subscribers) Introduction to VRay shading. Using a megascan asset and its textures to show the process. ----------------------------------- Hope this can help ! Social…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 2890
+  },
+  {
    "id": "e504d90cf320df1e",
    "tab": "reference",
    "kind": "github",
@@ -4704,6 +6237,42 @@
    "first_seen": "2026-11-19T06:33:46Z"
   },
   {
+   "id": "yt:ZLMxn6qWjNw",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-adrienlambert",
+   "source": "Adrien Lambert",
+   "title": "SideFX Houdini / Redshift : Shading tricks for environment (patreon release)",
+   "url": "https://www.youtube.com/watch?v=ZLMxn6qWjNw",
+   "published": "2024-05-07T17:27:59Z",
+   "excerpt": "Since I'm off in France for a long vacation and I won't be able to resume my projects and usual content, I figured I may as well start releasing some old patreon videos I recorded years ago. So let's…",
+   "tags": [
+    "YouTube",
+    "Rendering"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 3478
+  },
+  {
+   "id": "yt:wFXA3aC1NKY",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-adrienlambert",
+   "source": "Adrien Lambert",
+   "title": "Sidefx Houdini : Instancing Explained / CopyToPoints workflow",
+   "url": "https://www.youtube.com/watch?v=wFXA3aC1NKY",
+   "published": "2024-04-21T15:11:50Z",
+   "excerpt": "Hey there, fellow Houdini enthusiasts! 👋 Ever found yourself struggling with outdated techniques or missing features like copyStamp in Houdini 19.5? You're not alone! After receiving feedback from so…",
+   "tags": [
+    "YouTube",
+    "H19.5"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 7426
+  },
+  {
    "id": "yt:6J9uQSVXZgA",
    "tab": "tips",
    "kind": "youtube",
@@ -4719,7 +6288,8 @@
     "Rendering"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 27998
   },
   {
    "id": "yt:6YPnEP0_XJk",
@@ -4738,7 +6308,43 @@
     "Rendering"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 25879
+  },
+  {
+   "id": "yt:n5EJM3mA_Dw",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-timvanh",
+   "source": "Tim van Helsdingen",
+   "title": "Houdini 20 - Karma XPU Demo - Bottoms Up with XPU",
+   "url": "https://www.youtube.com/watch?v=n5EJM3mA_Dw",
+   "published": "2024-01-04T11:20:33Z",
+   "excerpt": "Noticed I never uploaded my demo sequence on Youtube! So thought i'd do that. SideFX asked me to create a sequence that would show off a lot of the new features Karma XPU has to offer such as nested…",
+   "tags": [
+    "YouTube",
+    "Karma"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 2318
+  },
+  {
+   "id": "yt:bIGOF5nvPtA",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-simonhoudini",
+   "source": "Simon Houdini",
+   "title": "Axe modeling || Houdini tutorial",
+   "url": "https://www.youtube.com/watch?v=bIGOF5nvPtA",
+   "published": "2023-12-29T13:57:09Z",
+   "excerpt": "Welcome to this tutorial on modeling a game-ready axe in Houdini! Reference: Nemoto Tactical Hatchet Axe - https://www.pinterest.com/pin/564709240747634692/ In this video, we'll guide you through the…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 18466
   },
   {
    "id": "yt:FB5-zOhiHgs",
@@ -4755,7 +6361,8 @@
     "Solaris"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 19152
   },
   {
    "id": "yt:c9Xu9YEZaKs",
@@ -4773,7 +6380,26 @@
     "Simulation"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 27603
+  },
+  {
+   "id": "yt:O-lCDNv-9ag",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-timvanh",
+   "source": "Tim van Helsdingen",
+   "title": "Houdini Vellum Fundamentals - Week 04 - Breaking meshes",
+   "url": "https://www.youtube.com/watch?v=O-lCDNv-9ag",
+   "published": "2023-12-08T13:51:09Z",
+   "excerpt": "3 months late, but better late than never: Vellum Fundamentals Week 4! Let's learn how to rip apart out vellum meshes. Source files: https://www.patreon.com/posts/94308991 https://timvanhelsdingen.gu…",
+   "tags": [
+    "YouTube",
+    "Vellum"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 8095
   },
   {
    "id": "yt:Xs2tHiVFKF0",
@@ -4790,7 +6416,27 @@
     "FLIP"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 56793
+  },
+  {
+   "id": "yt:kMpYf2FrJws",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-timvanh",
+   "source": "Tim van Helsdingen",
+   "title": "Enable/Disable Devices with Houdini Karma XPU",
+   "url": "https://www.youtube.com/watch?v=kMpYf2FrJws",
+   "published": "2023-11-28T19:53:46Z",
+   "excerpt": "Got asked this on discord, found a way to do this this, and decided to make it easier by rolling it into a HDA. Get the HDA: https://www.patreon.com/posts/93685668 https://timvanhelsdingen.gumroad.co…",
+   "tags": [
+    "YouTube",
+    "Karma",
+    "HDA"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 5393
   },
   {
    "id": "d9f9b8ad0cca7997",
@@ -4811,6 +6457,24 @@
    "first_seen": "2026-11-19T06:33:46Z"
   },
   {
+   "id": "yt:yNlyNhtpiRY",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-timvanh",
+   "source": "Tim van Helsdingen",
+   "title": "Houdini 20 HIDDEN GEM: Attribute Transfers directly inside MaterialX/Karma (great for wetmaps)",
+   "url": "https://www.youtube.com/watch?v=yNlyNhtpiRY",
+   "published": "2023-11-09T16:15:51Z",
+   "excerpt": "One of my favourite features of Houdini 20, and it was not mentioned in the launch anywhere! Perfect for wetmaps and other cool things. Get the files here: https://www.patreon.com/posts/92577982 Supp…",
+   "tags": [
+    "YouTube",
+    "Karma"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 7630
+  },
+  {
    "id": "yt:DJfkTV3Pivc",
    "tab": "tips",
    "kind": "youtube",
@@ -4825,7 +6489,8 @@
     "FLIP"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 43434
   },
   {
    "id": "yt:kYCT743alVI",
@@ -4844,7 +6509,8 @@
     "RBD"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 39178
   },
   {
    "id": "yt:F7_B-BA6C1o",
@@ -4863,7 +6529,43 @@
     "Rendering"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 28372
+  },
+  {
+   "id": "yt:GEXhbwPn3Zc",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-simonhoudini",
+   "source": "Simon Houdini",
+   "title": "Houdini Phone Reveal Tutorial",
+   "url": "https://www.youtube.com/watch?v=GEXhbwPn3Zc",
+   "published": "2023-09-28T16:30:05Z",
+   "excerpt": "Learn how to recreate the phone reveal effect seen in recent iPhone 15 videos using the power of Houdini. In this quick step-by-step video, we'll show you how to harness the incredible capabilities o…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 5186
+  },
+  {
+   "id": "yt:vwB-gY7j22s",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-simonhoudini",
+   "source": "Simon Houdini",
+   "title": "Houdini: Organizing and managing",
+   "url": "https://www.youtube.com/watch?v=vwB-gY7j22s",
+   "published": "2023-09-05T16:15:03Z",
+   "excerpt": "Dive into the fascinating world of Houdini as we explore more of setting up node networks, HDA structures, and improve your workflow with tips and tricks. In this tutorial, we'll take you on a journe…",
+   "tags": [
+    "YouTube",
+    "HDA"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 8558
   },
   {
    "id": "yt:kJKiCAPcomg",
@@ -4880,7 +6582,8 @@
     "Pyro"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 29398
   },
   {
    "id": "yt:d_8EEfIe1Lk",
@@ -4899,7 +6602,8 @@
     "Rendering"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 17323
   },
   {
    "id": "yt:cE-Bbdspu_8",
@@ -4917,7 +6621,8 @@
     "Rendering"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 53334
   },
   {
    "id": "yt:ul85ejWgnvY",
@@ -4935,7 +6640,8 @@
     "Simulation"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 23474
   },
   {
    "id": "yt:OfPoK_T3XNU",
@@ -4954,7 +6660,44 @@
     "Simulation"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 31597
+  },
+  {
+   "id": "yt:O0jQwM3GLBs",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-adrienlambert",
+   "source": "Adrien Lambert",
+   "title": "How not to suck at Job Interviews / VFX Industry Insights",
+   "url": "https://www.youtube.com/watch?v=O0jQwM3GLBs",
+   "published": "2023-06-12T04:18:04Z",
+   "excerpt": "With the risk of job lay off, and the amount of people suddenly unemployed I thought it would be useful to do a reminder on some good habits to have during a job interview in the VFX industry... and…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 5602
+  },
+  {
+   "id": "yt:pIFbZlqO1q8",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-simonhoudini",
+   "source": "Simon Houdini",
+   "title": "UI Fluid Health Orb || Houdini and Unreal Tutorial",
+   "url": "https://www.youtube.com/watch?v=pIFbZlqO1q8",
+   "published": "2023-06-07T16:00:28Z",
+   "excerpt": "These are the source files form the tutorial, you will see how the fluid orb for the interface was created. This is using the powerful combination of Houdini, Substance Designer, and Unreal Engine. H…",
+   "tags": [
+    "YouTube",
+    "FLIP",
+    "Unreal"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 11055
   },
   {
    "id": "yt:nQuVoXEAziU",
@@ -4971,7 +6714,166 @@
     "Vellum"
    ],
    "lang": "en",
-   "first_seen": "2026-11-18T07:04:11Z"
+   "first_seen": "2026-11-18T07:04:11Z",
+   "views": 40215
+  },
+  {
+   "id": "yt:9GUJz3d8S4o",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-simonhoudini",
+   "source": "Simon Houdini",
+   "title": "Stacking Objects || Quick Tips",
+   "url": "https://www.youtube.com/watch?v=9GUJz3d8S4o",
+   "published": "2023-05-22T16:19:03Z",
+   "excerpt": "Back with another quick tip, this time about stacking basics object quickly and randomly. This is a great way to save time and decorate a scene. https://siver.gumroad.com/ #Shorts youtube #shorts",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 11710
+  },
+  {
+   "id": "yt:H5aY9wcbX3c",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-simonhoudini",
+   "source": "Simon Houdini",
+   "title": "Blender To Houdini with Python, Creating custom tool!",
+   "url": "https://www.youtube.com/watch?v=H5aY9wcbX3c",
+   "published": "2023-05-02T16:00:15Z",
+   "excerpt": "In this tutorial, we'll show you how to streamline your workflow by using Python scripting to export and send geometry from Blender to Houdini. With just a few lines of Python code, you can create a…",
+   "tags": [
+    "YouTube",
+    "Python"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 5646
+  },
+  {
+   "id": "yt:dc4g1l4rxOU",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-simonhoudini",
+   "source": "Simon Houdini",
+   "title": "Send To Blender || Houdini and Python Tutorial",
+   "url": "https://www.youtube.com/watch?v=dc4g1l4rxOU",
+   "published": "2023-04-03T16:08:11Z",
+   "excerpt": "In this tutorial, you will learn how to use Python scripting in Houdini to launch Blender and open a geometry file. By using the subprocess module in Python, we can execute external commands and inte…",
+   "tags": [
+    "YouTube",
+    "Python"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 7048
+  },
+  {
+   "id": "yt:gfS6ylg9vbA",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-simonhoudini",
+   "source": "Simon Houdini",
+   "title": "Houdini & Substance Designer: Material Tutorial",
+   "url": "https://www.youtube.com/watch?v=gfS6ylg9vbA",
+   "published": "2023-02-27T17:16:09Z",
+   "excerpt": "In this tutorial, you will learn how to create a brick wall and trimsheet material using Houdini and Substance Designer. The first step in creating the material is to use Houdini to create a base hei…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 14642
+  },
+  {
+   "id": "yt:VNX9Qf6a5hs",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-simonhoudini",
+   "source": "Simon Houdini",
+   "title": "Houdini Unwrapping Techniques: The Basics",
+   "url": "https://www.youtube.com/watch?v=VNX9Qf6a5hs",
+   "published": "2023-01-30T17:00:30Z",
+   "excerpt": "This video will be about unwrapping! There are so many ways of creating UVs and doing it more procedural. Here you will see most of the unwrapping nodes Houdini offers. Unwrapping models can be a dif…",
+   "tags": [
+    "YouTube",
+    "Procedural"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 63254
+  },
+  {
+   "id": "yt:rgeMOOJ6M5g",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-adrienlambert",
+   "source": "Adrien Lambert",
+   "title": "Houdini AL TOOLS - Environment Customer Reel 2022",
+   "url": "https://www.youtube.com/watch?v=rgeMOOJ6M5g",
+   "published": "2022-07-06T15:44:01Z",
+   "excerpt": "2 years since I released my set of tools for environment creation in Houdini, AL Tools pack ! This calls for celebration and for that I wanted to share a reel of various projects you guys have been c…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 15881
+  },
+  {
+   "id": "yt:z0pArthvMx4",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-adrienlambert",
+   "source": "Adrien Lambert",
+   "title": "Sidefx Solaris Houdini | Part 1 : USD and Solaris introduction",
+   "url": "https://www.youtube.com/watch?v=z0pArthvMx4",
+   "published": "2022-06-11T18:41:57Z",
+   "excerpt": "This is the first part of a tutorial series about Universal Scene Description and Houdini Solaris. If you are interested in checking out the rest of the series check out my gumroad for more indepth c…",
+   "tags": [
+    "YouTube",
+    "Solaris"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 57212
+  },
+  {
+   "id": "yt:GOMN8Ywh3c8",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-adrienlambert",
+   "source": "Adrien Lambert",
+   "title": "USD - Universal Scene Description : What it is & Why should we care",
+   "url": "https://www.youtube.com/watch?v=GOMN8Ywh3c8",
+   "published": "2022-05-21T15:30:02Z",
+   "excerpt": "Universal Scene Description can be a powerful tool to use not only for big movies or animation but for smaller projects as well. Introducing here why we should even need to care about USD before movi…",
+   "tags": [
+    "YouTube",
+    "Solaris"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 44649
+  },
+  {
+   "id": "yt:dH_8GcVkfwg",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-adrienlambert",
+   "source": "Adrien Lambert",
+   "title": "SIDEFX HOUDINI - AL Tools v6 Release ! AdvancedScatter explained",
+   "url": "https://www.youtube.com/watch?v=dH_8GcVkfwg",
+   "published": "2022-04-29T02:55:13Z",
+   "excerpt": "0:00:00 - Introduction 0:00:37 - Customer Reel Sample : Thanks to Stephane Quillet, Masashi Imagawa, Juyong Jeon, Miroslav Samanek, 阳光, Alex Janke ! If you used those tools in a special project let m…",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-19T06:56:50Z",
+   "views": 22635
   }
  ]
 }

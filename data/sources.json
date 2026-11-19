@@ -9,6 +9,7 @@
     {"id": "sidefx-forum-solaris-karma", "name": "SideFX フォーラム: Solaris と Karma", "url": "https://www.sidefx.com/forum/feeds/forum/82/", "tab": "tips", "tags": ["Forum"], "lang": "en", "limit": 15, "keep": 40, "dedupe_title": true},
     {"id": "sidefx-forum-copernicus", "name": "SideFX フォーラム: Copernicus", "url": "https://www.sidefx.com/forum/feeds/forum/114/", "tab": "tips", "tags": ["Forum"], "lang": "en", "limit": 15, "keep": 40, "dedupe_title": true},
     {"id": "sidefx-forum-ja", "name": "SideFX 日本語フォーラム", "url": "https://www.sidefx.com/forum/feeds/forum/71/", "tab": "tips", "tags": ["Forum"], "lang": "ja", "limit": 15, "keep": 40, "dedupe_title": true},
+    {"id": "entagma-site", "name": "Entagma(サイト)", "url": "https://entagma.com/feed/", "tab": "tips", "tags": ["Entagma"], "lang": "en", "limit": 20, "keep": 40},
     {"id": "qiita-houdini", "name": "Qiita #Houdini", "url": "https://qiita.com/tags/houdini/feed", "tab": "tips", "tags": ["Qiita"], "lang": "ja", "limit": 20, "keep": 40},
     {"id": "zenn-houdini", "name": "Zenn トピック Houdini", "url": "https://zenn.dev/topics/houdini/feed", "tab": "tips", "tags": ["Zenn"], "lang": "ja", "limit": 20, "keep": 40}
   ]
