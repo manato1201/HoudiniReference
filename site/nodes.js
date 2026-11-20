@@ -4,7 +4,10 @@
   "use strict";
 
   var SVG_NS = "http://www.w3.org/2000/svg";
-  var CONTEXT_ORDER = ["SOP", "VOP", "LOP", "DOP", "COP", "OBJ", "ROP", "TOP"];
+  var CONTEXT_ORDER = ["SOP", "VOP", "LOP", "DOP", "COP", "CHOP", "OBJ", "ROP", "TOP"];
+  /* カテゴリの並び(80 件・19 カテゴリでも探しやすいよう、作る→変える→属性→シミュレーション→入出力…の流れ)。ここに無いカテゴリは末尾に五十音順 */
+  var CATEGORY_ORDER = ["生成", "配置・コピー", "変形", "モデリング", "曲線", "選択・削除", "統合", "VEX・アトリビュート", "ボリューム(VDB)", "シミュレーション",
+                        "リギング(KineFX)", "APEX", "入出力・管理", "USD 連携", "マテリアル", "レンダリング", "画像処理", "TOP・自動化", "チャンネル"];
   var SECTIONS = [
     ["①", "何をするか"], ["②", "どう使うか"], ["③", "実例のポイント"],
     ["④", "使いどころ"], ["⑤", "他のノードとの組み合わせ例"], ["⑥", "使う前と後の違い"]
@@ -126,7 +129,13 @@
     g2.appendChild(el("h2", "n-h", "カテゴリ"));
     var l2 = el("div", "nf-list");
     l2.appendChild(filterButton("すべて", Object.keys(catCounts).reduce(function (a, k) { return a + catCounts[k]; }, 0), !S.cat, function () { S.cat = ""; S.id = ""; renderPanel(); sync(); }));
-    Object.keys(catCounts).sort().forEach(function (c) {
+    var catKeys = Object.keys(catCounts);
+    catKeys.sort(function (a, b) {
+      var ia = CATEGORY_ORDER.indexOf(a), ib = CATEGORY_ORDER.indexOf(b);
+      if (ia < 0 && ib < 0) return a < b ? -1 : a > b ? 1 : 0;
+      return (ia < 0 ? 999 : ia) - (ib < 0 ? 999 : ib);
+    });
+    catKeys.forEach(function (c) {
       l2.appendChild(filterButton(c, catCounts[c], S.cat === c, function () { S.cat = S.cat === c ? "" : c; S.id = ""; renderPanel(); sync(); }));
     });
     g2.appendChild(l2); side.appendChild(g2);

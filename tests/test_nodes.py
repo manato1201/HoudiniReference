@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "nodes.json"
 SITE = ROOT / "site"
 REQUIRED = ("id", "name", "context", "category", "what", "how", "example_points", "use_cases", "combos", "before_after", "doc_url", "verified")
-CONTEXTS = {"SOP", "VOP", "LOP", "DOP", "COP", "OBJ", "ROP", "TOP"}
+CONTEXTS = {"SOP", "VOP", "LOP", "DOP", "COP", "CHOP", "OBJ", "ROP", "TOP"}
 ID_RE = re.compile(r"^[a-z0-9][a-z0-9_-]*$")
 
 
@@ -28,8 +28,8 @@ class NodesJsonTests(unittest.TestCase):
         self.doc = load()
         self.nodes = self.doc["nodes"]
 
-    def test_has_at_least_30_nodes(self):
-        self.assertGreaterEqual(len(self.nodes), 30)
+    def test_has_at_least_80_nodes(self):
+        self.assertGreaterEqual(len(self.nodes), 80)
 
     def test_required_keys_and_nonempty_strings(self):
         for n in self.nodes:

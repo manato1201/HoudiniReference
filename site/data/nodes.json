@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "updated": "2026-11-19",
+ "updated": "2026-11-20",
  "note": "ノードの説明はすべて自作の文章。公式ドキュメントの文章は写さず、doc_url で公式へリンクするだけ。ノード名・パラメータ名はローカルの Houdini 22.0.506(hython)で確認(verified: true)。画像は hython で cook したジオメトリを点・面の簡易 SVG に描いたもの(tools/node_previews.py)。",
  "nodes": [
   {
@@ -2219,6 +2219,3562 @@
     }
    ],
    "doc_url": "https://www.sidefx.com/docs/houdini/nodes/lop/sopimport.html",
+   "verified": true
+  },
+  {
+   "id": "object_merge",
+   "name": "Object Merge",
+   "type": "object_merge",
+   "context": "SOP",
+   "category": "入出力・管理",
+   "what": "別のノード(別のオブジェクトの中にあるものでもよい)の出力を、パスで指定して今のネットワークに取り込むノード。ネットワークをまたいでジオメトリを共有するときの定番。",
+   "how": "Object 1(objpath1)に、取り込みたい SOP のパスを入れる(ノードをドラッグして貼れる)。Transform(xformtype)を Into This Object にすると、元のオブジェクトの移動・回転を反映した位置で取り込み、None なら元の SOP の中の座標のまま取り込む。Group(group1)で一部だけを取り込める。対象を増やすには Number of Objects(numobj)を増やして、Object 2 以降を足す。",
+   "example_points": [
+    "元のオブジェクトを動かしていると、Into This Object と None で取り込んだ位置が変わる(実際に確かめた)",
+    "Group で、元のジオメトリの一部のグループだけを取り込める",
+    "取り込み元が更新されれば、このノードの出力も追従して更新される"
+   ],
+   "use_cases": [
+    "別のオブジェクトで作ったモデルを、衝突・配置の基準として参照する",
+    "1 つのネットワークを分けて、複数の geo で同じ元データを使い回す",
+    "リファレンス用のジオメトリ(地形やキャラクター)を、作業中のネットワークに表示して見比べる"
+   ],
+   "combos": [
+    {
+     "title": "基準の参照",
+     "chain": [
+      "Object Merge",
+      "Attribute Transfer",
+      "Null"
+     ],
+     "note": "別オブジェクトの地形から色や高さを属性として受け取り、Null で出力の目印を付ける。"
+    },
+    {
+     "title": "元データの共有",
+     "chain": [
+      "Object Merge",
+      "Transform",
+      "Merge"
+     ],
+     "note": "同じ元データを取り込み、別々に動かして 1 つに合わせる。"
+    }
+   ],
+   "before_after": {
+    "before": "取り込み元の SOP は別のオブジェクトの中にあり、今のネットワークからは見えない。",
+    "after": "パスを指定すると、その出力のジオメトリがこのノードの出力として現れる。Transform の設定で、元のオブジェクトの移動を含めるかを選べる。"
+   },
+   "params": [
+    {
+     "name": "objpath#",
+     "note": "Object 1, 2, …(取り込む SOP のパス)"
+    },
+    {
+     "name": "numobj",
+     "note": "Number of Objects"
+    },
+    {
+     "name": "group#",
+     "note": "Group 1, 2, …(取り込む一部のグループ)"
+    },
+    {
+     "name": "xformtype",
+     "note": "Transform(none / local / object)"
+    },
+    {
+     "name": "pack",
+     "note": "Pack Geometry Before Merging"
+    },
+    {
+     "name": "createptgroups",
+     "note": "Create Point Groups"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/object_merge.html",
+   "verified": true
+  },
+  {
+   "id": "null",
+   "name": "Null",
+   "type": "null",
+   "context": "SOP",
+   "category": "入出力・管理",
+   "what": "何も処理をしない目印のノード。入力をそのまま出力する。ネットワークの「出口」や「参照先」に名前を付けるために使う。",
+   "how": "ネットワークの最後や、他から参照される位置に置き、OUT_geo のように名前を付ける。Object Merge や ROP が参照するとき、Null を指しておけば、途中のノードを足し引きしても参照が切れない。Copy Input(copyinput)をオフにすると入力を出力へコピーしない設定にもできるが、通常はオンのままにする。",
+   "example_points": [
+    "出力は入力と同じジオメトリ(処理は何もしない)",
+    "名前を OUT_xxx のようにそろえると、ネットワークが読みやすくなる",
+    "Cache Input(cacheinput)で、入力の結果をメモリに保持できる"
+   ],
+   "use_cases": [
+    "ネットワークの出口に OUT という名前の Null を置いて、外から参照する",
+    "途中のノードを入れ替えても、参照先のパスが変わらないようにする",
+    "ネットワークの区切り(章の見出し)として置く"
+   ],
+   "combos": [
+    {
+     "title": "出口の目印",
+     "chain": [
+      "Merge",
+      "Null"
+     ],
+     "note": "最終結果の直後に OUT_geo を置き、参照・書き出しのときの目印にする。"
+    },
+    {
+     "title": "参照元",
+     "chain": [
+      "Null",
+      "Object Merge",
+      "Attribute Transfer"
+     ],
+     "note": "別の geo から Null を参照し、そのジオメトリの属性を受け取る。"
+    }
+   ],
+   "before_after": {
+    "before": "Merge の出力など、名前が付いていないジオメトリの流れ。",
+    "after": "Null が 1 つ入るだけで、ジオメトリは何も変わらない。ただし、外から参照できる名前の付いた出口ができる。"
+   },
+   "params": [
+    {
+     "name": "copyinput",
+     "note": "Copy Input"
+    },
+    {
+     "name": "cacheinput",
+     "note": "Cache Input"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/null.html",
+   "verified": true
+  },
+  {
+   "id": "file",
+   "name": "File",
+   "type": "file",
+   "context": "SOP",
+   "category": "入出力・管理",
+   "what": "ジオメトリのファイル(.bgeo.sc など)を読み込む、または書き出すノード。外部で作ったモデルや、保存済みのキャッシュを取り込む入口になる。",
+   "how": "Geometry File(file)にパスを入れ、File Mode(filemode)を Read Files にすると読み込み、Write Files にすると入力を書き出す。Automatic は、つなぎ方に合わせて自動で読み書きを決める設定。パスには $HIP や $F を使える。ファイルが無いフレームは Missing Frame(missingframe)で、エラーにするか空にするかを選ぶ。",
+   "example_points": [
+    "File Mode を Write Files にして書き出した .bgeo.sc を、別の File ノードの Read Files で読み戻せた(実際に確かめた)",
+    "パスに $F を入れると、フレームごとに別のファイルを読める",
+    "Load(loadtype)で、全ジオメトリ・点群・パックしたディスクプリミティブなど、読み込み方を選べる"
+   ],
+   "use_cases": [
+    "外部で作ったモデルやスキャンデータを取り込む",
+    "重い処理の結果を保存し、あとから読み込むだけにして軽くする",
+    "シミュレーションの結果を、フレームごとのファイルとして読む"
+   ],
+   "combos": [
+    {
+     "title": "取り込んで整える",
+     "chain": [
+      "File",
+      "Transform",
+      "Normal"
+     ],
+     "note": "読み込んだモデルの大きさや向きを直し、法線を作り直す。"
+    },
+    {
+     "title": "書き出し",
+     "chain": [
+      "Attribute Wrangle",
+      "File"
+     ],
+     "note": "処理した結果を、File Mode を Write Files にして保存する。"
+    }
+   ],
+   "before_after": {
+    "before": "モデルはディスク上のファイルにあるだけで、シーンの中にはない。",
+    "after": "Read Files で読むと、ファイルの点・面がそのままノードの出力になる(点数・面数はファイルの内容どおり)。"
+   },
+   "params": [
+    {
+     "name": "filemode",
+     "note": "File Mode(auto / read / write / none)"
+    },
+    {
+     "name": "file",
+     "note": "Geometry File(ファイルのパス)"
+    },
+    {
+     "name": "loadtype",
+     "note": "Load(読み込み方)"
+    },
+    {
+     "name": "missingframe",
+     "note": "Missing Frame(error / empty)"
+    },
+    {
+     "name": "delayload",
+     "note": "Delay Load Geometry"
+    },
+    {
+     "name": "cachesize",
+     "note": "Cache Frames"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/file.html",
+   "verified": true
+  },
+  {
+   "id": "filecache",
+   "name": "File Cache",
+   "type": "filecache::2.0",
+   "context": "SOP",
+   "category": "入出力・管理",
+   "what": "結果をディスクに保存(キャッシュ)し、必要なときに読み戻すノード。重い処理やシミュレーションの結果を残して、やり直しの時間を減らす。",
+   "how": "File Path(filemethod)が Constructed なら、Base Folder と Base Name、Version から保存先のパスを組み立てる。Evaluate As(trange)で 1 フレームか範囲かを選び、Save to Disk(execute)で保存する。保存したあと Load from Disk(loadfromdisk)をオンにすると、ノードの上流を計算せずファイルを読む。シミュレーションなら Simulation(cachesim)をオンにしておく。",
+   "example_points": [
+    "Base Folder の既定は $HIP/geo、Base Name の既定は $HIPNAME.$OS(実際に確認した)",
+    "Version(version)を上げると、古いキャッシュを消さずに別バージョンとして保存できる",
+    "Time Dependent Cache(timedependent)がオンなら、パスに $F が入りフレームごとのファイルになる"
+   ],
+   "use_cases": [
+    "重いシミュレーションの結果を保存して、あとは読み込むだけにする",
+    "上流のノードを触っている間も、固定したキャッシュを下流に流す",
+    "チームで、キャッシュをファイルとして共有する"
+   ],
+   "combos": [
+    {
+     "title": "シミュレーションの保存",
+     "chain": [
+      "Vellum Solver",
+      "File Cache",
+      "Null"
+     ],
+     "note": "解いた結果をフレームごとに保存し、下流では読み込みで使う。"
+    },
+    {
+     "title": "重い前処理",
+     "chain": [
+      "Remesh",
+      "File Cache",
+      "Attribute Wrangle"
+     ],
+     "note": "時間のかかる作り直しを保存し、そのあとの調整を軽くする。"
+    }
+   ],
+   "before_after": {
+    "before": "上流のノードを触るたびに、重い処理が毎回やり直しになる。",
+    "after": "Save to Disk で保存し、Load from Disk をオンにすると、上流を計算せずにファイルから結果を読む。"
+   },
+   "params": [
+    {
+     "name": "filemethod",
+     "note": "File Path(constructed / explicit)"
+    },
+    {
+     "name": "basedir",
+     "note": "Base Folder"
+    },
+    {
+     "name": "basename",
+     "note": "Base Name"
+    },
+    {
+     "name": "version",
+     "note": "Version"
+    },
+    {
+     "name": "trange",
+     "note": "Evaluate As(off / normal)"
+    },
+    {
+     "name": "execute",
+     "note": "Save to Disk"
+    },
+    {
+     "name": "loadfromdisk",
+     "note": "Load from Disk"
+    },
+    {
+     "name": "cachesim",
+     "note": "Simulation"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/filecache.html",
+   "verified": true
+  },
+  {
+   "id": "switch",
+   "name": "Switch",
+   "type": "switch",
+   "context": "SOP",
+   "category": "入出力・管理",
+   "what": "複数の入力のうち、番号で選んだ 1 つだけを出力するノード。ネットワークの分岐の切り替えスイッチ。",
+   "how": "入力を複数つなぎ、Select Input(input)に番号を入れる。番号は 0 から始まり、0 が一番上の入力。式を入れれば、フレームやパラメータに合わせて自動で切り替わる。選ばれなかった入力は計算されないので、重いブランチを持つときに無駄な計算を避けられる(筆者の理解)。",
+   "example_points": [
+    "input を 0 にすると 1 つ目、1 にすると 2 つ目の入力が出力された(実際に確かめた)",
+    "式で番号を決めれば、フレームごとの切り替えもできる",
+    "デジタルアセットでは、パラメータのメニューと結び付けて切り替えに使える"
+   ],
+   "use_cases": [
+    "低解像度・高解像度のモデルを切り替える",
+    "処理のオン/オフを、ブランチ全体で切り替える",
+    "アセットのオプション(形のバリエーション)を選べるようにする"
+   ],
+   "combos": [
+    {
+     "title": "バリエーション選択",
+     "chain": [
+      "Box",
+      "Sphere",
+      "Switch"
+     ],
+     "note": "形の違う入力をつなぎ、番号で 1 つを選ぶ。"
+    },
+    {
+     "title": "処理の入切",
+     "chain": [
+      "Mountain",
+      "Switch",
+      "Null"
+     ],
+     "note": "処理前と処理後を Switch の 2 入力につなぎ、番号でオン/オフを切り替える。"
+    }
+   ],
+   "before_after": {
+    "before": "複数のブランチがあり、どれを下流に流すかを毎回つなぎ直す必要がある。",
+    "after": "Select Input の数字を変えるだけで、下流に流れるジオメトリが切り替わる。"
+   },
+   "params": [
+    {
+     "name": "input",
+     "note": "Select Input(0 から始まる番号)"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/switch.html",
+   "verified": true
+  },
+  {
+   "id": "attribvop",
+   "name": "Attribute VOP",
+   "type": "attribvop",
+   "context": "SOP",
+   "category": "VEX・アトリビュート",
+   "what": "Attribute Wrangle と同じことを、コードではなくノードをつなぐ形(VOP ネットワーク)で書けるノード。点・面ごとの計算を視覚的に組み立てられる。",
+   "how": "ノードの中に入ると VOP ネットワークがあり、Geometry VOP Global Parameters から属性を読み、Geometry VOP Output へ書き込む。Run Over(bindclass)で、点・プリミティブ・頂点・ディテールのどの単位で実行するかを選ぶ。Bind(VOP の Bind ノード)に属性名を書くと、その属性を読み書きできる。",
+   "example_points": [
+    "Run Over が Points なら、点ごとに同じネットワークが実行される",
+    "Autobind by Name(autobind)がオンなら、Bind の名前が属性名に自動で結び付く",
+    "コードを書くのが苦手でも、Noise や Fit Range をつないで形や色を作れる"
+   ],
+   "use_cases": [
+    "ノイズや Fit Range を組み合わせた、変形・色付けの試作",
+    "コードを書かずに、点ごとの計算を組み立てる",
+    "他の人が読んで構造がわかる、見える形のロジック"
+   ],
+   "combos": [
+    {
+     "title": "色付け",
+     "chain": [
+      "Grid",
+      "Attribute VOP",
+      "Null"
+     ],
+     "note": "VOP のノイズから Cd を作って、格子に色を付ける。"
+    },
+    {
+     "title": "属性の加工",
+     "chain": [
+      "Scatter",
+      "Attribute VOP",
+      "Copy to Points"
+     ],
+     "note": "点ごとに pscale を作り、コピーの大きさに使う。"
+    }
+   ],
+   "before_after": {
+    "before": "点には位置しかなく、計算は VEX のコードで書くしかない。",
+    "after": "VOP ネットワークで、ノードをつなぐだけで同じ計算を作れる。"
+   },
+   "params": [
+    {
+     "name": "bindclass",
+     "note": "Run Over(detail / primitive / point / vertex / number)"
+    },
+    {
+     "name": "bindgroup",
+     "note": "Group"
+    },
+    {
+     "name": "autobind",
+     "note": "Autobind by Name"
+    },
+    {
+     "name": "vex_inplace",
+     "note": "Compute Results In Place"
+    },
+    {
+     "name": "vex_multithread",
+     "note": "Enable Multithreading"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/attribvop.html",
+   "verified": true
+  },
+  {
+   "id": "foreach",
+   "name": "For-Each Loop(Block Begin / Block End)",
+   "type": "block_begin / block_end",
+   "context": "SOP",
+   "category": "配置・コピー",
+   "what": "ジオメトリを 1 つずつ(部品ごと・点ごと・回数ごと)に分けて、同じ処理を繰り返すループ。Block Begin と Block End の 2 つのノードで挟んで使う。",
+   "how": "Block Begin の Method(method)を Extract Piece or Point にすると、入力を 1 つずつの部品として取り出す。Block End の Iteration Method(itermethod)を By Pieces or Points にし、Piece Attribute(attrib)に部品を分ける属性名を入れる。Gather Method(method)を Merge Each Iteration にすれば、毎回の結果を最後にまとめて出力する。2 つのノードの Block Path(blockpath)に、お互いのパスを設定してつなぐ。",
+   "example_points": [
+    "3 つの箱を Connectivity で別々の部品にして、ループの中で 0.5 倍に縮めると、各箱が原点中心に縮んだ(実際に確かめた)",
+    "ループの中の Transform の中心は、箱の中心ではなく原点のままなので、部品ごとの中心で縮めたいときは工夫が要る",
+    "By Count にすれば、部品に分けず、回数だけ繰り返せる(Iterations)"
+   ],
+   "use_cases": [
+    "部品ごとに別々の乱数や色を与えて加工する",
+    "同じ処理を回数だけ繰り返す(例えば、繰り返し細分化)",
+    "点ごとに別のジオメトリを作って、1 つにまとめる"
+   ],
+   "combos": [
+    {
+     "title": "部品ごとの加工",
+     "chain": [
+      "Connectivity",
+      "Block Begin",
+      "Transform",
+      "Block End"
+     ],
+     "note": "つながりごとに分けて、各部品を処理してから 1 つに戻す。"
+    },
+    {
+     "title": "繰り返し",
+     "chain": [
+      "Block Begin",
+      "PolyExtrude",
+      "Block End"
+     ],
+     "note": "By Count で、押し出しを何度か繰り返す。"
+    }
+   ],
+   "before_after": {
+    "before": "3 つの箱は 1 つのジオメトリとしてまとめて処理されるので、部品ごとの別処理にならない。",
+    "after": "ループで 1 つずつ処理して集め直すので、各箱が別々に 0.5 倍へ縮み、全体は 18 面のまま出力される。",
+    "image": {
+     "before": "img/nodes/foreach-before.svg",
+     "after": "img/nodes/foreach-after.svg",
+     "alt": "3 つの箱が、ループで別々に縮んだ"
+    }
+   },
+   "params": [
+    {
+     "name": "method",
+     "note": "Block Begin の Method(feedback / piece / metadata / input)。Block End の Gather Method(feedback / merge)も同じ名前"
+    },
+    {
+     "name": "blockpath",
+     "note": "Block Path(対の Block End)"
+    },
+    {
+     "name": "itermethod",
+     "note": "Block End の Iteration Method(auto / pieces / count)"
+    },
+    {
+     "name": "attrib",
+     "note": "Piece Attribute(部品を分ける属性名)"
+    },
+    {
+     "name": "iterations",
+     "note": "Iterations(回数)"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/block_begin.html",
+   "verified": true
+  },
+  {
+   "id": "pack",
+   "name": "Pack",
+   "type": "pack",
+   "context": "SOP",
+   "category": "配置・コピー",
+   "what": "ジオメトリをまとめて 1 つの「パックされたプリミティブ」(中身を隠した 1 個の入れ物)にするノード。大量のジオメトリを軽く扱うときに使う。",
+   "how": "入力をそのまま 1 つのパックにまとめる(複数の部品を入れた場合も 1 つ)。Pack By Name(packbyname)をオンにし、Name Attribute(nameattribute)に属性名を入れると、名前ごとに別々のパックを作る。Pivot Location(pivot)で、パックの中心を原点にするか重心にするかを選べる。中身を取り出すときは Unpack を使う。",
+   "example_points": [
+    "2 つの箱を Merge して Pack すると、パックは 1 個(点も 1 個)になった(実際に確かめた)",
+    "Pack By Name をオンにして name 属性を付けておくと、名前の数だけパックができ、2 つに分かれた(実際に確かめた)",
+    "パックの位置・向き・大きさを変える(Transform)と、中身を触らずに全体が動く"
+   ],
+   "use_cases": [
+    "コピーしたい大量のモデルを、メモリを節約してインスタンスとして扱う",
+    "RBD シミュレーションで、破片を 1 つずつ剛体として扱う",
+    "部品ごとにまとめて、動かしたり並べたりする"
+   ],
+   "combos": [
+    {
+     "title": "破片のパック",
+     "chain": [
+      "Assemble",
+      "Pack",
+      "RBD Configure"
+     ],
+     "note": "破片を名前ごとにパックし、剛体の設定へ渡す。"
+    },
+    {
+     "title": "軽いコピー",
+     "chain": [
+      "Pack",
+      "Copy to Points"
+     ],
+     "note": "パックにしてからコピーすると、ジオメトリの実体を増やさずに配置できる。"
+    }
+   ],
+   "before_after": {
+    "before": "2 つの箱は合計 16 点・12 面で、1 つ 1 つの点や面がそのまま存在している。",
+    "after": "Pack すると、1 つのパックされたプリミティブ(点は 1 個)になる。中身は Unpack で取り出せる。"
+   },
+   "params": [
+    {
+     "name": "packbyname",
+     "note": "Pack By Name"
+    },
+    {
+     "name": "nameattribute",
+     "note": "Name Attribute"
+    },
+    {
+     "name": "pivot",
+     "note": "Pivot Location(origin / centroid)"
+    },
+    {
+     "name": "viewportlod",
+     "note": "Display As"
+    },
+    {
+     "name": "transfer_attributes",
+     "note": "Transfer Attributes"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/pack.html",
+   "verified": true
+  },
+  {
+   "id": "unpack",
+   "name": "Unpack",
+   "type": "unpack",
+   "context": "SOP",
+   "category": "配置・コピー",
+   "what": "パックされたプリミティブの中身を取り出して、普通の点・面に戻すノード。Pack や、ファイルから読んだパックを展開する。",
+   "how": "入力のパックを、元のジオメトリに展開する。Apply Transform(dotransform)がオンなら、パックに付いている位置・向きを反映した位置に戻す。Transfer Attributes(transfer_attributes)に属性名を入れると、パック側の属性を展開後のジオメトリへ引き継げる。Limit Iterations(limit_iterations)で、パックの入れ子を何段まで展開するかを決める。",
+   "example_points": [
+    "名前ごとにパックした 2 つのパックを Unpack すると、元の 12 面・16 点に戻った(実際に確かめた)",
+    "Limit Iterations の既定は 1 段で、入れ子のパックを全部開くには回数を増やす",
+    "Apply Transform をオフにすると、パックの位置を反映せず、元の座標で取り出せる"
+   ],
+   "use_cases": [
+    "パックにしたジオメトリを、点や面の単位で編集し直す",
+    "Alembic や USD から読んだパックを、通常のジオメトリとして扱う",
+    "RBD の結果を、メッシュとして書き出す前に展開する"
+   ],
+   "combos": [
+    {
+     "title": "取り出して編集",
+     "chain": [
+      "File",
+      "Unpack",
+      "Attribute Wrangle"
+     ],
+     "note": "パックで読んだデータを展開し、点の属性を書き換える。"
+    },
+    {
+     "title": "戻す",
+     "chain": [
+      "Pack",
+      "Transform",
+      "Unpack"
+     ],
+     "note": "パックのまま動かしてから、位置を反映して通常のジオメトリに戻す。"
+    }
+   ],
+   "before_after": {
+    "before": "パックされたプリミティブが 1 つ。中の点・面は直接触れない。",
+    "after": "展開すると、元の点・面が現れ、通常のノードで編集できる。"
+   },
+   "params": [
+    {
+     "name": "dotransform",
+     "note": "Apply Transform"
+    },
+    {
+     "name": "limit_iterations",
+     "note": "Limit Iterations"
+    },
+    {
+     "name": "iterations",
+     "note": "Iterations"
+    },
+    {
+     "name": "transfer_attributes",
+     "note": "Transfer Attributes"
+    },
+    {
+     "name": "detail_attributes",
+     "note": "Detail Attributes"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/unpack.html",
+   "verified": true
+  },
+  {
+   "id": "attribtransfer",
+   "name": "Attribute Transfer",
+   "type": "attribtransfer",
+   "context": "SOP",
+   "category": "VEX・アトリビュート",
+   "what": "1 つ目のジオメトリの点・面へ、2 つ目のジオメトリの属性(色や法線など)を、近い位置から写し取るノード。",
+   "how": "1 つ目の入力が受け取る側、2 つ目の入力が元になる側。Points(pointattriblist)や Primitives(primattriblist)に、写す属性の名前(例 Cd)を入れる。Max Sample Count(maxsamplecount)が 1 なら一番近い点の値をそのまま、2 以上にすると複数の近い点を、Kernel Radius(kernelradius)の範囲でなめらかに混ぜる(Kernel Function で混ぜ方を選ぶ)。Distance Threshold(thresholddist)で、遠すぎる点には写さないよう制限できる。",
+   "example_points": [
+    "元の格子に位置で色を付けておき、散らした点へ Cd を写すと、一番近い格子点の色が点に付いた(実際に確かめた)",
+    "Max Sample Count を増やすと、近くの複数の点を混ぜた、なめらかな値になる",
+    "Kernel Radius と Distance Threshold で、写す範囲を制限できる"
+   ],
+   "use_cases": [
+    "地形の色や高さの情報を、散らした点に写して植生の配置に使う",
+    "形の違うメッシュ同士で、法線や UV を受け渡す",
+    "シミュレーション後の点に、元のモデルの色を戻す"
+   ],
+   "combos": [
+    {
+     "title": "点に色を移す",
+     "chain": [
+      "Grid",
+      "Scatter",
+      "Attribute Transfer"
+     ],
+     "note": "色付きの格子から、散らした点へ Cd を写す。"
+    },
+    {
+     "title": "配置の判断に使う",
+     "chain": [
+      "Attribute Transfer",
+      "Delete",
+      "Copy to Points"
+     ],
+     "note": "写した値で点を間引いてから、モデルをコピーして置く。"
+    }
+   ],
+   "before_after": {
+    "before": "散らした点には位置だけがあり、色の情報がない。",
+    "after": "元の格子の色(Cd)が、近い点の値として散らした点に写る。",
+    "image": {
+     "before": "img/nodes/attribtransfer-before.svg",
+     "after": "img/nodes/attribtransfer-after.svg",
+     "alt": "位置で色を付けた格子の色が、散らした点に写る"
+    }
+   },
+   "params": [
+    {
+     "name": "pointattriblist",
+     "note": "Points(点属性の写す名前)"
+    },
+    {
+     "name": "primattriblist",
+     "note": "Primitives(面属性の写す名前)"
+    },
+    {
+     "name": "kernel",
+     "note": "Kernel Function"
+    },
+    {
+     "name": "kernelradius",
+     "note": "Kernel Radius(既定 10)"
+    },
+    {
+     "name": "maxsamplecount",
+     "note": "Max Sample Count(既定 1)"
+    },
+    {
+     "name": "thresholddist",
+     "note": "Distance Threshold"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/attribtransfer.html",
+   "verified": true
+  },
+  {
+   "id": "attribdelete",
+   "name": "Attribute Delete",
+   "type": "attribdelete",
+   "context": "SOP",
+   "category": "VEX・アトリビュート",
+   "what": "不要になった属性(点・面・頂点・ディテール)を名前で指定して消すノード。データを軽くし、後続のノードや書き出しに余計な属性を渡さないために使う。",
+   "how": "Point Attributes(ptdel)・Primitive Attributes(primdel)などの欄に、消したい属性名を入れる(スペース区切りで複数)。Delete Non Selected(negate)をオンにすると逆に、指定した属性だけを残して他を消す。P など消せない基本の属性は残る。",
+   "example_points": [
+    "点に Cd と foo を付けて ptdel に Cd と入れると、Cd だけが消えて foo は残った(実際に確かめた)",
+    "Delete Non Selected をオンにすれば、残したい属性だけを書く形にできる",
+    "点・頂点・面・ディテールで、欄が別々になっている"
+   ],
+   "use_cases": [
+    "シミュレーションや書き出しの前に、使わない属性を落としてファイルを小さくする",
+    "途中で作った一時的な属性(計算用の値)を、後続に流さないよう片付ける",
+    "色(Cd)を消して、後で別の方法で色を付け直す"
+   ],
+   "combos": [
+    {
+     "title": "一時属性の片付け",
+     "chain": [
+      "Attribute Wrangle",
+      "Attribute Delete",
+      "File Cache"
+     ],
+     "note": "計算に使った属性を消してから、キャッシュに保存する。"
+    },
+    {
+     "title": "色を外す",
+     "chain": [
+      "Attribute Transfer",
+      "Attribute Delete",
+      "Null"
+     ],
+     "note": "写し取った値を使い終えたら消して、出口に流す。"
+    }
+   ],
+   "before_after": {
+    "before": "点に Cd(色)が付いていて、点が色分けされている。",
+    "after": "Cd を消すと、色の情報がなくなり、点は無色(表示の既定の色)になる。位置などの他の情報は変わらない。",
+    "image": {
+     "before": "img/nodes/attribdelete-before.svg",
+     "after": "img/nodes/attribdelete-after.svg",
+     "alt": "色の付いた点が、Cd を消すと無色になる"
+    }
+   },
+   "params": [
+    {
+     "name": "ptdel",
+     "note": "Point Attributes(消す点属性の名前)"
+    },
+    {
+     "name": "primdel",
+     "note": "Primitive Attributes"
+    },
+    {
+     "name": "vtxdel",
+     "note": "Vertex Attributes"
+    },
+    {
+     "name": "dtldel",
+     "note": "Detail Attributes"
+    },
+    {
+     "name": "negate",
+     "note": "Delete Non Selected(指定以外を消す)"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/attribdelete.html",
+   "verified": true
+  },
+  {
+   "id": "normal",
+   "name": "Normal",
+   "type": "normal",
+   "context": "SOP",
+   "category": "モデリング",
+   "what": "面の向きを表す法線(N)を、形から計算して付け直すノード。変形や作り直しのあと、陰影が不自然になったときの直しに使う。",
+   "how": "Add Normals to(type)で、法線を付ける場所(Points / Vertices / Primitives / Detail)を選ぶ。Cusp Angle(cuspangle)より鋭い角は、法線を分けて硬い見た目にする。Reverse Normals(reverse)で向きを反転できる。Make Normals Unit Length(normalize)で長さを 1 にそろえる。",
+   "example_points": [
+    "既定では法線は頂点(Vertices)に付き、点には付かない(実際に確かめた。Cusp Angle の既定は 60)",
+    "角度の大きい角は Cusp Angle で硬く、なだらかな面は滑らかに見える",
+    "Reverse Normals で、裏返った面の向きを直せる"
+   ],
+   "use_cases": [
+    "Mountain や変形のあと、法線を作り直して陰影を正しくする",
+    "裏返った面の向きをそろえる",
+    "硬い角と滑らかな面を、角度のしきい値で使い分ける"
+   ],
+   "combos": [
+    {
+     "title": "変形後の整え",
+     "chain": [
+      "Grid",
+      "Attribute Wrangle",
+      "Normal"
+     ],
+     "note": "式で凹凸を付けたあと、法線を作り直して陰影を整える。"
+    },
+    {
+     "title": "硬い面の確認",
+     "chain": [
+      "PolyBevel",
+      "Normal",
+      "Null"
+     ],
+     "note": "ベベルで丸めた角の法線を整えて出力する。"
+    }
+   ],
+   "before_after": {
+    "before": "形を変えたあとで、法線が古いまま、または無く、陰影が不自然になる。",
+    "after": "形から法線を計算し直し、頂点(または選んだ場所)に N が付く。法線は見た目の向きを表すだけで、点の位置は変わらない。"
+   },
+   "params": [
+    {
+     "name": "type",
+     "note": "Add Normals to(typepoint / typevertex / typeprim / typedetail)"
+    },
+    {
+     "name": "cuspangle",
+     "note": "Cusp Angle(既定 60)"
+    },
+    {
+     "name": "reverse",
+     "note": "Reverse Normals"
+    },
+    {
+     "name": "normalize",
+     "note": "Make Normals Unit Length"
+    },
+    {
+     "name": "group",
+     "note": "Group"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/normal.html",
+   "verified": true
+  },
+  {
+   "id": "color",
+   "name": "Color",
+   "type": "color",
+   "context": "SOP",
+   "category": "VEX・アトリビュート",
+   "what": "点・面などに色(Cd)を付けるノード。単色・位置による色分け・ランダムなどを、式を書かずに選べる。確認用の色分けにもよく使う。",
+   "how": "Class(class)で色を付ける場所(Detail / Primitive / Point / Vertex)を選ぶ。Color Type(colortype)は Constant(単色)・Bounding Box(位置に応じた色)・Random・Ramp from Attribute・Random from Attribute から選ぶ。Constant のときは Color(color)で色を決める。Random では Seed(seed)で乱数の並びを変える。",
+   "example_points": [
+    "Class の既定は Point(点)で、Cd が点に付いた(実際に確かめた)",
+    "Color Type を Bounding Box にすると、ジオメトリの位置に応じて色が変わる",
+    "Ramp from Attribute で、属性の値の範囲(Range)をランプの色に対応させられる"
+   ],
+   "use_cases": [
+    "グループや属性の結果を、色で見えるようにして確認する",
+    "部品ごとにランダムな色を付ける",
+    "簡易な見た目の色付け(シェーダーを使わない)"
+   ],
+   "combos": [
+    {
+     "title": "位置で色付け",
+     "chain": [
+      "Grid",
+      "Color",
+      "Null"
+     ],
+     "note": "格子に、位置に応じた色(Bounding Box)を付ける。"
+    },
+    {
+     "title": "つながりごとの色",
+     "chain": [
+      "Connectivity",
+      "Color",
+      "Copy to Points"
+     ],
+     "note": "部品ごとの属性から色を作り、見分けやすくする。"
+    }
+   ],
+   "before_after": {
+    "before": "格子の点は、色の情報を持たない。",
+    "after": "Bounding Box で色を付けると、位置に応じたグラデーション(Cd)が点に付く。",
+    "image": {
+     "before": "img/nodes/color-before.svg",
+     "after": "img/nodes/color-after.svg",
+     "alt": "無色の格子の点が、位置に応じた色になる"
+    }
+   },
+   "params": [
+    {
+     "name": "class",
+     "note": "Class(detail / primitive / point / vertex)"
+    },
+    {
+     "name": "colortype",
+     "note": "Color Type(Constant / Bounding Box / Random ほか)"
+    },
+    {
+     "name": "color",
+     "note": "Color(Constant のときの色)"
+    },
+    {
+     "name": "seed",
+     "note": "Seed"
+    },
+    {
+     "name": "rampattribute",
+     "note": "Attribute(Ramp の元の属性)"
+    },
+    {
+     "name": "ramprange",
+     "note": "Range"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/color.html",
+   "verified": true
+  },
+  {
+   "id": "bound",
+   "name": "Bound",
+   "type": "bound",
+   "context": "SOP",
+   "category": "生成",
+   "what": "ジオメトリを囲む境界(箱・球・長方形)を作るノード。大きさの目安や、衝突・マスクの範囲、ボリュームの範囲決めに使う。",
+   "how": "Bounding Type(boundtype)で Box / Sphere / Rectangle を選ぶ。Keep Original(keepOriginal)をオンにすると、元のジオメトリも一緒に出力する(既定はオフで、境界だけ)。Lower Padding(minpad)・Upper Padding(maxpad)で境界を広げる。Oriented Bounding Box(orientedbbox)で、点を最小で囲む向きにそろえた箱も作れる。",
+   "example_points": [
+    "球に Bound を使うと、6 面・8 点の箱ができた(実際に確かめた)",
+    "Keep Original をオンにすると、元の球の面と箱の面が一緒に出る",
+    "Padding で、箱を少し大きめにして余白を取れる"
+   ],
+   "use_cases": [
+    "モデルの範囲を囲んで、ボリュームやグリッドの大きさの基準にする",
+    "オブジェクトの大きさを調べ、配置やスケールの計算に使う",
+    "衝突や範囲選択のための、簡易な箱や球を作る"
+   ],
+   "combos": [
+    {
+     "title": "範囲の基準",
+     "chain": [
+      "Object Merge",
+      "Bound",
+      "VDB from Polygons"
+     ],
+     "note": "取り込んだモデルの範囲から、ボリュームの範囲を決める。"
+    },
+    {
+     "title": "簡易コリジョン",
+     "chain": [
+      "Bound",
+      "Transform",
+      "Boolean"
+     ],
+     "note": "囲った箱を少し動かして、切り抜きの範囲に使う。"
+    }
+   ],
+   "before_after": {
+    "before": "球が 1 つあるだけで、範囲を示す形はない。",
+    "after": "Keep Original をオンにすると、球を囲む箱が加わる。箱は球の最大・最小の位置に接する。",
+    "image": {
+     "before": "img/nodes/bound-before.svg",
+     "after": "img/nodes/bound-after.svg",
+     "alt": "球に、それを囲む箱が加わる"
+    }
+   },
+   "params": [
+    {
+     "name": "boundtype",
+     "note": "Bounding Type(off=Box / on=Sphere / rectangle)"
+    },
+    {
+     "name": "keepOriginal",
+     "note": "Keep Original(既定オフ)"
+    },
+    {
+     "name": "minpad",
+     "note": "Lower Padding"
+    },
+    {
+     "name": "maxpad",
+     "note": "Upper Padding"
+    },
+    {
+     "name": "orientedbbox",
+     "note": "Oriented Bounding Box"
+    },
+    {
+     "name": "group",
+     "note": "Group"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/bound.html",
+   "verified": true
+  },
+  {
+   "id": "mirror",
+   "name": "Mirror",
+   "type": "mirror",
+   "context": "SOP",
+   "category": "変形",
+   "what": "ジオメトリを平面で折り返してコピーするノード。左右対称のモデルを、片側だけ作って完成させるときに使う。",
+   "how": "Origin(origin)と Direction(dir)で、鏡になる平面の位置と向きを決める(Direction の既定は X 方向)。Keep Original(keepOriginal)がオンなら、元の形と折り返した形の両方が出る(既定はオン)。Consolidate Seam(consolidatepts)で、合わせ目の点を 1 つにまとめられる。Operation(operation)を Clip Primitives and Mirror にすると、平面で切ってから折り返す。",
+   "example_points": [
+    "Keep Original がオンの既定では、片側の箱が左右の 2 つの箱になり、面は 6 から 12 に増えた(実際に確かめた)",
+    "Direction を変えれば、X 以外の向きの対称にできる",
+    "合わせ目に点が重なる形のときは、Consolidate Seam で点をまとめる"
+   ],
+   "use_cases": [
+    "キャラクターや乗り物など、左右対称のモデルを半分だけ作る",
+    "斜めの形でも、平面を基準に対称な形を作る",
+    "パーツを鏡像にして、左右のペアを作る"
+   ],
+   "combos": [
+    {
+     "title": "半身から全身",
+     "chain": [
+      "Blast",
+      "Mirror",
+      "Fuse"
+     ],
+     "note": "片側を残して切り、折り返して、合わせ目の点をまとめる。"
+    },
+    {
+     "title": "対称な配置",
+     "chain": [
+      "Box",
+      "Transform",
+      "Mirror"
+     ],
+     "note": "片側に置いた箱を、反対側にも置く。"
+    }
+   ],
+   "before_after": {
+    "before": "平面の右側に、傾いた箱が 1 つある。",
+    "after": "Mirror で、平面の左側に鏡像の箱が加わり、左右が対称の 2 つの箱になる。",
+    "image": {
+     "before": "img/nodes/mirror-before.svg",
+     "after": "img/nodes/mirror-after.svg",
+     "alt": "傾いた箱が 1 つから、左右対称の 2 つになる"
+    }
+   },
+   "params": [
+    {
+     "name": "origin",
+     "note": "Origin(平面の位置)"
+    },
+    {
+     "name": "dir",
+     "note": "Direction(平面の向き)"
+    },
+    {
+     "name": "keepOriginal",
+     "note": "Keep Original(既定オン)"
+    },
+    {
+     "name": "operation",
+     "note": "Operation(all / clip)"
+    },
+    {
+     "name": "consolidatepts",
+     "note": "Enable Consolidate Seam"
+    },
+    {
+     "name": "group",
+     "note": "Group"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/mirror.html",
+   "verified": true
+  },
+  {
+   "id": "smooth",
+   "name": "Smooth",
+   "type": "smooth::2.0",
+   "context": "SOP",
+   "category": "モデリング",
+   "what": "点の位置(または他の属性)を、近くの点となじませて滑らかにするノード。ギザギザのノイズや、細かすぎる凹凸をならす。",
+   "how": "Attributes(attributes)に、なじませる属性を入れる(既定は P=位置)。Strength(strength)が大きいほど強くなじみ、Filter Quality(filterquality)は計算の質の設定。Method(method)で、Uniform などのなじませ方を選ぶ。Constrained Boundary(contrainedboundary)の設定により、境界の点を固定できる(綴りは Houdini の名前のまま)。",
+   "example_points": [
+    "点の高さをランダムにした格子に Smooth をかけると、尖ったギザギザがなじんだ(図)",
+    "Strength と Filter Quality の組み合わせで効き方が変わる(実際に値を変えて、高さのばらつきが減るのを確かめた)",
+    "既定の境界の設定では、境界の点は固定されるので、端はあまり動かない"
+   ],
+   "use_cases": [
+    "スキャンデータや Mountain のノイズの、ギザギザを和らげる",
+    "VDB から戻したメッシュの、粗い凹凸をならす",
+    "Cd などの属性を、近くの点となじませてぼかす"
+   ],
+   "combos": [
+    {
+     "title": "ノイズをならす",
+     "chain": [
+      "Grid",
+      "Attribute Noise",
+      "Smooth"
+     ],
+     "note": "ノイズで作った凹凸を、なじませて柔らかくする。"
+    },
+    {
+     "title": "メッシュの整え",
+     "chain": [
+      "VDB from Polygons",
+      "Convert VDB",
+      "Smooth"
+     ],
+     "note": "VDB から戻した面の凹凸を整える。"
+    }
+   ],
+   "before_after": {
+    "before": "点の高さがランダムで、ギザギザした面。",
+    "after": "Smooth をかけると、近い点同士の高さがなじんで、全体が滑らかになる。",
+    "image": {
+     "before": "img/nodes/smooth-before.svg",
+     "after": "img/nodes/smooth-after.svg",
+     "alt": "ギザギザの面が、なじんで滑らかになる"
+    }
+   },
+   "params": [
+    {
+     "name": "attributes",
+     "note": "Attributes(なじませる属性。既定 P)"
+    },
+    {
+     "name": "strength",
+     "note": "Strength(既定 10)"
+    },
+    {
+     "name": "filterquality",
+     "note": "Filter Quality"
+    },
+    {
+     "name": "method",
+     "note": "Method(uniform / scaledominant / curvaturedominant)"
+    },
+    {
+     "name": "contrainedboundary",
+     "note": "Constrained Boundary"
+    },
+    {
+     "name": "group",
+     "note": "Group"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/smooth.html",
+   "verified": true
+  },
+  {
+   "id": "polyreduce",
+   "name": "PolyReduce",
+   "type": "polyreduce::2.0",
+   "context": "SOP",
+   "category": "モデリング",
+   "what": "形をなるべく保ったまま、ポリゴンの数を減らすノード。重いモデルを軽くする(LOD や、書き出し前の最適化)。",
+   "how": "Target(target)で、減らす基準を選ぶ(入力の面数に対する割合・点数の割合・出力の面数・出力の点数)。割合なら Percent To Keep(percentage)に残す割合を入れる(100 が全部残す、既定)。数で決めるなら Number To Keep(finalcount)を使う。Preserve Quads(preservequads)で四角形をなるべく残す。境界の重み(boundaryweight)などで、形を保つ度合いを調整できる。",
+   "example_points": [
+    "1160 面の球で Percent To Keep を 50 にすると 580 面、20 にすると 232 面になった(実際に確かめた)",
+    "Target を Output Point Count にして 100 を入れると、点が 100 個の結果になった(実際に確かめた)",
+    "形の特徴に重みを付けて、残したい部分を指定できる"
+   ],
+   "use_cases": [
+    "LOD(遠くで見る用の軽いモデル)を作る",
+    "スキャンデータなど、重すぎるメッシュを軽くする",
+    "シミュレーション前に、面を減らして計算を軽くする"
+   ],
+   "combos": [
+    {
+     "title": "LOD 作成",
+     "chain": [
+      "File",
+      "PolyReduce",
+      "Normal"
+     ],
+     "note": "読み込んだ重いモデルを減らし、法線を整える。"
+    },
+    {
+     "title": "作り直しの前処理",
+     "chain": [
+      "PolyReduce",
+      "Remesh",
+      "Smooth"
+     ],
+     "note": "いったん減らしてから、均一なメッシュに作り直す。"
+    }
+   ],
+   "before_after": {
+    "before": "細かい格子状の球(面が多く、重い)。",
+    "after": "15% だけ残すと、面が少ない粗い球になる。大まかな形は保たれる。",
+    "image": {
+     "before": "img/nodes/polyreduce-before.svg",
+     "after": "img/nodes/polyreduce-after.svg",
+     "alt": "細かい球が、粗い面の球になる"
+    }
+   },
+   "params": [
+    {
+     "name": "target",
+     "note": "Target(poly_percent / pt_percent / poly_count / pt_count)"
+    },
+    {
+     "name": "percentage",
+     "note": "Percent To Keep(既定 100)"
+    },
+    {
+     "name": "finalcount",
+     "note": "Number To Keep"
+    },
+    {
+     "name": "preservequads",
+     "note": "Preserve Quads"
+    },
+    {
+     "name": "boundaryweight",
+     "note": "Boundaries"
+    },
+    {
+     "name": "group",
+     "note": "Group"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/polyreduce.html",
+   "verified": true
+  },
+  {
+   "id": "remesh",
+   "name": "Remesh",
+   "type": "remesh::2.0",
+   "context": "SOP",
+   "category": "モデリング",
+   "what": "三角形の大きさがバラバラなメッシュを、そろった大きさの三角形に作り直すノード。シミュレーションや彫刻の前の下ごしらえに使う。",
+   "how": "Edge Lengths(sizing)が Uniform なら、Target Size(targetsize)で三角形の辺の長さの目標を決める(値が小さいほど細かい)。Adaptive にすると、形に応じて密度を変える。Iterations(iterations)で整える回数を、Smoothing(smoothing)でなめらかさを決める。Hard Edges Group や Hard Points Group で、固定したい辺・点を守れる。",
+   "example_points": [
+    "PolyReduce で大きさがバラバラになった球に、Target Size 0.3 の Remesh をかけたら、面が 298 枚のそろった三角形になった(実際に確かめた)",
+    "Target Size は、既定が 0.2 で、小さくすると細かくなる",
+    "Iterations の既定は 2 で、増やすと整い方が強くなる"
+   ],
+   "use_cases": [
+    "Vellum(布)・変形の前に、均一な三角形メッシュに整える",
+    "PolyReduce や VDB のあとの、バラバラなメッシュの下ごしらえ",
+    "スカルプトや彫刻の、土台のメッシュ作り"
+   ],
+   "combos": [
+    {
+     "title": "均一化",
+     "chain": [
+      "PolyReduce",
+      "Remesh",
+      "Vellum Constraints"
+     ],
+     "note": "面を減らしてから、均一にして布の計算に渡す。"
+    },
+    {
+     "title": "彫刻の土台",
+     "chain": [
+      "Boolean",
+      "Remesh",
+      "Smooth"
+     ],
+     "note": "ブーリアン後の乱れた面を作り直して、滑らかにする。"
+    }
+   ],
+   "before_after": {
+    "before": "大きい三角形と小さい三角形が混ざった、粗く不ぞろいなメッシュ。",
+    "after": "Target Size に近い大きさの三角形が、全体にそろったメッシュ。面の数は増える。",
+    "image": {
+     "before": "img/nodes/remesh-before.svg",
+     "after": "img/nodes/remesh-after.svg",
+     "alt": "不ぞろいな三角形の球が、そろった三角形になる"
+    }
+   },
+   "params": [
+    {
+     "name": "sizing",
+     "note": "Edge Lengths(uniform / adaptive)"
+    },
+    {
+     "name": "targetsize",
+     "note": "Target Size(既定 0.2)"
+    },
+    {
+     "name": "iterations",
+     "note": "Iterations(既定 2)"
+    },
+    {
+     "name": "smoothing",
+     "note": "Smoothing(既定 0.1)"
+    },
+    {
+     "name": "hard_edges",
+     "note": "Hard Edges Group"
+    },
+    {
+     "name": "group",
+     "note": "Group"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/remesh.html",
+   "verified": true
+  },
+  {
+   "id": "ray",
+   "name": "Ray",
+   "type": "ray",
+   "context": "SOP",
+   "category": "変形",
+   "what": "1 つ目のジオメトリの点から光線(レイ)を飛ばし、2 つ目のジオメトリの表面に当てて、点を貼り付ける(投影する)ノード。",
+   "how": "Method(method)を Project Rays にし、Direction Source(dirmethod)を Vector にして Direction(dir)に方向を入れる。Normal にすると各点の法線の向きに飛ばす。Direction Type(reverserays)で順方向・逆方向・両方向を選ぶ。Transform Points(dotrans)がオンなら当たった位置へ点を動かす。Lift(lift)で、表面から少し浮かせる。",
+   "example_points": [
+    "球の上に置いた格子を、Direction (0,-1,0) で下へ投影すると、全ての点が球の表面に貼り付いた(図)",
+    "Direction の欄には既定で式が入っているので、値を入れるには式を消す必要があった(実際に確かめた)",
+    "光線が当たらない点は、元の位置のまま残る"
+   ],
+   "use_cases": [
+    "地形の上に、道や建物の足元の点を貼り付ける",
+    "ジオメトリ同士の最短距離・衝突の位置を調べる",
+    "平らな面を、他の形に沿わせる(ラップする)"
+   ],
+   "combos": [
+    {
+     "title": "地形への貼り付け",
+     "chain": [
+      "Grid",
+      "Ray",
+      "Copy to Points"
+     ],
+     "note": "格子の点を地形に投影して、その位置にモデルを置く。"
+    },
+    {
+     "title": "形に沿わせる",
+     "chain": [
+      "Scatter",
+      "Ray",
+      "Attribute Wrangle"
+     ],
+     "note": "散らした点を表面に落とし、向きを整える。"
+    }
+   ],
+   "before_after": {
+    "before": "球の上に、平らな格子が浮いている。",
+    "after": "Ray で下に投影すると、格子の点が球の表面に貼り付き、丸い面になる。",
+    "image": {
+     "before": "img/nodes/ray-before.svg",
+     "after": "img/nodes/ray-after.svg",
+     "alt": "球の上に浮く格子が、球の表面に貼り付く"
+    }
+   },
+   "params": [
+    {
+     "name": "method",
+     "note": "Method(minimum / project)"
+    },
+    {
+     "name": "dirmethod",
+     "note": "Direction Source(vector / normal / attribute)"
+    },
+    {
+     "name": "dir",
+     "note": "Direction"
+    },
+    {
+     "name": "reverserays",
+     "note": "Direction Type(off / on / bidirectional)"
+    },
+    {
+     "name": "dotrans",
+     "note": "Transform Points"
+    },
+    {
+     "name": "lift",
+     "note": "Lift"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/ray.html",
+   "verified": true
+  },
+  {
+   "id": "trail",
+   "name": "Trail",
+   "type": "trail",
+   "context": "SOP",
+   "category": "シミュレーション",
+   "what": "動いているジオメトリの、過去のフレームの位置を参照するノード。速度(v)の計算や、動きの軌跡をつなぐのに使う。",
+   "how": "Result Type(result)で結果を選ぶ。Compute Velocity なら、前後のフレームの差から速度 v を作る(Velocity Scale(velscale)で倍率を変えられる)。Connect as Mesh / Polygons は過去の位置をつないだ軌跡を作る(Trail Length(length)で長さを決める)。速度は 1 秒あたりの移動量なので、フレームレートの影響を受ける。",
+   "example_points": [
+    "1 フレームで 0.5 動く点に Compute Velocity を使うと、24fps で v=(12, 0, 0) になった。Velocity Scale を 2 にすると 24 になった(実際に確かめた)",
+    "Connect as Mesh で Trail Length 5 にすると、4 点の面が 20 点のメッシュになった(実際に確かめた)",
+    "フレームをまたいで計算するので、アニメーションがあるジオメトリで意味を持つ"
+   ],
+   "use_cases": [
+    "アニメーションする形に、モーションブラーや粒子の初速のための速度を付ける",
+    "動きの軌跡を、線やメッシュとして見えるようにする",
+    "移動するオブジェクトから、粒子を放出するときの勢いを作る"
+   ],
+   "combos": [
+    {
+     "title": "速度付き発生",
+     "chain": [
+      "Transform",
+      "Trail",
+      "Scatter"
+     ],
+     "note": "動くオブジェクトに速度を付けて、粒子の発生源にする。"
+    },
+    {
+     "title": "軌跡の表示",
+     "chain": [
+      "Attribute Wrangle",
+      "Trail",
+      "Null"
+     ],
+     "note": "動く点を軌跡のメッシュにして出力する。"
+    }
+   ],
+   "before_after": {
+    "before": "位置が毎フレーム変わるだけで、速度の情報を持たない。",
+    "after": "Compute Velocity で、v 属性が付く。1 フレームの移動量に fps をかけた値になる。"
+   },
+   "params": [
+    {
+     "name": "result",
+     "note": "Result Type(preserve / mesh / poly / velocity)"
+    },
+    {
+     "name": "length",
+     "note": "Trail Length"
+    },
+    {
+     "name": "inc",
+     "note": "Trail Increment"
+    },
+    {
+     "name": "velscale",
+     "note": "Velocity Scale"
+    },
+    {
+     "name": "velapproximation",
+     "note": "Velocity Approximation"
+    },
+    {
+     "name": "cache",
+     "note": "Cache Size"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/trail.html",
+   "verified": true
+  },
+  {
+   "id": "measure",
+   "name": "Measure",
+   "type": "measure::2.0",
+   "context": "SOP",
+   "category": "VEX・アトリビュート",
+   "what": "面積・長さ・体積・曲率などの「形の大きさ」を測って、属性として付けるノード。面ごとの大きさを使った処理(大きい面だけ選ぶなど)の元データを作る。",
+   "how": "Element Type(grouptype)で測る対象(Points / Primitives)を選び、Measure(measure)で測る量(Perimeter / Area / Volume / Centroid / Curvature など)を選ぶ。結果は Attribute Name(attribname)の名前の属性に入る(既定は area)。Make Scale Independent(scalenormalize)で、大きさに依存しない値にもできる。",
+   "example_points": [
+    "1×1 のマスが並ぶ格子で Area を測ると、各面の area が 1.0 になり、期待どおりの面積だった(実際に確かめた)",
+    "Element Type の既定は Primitives で、面ごとに値が付く",
+    "測った値は、Delete や Blast と合わせて「小さい面を消す」などの条件に使える"
+   ],
+   "use_cases": [
+    "面積の小さい面を見つけて、削除や結合の対象にする",
+    "曲率が大きい場所に、ほこりや傷を付ける",
+    "モデルの体積や表面積の目安を調べる"
+   ],
+   "combos": [
+    {
+     "title": "小さい面の除去",
+     "chain": [
+      "Measure",
+      "Delete",
+      "Fuse"
+     ],
+     "note": "面積が小さい面を消して、点を整理する。"
+    },
+    {
+     "title": "曲率で色付け",
+     "chain": [
+      "Measure",
+      "Color",
+      "Null"
+     ],
+     "note": "曲率を属性にして、色の元データにする。"
+    }
+   ],
+   "before_after": {
+    "before": "面には形の情報(位置と面のつながり)しかなく、面の大きさの値は持たない。",
+    "after": "Measure を通すと、面ごとの面積が area 属性として付き、後続のノードから使える。"
+   },
+   "params": [
+    {
+     "name": "grouptype",
+     "note": "Element Type(points / prims)"
+    },
+    {
+     "name": "measure",
+     "note": "Measure(perimeter / area / volume / curvature ほか)"
+    },
+    {
+     "name": "attribname",
+     "note": "Attribute Name(既定 area)"
+    },
+    {
+     "name": "scalenormalize",
+     "note": "Make Scale Independent"
+    },
+    {
+     "name": "group",
+     "note": "Group"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/measure.html",
+   "verified": true
+  },
+  {
+   "id": "polyframe",
+   "name": "PolyFrame",
+   "type": "polyframe",
+   "context": "SOP",
+   "category": "VEX・アトリビュート",
+   "what": "面や点ごとに、向きの基準(法線・接線・従法線)を属性として作るノード。コピーした物の向きをそろえたいときの元になる。",
+   "how": "Entity(entity)で、計算する単位(Primitives / Points)を選ぶ。Enable Normal(Non)・Enable Tangent(tangentuon)・Enable Bitangent(tangentvon)で作る向きを選び、Normal Name(N)・Tangent Name(tangentu)・Bitangent Name(tangentv)で属性の名前を決める。Make Frame Orthogonal(ortho)で、3 つの向きを互いに直角にそろえる。",
+   "example_points": [
+    "既定では、Enable Normal と Enable Tangent がオンで、N と tangentu が付く(実際に確かめた。格子では点に付いた)",
+    "接線の向きは、Style(style)の設定で決まる",
+    "Make Frame Orthogonal をオンにすると、向きの 3 本が直交する"
+   ],
+   "use_cases": [
+    "曲線に沿って物を並べるとき、進行方向に向きをそろえる",
+    "Copy to Points で、面の向きに合わせてモデルを置く",
+    "表面にそった方向を、VEX で使うために属性にする"
+   ],
+   "combos": [
+    {
+     "title": "向きをそろえた配置",
+     "chain": [
+      "Scatter",
+      "PolyFrame",
+      "Copy to Points"
+     ],
+     "note": "散らした点に向きの基準を作り、モデルを面に沿って置く。"
+    },
+    {
+     "title": "曲線に沿う",
+     "chain": [
+      "Resample",
+      "PolyFrame",
+      "Copy to Points"
+     ],
+     "note": "曲線を等間隔の点にして、進行方向をそろえる。"
+    }
+   ],
+   "before_after": {
+    "before": "点・面は位置だけで、どちらを向いているかの情報(接線など)がない。",
+    "after": "PolyFrame を通すと、N(法線)と tangentu(接線)が付き、向きの基準として使える。"
+   },
+   "params": [
+    {
+     "name": "entity",
+     "note": "Entity(primitive / point)"
+    },
+    {
+     "name": "Non",
+     "note": "Enable Normal"
+    },
+    {
+     "name": "N",
+     "note": "Normal Name"
+    },
+    {
+     "name": "tangentuon",
+     "note": "Enable Tangent"
+    },
+    {
+     "name": "tangentu",
+     "note": "Tangent Name"
+    },
+    {
+     "name": "ortho",
+     "note": "Make Frame Orthogonal"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/polyframe.html",
+   "verified": true
+  },
+  {
+   "id": "bend",
+   "name": "Bend",
+   "type": "bend",
+   "context": "SOP",
+   "category": "変形",
+   "what": "細長い形を、指定した範囲で曲げるノード。ねじり・先細り・押しつぶしなどの基本的な変形も、1 つのノードにまとまっている。",
+   "how": "Bend Angle(bend)に角度を入れると曲がる。曲げの基準は Capture Origin(origin)・Capture Direction(dir)・Capture Length(length)で決める範囲(既定は原点から Z 方向に長さ 1)で、Limit Deformation to Capture Region(limit_deformation)がオンのとき、その範囲の中で変形する。Twist(twist)・Taper(taper)・Squish(squish)・Length Scale(lengthscale)は、それぞれ別のスイッチで追加できる。",
+   "example_points": [
+    "既定では Bend Angle は 0 で、数値を入れると曲がり始める(実際に確かめた)",
+    "Capture Length を、形の長さに合わせて広げないと、一部だけが曲がる",
+    "形に十分な分割(点)がないと、曲がっても角ばって見える"
+   ],
+   "use_cases": [
+    "曲がった管・ホース・植物の茎の形を作る",
+    "ねじりや先細りで、角や触手のような形を作る",
+    "直線のモデルを、少しだけ曲げて自然な形にする"
+   ],
+   "combos": [
+    {
+     "title": "曲がった柱",
+     "chain": [
+      "Box",
+      "Bend",
+      "Normal"
+     ],
+     "note": "分割した細長い箱を曲げて、法線を整える。"
+    },
+    {
+     "title": "ねじって束ねる",
+     "chain": [
+      "Tube",
+      "Bend",
+      "Copy to Points"
+     ],
+     "note": "曲げた形を点に並べて、群れを作る。"
+    }
+   ],
+   "before_after": {
+    "before": "分割した、まっすぐな細長い箱。",
+    "after": "Bend Angle を 100 度にして、捕獲範囲を箱の長さに合わせると、全体が弧を描いて曲がる。",
+    "image": {
+     "before": "img/nodes/bend-before.svg",
+     "after": "img/nodes/bend-after.svg",
+     "alt": "まっすぐな細長い箱が、弧を描いて曲がる"
+    }
+   },
+   "params": [
+    {
+     "name": "bend",
+     "note": "Bend Angle(既定 0)"
+    },
+    {
+     "name": "origin",
+     "note": "Capture Origin"
+    },
+    {
+     "name": "dir",
+     "note": "Capture Direction"
+    },
+    {
+     "name": "length",
+     "note": "Capture Length(既定 1)"
+    },
+    {
+     "name": "twist",
+     "note": "Twist"
+    },
+    {
+     "name": "taper",
+     "note": "Taper"
+    },
+    {
+     "name": "limit_deformation",
+     "note": "Limit Deformation to Capture Region"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/bend.html",
+   "verified": true
+  },
+  {
+   "id": "dissolve",
+   "name": "Dissolve",
+   "type": "dissolve::2.0",
+   "context": "SOP",
+   "category": "モデリング",
+   "what": "選んだ辺や面を消して、まわりの面を 1 つの大きな面にまとめるノード。不要な分割線を消して、ポリゴンを整理する。",
+   "how": "Group(group)に、消す辺のグループを入れる(辺は Group ノードの Entity を Edges にして作れる)。Operation(invertsel)の Dissolve Selected は選んだものを消し、Dissolve Non-Selected は逆に選ばなかったものを消す。Remove Inline Points(reminlinepts)がオンなら、一直線上の余分な点も消す。Remove Unused Points(remunusedpts)で、使われない点を片付ける。",
+   "example_points": [
+    "5×5 点の格子(16 面)で、つながった 3 辺を Dissolve すると 13 面になり、点は 25 から 22 になった(実際に確かめた)",
+    "1 辺だけを Dissolve すると、両側の四角形が 1 つの六角形になった(実際に確かめた)",
+    "Delete と違い、穴は開かず、まわりの面が広がって埋める"
+   ],
+   "use_cases": [
+    "Boolean などで増えた余分な分割線を消して、すっきりさせる",
+    "モデリングで、面の数を減らしながら形は変えずに整理する",
+    "辺を消して、大きな多角形を作り、押し出しや面取りの土台にする"
+   ],
+   "combos": [
+    {
+     "title": "辺の整理",
+     "chain": [
+      "Group Create",
+      "Dissolve",
+      "PolyExtrude"
+     ],
+     "note": "辺のグループを消して、大きくなった面を押し出す。"
+    },
+    {
+     "title": "ブーリアン後の掃除",
+     "chain": [
+      "Boolean",
+      "Dissolve",
+      "Normal"
+     ],
+     "note": "切り抜きで増えた線を消し、法線を整える。"
+    }
+   ],
+   "before_after": {
+    "before": "格子状に、細かい四角形が並ぶ面。",
+    "after": "選んだ 3 辺が消えて、その両側の面が大きな 1 つの面にまとまる(面の数が減る)。",
+    "image": {
+     "before": "img/nodes/dissolve-before.svg",
+     "after": "img/nodes/dissolve-after.svg",
+     "alt": "格子の辺を消すと、両側の面が 1 つにまとまる"
+    }
+   },
+   "params": [
+    {
+     "name": "group",
+     "note": "Group(消す辺・面)"
+    },
+    {
+     "name": "invertsel",
+     "note": "Operation(delete / keep)"
+    },
+    {
+     "name": "reminlinepts",
+     "note": "Remove Inline Points"
+    },
+    {
+     "name": "remunusedpts",
+     "note": "Remove Unused Points"
+    },
+    {
+     "name": "bridge",
+     "note": "Bridge"
+    },
+    {
+     "name": "compnorms",
+     "note": "Recompute Normals"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/dissolve.html",
+   "verified": true
+  },
+  {
+   "id": "pyrosolver",
+   "name": "Pyro Solver",
+   "type": "pyrosolver",
+   "context": "SOP",
+   "category": "シミュレーション",
+   "what": "煙・炎・爆発を、SOP の中で解くノード。発生源の点やボリュームを入れて、フレームを進めると、ボリュームの煙が育つ。",
+   "how": "入力に、発生源(温度・密度・速度などを持つボリュームや点)をつなぐ。Quick Setups(quicksetup)のメニューから、Initialize Smoke・Initialize Fire・Initialize Explosion などを選ぶと、設定がまとめて入る。Voxel Size(divsize、既定 0.1)が小さいほど細かいが重く、Simulation Type(solver)で、疎(Sparse)・密(Dense)を選ぶ。Start Frame(startframe)から計算が始まり、結果はフレーム順に積み重ねられる。",
+   "example_points": [
+    "Voxel Size の既定は 0.1、Start Frame の既定は 1、Simulation Type の既定は Sparse(実際に確かめた)",
+    "Quick Setups から、煙・炎・爆発の初期設定を選べる",
+    "Cache Simulation(cacheenabled)で、計算済みのフレームをメモリに残せる"
+   ],
+   "use_cases": [
+    "焚き火・煙突の煙・爆発などの VFX を作る",
+    "Voxel Size を粗くして形を決め、細かくして仕上げる",
+    "シミュレーション結果を File Cache に保存して、Karma でレンダリングする"
+   ],
+   "combos": [
+    {
+     "title": "煙の発生",
+     "chain": [
+      "Scatter",
+      "Pyro Solver",
+      "File Cache"
+     ],
+     "note": "点から煙を出し、計算結果をキャッシュに保存する。"
+    },
+    {
+     "title": "発生源の整え",
+     "chain": [
+      "Attribute Wrangle",
+      "Pyro Solver",
+      "Null"
+     ],
+     "note": "温度や密度を式で作ってから、煙として解く。"
+    }
+   ],
+   "before_after": {
+    "before": "発生源の点やボリュームが、静止している。",
+    "after": "フレームを進めると、発生源から煙や炎が広がり、ボリュームが動く(静止画では前後が出ないので、図は無し)。"
+   },
+   "params": [
+    {
+     "name": "quicksetup",
+     "note": "Quick Setups(煙・炎・爆発など)"
+    },
+    {
+     "name": "divsize",
+     "note": "Voxel Size(既定 0.1)"
+    },
+    {
+     "name": "solver",
+     "note": "Simulation Type(sparse / dense / gpu)"
+    },
+    {
+     "name": "startframe",
+     "note": "Start Frame"
+    },
+    {
+     "name": "timescale",
+     "note": "Time Scale"
+    },
+    {
+     "name": "substep",
+     "note": "Global Substeps"
+    },
+    {
+     "name": "cacheenabled",
+     "note": "Cache Simulation"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/pyrosolver.html",
+   "verified": true
+  },
+  {
+   "id": "vellumconstraints",
+   "name": "Vellum Constraints",
+   "type": "vellumconstraints",
+   "context": "SOP",
+   "category": "シミュレーション",
+   "what": "Vellum(布・髪・ソフトボディの計算)で、点同士をどうつなぐか(制約)を作るノード。布なら、辺の伸びと三角形の曲げに対する制約を作る。",
+   "how": "Constraint Type(constrainttype)で種類を選ぶ(Cloth・Hair・String・Pin to Target・Attach to Geometry・Stitch Points・Pressure・Glue など)。Cloth なら、Stiffness(stretchstiffness・bendstiffness、既定は 1.0)で硬さを調整する。Mass(mass)・Thickness(thickness)で、重さと厚みを決める。出力は、点のデータと、制約のデータの 2 つ(制約は 2 つ目の出力)で、そのまま Vellum Solver の 2 つの入力へつなぐ。",
+   "example_points": [
+    "8×8 分割の格子を Cloth にすると、点の数は 64 のまま、mass・pscale・dragnormal などの属性が付いた(実際に確かめた)",
+    "Mass の既定は 0.1、Thickness の既定は 0.01(実際に確かめた)",
+    "Pin to Target で、一部の点を固定できる"
+   ],
+   "use_cases": [
+    "旗・カーテン・服など、布の揺れを作る",
+    "ロープや髪の毛を、制約でつなげて動かす",
+    "風船のように膨らむ Pressure の物体を作る"
+   ],
+   "combos": [
+    {
+     "title": "布の準備",
+     "chain": [
+      "Grid",
+      "Vellum Constraints",
+      "Vellum Solver"
+     ],
+     "note": "格子を布の制約にして、ソルバーに渡す。"
+    },
+    {
+     "title": "固定した旗",
+     "chain": [
+      "Grid",
+      "Vellum Constraints",
+      "Attribute Wrangle"
+     ],
+     "note": "一辺を固定する点を決めて、残りを風で揺らす。"
+    }
+   ],
+   "before_after": {
+    "before": "格子は、点と面があるだけで、動かしても形はつながらず、布にならない。",
+    "after": "Cloth の制約を作ると、辺に沿って伸びを保ち、三角形の曲げを抵抗する制約が付き、Vellum Solver で布として動かせる。"
+   },
+   "params": [
+    {
+     "name": "constrainttype",
+     "note": "Constraint Type(cloth / hair / pin / attach ほか)"
+    },
+    {
+     "name": "stretchstiffness",
+     "note": "Stiffness(伸び。既定 1.0)"
+    },
+    {
+     "name": "bendstiffness",
+     "note": "Stiffness(曲げ。既定 1.0)"
+    },
+    {
+     "name": "mass",
+     "note": "Mass(既定 0.1)"
+    },
+    {
+     "name": "thickness",
+     "note": "Thickness(既定 0.01)"
+    },
+    {
+     "name": "group",
+     "note": "Group"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/vellumconstraints.html",
+   "verified": true
+  },
+  {
+   "id": "vellumsolver",
+   "name": "Vellum Solver",
+   "type": "vellumsolver",
+   "context": "SOP",
+   "category": "シミュレーション",
+   "what": "Vellum の布・髪・ソフトボディの動きを、時間を進めながら解くノード。重力・風・衝突を入れて、制約の通りに動かす。",
+   "how": "1 つ目の入力に点のデータ、2 つ目に Vellum Constraints の制約をつなぐ。Gravity(gravity、既定は下向きに 9.80665)・Substeps(substeps)・Constraint Iterations(niter、既定 100)で、動きの質を決める。Enable Collisions(enablecollisions)をオンにして、3 つ目の入力に衝突するジオメトリをつなぐと、布が物にぶつかる。Start Frame(startframe)から計算し、Reset Simulation で最初から計算し直す。",
+   "example_points": [
+    "固定のない格子の布を落とすと、1 フレーム目の高さ 0 から、6 フレーム目で約 -0.17 まで下がった(実際に確かめた)",
+    "Constraint Iterations の既定は 100、Smoothing Iterations の既定は 10(実際に確かめた)",
+    "Substeps を増やすと精度が上がるが、計算が重くなる"
+   ],
+   "use_cases": [
+    "布・旗・服のシミュレーション",
+    "髪の毛やロープなど、細い物の揺れ",
+    "ソフトボディのつぶれや弾み"
+   ],
+   "combos": [
+    {
+     "title": "布の解決",
+     "chain": [
+      "Vellum Constraints",
+      "Vellum Solver",
+      "File Cache"
+     ],
+     "note": "制約を解いた結果を、キャッシュに保存する。"
+    },
+    {
+     "title": "布と衝突",
+     "chain": [
+      "Vellum Constraints",
+      "Vellum Solver",
+      "Vellum Post-Process"
+     ],
+     "note": "衝突物を入れて解き、仕上げの処理をかける。"
+    }
+   ],
+   "before_after": {
+    "before": "布は静止していて、時間が進んでも形は変わらない。",
+    "after": "フレームを進めると、重力で布が落ち、制約に従って伸び縮みしながら動く(静止画では前後が出ないので、図は無し)。"
+   },
+   "params": [
+    {
+     "name": "startframe",
+     "note": "Start Frame"
+    },
+    {
+     "name": "substeps",
+     "note": "Substeps"
+    },
+    {
+     "name": "niter",
+     "note": "Constraint Iterations(既定 100)"
+    },
+    {
+     "name": "gravity",
+     "note": "Gravity(既定 0, -9.80665, 0)"
+    },
+    {
+     "name": "enablecollisions",
+     "note": "Enable Collisions"
+    },
+    {
+     "name": "smoothiter",
+     "note": "Smoothing Iterations(既定 10)"
+    },
+    {
+     "name": "resimulate",
+     "note": "Reset Simulation"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/vellumsolver.html",
+   "verified": true
+  },
+  {
+   "id": "rbdconfigure",
+   "name": "RBD Configure",
+   "type": "rbdconfigure",
+   "context": "SOP",
+   "category": "シミュレーション",
+   "what": "壊れたジオメトリ(破片)を、剛体シミュレーションに渡す形に整えるノード。破片をパックして、質量・名前・衝突の形などの設定を付ける。",
+   "how": "入力に、Fracture などで作った破片のジオメトリをつなぐ。破片は名前(name)ごとに 1 つの剛体としてまとめられ、点にシミュレーションの設定(bounce・density など)が付く。Group の追加設定(multiparm)で、グループごとに「動かす/動かさない(Active)」「重さ」「衝突の形(Geometry Representation)」などを変えられる。Unit Mass(unitmass)・Unit Length(unitlength)で、単位をそろえる。",
+   "example_points": [
+    "RBD Material Fracture で割った箱(191 枚のポリゴン)を通すと、25 個のパックされた破片(PackedFragment)になった(実際に確かめた)",
+    "点に name・density・bounce などの属性が付いた(実際に確かめた)",
+    "グループごとに Active(動くか固定か)を切り替え、一部の破片を固定できる"
+   ],
+   "use_cases": [
+    "壁・ガラス・建物の破壊の準備",
+    "破片ごとに質量や衝突の形を設定する",
+    "RBD Bullet Solver や DOP の剛体に渡す前の下ごしらえ"
+   ],
+   "combos": [
+    {
+     "title": "破壊の準備",
+     "chain": [
+      "RBD Material Fracture",
+      "RBD Configure",
+      "RBD Bullet Solver"
+     ],
+     "note": "破片をパックして設定し、剛体のソルバーに渡す。"
+    },
+    {
+     "title": "一部を固定",
+     "chain": [
+      "Group Create",
+      "RBD Configure",
+      "RBD Bullet Solver"
+     ],
+     "note": "グループで、動かす破片と固定する破片を分ける。"
+    }
+   ],
+   "before_after": {
+    "before": "割った後の破片は、ばらばらのポリゴン(191 面)。シミュレーションの設定は付いていない。",
+    "after": "破片ごとにパックされた 25 個になり、剛体として動かすための属性(名前・密度・bounce)が付く。"
+   },
+   "params": [
+    {
+     "name": "unitmass",
+     "note": "Unit Mass (kg)"
+    },
+    {
+     "name": "unitlength",
+     "note": "Unit Length (m)"
+    },
+    {
+     "name": "nameprefix",
+     "note": "Name Prefix(既定 piece)"
+    },
+    {
+     "name": "createpackedfragments",
+     "note": "Create Packed Fragments"
+    },
+    {
+     "name": "addactive#",
+     "note": "Add Active(グループごと)"
+    },
+    {
+     "name": "georep#",
+     "note": "Geometry Representation(衝突の形)"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/rbdconfigure.html",
+   "verified": true
+  },
+  {
+   "id": "skeleton",
+   "name": "Skeleton",
+   "type": "kinefx::skeleton",
+   "context": "SOP",
+   "category": "リギング(KineFX)",
+   "what": "KineFX で、関節(ジョイント)と骨(ボーン)でできたスケルトンを描いて作るノード。KineFX では、関節は点、骨は点同士をつなぐ線として扱う。",
+   "how": "ノードを選んでビューポートに入り、クリックで関節を置いていくと、点と線でスケルトンができる(入力が無くても動く)。Joint Color(jointcolor)で、表示の色を変える。Stash Input(stashinput)は、つないだ入力を、編集のたびに保持するためのボタン。Cache Output(cacheoutput)で、出力を保持する。作ったスケルトンは、Rig Pose や Full Body IK、Skin Capture などの入力にする。",
+   "example_points": [
+    "何もせずに置いただけでは、点が 0 個の空の出力になる(実際に確かめた)",
+    "関節は点、骨は点同士をつなぐ線として扱うので、通常の SOP でも属性を読み書きできる",
+    "Transfer Input Animation(transferanimation)で、入力のアニメーションを引き継げる"
+   ],
+   "use_cases": [
+    "キャラクターや生物の、骨の構造を作る",
+    "ヒューマノイドの骨に合わせたリグの土台",
+    "ジオメトリの形に合わせて、関節を自分で置いて作る"
+   ],
+   "combos": [
+    {
+     "title": "骨の作成",
+     "chain": [
+      "Skeleton",
+      "Rig Pose",
+      "Joint Deform"
+     ],
+     "note": "作った骨にポーズを付けて、メッシュを変形させる。"
+    },
+    {
+     "title": "IK のための準備",
+     "chain": [
+      "Skeleton",
+      "Orient Joints",
+      "Full Body IK"
+     ],
+     "note": "関節の向きをそろえ、IK で動かす。"
+    }
+   ],
+   "before_after": {
+    "before": "ジオメトリはあるが、動かすための骨が何も無い。",
+    "after": "クリックで置いた関節と骨が、点と線のスケルトンになり、Rig Pose などで動かせる(対話操作が必要なので、図は無し)。"
+   },
+   "params": [
+    {
+     "name": "jointcolor",
+     "note": "Joint Color"
+    },
+    {
+     "name": "stashinput",
+     "note": "Stash Input"
+    },
+    {
+     "name": "transferanimation",
+     "note": "Transfer Input Animation"
+    },
+    {
+     "name": "cacheoutput",
+     "note": "Cache Output"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/kinefx--skeleton.html",
+   "verified": true
+  },
+  {
+   "id": "rigpose",
+   "name": "Rig Pose",
+   "type": "kinefx::rigpose",
+   "context": "SOP",
+   "category": "リギング(KineFX)",
+   "what": "KineFX のスケルトンの関節を、選んで動かす(ポーズを付ける)ノード。ビューポートのハンドルで回すか、数値を入れる。",
+   "how": "Group(group#)に、動かす関節の名前を入れ(ビューポートで関節を選んでもよい)、Translate(t#)・Rotate(r#)・Scale(s#)に値を入れる。Mode(mode#)で、入力のポーズに掛け合わせるか(Pre-Multiply / Post-Multiply)、上書きするか(Override)、元の姿勢から始めるか(From Rest Pose)を選ぶ。World Space(worldspace)で、ワールド座標でのハンドル操作にできる。複数の関節を動かすときは、設定を増やして足す。",
+   "example_points": [
+    "Mode には Pre-Multiply・Post-Multiply・Override・From Rest Pose がある(実際に確かめた)",
+    "Transform Order(xOrd#)・Rotate Order(rOrd#)で、回転の順序を選べる",
+    "Bake(bake)のボタンで、ポーズをアニメーションとして書き出せる"
+   ],
+   "use_cases": [
+    "歩きや構えなどのポーズを付けて、メッシュの変形を確かめる",
+    "モーションクリップの上に、手で補正を重ねる",
+    "リグのテストポーズを作る"
+   ],
+   "combos": [
+    {
+     "title": "ポーズ確認",
+     "chain": [
+      "Skeleton",
+      "Rig Pose",
+      "Joint Deform"
+     ],
+     "note": "スケルトンにポーズを付けて、メッシュの変形を見る。"
+    },
+    {
+     "title": "補正を重ねる",
+     "chain": [
+      "MotionClip Evaluate",
+      "Rig Pose",
+      "Joint Deform"
+     ],
+     "note": "モーションに、手動のポーズ補正を加える。"
+    }
+   ],
+   "before_after": {
+    "before": "スケルトンは、元のポーズのまま。",
+    "after": "指定した関節が回転・移動し、その子の関節も一緒に動いて、スケルトンが新しいポーズになる(対話操作が必要なので、図は無し)。"
+   },
+   "params": [
+    {
+     "name": "group#",
+     "note": "Group 1, 2, …(動かす関節)"
+    },
+    {
+     "name": "mode#",
+     "note": "Mode(pre / post / override / restpose)"
+    },
+    {
+     "name": "t#",
+     "note": "Translate"
+    },
+    {
+     "name": "r#",
+     "note": "Rotate"
+    },
+    {
+     "name": "s#",
+     "note": "Scale"
+    },
+    {
+     "name": "worldspace",
+     "note": "World Space"
+    },
+    {
+     "name": "xOrd#",
+     "note": "Transform Order"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/kinefx--rigpose.html",
+   "verified": true
+  },
+  {
+   "id": "fullbodyik",
+   "name": "Full Body IK",
+   "type": "kinefx::fullbodyik",
+   "context": "SOP",
+   "category": "リギング(KineFX)",
+   "what": "手足の先など、いくつかの目標の位置を決めると、体全体の関節をまとめて動かして追従させる、KineFX の IK(逆運動学)ノード。",
+   "how": "1 つ目の入力にスケルトン、2 つ目の入力に目標の点を持つジオメトリをつなぎ、Map Using(mapusing)で、目標と関節の対応の付け方(Mapping Attribute か Match by Attribute)を選ぶ(接続の細かい使い方は筆者の理解)。Solver(solver)で解き方(FABRIK / Physical Full Body IK)を選び、Iterations(iterations)・Damping(damping)・Tolerance(tolerance)で、収束の質を調整する。Pin Root(pinroot)・Constrain Root(constrainroot)で、体の根元(ルート)を固定できる。",
+   "example_points": [
+    "Solver の既定は Physical Full Body IK で、Iterations は 10、Damping は 0.5、Tolerance は 0.01(実際に確かめた)",
+    "目標ごとの Weight(weight#)で、どの目標を優先するかを調整できる",
+    "Add Center of Mass Target(addcomtarget)で、重心の目標も追加できる"
+   ],
+   "use_cases": [
+    "足を地面に着けたまま、体を動かす",
+    "手の位置を決めて、腕や体全体を自然に追従させる",
+    "モーションを、別の体型に合わせて補正する"
+   ],
+   "combos": [
+    {
+     "title": "足の接地",
+     "chain": [
+      "Skeleton",
+      "Full Body IK",
+      "Joint Deform"
+     ],
+     "note": "足の目標を地面に合わせて、体全体を追従させる。"
+    },
+    {
+     "title": "目標の追従",
+     "chain": [
+      "Rig Pose",
+      "Full Body IK",
+      "Joint Deform"
+     ],
+     "note": "ポーズの先端を目標に合わせて、メッシュを変形する。"
+    }
+   ],
+   "before_after": {
+    "before": "関節はそれぞれ別々に回転していて、手足の先を指定の位置に置くには、関節を 1 つずつ調整する必要がある。",
+    "after": "目標の位置を決めると、全身の関節が自動で回って、先端が目標に近づく(静止画では前後が出ないので、図は無し)。"
+   },
+   "params": [
+    {
+     "name": "solver",
+     "note": "Solver(solvefbik / solvephysfbik)"
+    },
+    {
+     "name": "iterations",
+     "note": "Iterations(既定 10)"
+    },
+    {
+     "name": "damping",
+     "note": "Damping(既定 0.5)"
+    },
+    {
+     "name": "tolerance",
+     "note": "Tolerance(既定 0.01)"
+    },
+    {
+     "name": "pinroot",
+     "note": "Pin Root"
+    },
+    {
+     "name": "constrainroot",
+     "note": "Constrain Root"
+    },
+    {
+     "name": "mapusing",
+     "note": "Map Using"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/kinefx--fullbodyik.html",
+   "verified": true
+  },
+  {
+   "id": "apex_script",
+   "name": "APEX Script",
+   "type": "apex::script",
+   "context": "SOP",
+   "category": "APEX",
+   "what": "APEX(Houdini の新しいリグ・アニメーションの仕組み)で、ノードのグラフをスクリプトで組み立てるノード。ノードをつなぐ代わりに、文章で書いて作る。",
+   "how": "Snippet(snippet)の欄に、APEX のスクリプトを書く。結果は APEX のグラフとして出力され、Invoke Graph などで実行できる。View Log(viewlog)でログを確認し、Show Traceback(traceback)で、エラーの位置を詳しく表示する。Load Text(loadsnippet)・Save Text(savetext)でスクリプトをファイルに保存・読み込みできる。ノードグラフとの変換用に、Convert to Snippet(converttosnippet)もある。",
+   "example_points": [
+    "グラフをノードで組む代わりに、スクリプトで書いてバージョン管理しやすくできる",
+    "Header(useheader)のテンプレート(Basic / Graph / Component / Custom)で、書き出しの形を選べる",
+    "Subgraphs(usesubgraphs)で、サブグラフを部品としてまとめられる"
+   ],
+   "use_cases": [
+    "繰り返しの多いリグの部品を、スクリプトで生成する",
+    "APEX のグラフをテキストとして共有・差分管理する",
+    "ノード配置の手間なく、実験的なグラフを素早く作る"
+   ],
+   "combos": [
+    {
+     "title": "グラフの生成と実行",
+     "chain": [
+      "APEX Script",
+      "APEX Invoke Graph",
+      "Null"
+     ],
+     "note": "スクリプトで作ったグラフを実行して、結果を出力する。"
+    },
+    {
+     "title": "リグの部品",
+     "chain": [
+      "APEX Script",
+      "APEX Configure Character",
+      "APEX Pack Character"
+     ],
+     "note": "スクリプトで作った部品を、キャラクターの設定に組み込む。"
+    }
+   ],
+   "before_after": {
+    "before": "APEX のグラフは、ノードを 1 つずつ置いてつなぐ必要がある。",
+    "after": "スクリプトに処理を書くと、同じ内容のグラフが生成され、ノードの配置の手間が省ける(静止画では前後が出ないので、図は無し)。"
+   },
+   "params": [
+    {
+     "name": "snippet",
+     "note": "Snippet(APEX スクリプト本体)"
+    },
+    {
+     "name": "viewlog",
+     "note": "View Log"
+    },
+    {
+     "name": "traceback",
+     "note": "Show Traceback"
+    },
+    {
+     "name": "loadsnippet",
+     "note": "Load Text"
+    },
+    {
+     "name": "savetext",
+     "note": "Save Text"
+    },
+    {
+     "name": "converttosnippet",
+     "note": "Convert to Snippet"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/sop/apex--script.html",
+   "verified": true
+  },
+  {
+   "id": "bind",
+   "name": "Bind",
+   "type": "bind",
+   "context": "VOP",
+   "category": "VEX・アトリビュート",
+   "what": "VOP ネットワークの外のデータ(ジオメトリの属性やパラメータ)を、ネットワークの中に取り込むノード。Attribute VOP で属性を読む入口。",
+   "how": "Name(parmname)に、読みたい属性の名前(例 Cd、N、pscale)を入れ、Type(parmtype)でその型(Float・Integer・Vector・Color など)を選ぶ。Autobind がオンの Attribute VOP なら、名前が一致する属性が自動で結び付く。属性が無いときの値は、型ごとの Default(floatdef・vectordef など)で決まる。結果を外へ書き出すには、Export(exportparm)を設定するか、Bind Export ノードを使う。",
+   "example_points": [
+    "Name に Cd と入れ、Type を Vector にすると、色の属性を 3 つの値として読める(実際に出力名 Cd を確かめた)",
+    "属性が存在しないときのために、Default の値を設定できる",
+    "Use Input Value If Not Bound(usebound)で、結び付かないときに入力の値を使える"
+   ],
+   "use_cases": [
+    "Attribute VOP で、pscale や Cd などの属性を読んで計算に使う",
+    "外のパラメータを、スライダーとして VOP に取り込む",
+    "計算した値を、別の属性として書き出す(Export)"
+   ],
+   "combos": [
+    {
+     "title": "属性を読む",
+     "chain": [
+      "Bind",
+      "Mix",
+      "Bind(Export)"
+     ],
+     "note": "Cd を読み、別の色と混ぜて、結果を書き戻す。"
+    },
+    {
+     "title": "乱数で変化",
+     "chain": [
+      "Bind",
+      "Random",
+      "Fit Range"
+     ],
+     "note": "属性から乱数を作り、範囲を合わせて使う。"
+    }
+   ],
+   "before_after": {
+    "before": "VOP ネットワークの中では、ジオメトリの属性が見えず、計算に使えない。",
+    "after": "Bind を置くと、属性や外のパラメータが、ネットワークの中の値として使える。"
+   },
+   "params": [
+    {
+     "name": "parmname",
+     "note": "Name(読む属性・パラメータの名前)"
+    },
+    {
+     "name": "parmtype",
+     "note": "Type(float / int / vector ほか)"
+    },
+    {
+     "name": "floatdef",
+     "note": "1 Float Default"
+    },
+    {
+     "name": "vectordef",
+     "note": "Vector Default"
+    },
+    {
+     "name": "usebound",
+     "note": "Use Input Value If Not Bound"
+    },
+    {
+     "name": "exportparm",
+     "note": "Export"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/vop/bind.html",
+   "verified": true
+  },
+  {
+   "id": "mix",
+   "name": "Mix",
+   "type": "mix",
+   "context": "VOP",
+   "category": "VEX・アトリビュート",
+   "what": "2 つの値を、割合(バイアス)で混ぜ合わせるノード。値(数・ベクトル・色)の補間をするときの基本。",
+   "how": "Input 1 と Input 2 に混ぜる値をつなぎ、Bias(bias)に割合を入れる。Bias が 0 なら Input 1 のまま、1 なら Input 2、0.5 なら中間になる。値の型は Signature(signature)で、数・ベクトル・色などに合わせる。Bias に属性やノイズをつなげば、場所ごとに混ぜ方を変えられる。",
+   "example_points": [
+    "位置 P と (0, 2, 0) を Bias 0.25 で混ぜると、結果の位置は元の P の 0.75 倍に (0, 0.5, 0) を足したものになった(実際に確かめた)",
+    "Bias に属性やノイズをつなぐと、場所ごとに混ぜ方が変わる",
+    "色(Cd)同士を混ぜて、グラデーションを作れる"
+   ],
+   "use_cases": [
+    "2 つの色や形を、ノイズの値で混ぜる",
+    "元の位置と目標の位置の間を、補間する",
+    "強さのパラメータで、効果の度合いを変える"
+   ],
+   "combos": [
+    {
+     "title": "色の混合",
+     "chain": [
+      "Bind",
+      "Mix",
+      "Bind(Export)"
+     ],
+     "note": "元の色と別の色を混ぜて、結果を Cd へ書く。"
+    },
+    {
+     "title": "補間",
+     "chain": [
+      "Turbulent Noise",
+      "Mix",
+      "Bind(P)"
+     ],
+     "note": "ノイズを割合にして、位置を補間する。"
+    }
+   ],
+   "before_after": {
+    "before": "2 つの値(位置や色)があるだけで、その間の値を作る方法がない。",
+    "after": "Mix に Bias を入れると、2 つの値の間の値が得られる。Bias を 0 から 1 へ動かすと、滑らかに入れ替わる。"
+   },
+   "params": [
+    {
+     "name": "bias",
+     "note": "Bias(0 で Input 1、1 で Input 2)"
+    },
+    {
+     "name": "input1",
+     "note": "Input 1"
+    },
+    {
+     "name": "input2",
+     "note": "Input 2"
+    },
+    {
+     "name": "signature",
+     "note": "Signature(値の型)"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/vop/mix.html",
+   "verified": true
+  },
+  {
+   "id": "random",
+   "name": "Random",
+   "type": "random",
+   "context": "VOP",
+   "category": "VEX・アトリビュート",
+   "what": "入力した値(位置や番号)から、0 から 1 の乱数を作るノード。同じ入力には必ず同じ乱数になるので、フレームが変わっても結果が安定する。",
+   "how": "Position(pos)に、乱数の元になる値(例:点の番号や位置)を入れる。出力 rand が 0 から 1 の乱数。点の番号(ptnum)をつなぐと、点ごとに別の値になる。Clamp Position to Integer(roundtoint)をオンにすると、元の値を整数に丸めるので、近い位置でも同じ値になる。Signature(signature)で、入力の型(数・ベクトルなど)を選ぶ。",
+   "example_points": [
+    "入力が同じなら出力も同じ(再現性がある)。違う結果が欲しいときは、入力にオフセットを足す",
+    "点の番号をつなぐと、点ごとにばらばらな値が得られる",
+    "出力は 0 から 1 なので、Fit Range で好きな範囲に変換して使う"
+   ],
+   "use_cases": [
+    "点ごとに、大きさ・色・回転にばらつきを付ける",
+    "コピーしたモデルの、見た目のばらつきを作る",
+    "乱数で、グループ分けや間引きの条件を作る"
+   ],
+   "combos": [
+    {
+     "title": "ランダムな大きさ",
+     "chain": [
+      "Random",
+      "Fit Range",
+      "Bind(Export)"
+     ],
+     "note": "乱数を範囲に合わせて、pscale として書き出す。"
+    },
+    {
+     "title": "ランダムな色",
+     "chain": [
+      "Random",
+      "Mix",
+      "Bind(Export)"
+     ],
+     "note": "乱数を割合にして、2 色を混ぜ、Cd を作る。"
+    }
+   ],
+   "before_after": {
+    "before": "点はみな同じ大きさ・同じ色で、ばらつきがない。",
+    "after": "Random の値を属性に使うと、点ごとに異なる(しかし毎回同じ)値が付き、ばらつきが生まれる。"
+   },
+   "params": [
+    {
+     "name": "pos",
+     "note": "Position(乱数の元の値)"
+    },
+    {
+     "name": "roundtoint",
+     "note": "Clamp Position to Integer"
+    },
+    {
+     "name": "signature",
+     "note": "Signature(入力の型)"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/vop/random.html",
+   "verified": true
+  },
+  {
+   "id": "materiallibrary",
+   "name": "Material Library",
+   "type": "materiallibrary",
+   "context": "LOP",
+   "category": "マテリアル",
+   "what": "マテリアル(材質)のネットワークを作り、USD のステージに登録するノード。Solaris で、材質を作る場所。",
+   "how": "ノードの中の Material Network(matnet)に、MaterialX などのシェーダーを組む。Auto-fill Materials(fillmaterials)のボタンを押すと、中の VOP からマテリアルが登録される。Material Path Prefix(matpathprefix、既定 /materials/)の下に、マテリアルが作られる。Assign to Geometry(assign#)と Geometry Path(geopath#)で、同じノードの中で、マテリアルを面にそのまま割り当てられる。",
+   "example_points": [
+    "Material Path Prefix の既定は /materials/(実際に確かめた)",
+    "Auto-generate Preview Surface Shaders の既定はオン(実際に確かめた)",
+    "割り当てを別のノード(Assign Material)に分けるか、同じノードの中で行うかを選べる"
+   ],
+   "use_cases": [
+    "Karma 用の材質(MaterialX Standard Surface など)を作る",
+    "モデルに貼るテクスチャ付きの材質を、ステージに登録する",
+    "材質の名前とパスを整理して、シーンにまとめる"
+   ],
+   "combos": [
+    {
+     "title": "材質を作って付ける",
+     "chain": [
+      "Material Library",
+      "Assign Material",
+      "Karma Render Settings"
+     ],
+     "note": "材質を登録し、モデルに割り当て、レンダリング設定へ進む。"
+    },
+    {
+     "title": "モデルと材質",
+     "chain": [
+      "SOP Import",
+      "Material Library",
+      "Merge"
+     ],
+     "note": "SOP のモデルと材質を作って、まとめる。"
+    }
+   ],
+   "before_after": {
+    "before": "ステージには形(モデル)があるだけで、見た目を決める材質が無い。",
+    "after": "Material Library を通すと、ステージに材質が登録され、モデルに割り当てられる状態になる。"
+   },
+   "params": [
+    {
+     "name": "matnet",
+     "note": "Material Network"
+    },
+    {
+     "name": "matpathprefix",
+     "note": "Material Path Prefix(既定 /materials/)"
+    },
+    {
+     "name": "fillmaterials",
+     "note": "Auto-fill Materials"
+    },
+    {
+     "name": "matpath#",
+     "note": "Material Path"
+    },
+    {
+     "name": "assign#",
+     "note": "Assign to Geometry"
+    },
+    {
+     "name": "geopath#",
+     "note": "Geometry Path"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/lop/materiallibrary.html",
+   "verified": true
+  },
+  {
+   "id": "assignmaterial",
+   "name": "Assign Material",
+   "type": "assignmaterial",
+   "context": "LOP",
+   "category": "マテリアル",
+   "what": "ステージの中のモデル(プリミティブ)に、登録済みのマテリアルを割り当てるノード。どのモデルにどの材質を付けるかを決める。",
+   "how": "Primitives(primpattern#)に、割り当てる先のプリミティブのパス(例 /geo/chair)やパターンを入れ、Specify Material Using(matspecmethod#)を Explicit Path にして、Material Path(matspecpath#)に材質のパスを入れる。Create and Bind Geometry Subsets(geosubset#)をオンにすると、グループなどで分けた一部の面にだけ割り当てられる。割り当てを増やすときは、設定を追加する。",
+   "example_points": [
+    "Specify Material Using の既定は Explicit Path(パス指定)で、Primitives の既定は空(実際に確かめた)",
+    "パターンを使うと、複数のモデルへまとめて割り当てられる",
+    "Strength(bindstrength#)で、子のプリミティブとの優先を決められる"
+   ],
+   "use_cases": [
+    "家具・建物などに、材質をまとめて割り当てる",
+    "同じモデルに、シーンごとに別の材質を付ける",
+    "一部の面(サブセット)にだけ、別の材質を付ける"
+   ],
+   "combos": [
+    {
+     "title": "材質の割り当て",
+     "chain": [
+      "SOP Import",
+      "Material Library",
+      "Assign Material"
+     ],
+     "note": "モデルを取り込み、材質を作って、割り当てる。"
+    },
+    {
+     "title": "レンダリング準備",
+     "chain": [
+      "Assign Material",
+      "Karma Render Settings",
+      "USD ROP"
+     ],
+     "note": "割り当てた結果をレンダリング設定へ進める。"
+    }
+   ],
+   "before_after": {
+    "before": "材質は登録されているが、モデルとはまだ結び付いていない。",
+    "after": "Assign Material で材質のパスを指定すると、モデルがその材質で表示・レンダリングされる。"
+   },
+   "params": [
+    {
+     "name": "primpattern#",
+     "note": "Primitives(割り当て先)"
+    },
+    {
+     "name": "matspecmethod#",
+     "note": "Specify Material Using(path / cvex / vexpr)"
+    },
+    {
+     "name": "matspecpath#",
+     "note": "Material Path"
+    },
+    {
+     "name": "geosubset#",
+     "note": "Create and Bind Geometry Subsets"
+    },
+    {
+     "name": "bindstrength#",
+     "note": "Strength"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/lop/assignmaterial.html",
+   "verified": true
+  },
+  {
+   "id": "reference",
+   "name": "Reference",
+   "type": "reference",
+   "context": "LOP",
+   "category": "USD 連携",
+   "what": "USD ファイル(別のシーンやモデル)を、参照としてステージに取り込むノード。ファイルの内容をコピーせず、元のファイルを指す形で使う。",
+   "how": "Reference File(filepath#)に、USD ファイルのパスを入れる。Primitive Path(primpath)に、ステージの上での置き場所を指定する。Action(createprims)が Create なら新しい場所を作り、Edit なら既にある場所へ追加する(既定は Create)。Make Instanceable(instanceable)をオンにすると、同じ参照が多数あるとき、メモリを節約できる。ファイルを更新したときは Reload Files で読み直す。",
+   "example_points": [
+    "Action の既定は Create で、Primitive Path の既定は /、Make Instanceable の既定はオフ(実際に確かめた)",
+    "元のファイルを更新すれば、Reload Files で参照先の変更を反映できる",
+    "Time Offset(timeoffset#)で、参照するアニメーションの時間をずらせる"
+   ],
+   "use_cases": [
+    "アセットのライブラリを、ステージに参照して配置する",
+    "別の人が作ったモデルを、コピーせず元のファイルのまま使う",
+    "同じアセットを、複数の場所に参照して使い回す"
+   ],
+   "combos": [
+    {
+     "title": "アセットの配置",
+     "chain": [
+      "Reference",
+      "Transform",
+      "Merge"
+     ],
+     "note": "参照したアセットを動かして、シーンにまとめる。"
+    },
+    {
+     "title": "材質付きの組み立て",
+     "chain": [
+      "Reference",
+      "Material Library",
+      "Assign Material"
+     ],
+     "note": "参照した形に、材質を作って割り当てる。"
+    }
+   ],
+   "before_after": {
+    "before": "USD ファイルはディスク上にあるだけで、ステージには何も無い。",
+    "after": "Reference で指定すると、ステージにそのファイルの内容が現れる(ファイルは元のまま、参照として使われる)。"
+   },
+   "params": [
+    {
+     "name": "filepath#",
+     "note": "Reference File(USD ファイルのパス)"
+    },
+    {
+     "name": "primpath",
+     "note": "Primitive Path"
+    },
+    {
+     "name": "createprims",
+     "note": "Action(off=Edit / on=Create)"
+    },
+    {
+     "name": "instanceable",
+     "note": "Make Instanceable"
+    },
+    {
+     "name": "timeoffset#",
+     "note": "Time Offset(in Frames)"
+    },
+    {
+     "name": "reload",
+     "note": "Reload Files"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/lop/reference.html",
+   "verified": true
+  },
+  {
+   "id": "karmarendersettings",
+   "name": "Karma Render Settings",
+   "type": "karmarendersettings",
+   "context": "LOP",
+   "category": "レンダリング",
+   "what": "Karma でレンダリングするときの設定(解像度・画質・カメラ・出力先)を、ステージの中に作るノード。USD ROP などから読まれる。",
+   "how": "Camera(camera)にレンダリングするカメラのパスを入れ、Resolution(resolution)で画像の大きさを決める。画質は Primary Samples(samplesperpixel)・Path Traced Samples(pathtracedsamples)で決まり、値が大きいほどノイズが減るが遅くなる。Enable Depth of Field(enabledof)・Enable Motion Blur(enablemblur)で、被写界深度とモーションブラーの入切を選ぶ。Output Picture(picture)が、画像の出力先。",
+   "example_points": [
+    "既定では、Resolution は 1280×720、Primary Samples は 9、Path Traced Samples は 128(実際に確かめた)",
+    "Depth of Field と Motion Blur の既定はオン(実際に確かめた)",
+    "Diffuse Limit などの Limit 系で、光の反射回数を制限できる"
+   ],
+   "use_cases": [
+    "Karma の画質と解像度を、シーンごとに設定する",
+    "プレビュー用と最終用で、サンプル数を切り替える",
+    "出力先のファイル名をまとめて決める"
+   ],
+   "combos": [
+    {
+     "title": "レンダリング準備",
+     "chain": [
+      "Assign Material",
+      "Karma Render Settings",
+      "USD ROP"
+     ],
+     "note": "材質を割り当てたあとに、設定を足して、出力へ進める。"
+    },
+    {
+     "title": "光と設定",
+     "chain": [
+      "Dome Light",
+      "Karma Render Settings",
+      "USD Render ROP"
+     ],
+     "note": "ライトと設定を整えて、レンダリングする。"
+    }
+   ],
+   "before_after": {
+    "before": "ステージにモデルと材質があるが、レンダリングの画質や出力先が決まっていない。",
+    "after": "Karma Render Settings で、カメラ・解像度・サンプル数・出力先がそろい、そのままレンダリングできる(静止画では前後が出ないので、図は無し)。"
+   },
+   "params": [
+    {
+     "name": "camera",
+     "note": "Camera(レンダリングするカメラ)"
+    },
+    {
+     "name": "resolution",
+     "note": "Resolution(既定 1280×720)"
+    },
+    {
+     "name": "samplesperpixel",
+     "note": "Primary Samples(既定 9)"
+    },
+    {
+     "name": "pathtracedsamples",
+     "note": "Path Traced Samples(既定 128)"
+    },
+    {
+     "name": "enabledof",
+     "note": "Enable Depth of Field"
+    },
+    {
+     "name": "enablemblur",
+     "note": "Enable Motion Blur"
+    },
+    {
+     "name": "picture",
+     "note": "Output Picture"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/lop/karmarendersettings.html",
+   "verified": true
+  },
+  {
+   "id": "popsolver",
+   "name": "POP Solver",
+   "type": "popsolver::2.0",
+   "context": "DOP",
+   "category": "シミュレーション",
+   "what": "パーティクル(粒子)を、フォース(力)や衝突に従って動かす DOP のソルバー。粒子の動きの計算の中心になる。",
+   "how": "DOP ネットワークの中で、POP Object(粒子の入れ物)を 1 つ目の入力へつなぎ、重力などのフォース(Gravity Force、POP Force など)を 2 つ目以降へつなぐ。Min Substeps(minimumsubsteps)・Max Substeps(substeps)で計算を細かくでき、Enable Collision Detection(docollision)で衝突の判定を入れる。Age Particles(doage)で、粒子に年齢を付けられる。",
+   "example_points": [
+    "Substeps の既定は 1、Age Particles と Enable Collision Detection の既定はオン(実際に確かめた)",
+    "入力は 3 つ持ち、粒子・フォースなどをつなげられる(実際に確かめた)",
+    "Enable Auto Sleep(doautosleep)をオンにすると、止まった粒子の計算を省ける"
+   ],
+   "use_cases": [
+    "火花・雨・舞う粉など、粒子の動き",
+    "風や重力に従って流れる、粒子の群れ",
+    "ジオメトリにぶつかって跳ねる、粒子の衝突"
+   ],
+   "combos": [
+    {
+     "title": "粒子の基本",
+     "chain": [
+      "POP Object",
+      "POP Solver",
+      "Gravity Force"
+     ],
+     "note": "粒子の入れ物を、重力でソルバーに動かす。"
+    },
+    {
+     "title": "粒子の発生と結果",
+     "chain": [
+      "POP Source",
+      "POP Solver",
+      "POP Wind"
+     ],
+     "note": "発生した粒子に、風を当てて動かす。"
+    }
+   ],
+   "before_after": {
+    "before": "粒子は初期位置にあるだけで、時間が進んでも動かない。",
+    "after": "POP Solver を通すと、フレームごとに、重力や衝突に従って粒子が動く(静止画では前後が出ないので、図は無し)。"
+   },
+   "params": [
+    {
+     "name": "substeps",
+     "note": "Max Substeps"
+    },
+    {
+     "name": "minimumsubsteps",
+     "note": "Min Substeps"
+    },
+    {
+     "name": "doage",
+     "note": "Age Particles"
+    },
+    {
+     "name": "docollision",
+     "note": "Enable Collision Detection"
+    },
+    {
+     "name": "doautosleep",
+     "note": "Enable Auto Sleep"
+    },
+    {
+     "name": "timescale",
+     "note": "Time Scale"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/dop/popsolver.html",
+   "verified": true
+  },
+  {
+   "id": "popsource",
+   "name": "POP Source",
+   "type": "popsource::2.0",
+   "context": "DOP",
+   "category": "シミュレーション",
+   "what": "パーティクル(粒子)を、ジオメトリの点や表面から発生させる DOP のノード。POP Solver に、新しい粒子を供給する。",
+   "how": "Geometry Source(usecontextgeo)と SOP(soppath)で、発生元のジオメトリを決める。Emission Type(emittype)で、全ての点から出すか、表面に散らして出すか(Scatter onto Surfaces)などを選ぶ。Const. Birth Rate(constantrate)で、1 秒あたりに出す数を、Impulse Count(impulserate)で、1 回だけ出す数を決める。Life Expectancy(life)で粒子の寿命、Velocity(vel)で初速を決める。",
+   "example_points": [
+    "既定では、Emission Type は Scatter onto Surfaces、Const. Birth Rate は 5000、Life Expectancy は 100(実際に確かめた)",
+    "Initial Velocity(initvel)で、元のジオメトリが持つ速度(v)を使うか、値を足すかを選べる",
+    "Seed(seed)で、発生の乱数の並びを変えられる"
+   ],
+   "use_cases": [
+    "物体の表面から、火花や粉を出す",
+    "点の位置から、粒子を流す(噴水・雨など)",
+    "一瞬だけ大量の粒子を出す(破裂・爆発の粒)"
+   ],
+   "combos": [
+    {
+     "title": "粒子の発生",
+     "chain": [
+      "POP Object",
+      "POP Source",
+      "POP Solver"
+     ],
+     "note": "粒子の入れ物に発生源を足して、ソルバーで動かす。"
+    },
+    {
+     "title": "力を加える",
+     "chain": [
+      "POP Source",
+      "POP Solver",
+      "POP Wind"
+     ],
+     "note": "発生した粒子に、風を当てて流す。"
+    }
+   ],
+   "before_after": {
+    "before": "粒子はまだ存在せず、シーンには発生元のジオメトリだけがある。",
+    "after": "POP Source で、フレームごとにジオメトリの表面などから粒子が生まれ、ソルバーに渡される(静止画では前後が出ないので、図は無し)。"
+   },
+   "params": [
+    {
+     "name": "emittype",
+     "note": "Emission Type(allpoint / allgeo / point / surface)"
+    },
+    {
+     "name": "soppath",
+     "note": "SOP(発生元)"
+    },
+    {
+     "name": "constantrate",
+     "note": "Const. Birth Rate(既定 5000)"
+    },
+    {
+     "name": "impulserate",
+     "note": "Impulse Count"
+    },
+    {
+     "name": "life",
+     "note": "Life Expectancy(既定 100)"
+    },
+    {
+     "name": "vel",
+     "note": "Velocity(初速)"
+    },
+    {
+     "name": "seed",
+     "note": "Seed"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/dop/popsource.html",
+   "verified": true
+  },
+  {
+   "id": "rbdpackedobject",
+   "name": "RBD Packed Object",
+   "type": "rbdpackedobject",
+   "context": "DOP",
+   "category": "シミュレーション",
+   "what": "パックされたジオメトリ(破片など)を、剛体のオブジェクトとして DOP に取り込むノード。破壊のシミュレーションを DOP で組むときの入口。",
+   "how": "Geometry Source(geosource)と SOP Path(soppath)で、取り込む SOP を指定する。SOP 側が RBD Configure で整えたパックの破片なら、その属性(質量・名前など)がそのまま使われる。Initial Object Type(initialstate)で、動く(Active)か、動かない(Static)かを選ぶ。Use Object Transform(usetransform)で、オブジェクトの位置を反映する。",
+   "example_points": [
+    "Initial Object Type の既定は Create Active Objects(動く剛体)、Geometry Source の既定は SOP(実際に確かめた)",
+    "Object Name(object_name)の既定は、ノードの名前に基づく",
+    "Static にすると、破片は動かず、他の剛体の衝突相手になる"
+   ],
+   "use_cases": [
+    "壊れる壁や、倒れる積み木などの剛体の破壊",
+    "地面や固定された壁(Static)と、動く破片(Active)を分けて入れる",
+    "SOP で作った大量のパックを、DOP の剛体として動かす"
+   ],
+   "combos": [
+    {
+     "title": "破片の取り込み",
+     "chain": [
+      "RBD Configure",
+      "RBD Packed Object",
+      "Bullet Solver"
+     ],
+     "note": "整えた破片を取り込み、剛体のソルバーで動かす。"
+    },
+    {
+     "title": "地面と破片",
+     "chain": [
+      "RBD Packed Object",
+      "Ground Plane",
+      "Merge"
+     ],
+     "note": "動く破片と、固定の地面を 1 つのシミュレーションにまとめる。"
+    }
+   ],
+   "before_after": {
+    "before": "破片は SOP の中のパックされたジオメトリで、物理の計算には参加していない。",
+    "after": "RBD Packed Object で取り込むと、破片が剛体のオブジェクトとして DOP に入り、重力や衝突で動く(静止画では前後が出ないので、図は無し)。"
+   },
+   "params": [
+    {
+     "name": "soppath",
+     "note": "SOP Path"
+    },
+    {
+     "name": "geosource",
+     "note": "Geometry Source(sop / first / second ほか)"
+    },
+    {
+     "name": "initialstate",
+     "note": "Initial Object Type"
+    },
+    {
+     "name": "object_name",
+     "note": "Object Name"
+    },
+    {
+     "name": "usetransform",
+     "note": "Use Object Transform"
+    },
+    {
+     "name": "bullet_georep",
+     "note": "Geometry Representation"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/dop/rbdpackedobject.html",
+   "verified": true
+  },
+  {
+   "id": "blur",
+   "name": "Blur",
+   "type": "blur",
+   "context": "COP",
+   "category": "画像処理",
+   "what": "Copernicus(新しい COP)で、画像をぼかすノード。ぼかし方と大きさを選べる。",
+   "how": "Filter(filter)で、ぼかし方(Box / Gaussian)を選ぶ。Units(units)で、大きさの単位を選び(Image=画像に対する割合 / Pixels=画素数 / Local)、対応する Size(size / size_pixel / size_local)に値を入れる。Read Pixels outside Image(readoutside)で、画像の外の画素を読むかを決める。入力は、画像(source)と、ぼかしの大きさ(size)の 2 つがある。",
+   "example_points": [
+    "既定の Filter は Gaussian、Units は Image、Size は 0.005(画像の大きさに対する割合)(実際に確かめた)",
+    "Units を Pixels にすると、画素数でぼかしの大きさを決められる",
+    "入力 size に画像をつなぐと、場所ごとにぼかしの大きさを変えられる(筆者の理解)"
+   ],
+   "use_cases": [
+    "マスクの縁をぼかして、自然な境界にする",
+    "ハイトフィールド用の画像のノイズをならす",
+    "ぼかしを使った、グロー(光のにじみ)の元データを作る"
+   ],
+   "combos": [
+    {
+     "title": "縁をぼかす",
+     "chain": [
+      "Rasterize Geometry",
+      "Blur",
+      "Color Correct"
+     ],
+     "note": "ジオメトリを画像にして、縁をぼかして、明るさを整える。"
+    },
+    {
+     "title": "マスクの調整",
+     "chain": [
+      "Mono",
+      "Blur",
+      "Layer to Geometry"
+     ],
+     "note": "マスク画像をぼかして、ジオメトリの値に使う。"
+    }
+   ],
+   "before_after": {
+    "before": "輪郭がくっきりした画像。",
+    "after": "Blur をかけると、輪郭がなだらかになり、ぼけた画像になる(Size が大きいほど強い)。"
+   },
+   "params": [
+    {
+     "name": "filter",
+     "note": "Filter(box / gaussian)"
+    },
+    {
+     "name": "units",
+     "note": "Units(image / pixels / local)"
+    },
+    {
+     "name": "size",
+     "note": "Size(Image 単位。既定 0.005)"
+    },
+    {
+     "name": "size_pixel",
+     "note": "Size(Pixels 単位)"
+    },
+    {
+     "name": "readoutside",
+     "note": "Read Pixels outside Image"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/cop/blur.html",
+   "verified": true
+  },
+  {
+   "id": "colorcorrect",
+   "name": "Color Correct",
+   "type": "colorcorrect",
+   "context": "COP",
+   "category": "画像処理",
+   "what": "画像の色や明るさを、影・中間・ハイライトごとに整えるノード。足す・掛ける・ガンマ・コントラストの 4 つの調整ができる。",
+   "how": "Master(do_master)・Shadow(do_shadow)・Midtones(do_mid)・Highlight(do_highlight)のスイッチを入れ、それぞれの Add・Mult・Gamma・Contrast(master_mult など)を調整する。Master は全体、Shadow は暗い部分、Midtones は中間、Highlight は明るい部分に効く。Mask(mask)で、効果をかける場所を限定できる。Treat RGBA as Premultiplied(ispremult)で、アルファの扱いを選ぶ。",
+   "example_points": [
+    "全体の明るさは Master Mult、暗い部分の持ち上げは Shadow Add など、場所ごとに調整できる",
+    "Gamma は中間の明るさに効き、Contrast は明暗の差を変える",
+    "Mask をつなぐと、画像の一部だけ色を直せる"
+   ],
+   "use_cases": [
+    "テクスチャの色味や明るさを整える",
+    "ハイトフィールドや法線画像の、値の分布を調整する",
+    "複数の画像の色をそろえる"
+   ],
+   "combos": [
+    {
+     "title": "色味の調整",
+     "chain": [
+      "Blur",
+      "Color Correct",
+      "Layer to Geometry"
+     ],
+     "note": "ぼかした画像の明るさを整えてから、ジオメトリへ変換する。"
+    },
+    {
+     "title": "マスクの強調",
+     "chain": [
+      "Rasterize Geometry",
+      "Color Correct",
+      "Blur"
+     ],
+     "note": "取り出したマスクのコントラストを上げて、縁をぼかす。"
+    }
+   ],
+   "before_after": {
+    "before": "暗く、コントラストの弱い画像。",
+    "after": "Master Mult や Gamma を調整すると、全体の明るさや色味が整い、メリハリのある画像になる。"
+   },
+   "params": [
+    {
+     "name": "do_master",
+     "note": "Master(全体のスイッチ)"
+    },
+    {
+     "name": "master_mult",
+     "note": "Master Mult"
+    },
+    {
+     "name": "master_gamma",
+     "note": "Master Gamma"
+    },
+    {
+     "name": "master_contrast",
+     "note": "Master Contrast"
+    },
+    {
+     "name": "do_shadow",
+     "note": "Shadow"
+    },
+    {
+     "name": "do_highlight",
+     "note": "Highlight"
+    },
+    {
+     "name": "mask",
+     "note": "Mask"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/cop/colorcorrect.html",
+   "verified": true
+  },
+  {
+   "id": "rasterizegeo",
+   "name": "Rasterize Geometry",
+   "type": "rasterizegeo",
+   "context": "COP",
+   "category": "画像処理",
+   "what": "3D のジオメトリを、2D の画像(レイヤー)に描き込むノード。ジオメトリの位置・法線・UV などの属性を、画素の値として取り出せる。",
+   "how": "入力にジオメトリをつなぎ、画像として描き出す(入力のつなぎ方の細かい点は筆者の理解)。Quick Setups(quicksetup)から、Add Alpha・Add Position・Add Normal・Add UV・Add Depth from Eye などを選ぶと、出力する値(レイヤー)が追加される。出力は Name(name#)・Output Type(outtype#)で、名前と型(Mono / UV / RGB / RGBA / ID)を決める。Border(border)で画像の縁の扱い、Face Culling(faceculling)で裏面を描くかを選ぶ。",
+   "example_points": [
+    "Quick Setups に、Add Alpha・Add Position・Add Original Position・Add Normal・Add UV・Add Depth from Eye がある(実際に確かめた)",
+    "Output Type には、Mono・UV・RGB・RGBA・ID がある(実際に確かめた)",
+    "Face Culling を使うと、裏面(Backface)や表面(Frontface)を描かないようにできる"
+   ],
+   "use_cases": [
+    "モデルの属性(法線・位置・UV)を、テクスチャ画像として焼き込む",
+    "ジオメトリのマスクを、画像として取り出して加工する",
+    "手続き的に作った形を、画像で見て確認する"
+   ],
+   "combos": [
+    {
+     "title": "属性の画像化",
+     "chain": [
+      "Rasterize Geometry",
+      "Blur",
+      "Color Correct"
+     ],
+     "note": "取り出した画像をぼかして、明るさを整える。"
+    },
+    {
+     "title": "画像からジオメトリへ",
+     "chain": [
+      "Rasterize Geometry",
+      "Mono",
+      "Layer to Geometry"
+     ],
+     "note": "描いた画像を 1 チャンネルにして、ジオメトリへ戻す。"
+    }
+   ],
+   "before_after": {
+    "before": "ジオメトリは 3D の点・面で、画像としては存在しない。",
+    "after": "Rasterize Geometry で、位置・法線・UV などを画素に描いた、2D の画像になる(結果は画像のため、前後の図は無し)。"
+   },
+   "params": [
+    {
+     "name": "quicksetup",
+     "note": "Quick Setups(Add Alpha / Position / Normal / UV ほか)"
+    },
+    {
+     "name": "name#",
+     "note": "Name(出力レイヤー名)"
+    },
+    {
+     "name": "outtype#",
+     "note": "Output Type(float / vector2 / vector3 / vector4 / int)"
+    },
+    {
+     "name": "border",
+     "note": "Border"
+    },
+    {
+     "name": "faceculling",
+     "note": "Face Culling"
+    },
+    {
+     "name": "depthmode",
+     "note": "Depth Mode"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/cop/rasterizegeo.html",
+   "verified": true
+  },
+  {
+   "id": "ropfetch",
+   "name": "ROP Fetch",
+   "type": "ropfetch",
+   "context": "TOP",
+   "category": "TOP・自動化",
+   "what": "TOP(PDG: 作業の並列実行の仕組み)から、既存の ROP(書き出し・レンダリング)のノードを呼び出して実行するノード。1 つの ROP を、フレームごとの作業(ワークアイテム)に分けて並列で動かせる。",
+   "how": "ROP Path(roppath)に、実行する ROP(Geometry ROP など)のパスを入れる。Evaluate Using(framegeneration)で、1 フレームだけか、範囲か、ROP の設定どおりかを選ぶ。ROP Cook Order(roporder)で、Node by Node(ノード順)か Frame by Frame(フレーム順)を選ぶ。Cook Type(pdg_cooktype)で、In-Process・Out-of-Process・Service の実行方法を選ぶ。",
+   "example_points": [
+    "既定では、Evaluate Using は Single Frame、ROP Cook Order は Frame by Frame、Cook Type は Out-of-Process(実際に確かめた)",
+    "Frame Range を選ぶと、フレームごとに 1 つのワークアイテムになり、並列で動く",
+    "Cook Frames as Single Work Item(singletask)で、全フレームを 1 つの作業にまとめられる"
+   ],
+   "use_cases": [
+    "シミュレーションのキャッシュ書き出しを、自動で実行する",
+    "複数のウェッジ(パラメータ違い)を並べて、まとめてレンダリングする",
+    "ROP の書き出しを、大量の作業の一部として自動化する"
+   ],
+   "combos": [
+    {
+     "title": "キャッシュの自動化",
+     "chain": [
+      "File Pattern",
+      "ROP Fetch",
+      "Wait for All"
+     ],
+     "note": "ファイルごとに ROP を実行し、すべて終わるのを待つ。"
+    },
+    {
+     "title": "ウェッジの書き出し",
+     "chain": [
+      "Wedge",
+      "ROP Fetch",
+      "Wait for All"
+     ],
+     "note": "パラメータ違いを並列で書き出し、終わったらまとめる。"
+    }
+   ],
+   "before_after": {
+    "before": "ROP は、手で 1 つずつ実行する必要がある。",
+    "after": "ROP Fetch を TOP に置くと、ROP がワークアイテムとして自動で実行され、フレームや条件ごとに並列で処理される(静止画では前後が出ないので、図は無し)。"
+   },
+   "params": [
+    {
+     "name": "roppath",
+     "note": "ROP Path(実行する ROP)"
+    },
+    {
+     "name": "framegeneration",
+     "note": "Evaluate Using(単一フレーム・範囲ほか)"
+    },
+    {
+     "name": "roporder",
+     "note": "ROP Cook Order"
+    },
+    {
+     "name": "pdg_cooktype",
+     "note": "Cook Type(1=In-Process / 2=Out-of-Process / 3=Service)"
+    },
+    {
+     "name": "singletask",
+     "note": "Cook Frames as Single Work Item"
+    },
+    {
+     "name": "batchall",
+     "note": "All Frames in One Batch"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/top/ropfetch.html",
+   "verified": true
+  },
+  {
+   "id": "filepattern",
+   "name": "File Pattern",
+   "type": "filepattern",
+   "context": "TOP",
+   "category": "TOP・自動化",
+   "what": "フォルダの中のファイルを、パターンで探して、見つかったファイルごとの作業(ワークアイテム)を作る TOP のノード。ファイルの一括処理の入口。",
+   "how": "Pattern(pattern)に、探すファイルのパターン(例 $HIP/textures/*.png)を書く。Recursive(recursive)をオンにすると、サブフォルダも探す。Split Files into Separate Items(split)がオンなら、見つかった 1 ファイルごとに別のワークアイテムになる。ファイル名は File Attribute(fileattrib、既定 filename)などの属性に入り、後続のノードで使える。No Match Behavior(nomatchbehavior)で、見つからないときの動きを決める。",
+   "example_points": [
+    "Split Files into Separate Items の既定はオン、Recursive の既定はオフ(実際に確かめた)",
+    "File Attribute の既定は filename で、ワークアイテムごとにファイル名が入る(実際に確かめた)",
+    "No Match Behavior で、見つからないときに、無視・エラー・属性付きの作業の作成を選べる"
+   ],
+   "use_cases": [
+    "フォルダ内のテクスチャを、全部まとめて変換する",
+    "キャッシュしたファイルの一覧から、作業を作る",
+    "大量のファイルを、並列で処理する"
+   ],
+   "combos": [
+    {
+     "title": "一括変換",
+     "chain": [
+      "File Pattern",
+      "Make Texture",
+      "Wait for All"
+     ],
+     "note": "テクスチャを 1 枚ずつ変換し、全部終わるのを待つ。"
+    },
+    {
+     "title": "ファイルの確認",
+     "chain": [
+      "File Pattern",
+      "Python Script",
+      "Wait for All"
+     ],
+     "note": "見つかったファイルを 1 つずつ確認して、結果をまとめる。"
+    }
+   ],
+   "before_after": {
+    "before": "フォルダに大量のファイルがあるだけで、処理の対象になっていない。",
+    "after": "File Pattern で、見つかったファイル 1 つにつき 1 つのワークアイテムができ、後続のノードで並列に処理される。"
+   },
+   "params": [
+    {
+     "name": "pattern",
+     "note": "Pattern(ファイルのパターン)"
+    },
+    {
+     "name": "recursive",
+     "note": "Recursive"
+    },
+    {
+     "name": "split",
+     "note": "Split Files into Separate Items"
+    },
+    {
+     "name": "fileattrib",
+     "note": "File Attribute(既定 filename)"
+    },
+    {
+     "name": "nomatchbehavior",
+     "note": "No Match Behavior"
+    },
+    {
+     "name": "filetypes",
+     "note": "File Types"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/top/filepattern.html",
+   "verified": true
+  },
+  {
+   "id": "waitforall",
+   "name": "Wait for All",
+   "type": "waitforall",
+   "context": "TOP",
+   "category": "TOP・自動化",
+   "what": "前のノードのすべての作業(ワークアイテム)が終わるまで待ち、1 つの作業にまとめる TOP のノード。並列処理を、1 つに合流させる。",
+   "how": "入力のワークアイテムが、すべて終わる(または生成される)のを待って、1 つのパーティションとしてまとめる。Partition When(pdg_partitionwhen)で、入力が生成されたとき(既定)か、実行が終わったときかを選ぶ。Sort Contents By(pdg_partitionsort)で、中の並び順を決める。Use Split by Attribute(pdg_partitionsplit)をオンにすると、属性の値ごとに別々にまとめられる。",
+   "example_points": [
+    "既定では、Partition When は Input Items are Generated、並び順は Work Item Index(実際に確かめた)",
+    "Split by Attribute を使うと、グループごとに別々の合流にできる",
+    "Ignore Failed Work Items(pdg_partitionignorefailures)で、失敗した作業を無視して進められる"
+   ],
+   "use_cases": [
+    "全フレームのキャッシュが終わってから、次の処理(動画化など)を始める",
+    "並列に作った結果を、1 つにまとめて書き出す",
+    "全部の作業が成功したことを待ってから、通知を送る"
+   ],
+   "combos": [
+    {
+     "title": "並列のあとに合流",
+     "chain": [
+      "ROP Fetch",
+      "Wait for All",
+      "FFmpeg Encode Video"
+     ],
+     "note": "全フレームの書き出しを待ってから、動画にまとめる。"
+    },
+    {
+     "title": "ファイルの集約",
+     "chain": [
+      "File Pattern",
+      "Wait for All",
+      "Python Script"
+     ],
+     "note": "全ファイルを集めて、1 回だけ処理する。"
+    }
+   ],
+   "before_after": {
+    "before": "並列で動いた作業は、それぞれ別々に終わるので、全体の完了を待つことができない。",
+    "after": "Wait for All を通すと、全作業が終わった時点で、1 つの作業としてまとまり、次のノードが 1 回だけ動く。"
+   },
+   "params": [
+    {
+     "name": "pdg_partitionwhen",
+     "note": "Partition When"
+    },
+    {
+     "name": "pdg_partitionsort",
+     "note": "Sort Contents By"
+    },
+    {
+     "name": "pdg_partitionsplit",
+     "note": "Use Split by Attribute"
+    },
+    {
+     "name": "pdg_partitionsplitattrib",
+     "note": "Split by Attribute"
+    },
+    {
+     "name": "pdg_partitionignorefailures",
+     "note": "Ignore Failed Work Items"
+    },
+    {
+     "name": "pdg_partitiontargettype",
+     "note": "Partition Target(s)"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/top/waitforall.html",
+   "verified": true
+  },
+  {
+   "id": "chop_noise",
+   "name": "Noise (CHOP)",
+   "type": "noise",
+   "context": "CHOP",
+   "category": "チャンネル",
+   "what": "時間とともに、なめらかに変わる乱数のチャンネル(値の列)を作る CHOP のノード。パラメータに結び付けて、揺れや震えを付ける。",
+   "how": "Type(function)で、乱数の種類を選ぶ(Sparse・Hermite・Harmonic Summation・Brownian・Random・Alligator)。Period(period)は変化のゆっくりさ、Amplitude(amp)は振れ幅、Seed(seed)で値の並びを変える。Harmonics(harmon)は細かい揺れの数。Channel Name(channelname)でチャンネル名を決め、Export CHOP や Export Prefix(export)で、他のノードのパラメータに結び付ける。",
+   "example_points": [
+    "既定では、Type は Sparse、Period は 1、Amplitude は 1、Harmonics は 3、Sample Rate は 24(実際に確かめた)",
+    "Amplitude を 1 から 5 にすると、値の幅が約 5 倍になった(約 -0.74〜0.56 が約 -3.7〜2.8 に。実際に確かめた)",
+    "Seed を変えると、同じ設定でも別の値の並びになる"
+   ],
+   "use_cases": [
+    "カメラの手ぶれや、物の震えを作る",
+    "パラメータをゆらゆら動かして、有機的な動きにする",
+    "複数のチャンネルで、ばらばらな動きを付ける"
+   ],
+   "combos": [
+    {
+     "title": "カメラの手ぶれ",
+     "chain": [
+      "Noise",
+      "Math",
+      "Export"
+     ],
+     "note": "ノイズの値を大きさに合わせて、カメラの位置に結び付ける。"
+    },
+    {
+     "title": "動きの平滑化",
+     "chain": [
+      "Noise",
+      "Lag",
+      "Null"
+     ],
+     "note": "ノイズをなめらかにして、出力として使う。"
+    }
+   ],
+   "before_after": {
+    "before": "パラメータは一定の値で、動きがない。",
+    "after": "Noise のチャンネルを結び付けると、パラメータが時間とともに自然に揺れる。"
+   },
+   "params": [
+    {
+     "name": "function",
+     "note": "Type(sparse / perlin / harmonic / brownian / int / alligator)"
+    },
+    {
+     "name": "period",
+     "note": "Period"
+    },
+    {
+     "name": "amp",
+     "note": "Amplitude"
+    },
+    {
+     "name": "seed",
+     "note": "Seed"
+    },
+    {
+     "name": "harmon",
+     "note": "Harmonics"
+    },
+    {
+     "name": "channelname",
+     "note": "Channel Name"
+    },
+    {
+     "name": "rate",
+     "note": "Sample Rate"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/chop/noise.html",
+   "verified": true
+  },
+  {
+   "id": "rop_geometry",
+   "name": "Geometry ROP",
+   "type": "geometry",
+   "context": "ROP",
+   "category": "入出力・管理",
+   "what": "SOP のジオメトリを、ファイル(.bgeo.sc など)に書き出す ROP。フレームごとの連番で保存でき、キャッシュの定番の書き出し先。",
+   "how": "SOP Path(soppath)に、書き出す SOP のパスを入れ、Output File(sopoutput)に、書き出し先のパス(例 $HIP/geo/a.$F4.bgeo.sc)を入れる。Valid Frame Range(trange)で、現在のフレームだけ・範囲を選ぶ。Save to Disk(execute)を押すと書き出される。Create Intermediate Directories(mkpath)がオンなら、フォルダも自動で作る。",
+   "example_points": [
+    "Valid Frame Range の既定は Render Current Frame、Create Intermediate Directories の既定はオン(実際に確かめた)",
+    "Output File に $F4 を入れて書き出すと、フレームごとにファイルが連番(a.0001.bgeo.sc など)で作られた(実際に確かめた)",
+    "Transform(xformtype)を Into World Space にすると、オブジェクトの変換を含めて書き出せる"
+   ],
+   "use_cases": [
+    "シミュレーションの結果を、連番のファイルに保存する",
+    "ジオメトリを、他のアプリや別のシーンに渡す",
+    "重い処理を書き出して、読み込むだけの軽いシーンにする"
+   ],
+   "combos": [
+    {
+     "title": "書き出し",
+     "chain": [
+      "Vellum Solver",
+      "Null",
+      "Geometry ROP"
+     ],
+     "note": "計算結果の出口の Null を、ファイルへ書き出す。"
+    },
+    {
+     "title": "書き出しと自動化",
+     "chain": [
+      "Geometry ROP",
+      "ROP Fetch",
+      "Wait for All"
+     ],
+     "note": "書き出しを TOP から呼び出して、並列で実行する。"
+    }
+   ],
+   "before_after": {
+    "before": "ジオメトリは、シーンの中だけにあり、ファイルとしては残らない。",
+    "after": "Save to Disk で、指定した名前(連番)のファイルが作られ、File ノードで読み込める。"
+   },
+   "params": [
+    {
+     "name": "soppath",
+     "note": "SOP Path"
+    },
+    {
+     "name": "sopoutput",
+     "note": "Output File"
+    },
+    {
+     "name": "trange",
+     "note": "Valid Frame Range(off / normal / on)"
+    },
+    {
+     "name": "f",
+     "note": "Start/End/Inc"
+    },
+    {
+     "name": "execute",
+     "note": "Save to Disk"
+    },
+    {
+     "name": "mkpath",
+     "note": "Create Intermediate Directories"
+    },
+    {
+     "name": "xformtype",
+     "note": "Transform"
+    }
+   ],
+   "doc_url": "https://www.sidefx.com/docs/houdini/nodes/out/geometry.html",
    "verified": true
   }
  ]

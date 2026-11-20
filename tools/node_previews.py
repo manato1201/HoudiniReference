@@ -278,6 +278,88 @@ def ex_vdbfrompolygons():
     cv = mk("convertvdb", v, conversion="poly")
     return dict(before=[sp], after=[cv], view="iso", opts={})
 
+def ex_attribtransfer():
+    src = mk("grid", size=(4, 4), rows=6, cols=6)
+    srcc = wrangle(src, "@Cd = set(fit(@P.x, -2, 2, 0.1, 1), 0.25, fit(@P.z, -2, 2, 1, 0.1));")
+    dst = mk("scatter::2.0", mk("grid", size=(4, 4), rows=2, cols=2), forcetotal=1, npts=70, seed=4)
+    at = mk("attribtransfer", dst, srcc, pointattriblist="Cd", maxsamplecount=1)
+    return dict(before=[srcc, dst], after=[at], view="top", opts=dict(points=True, r=3.2, solid=False))
+
+def ex_foreach():
+    boxes = [mk("box", size=(1, 1, 1), t=(x, 0, 0)) for x in (-2, 0, 2)]
+    m = mk("merge", *boxes)
+    cn = mk("connectivity", m, connecttype=1, attribname="class")
+    bb = mk("block_begin", cn, method="piece")
+    xf = mk("xform", bb, s=(0.5, 0.5, 0.5))
+    be = geo.createNode("block_end")
+    be.setInput(0, xf)
+    for k, v in dict(itermethod="pieces", method="merge", **{"class": "primitive"}, useattrib=1, attrib="class").items():
+        be.parm(k).set(v)
+    be.parm("blockpath").set(bb.path()); be.parm("templatepath").set(bb.path())
+    bb.parm("blockpath").set(be.path())
+    return dict(before=[cn], after=[be], view="iso", opts=dict(color_key=True))
+
+def clear_expr(node, name):   # 既定で式が入っているパラメータは、値を入れる前に式を消す(例: Ray の Direction)
+    for p in node.parmTuple(name):
+        p.deleteAllKeyframes()
+
+def ex_attribdelete():
+    g = mk("grid", size=(4, 4), rows=5, cols=5)
+    c = wrangle(g, "@Cd = set(fit(@P.x, -2, 2, 0.1, 1), 0.3, fit(@P.z, -2, 2, 1, 0.1));")
+    d = mk("attribdelete", c, ptdel="Cd")
+    return dict(before=[c], after=[d], view="top", opts=dict(points=True, r=5.0, solid=False))
+
+def ex_color():
+    g = mk("grid", size=(4, 4), rows=9, cols=9)
+    c = mk("color", g, colortype=1)
+    return dict(before=[g], after=[c], view="top", opts=dict(points=True, r=4.2, solid=False))
+
+def ex_bound():
+    sp = mk("sphere", type=2, rad=(1, 1, 1), t=(0.6, 0.3, 0), rows=10, cols=16, scale=1)
+    bd = mk("bound", sp, keepOriginal=1)
+    return dict(before=[sp], after=[bd], view="iso", opts=dict(solid=False))
+
+def ex_mirror():
+    bx = mk("box", size=(0.8, 1.6, 0.8), t=(1.2, 0, 0), r=(0, 0, 25))
+    mr = mk("mirror", bx)
+    return dict(before=[bx], after=[mr], view="iso", opts={})
+
+def ex_smooth():
+    g = mk("grid", size=(5, 5), rows=24, cols=24)
+    n = wrangle(g, "@P.y = (rand(@ptnum) - 0.5) * 0.8;")
+    sm = mk("smooth::2.0", n, strength=200, filterquality=2)
+    return dict(before=[n], after=[sm], view="iso", opts=dict(solid=False))
+
+def ex_polyreduce():
+    sp = mk("sphere", type=2, rad=(1, 1, 1), rows=16, cols=24)
+    pr = mk("polyreduce::2.0", sp, percentage=15)
+    return dict(before=[sp], after=[pr], view="iso", opts={})
+
+def ex_remesh():
+    sp = mk("sphere", type=2, rad=(1, 1, 1), rows=30, cols=40)
+    pr = mk("polyreduce::2.0", sp, percentage=5)
+    rm = mk("remesh::2.0", pr, targetsize=0.3, iterations=3)
+    return dict(before=[pr], after=[rm], view="iso", opts=dict(solid=False))
+
+def ex_ray():
+    terr = mk("sphere", type=2, rad=(1.5, 1.5, 1.5), rows=14, cols=20)
+    top = mk("grid", size=(2.0, 2.0), rows=9, cols=9, t=(0, 2.6, 0))
+    ry = mk("ray", top, terr)
+    ry.parm("method").set(1); ry.parm("dirmethod").set(0)
+    clear_expr(ry, "dir"); ry.parmTuple("dir").set((0, -1, 0))
+    return dict(before=[top, terr], after=[ry, terr], view="iso", opts=dict(solid=False))
+
+def ex_bend():
+    bx = mk("box", size=(0.5, 0.5, 3), dodivs=1, divs=(2, 2, 12))
+    bd = mk("bend", bx, bend=100, origin=(0, 0, -1.5), length=3)
+    return dict(before=[bx], after=[bd], view="iso", opts=dict(solid=False))
+
+def ex_dissolve():
+    g = mk("grid", size=(4, 4), rows=5, cols=5)
+    gp = mk("group", g, crname="d", entity="edge", groupnumber=1, pattern="p6-7 p7-8 p8-9")
+    ds = mk("dissolve::2.0", gp, group="d")
+    return dict(before=[g], after=[ds], view="top", opts=dict(solid=False, points=False))
+
 EXAMPLES = {k[3:]: v for k, v in list(globals().items()) if k.startswith("ex_")}
 
 if __name__ == "__main__":

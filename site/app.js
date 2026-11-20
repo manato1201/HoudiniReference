@@ -9,10 +9,10 @@
   /* 関連サイト(フッター)。URL はここ 1 か所だけ。自サイトの url はデプロイ後に埋める(空なら名前だけ出す)。
      自サイトは self: true または url の origin が現在地と一致する時に「いま見ているサイト」として出し、リンクにしない。 */
   var RELATED_SITES = [
-    { name: "HoudiniReference", url: "https://houdini-reference.vercel.app", self: true },
-    { name: "The-Algorithm-Illustrated", url: "https://the-algorithm-illustrated.vercel.app" },
-    { name: "FoundationsEncyclopedia", url: "https://foundations-encyclopedia.vercel.app" },
-    { name: "ColorEncyclopedia", url: "https://color-encyclopedia.vercel.app" }
+    { name: "Houdini リファレンス", desc: "Tips・ニュース・リファレンスを自動で集めて見る", url: "https://houdini-reference.vercel.app", self: true },
+    { name: "アルゴリズム図鑑", desc: "動きを 1 コマずつ再生して学ぶ", url: "https://the-algorithm-illustrated.vercel.app" },
+    { name: "基礎学習図鑑", desc: "言語・IT・DCC の土台を手順の図で", url: "https://foundations-encyclopedia.vercel.app" },
+    { name: "色彩図鑑", desc: "色と図形の図鑑・色彩検定の対策", url: "https://color-encyclopedia.vercel.app" }
   ];
   var FAV_KEY = "hr.fav", THEME_KEY = "hr.theme", VIEW_KEY = "hr.view";
   var YT_ID = /^yt:([A-Za-z0-9_-]{11})$/;   /* 動画 ID はこの形のものだけ(サムネ・埋め込みの URL に入れてよい) */
@@ -480,8 +480,8 @@
     if (site.self) return true;
     try { return !!site.url && new URL(site.url).origin === location.origin; } catch (e) { return false; }
   }
-  function renderRelated() {
-    var ul = $("related-list");
+  /* フッターとヘッダーのメニューで同じ一覧を作る(RELATED_SITES の 1 か所だけが元)。withDesc: 各サイトの一言も出す */
+  function relatedItems(ul, withDesc) {
     clear(ul);
     RELATED_SITES.forEach(function (site) {
       var li = el("li");
@@ -492,13 +492,54 @@
         li.appendChild(cur);
         li.appendChild(el("span", "rel-note", "いま見ているサイト"));
       } else if (href) {
-        var a = el("a", "rel-item rel-link", site.name);
+        var a = el("a", "rel-item rel-link");
         a.href = href; a.rel = "noopener";
+        if (withDesc) {   /* メニュー: 名前と一言を 1 つのリンクに(行全体が押せる) */
+          a.appendChild(el("span", "rel-name", site.name));
+          if (site.desc) a.appendChild(el("span", "rel-note", site.desc));
+        } else { a.textContent = site.name; }
         li.appendChild(a);
       } else {
         li.appendChild(el("span", "rel-item", site.name));
       }
       ul.appendChild(li);
+    });
+  }
+  function renderRelated() {
+    relatedItems($("related-list"), false);
+    relatedItems($("sites-list"), true);
+  }
+
+  /* ---- ヘッダーの「関連サイト」メニュー(開示パターン)。Esc・外側のクリック・フォーカスが外れる(Tab)で閉じる。↑↓/Home/End で項目を移動 ---- */
+  function bindSitesMenu() {
+    var root = $("sites"), btn = $("sites-btn"), panel = $("sites-panel");
+    function links() { return Array.prototype.slice.call(panel.querySelectorAll("a")); }
+    function setOpen(open, focusBtn) {
+      panel.hidden = !open;
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      if (!open && focusBtn) btn.focus();
+    }
+    function isOpen() { return !panel.hidden; }
+    function focusAt(i) { var l = links(); if (l.length) l[(i + l.length) % l.length].focus(); }
+    btn.addEventListener("click", function () { setOpen(!isOpen(), false); });
+    root.addEventListener("keydown", function (e) {
+      var l = links(), idx = l.indexOf(document.activeElement);
+      if (e.key === "Escape" && isOpen()) { e.preventDefault(); setOpen(false, true); return; }
+      if (e.altKey || e.ctrlKey || e.metaKey) return;
+      if (e.key === "ArrowDown") {
+        e.preventDefault();
+        if (!isOpen()) setOpen(true, false);
+        focusAt(idx < 0 ? 0 : idx + 1);
+      } else if (e.key === "ArrowUp") {
+        if (!isOpen()) return;
+        e.preventDefault();
+        if (idx <= 0) btn.focus(); else focusAt(idx - 1);   /* 先頭の次は、押したボタンへ戻る */
+      } else if (e.key === "Home" && isOpen() && idx >= 0) { e.preventDefault(); focusAt(0); }
+      else if (e.key === "End" && isOpen() && idx >= 0) { e.preventDefault(); focusAt(l.length - 1); }
+    });
+    document.addEventListener("pointerdown", function (e) { if (isOpen() && !root.contains(e.target)) setOpen(false, false); });
+    root.addEventListener("focusout", function (e) {   /* フォーカスがメニューの外へ出たら閉じる */
+      if (isOpen() && e.relatedTarget && !root.contains(e.relatedTarget)) setOpen(false, false);
     });
   }
 
@@ -560,6 +601,7 @@
       b.addEventListener("click", function () { state.view = b.getAttribute("data-view") === "list" ? "list" : "grid"; lsSet(VIEW_KEY, state.view); render(false); });
     });
     bindPreview();
+    bindSitesMenu();
     $("favonly").addEventListener("click", function () { state.favOnly = !state.favOnly; render(false); });
     $("theme").addEventListener("click", function () {
       var t = currentTheme() === "dark" ? "light" : "dark";
