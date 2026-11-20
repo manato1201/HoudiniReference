@@ -1,11 +1,11 @@
 {
  "https://www.sidefx.com/forum/feeds/forum/70/": {
   "etag": "",
-  "last_modified": "Thu, 08 Oct 2026 19:32:24 GMT"
+  "last_modified": "Thu, 19 Nov 2026 20:29:54 GMT"
  },
  "https://www.sidefx.com/forum/feeds/topics/": {
   "etag": "",
-  "last_modified": "Wed, 18 Nov 2026 18:08:43 GMT"
+  "last_modified": "Thu, 19 Nov 2026 20:29:54 GMT"
  },
  "https://www.sidefx.com/changelog/rss/22_0/": {
   "etag": "",
@@ -37,14 +37,14 @@
  },
  "https://zenn.dev/topics/houdini/feed": {
   "etag": "",
-  "last_modified": "Thu, 19 Nov 2026 06:29:16 GMT"
+  "last_modified": "Fri, 20 Nov 2026 02:21:46 GMT"
  },
  "https://api.github.com/repos/sideeffects/SideFXLabs/releases?per_page=8": {
   "etag": "W/\"e05d9f1d1260c4560772a1273917b83dc97f853430b034db3590a3818f25e6a9\"",
   "last_modified": ""
  },
  "https://api.github.com/repos/sideeffects/HoudiniEngineForUnreal/releases?per_page=10": {
-  "etag": "W/\"a427618d6b20bd1401493e74afb13741affb561a1d41ebf7e136ad6e299bb3d1\"",
+  "etag": "W/\"93b3f73d42e2b5462604d7efdfc60cd894b833d8c7d278498cfc5e596758596d\"",
   "last_modified": ""
  },
  "https://api.github.com/repos/sideeffects/HoudiniEngineForUnity/releases?per_page=10": {
@@ -52,7 +52,7 @@
   "last_modified": ""
  },
  "https://api.github.com/repos/sideeffects/HoudiniNiagara/releases?per_page=8": {
-  "etag": "W/\"20514b6db91692c8c1b0781f49892a562f543764fbb449756c991eaea3f42696\"",
+  "etag": "W/\"e639fd677ff6c0e8f06424ee9cbdb6b022501299818f4d7da11af6de1b52fa21\"",
   "last_modified": ""
  },
  "https://www.sidefx.com/forum/feeds/forum/10/": {
@@ -65,7 +65,7 @@
  },
  "https://www.sidefx.com/forum/feeds/forum/82/": {
   "etag": "",
-  "last_modified": "Wed, 18 Nov 2026 12:05:47 GMT"
+  "last_modified": "Thu, 19 Nov 2026 15:19:13 GMT"
  },
  "https://www.youtube.com/feeds/videos.xml?channel_id=UCN2wg0lZFIjS7q1V-WsI85A": {
   "etag": "",
@@ -93,7 +93,7 @@
  },
  "https://entagma.com/feed/": {
   "etag": "",
-  "last_modified": "Thu, 05 Nov 2026 16:30:00 GMT"
+  "last_modified": "Thu, 19 Nov 2026 16:30:00 GMT"
  },
  "https://www.youtube.com/feeds/videos.xml?channel_id=UCkJxTflKEWfmoqlQA9QxTOA": {
   "etag": "",
