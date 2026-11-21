@@ -5,11 +5,11 @@
  },
  "https://www.sidefx.com/forum/feeds/topics/": {
   "etag": "",
-  "last_modified": "Thu, 19 Nov 2026 20:29:54 GMT"
+  "last_modified": "Fri, 20 Nov 2026 15:48:29 GMT"
  },
  "https://www.sidefx.com/changelog/rss/22_0/": {
   "etag": "",
-  "last_modified": "Wed, 18 Nov 2026 21:43:15 GMT"
+  "last_modified": "Thu, 19 Nov 2026 19:16:02 GMT"
  },
  "https://www.sidefx.com/changelog/rss/21_0/": {
   "etag": "",
@@ -37,22 +37,22 @@
  },
  "https://zenn.dev/topics/houdini/feed": {
   "etag": "",
-  "last_modified": "Fri, 20 Nov 2026 02:21:46 GMT"
+  "last_modified": "Sat, 21 Nov 2026 02:19:58 GMT"
  },
  "https://api.github.com/repos/sideeffects/SideFXLabs/releases?per_page=8": {
-  "etag": "W/\"e05d9f1d1260c4560772a1273917b83dc97f853430b034db3590a3818f25e6a9\"",
+  "etag": "W/\"50dbe49569971afcba515741bb9083fa85b35157fe266e395be6e07e62aa0166\"",
   "last_modified": ""
  },
  "https://api.github.com/repos/sideeffects/HoudiniEngineForUnreal/releases?per_page=10": {
-  "etag": "W/\"93b3f73d42e2b5462604d7efdfc60cd894b833d8c7d278498cfc5e596758596d\"",
+  "etag": "W/\"9c51eb92239b03c3561051ef3679f597aa3d71678f14cc4d117a3561d2436d41\"",
   "last_modified": ""
  },
  "https://api.github.com/repos/sideeffects/HoudiniEngineForUnity/releases?per_page=10": {
-  "etag": "W/\"94258da98689392ded25332d35286edbd8724f1de15ce6f824caae99a0533659\"",
+  "etag": "W/\"dc3f8926b87e52212d2591f6f12693796e900a43de4959b067c9f3aa4dd6e667\"",
   "last_modified": ""
  },
  "https://api.github.com/repos/sideeffects/HoudiniNiagara/releases?per_page=8": {
-  "etag": "W/\"e639fd677ff6c0e8f06424ee9cbdb6b022501299818f4d7da11af6de1b52fa21\"",
+  "etag": "W/\"1862fe145d0b9728c1a1c0ac9e37108e4aa5592076b7ea7a9e9d1c29b125606c\"",
   "last_modified": ""
  },
  "https://www.sidefx.com/forum/feeds/forum/10/": {
@@ -65,7 +65,7 @@
  },
  "https://www.sidefx.com/forum/feeds/forum/82/": {
   "etag": "",
-  "last_modified": "Thu, 19 Nov 2026 15:19:13 GMT"
+  "last_modified": "Fri, 20 Nov 2026 14:09:40 GMT"
  },
  "https://www.youtube.com/feeds/videos.xml?channel_id=UCN2wg0lZFIjS7q1V-WsI85A": {
   "etag": "",
