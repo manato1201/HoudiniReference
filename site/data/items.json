@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-21T02:19:56Z",
+ "generated_at": "2026-11-22T01:22:23Z",
  "sources": [
   {
    "id": "sidefx-news",
@@ -10,7 +10,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-21T02:19:56Z"
+   "last_ok": "2026-11-22T01:22:23Z"
   },
   {
    "id": "sidefx-forum",
@@ -20,7 +20,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-21T02:19:56Z"
+   "last_ok": "2026-11-22T01:22:23Z"
   },
   {
    "id": "sidefx-changelog-22",
@@ -28,9 +28,9 @@
    "kind": "rss",
    "tab": "reference",
    "ok": true,
-   "fetched": 21,
+   "fetched": 29,
    "not_modified": false,
-   "last_ok": "2026-11-21T02:19:56Z"
+   "last_ok": "2026-11-22T01:22:23Z"
   },
   {
    "id": "sidefx-changelog-21",
@@ -40,7 +40,7 @@
    "ok": true,
    "fetched": 2,
    "not_modified": false,
-   "last_ok": "2026-11-21T02:19:56Z"
+   "last_ok": "2026-11-22T01:22:23Z"
   },
   {
    "id": "sidefx-forum-learning",
@@ -50,7 +50,7 @@
    "ok": true,
    "fetched": 8,
    "not_modified": false,
-   "last_ok": "2026-11-21T02:19:56Z"
+   "last_ok": "2026-11-22T01:22:23Z"
   },
   {
    "id": "sidefx-forum-solaris-karma",
@@ -60,7 +60,7 @@
    "ok": true,
    "fetched": 8,
    "not_modified": false,
-   "last_ok": "2026-11-21T02:19:56Z"
+   "last_ok": "2026-11-22T01:22:23Z"
   },
   {
    "id": "sidefx-forum-copernicus",
@@ -70,7 +70,7 @@
    "ok": true,
    "fetched": 6,
    "not_modified": false,
-   "last_ok": "2026-11-21T02:19:56Z"
+   "last_ok": "2026-11-22T01:22:23Z"
   },
   {
    "id": "sidefx-forum-ja",
@@ -80,7 +80,7 @@
    "ok": true,
    "fetched": 9,
    "not_modified": false,
-   "last_ok": "2026-11-21T02:19:56Z"
+   "last_ok": "2026-11-22T01:22:23Z"
   },
   {
    "id": "entagma-site",
@@ -90,7 +90,7 @@
    "ok": true,
    "fetched": 0,
    "not_modified": true,
-   "last_ok": "2026-11-21T02:19:56Z"
+   "last_ok": "2026-11-22T01:22:23Z"
   },
   {
    "id": "qiita-houdini",
@@ -100,7 +100,7 @@
    "ok": true,
    "fetched": 0,
    "not_modified": true,
-   "last_ok": "2026-11-21T02:19:56Z"
+   "last_ok": "2026-11-22T01:22:23Z"
   },
   {
    "id": "zenn-houdini",
@@ -110,7 +110,7 @@
    "ok": true,
    "fetched": 20,
    "not_modified": false,
-   "last_ok": "2026-11-21T02:19:56Z"
+   "last_ok": "2026-11-22T01:22:23Z"
   },
   {
    "id": "youtube-sidefx",
@@ -120,7 +120,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-21T02:19:56Z"
+   "last_ok": "2026-11-22T01:22:23Z"
   },
   {
    "id": "youtube-entagma",
@@ -130,7 +130,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-21T02:19:56Z"
+   "last_ok": "2026-11-22T01:22:23Z"
   },
   {
    "id": "youtube-horikawa",
@@ -140,7 +140,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-21T02:19:56Z"
+   "last_ok": "2026-11-22T01:22:23Z"
   },
   {
    "id": "youtube-ninebetween",
@@ -150,7 +150,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-21T02:19:56Z"
+   "last_ok": "2026-11-22T01:22:23Z"
   },
   {
    "id": "youtube-indyzone",
@@ -160,7 +160,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-21T02:19:56Z"
+   "last_ok": "2026-11-22T01:22:23Z"
   },
   {
    "id": "youtube-usdvfx",
@@ -170,7 +170,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-21T02:19:56Z"
+   "last_ok": "2026-11-22T01:22:23Z"
   },
   {
    "id": "youtube-magnus",
@@ -180,7 +180,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-21T02:19:56Z"
+   "last_ok": "2026-11-22T01:22:23Z"
   },
   {
    "id": "youtube-dalvi",
@@ -190,7 +190,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-21T02:19:56Z"
+   "last_ok": "2026-11-22T01:22:23Z"
   },
   {
    "id": "youtube-radu",
@@ -200,7 +200,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-21T02:19:56Z"
+   "last_ok": "2026-11-22T01:22:23Z"
   },
   {
    "id": "youtube-cgartistacademy",
@@ -210,7 +210,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-21T02:19:56Z"
+   "last_ok": "2026-11-22T01:22:23Z"
   },
   {
    "id": "youtube-simonhoudini",
@@ -220,7 +220,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-21T02:19:56Z"
+   "last_ok": "2026-11-22T01:22:23Z"
   },
   {
    "id": "youtube-timvanh",
@@ -230,7 +230,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-21T02:19:56Z"
+   "last_ok": "2026-11-22T01:22:23Z"
   },
   {
    "id": "youtube-adrienlambert",
@@ -240,7 +240,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-21T02:19:56Z"
+   "last_ok": "2026-11-22T01:22:23Z"
   },
   {
    "id": "youtube-fancher",
@@ -250,7 +250,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-21T02:19:56Z"
+   "last_ok": "2026-11-22T01:22:23Z"
   },
   {
    "id": "github-sideeffects-sidefxlabs",
@@ -260,7 +260,7 @@
    "ok": true,
    "fetched": 8,
    "not_modified": false,
-   "last_ok": "2026-11-21T02:19:56Z"
+   "last_ok": "2026-11-22T01:22:23Z"
   },
   {
    "id": "github-sideeffects-houdiniengineforunreal",
@@ -270,7 +270,7 @@
    "ok": true,
    "fetched": 10,
    "not_modified": false,
-   "last_ok": "2026-11-21T02:19:56Z"
+   "last_ok": "2026-11-22T01:22:23Z"
   },
   {
    "id": "github-sideeffects-houdiniengineforunity",
@@ -278,9 +278,9 @@
    "kind": "github",
    "tab": "reference",
    "ok": true,
-   "fetched": 1,
-   "not_modified": false,
-   "last_ok": "2026-11-21T02:19:56Z"
+   "fetched": 0,
+   "not_modified": true,
+   "last_ok": "2026-11-22T01:22:23Z"
   },
   {
    "id": "github-sideeffects-houdininiagara",
@@ -290,7 +290,7 @@
    "ok": true,
    "fetched": 8,
    "not_modified": false,
-   "last_ok": "2026-11-21T02:19:56Z"
+   "last_ok": "2026-11-22T01:22:23Z"
   },
   {
    "id": "x",
@@ -301,6 +301,416 @@
   }
  ],
  "items": [
+  {
+   "id": "yt:vAiHVx0uplQ",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "Advanced Realtime Destruction 6 | Assign Procedural Materials",
+   "url": "https://www.youtube.com/watch?v=vAiHVx0uplQ",
+   "published": "2026-11-21T19:16:28Z",
+   "excerpt": "All Lessons and Project Files: https://www.sidefx.com/tutorials/advanced-realtime-destruction-techniques/ Learn how to set up materials for the procedural brick wall in Houdini and prepare them for u…",
+   "tags": [
+    "YouTube",
+    "SideFX",
+    "RBD",
+    "Procedural"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-22T01:22:23Z",
+   "views": 113
+  },
+  {
+   "id": "yt:p5w_fgMWdY0",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "Advanced Realtime Destruction 10 | Generate Collisions",
+   "url": "https://www.youtube.com/watch?v=p5w_fgMWdY0",
+   "published": "2026-11-21T19:16:28Z",
+   "excerpt": "All Lessons and Project Files: https://www.sidefx.com/tutorials/advanced-realtime-destruction-techniques/ Explore different techniques for generating optimized collision geometry for the static porti…",
+   "tags": [
+    "YouTube",
+    "SideFX",
+    "RBD"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-22T01:22:23Z",
+   "views": 99
+  },
+  {
+   "id": "yt:fdXxbtEeYBU",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "Advanced Realtime Destruction 7 | Create Geometry Collections",
+   "url": "https://www.youtube.com/watch?v=fdXxbtEeYBU",
+   "published": "2026-11-21T19:16:28Z",
+   "excerpt": "All Lessons and Project Files: https://www.sidefx.com/tutorials/advanced-realtime-destruction-techniques/ Explore different approaches to creating destruction in Unreal Engine using Chaos Physics and…",
+   "tags": [
+    "YouTube",
+    "SideFX",
+    "RBD",
+    "Unreal"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-22T01:22:23Z",
+   "views": 182
+  },
+  {
+   "id": "yt:QePun1eEg38",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "Advanced Realtime Destruction 5 | Create Bricks HDA",
+   "url": "https://www.youtube.com/watch?v=QePun1eEg38",
+   "published": "2026-11-21T19:16:28Z",
+   "excerpt": "All Lessons and Project Files: https://www.sidefx.com/tutorials/advanced-realtime-destruction-techniques/ Learn how to turn the procedural brick wall generator into a reusable Houdini Digital Asset (…",
+   "tags": [
+    "YouTube",
+    "SideFX",
+    "RBD",
+    "HDA",
+    "Procedural"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-22T01:22:23Z",
+   "views": 232
+  },
+  {
+   "id": "yt:-zgtIYd62hM",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "Advanced Realtime Destruction 8 | Set Projectile Forces",
+   "url": "https://www.youtube.com/watch?v=-zgtIYd62hM",
+   "published": "2026-11-21T19:16:28Z",
+   "excerpt": "All Lessons and Project Files: https://www.sidefx.com/tutorials/advanced-realtime-destruction-techniques/ Set up projectile impacts in Unreal Engine. Learn how to modify the shooter Blueprint to spaw…",
+   "tags": [
+    "YouTube",
+    "SideFX",
+    "RBD",
+    "Unreal"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-22T01:22:23Z",
+   "views": 304
+  },
+  {
+   "id": "yt:wyeVuM9cP9Q",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "Advanced Realtime Destruction 12 | Integrate Pyro Flipbooks in UE",
+   "url": "https://www.youtube.com/watch?v=wyeVuM9cP9Q",
+   "published": "2026-11-21T19:12:31Z",
+   "excerpt": "All Lessons and Project Files: https://www.sidefx.com/tutorials/advanced-realtime-destruction-techniques/ Learn how to bring dust flipbook textures created in Houdini into Unreal Engine and use them…",
+   "tags": [
+    "YouTube",
+    "SideFX",
+    "Pyro",
+    "RBD",
+    "Unreal"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-22T01:22:23Z",
+   "views": 55
+  },
+  {
+   "id": "yt:useFNX6ZXNk",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "Advanced Realtime Destruction 18 | Integrate Muzzle Flash Flipbook in UE",
+   "url": "https://www.youtube.com/watch?v=useFNX6ZXNk",
+   "published": "2026-11-21T19:12:31Z",
+   "excerpt": "All Lessons and Project Files: https://www.sidefx.com/tutorials/advanced-realtime-destruction-techniques/ Learn how to bring a muzzle flash flipbook created in Houdini into Unreal Engine and turn it…",
+   "tags": [
+    "YouTube",
+    "SideFX",
+    "RBD",
+    "Unreal"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-22T01:22:23Z",
+   "views": 53
+  },
+  {
+   "id": "yt:q_ZWJzoMctk",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "Advanced Realtime Destruction 19 | Bring It All Together",
+   "url": "https://www.youtube.com/watch?v=q_ZWJzoMctk",
+   "published": "2026-11-21T19:12:31Z",
+   "excerpt": "All Lessons and Project Files: https://www.sidefx.com/tutorials/advanced-realtime-destruction-techniques/ Learn how to bring together the techniques covered throughout the series to create a polished…",
+   "tags": [
+    "YouTube",
+    "SideFX",
+    "RBD"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-22T01:22:23Z",
+   "views": 278
+  },
+  {
+   "id": "yt:q6OT98YnSvQ",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "Advanced Realtime Destruction 15 | UV and Assign Material to Fractures",
+   "url": "https://www.youtube.com/watch?v=q6OT98YnSvQ",
+   "published": "2026-11-21T19:12:31Z",
+   "excerpt": "All Lessons and Project Files: https://www.sidefx.com/tutorials/advanced-realtime-destruction-techniques/ Clean up fractured geometry in Houdini, fixing topology issues, and generating UVs. Learn how…",
+   "tags": [
+    "YouTube",
+    "SideFX",
+    "RBD"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-22T01:22:23Z",
+   "views": 140
+  },
+  {
+   "id": "yt:hdNlBg-L4OY",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "Advanced Realtime Destruction 17 | Muzzle Flash Flipbook",
+   "url": "https://www.youtube.com/watch?v=hdNlBg-L4OY",
+   "published": "2026-11-21T19:12:31Z",
+   "excerpt": "All Lessons and Project Files: https://www.sidefx.com/tutorials/advanced-realtime-destruction-techniques/ Learn how to create a muzzle flash effect in Houdini using the SOP Pyro muzzle flash preset.…",
+   "tags": [
+    "YouTube",
+    "SideFX",
+    "Pyro",
+    "RBD"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-22T01:22:23Z",
+   "views": 202
+  },
+  {
+   "id": "yt:q6nmxyQzIu4",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "Advanced Realtime Destruction 13 | Adjust HDA Viewerstates",
+   "url": "https://www.youtube.com/watch?v=q6nmxyQzIu4",
+   "published": "2026-11-21T19:12:30Z",
+   "excerpt": "All Lessons and Project Files: https://www.sidefx.com/tutorials/advanced-realtime-destruction-techniques/ Start building a paintable destruction tool in Houdini to define fracture regions on any inpu…",
+   "tags": [
+    "YouTube",
+    "SideFX",
+    "RBD",
+    "HDA"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-22T01:22:23Z",
+   "views": 39
+  },
+  {
+   "id": "yt:k-Dotx8Ious",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "Advanced Realtime Destruction 14 | Adjust HDA Visualization",
+   "url": "https://www.youtube.com/watch?v=k-Dotx8Ious",
+   "published": "2026-11-21T19:12:30Z",
+   "excerpt": "All Lessons and Project Files: https://www.sidefx.com/tutorials/advanced-realtime-destruction-techniques/ Learn how to improve the paintable destruction HDA in Houdini by adding visual feedback and s…",
+   "tags": [
+    "YouTube",
+    "SideFX",
+    "RBD",
+    "HDA"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-22T01:22:23Z",
+   "views": 77
+  },
+  {
+   "id": "yt:PsLingCYDQg",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "Advanced Realtime Destruction 16 | Embeded Geometry",
+   "url": "https://www.youtube.com/watch?v=PsLingCYDQg",
+   "published": "2026-11-21T19:12:30Z",
+   "excerpt": "All Lessons and Project Files: https://www.sidefx.com/tutorials/advanced-realtime-destruction-techniques/ Learn how to embed geometry, such as rebar and other structural details, into Chaos Geometry…",
+   "tags": [
+    "YouTube",
+    "SideFX",
+    "RBD"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-22T01:22:23Z",
+   "views": 1439
+  },
+  {
+   "id": "yt:JzPs8UTrdHQ",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "Advanced Realtime Destruction 11 | Add Pyro Dust Setup",
+   "url": "https://www.youtube.com/watch?v=JzPs8UTrdHQ",
+   "published": "2026-11-21T19:12:30Z",
+   "excerpt": "All Lessons and Project Files: https://www.sidefx.com/tutorials/advanced-realtime-destruction-techniques/ Learn how to create a dust burst simulation in Houdini using the SOP Pyro tools. You’ll set u…",
+   "tags": [
+    "YouTube",
+    "SideFX",
+    "Pyro",
+    "RBD",
+    "Simulation"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-22T01:22:23Z",
+   "views": 70
+  },
+  {
+   "id": "yt:2stJ7eqG5mM",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "Advanced Realtime Destruction 3 | Build a Procedural Brick Wall",
+   "url": "https://www.youtube.com/watch?v=2stJ7eqG5mM",
+   "published": "2026-11-21T19:11:23Z",
+   "excerpt": "All Lessons and Project Files: https://www.sidefx.com/tutorials/advanced-realtime-destruction-techniques/ Learn how to build a procedural brick wall generator in Houdini using a user-drawn curve to d…",
+   "tags": [
+    "YouTube",
+    "SideFX",
+    "RBD",
+    "Procedural"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-22T01:22:23Z",
+   "views": 107
+  },
+  {
+   "id": "7249081041b38df3",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum",
+   "source": "SideFX フォーラム",
+   "title": "Houdini Vulkan Viewport Issues :/",
+   "url": "https://www.sidefx.com/forum/topic/104798/",
+   "published": "2026-11-21T18:07:28Z",
+   "excerpt": "Hi everyone, I'm having some strange issues with the Vulkan viewport in Houdini 21.0.792. SDF Volumes are not showing up in the viewport. Geometry sometimes turns completely black. FLIP particles som…",
+   "tags": [
+    "Forum",
+    "FLIP",
+    "H21.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-22T01:22:23Z"
+  },
+  {
+   "id": "64ae43db13247f7d",
+   "tab": "reference",
+   "kind": "github",
+   "source_id": "github-sideeffects-sidefxlabs",
+   "source": "SideFX Labs",
+   "title": "SideFX Labs: 22.0.510",
+   "url": "https://github.com/sideeffects/SideFXLabs/releases/tag/22.0.510",
+   "published": "2026-11-21T05:01:09Z",
+   "excerpt": "",
+   "tags": [
+    "GitHub",
+    "Release notes",
+    "Labs",
+    "H22.0",
+    "Pre-release"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-22T01:22:23Z"
+  },
+  {
+   "id": "5bb9037032c3ec64",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.510: Fixed an issue where the Prefix S...",
+   "url": "https://www.sidefx.com/changelog/entry/1006262533/",
+   "published": "2026-11-20T20:04:17Z",
+   "excerpt": "Fixed an issue where the Prefix Sum Core COP would not work with constant layers.",
+   "tags": [
+    "Release notes",
+    "Copernicus",
+    "H22.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-22T01:22:23Z"
+  },
+  {
+   "id": "6b919b98cb7f93cb",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.510: When saving snapshots and renderi...",
+   "url": "https://www.sidefx.com/changelog/entry/1006262534/",
+   "published": "2026-11-20T19:53:39Z",
+   "excerpt": "When saving snapshots and rendering with auto-tiling, husk will now save a snapshot of the stitched tiles rather than a snapshot of individual tile images.",
+   "tags": [
+    "Release notes",
+    "Rendering",
+    "H22.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-22T01:22:23Z"
+  },
+  {
+   "id": "246b25c9bb591164",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.510: Fixed an error that would occur i...",
+   "url": "https://www.sidefx.com/changelog/entry/1006262535/",
+   "published": "2026-11-20T18:00:43Z",
+   "excerpt": "Fixed an error that would occur in the HeightField Erode COP node if the COP network's Default Precision was set to 16-bit.",
+   "tags": [
+    "Release notes",
+    "Copernicus",
+    "Terrain",
+    "H22.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-22T01:22:23Z"
+  },
+  {
+   "id": "d22f97b92e43c653",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.510: Fix handling of Bool USD attribs...",
+   "url": "https://www.sidefx.com/changelog/entry/1006262536/",
+   "published": "2026-11-20T17:36:42Z",
+   "excerpt": "Fix handling of Bool USD attribs and toggle parms in Material Library LOP.",
+   "tags": [
+    "Release notes",
+    "Solaris",
+    "H22.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-22T01:22:23Z"
+  },
   {
    "id": "e9b8dc9ccd41a1df",
    "tab": "reference",
@@ -355,6 +765,23 @@
    "first_seen": "2026-11-21T02:19:56Z"
   },
   {
+   "id": "386dc0d8f8a161e3",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.510: ButtonParmTemplate recipe data no...",
+   "url": "https://www.sidefx.com/changelog/entry/1006262537/",
+   "published": "2026-11-20T14:43:57Z",
+   "excerpt": "ButtonParmTemplate recipe data now supports menu related keys. This fixes a recipe error related to the SOP Camera's resolution menu that is actually a button parameter posing as a menu.",
+   "tags": [
+    "Release notes",
+    "H22.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-22T01:22:23Z"
+  },
+  {
    "id": "258153635c6f5768",
    "tab": "tips",
    "kind": "rss",
@@ -369,6 +796,59 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-21T02:19:56Z"
+  },
+  {
+   "id": "dfd83be1342456e3",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.510: Fixed an issue with paused Live R...",
+   "url": "https://www.sidefx.com/changelog/entry/1006262538/",
+   "published": "2026-11-20T13:34:02Z",
+   "excerpt": "Fixed an issue with paused Live Renders responding to stage changes.",
+   "tags": [
+    "Release notes",
+    "Rendering",
+    "H22.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-22T01:22:23Z"
+  },
+  {
+   "id": "e209c0c1f4756548",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.510: Updated the FK Transform componen...",
+   "url": "https://www.sidefx.com/changelog/entry/1006262539/",
+   "published": "2026-11-20T10:53:33Z",
+   "excerpt": "Updated the FK Transform component to add a joint menu to the T, R and S Promote Group parameters.",
+   "tags": [
+    "Release notes",
+    "H22.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-22T01:22:23Z"
+  },
+  {
+   "id": "89470f6c2ca4fb78",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.510: Improve parsing of _ in numbers i...",
+   "url": "https://www.sidefx.com/changelog/entry/1006262540/",
+   "published": "2026-11-20T06:16:28Z",
+   "excerpt": "Improve parsing of _ in numbers in VEX and expressions. _1 is rejected as an integer. 0.0_3 is parsed as 0.03 rather than 0.",
+   "tags": [
+    "Release notes",
+    "VEX",
+    "H22.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-22T01:22:23Z"
   },
   {
    "id": "60dcbd48a81383ef",
@@ -698,7 +1178,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-20T02:21:44Z",
-   "views": 740
+   "views": 1316
   },
   {
    "id": "f3045b143386f5ce",
@@ -1052,7 +1532,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T02:36:36Z",
-   "views": 3221
+   "views": 3486
   },
   {
    "id": "5eee49c58b76a4a2",
@@ -1159,7 +1639,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 6153
+   "views": 6448
   },
   {
    "id": "6702aab2c002c27d",
@@ -1577,7 +2057,7 @@
    "kind": "youtube",
    "source_id": "youtube-indyzone",
    "source": "IndyZone",
-   "title": "【11月22日(日) 13:00〜】Houdiniに関するみなさまからのご質問にお答えします！",
+   "title": "【11月22日(日) 13:00〜】Houdini ちょっと便利なおすすめノード・時間を操作しよう！！ & みなさまからのご質問にお答えします！",
    "url": "https://www.youtube.com/watch?v=x22PrwmnfX8",
    "published": "2026-11-16T14:31:47Z",
    "excerpt": "▼ご質問募集フォーム https://forms.gle/6bNi8nFsq5PAfPCV9 みなさまからのHoudiniに関するご質問にお答えします！ Houdiniを現在勉強中の方はもちろん、昔からHoudiniを使っている方も、ぜひお気軽にご参加ください！ ▼配信終了後アンケートフォーム ※準備中 ▼Houdini 初級講座についてはこちら https://houdinifx.jp/blo…",
@@ -1658,7 +2138,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 1864
+   "views": 1877
   },
   {
    "id": "ccd41bca4608db59",
@@ -1730,7 +2210,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 1217
+   "views": 1276
   },
   {
    "id": "yt:-05LoJrNQ_I",
@@ -1747,7 +2227,7 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 2143
+   "views": 2241
   },
   {
    "id": "880a8d869055dd78",
@@ -1801,7 +2281,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 1401
+   "views": 1472
   },
   {
    "id": "024ddde778cc9d80",
@@ -2122,7 +2602,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 2176
+   "views": 2213
   },
   {
    "id": "ea0cebb2dc3185e5",
@@ -2194,7 +2674,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 987
+   "views": 997
   },
   {
    "id": "869ad5697c6bf9b3",
@@ -2351,7 +2831,7 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 2045
+   "views": 2104
   },
   {
    "id": "yt:4jaizBENyRQ",
@@ -2370,7 +2850,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 1722
+   "views": 1732
   },
   {
    "id": "c2f11049e279c487",
@@ -2458,7 +2938,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 938
+   "views": 952
   },
   {
    "id": "yt:SwjsWmIZtAo",
@@ -2475,7 +2955,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 2877
+   "views": 2889
   },
   {
    "id": "yt:oCj05Fp0tyc",
@@ -2492,7 +2972,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 6824
+   "views": 6850
   },
   {
    "id": "5d7ce2fce19467b2",
@@ -2528,7 +3008,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 5846
+   "views": 5883
   },
   {
    "id": "860dd95adc5048dc",
@@ -2562,7 +3042,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 945
+   "views": 950
   },
   {
    "id": "yt:9Y8dUr99Gv4",
@@ -2579,7 +3059,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 4362
+   "views": 4371
   },
   {
    "id": "yt:KKBR3o38GK4",
@@ -2596,7 +3076,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 1915
+   "views": 1920
   },
   {
    "id": "yt:kOg4AF82xzg",
@@ -2613,7 +3093,7 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 761
+   "views": 762
   },
   {
    "id": "6a3dd3ae3c3ac712",
@@ -2651,7 +3131,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 954
+   "views": 955
   },
   {
    "id": "yt:VDIsRIsVgsw",
@@ -2668,7 +3148,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 19810
+   "views": 19937
   },
   {
    "id": "c64fafdfebba0221",
@@ -2718,7 +3198,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 2031
+   "views": 2036
   },
   {
    "id": "yt:PeeAvnOyaa4",
@@ -2735,7 +3215,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 2474
+   "views": 2478
   },
   {
    "id": "yt:pOeuG24PUZ8",
@@ -2753,7 +3233,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 3020
+   "views": 3049
   },
   {
    "id": "465dc940d01d8456",
@@ -2805,7 +3285,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 3575
+   "views": 3607
   },
   {
    "id": "yt:Y03l5nxwA00",
@@ -2822,7 +3302,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 1613
+   "views": 1614
   },
   {
    "id": "b02bfb3d1b5404cd",
@@ -2856,7 +3336,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 1186
+   "views": 1188
   },
   {
    "id": "yt:GE4DH4N2D0c",
@@ -2873,7 +3353,7 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 3640
+   "views": 3655
   },
   {
    "id": "yt:QoiBoltVDjs",
@@ -2890,7 +3370,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 2510
+   "views": 2514
   },
   {
    "id": "cf6b5e8cf34f3c89",
@@ -3048,7 +3528,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 4426
+   "views": 4465
   },
   {
    "id": "f0b05eb4ee408f43",
@@ -3081,7 +3561,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 5196
+   "views": 5197
   },
   {
    "id": "6ef6efe747f4f4e4",
@@ -3114,7 +3594,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 12654
+   "views": 12660
   },
   {
    "id": "yt:4aKv3Pkyj8Y",
@@ -3131,7 +3611,7 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 1171
+   "views": 1175
   },
   {
    "id": "85d60a0243c87c39",
@@ -3168,7 +3648,7 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 1485
+   "views": 1487
   },
   {
    "id": "ab1ad67848b61437",
@@ -3203,7 +3683,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 2010
+   "views": 2017
   },
   {
    "id": "yt:lVL5qz9v23k",
@@ -3220,7 +3700,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 2097
+   "views": 2102
   },
   {
    "id": "yt:8oUbY4aww0s",
@@ -3241,7 +3721,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 1308
+   "views": 1312
   },
   {
    "id": "yt:R_MoYhQ_AmE",
@@ -3332,7 +3812,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 1333
+   "views": 1336
   },
   {
    "id": "yt:KYgzXSRfVsw",
@@ -3349,7 +3829,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 2762
+   "views": 2767
   },
   {
    "id": "yt:2T34relmbm8",
@@ -3366,7 +3846,7 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 532
+   "views": 533
   },
   {
    "id": "yt:7aWE-3T_3NA",
@@ -3384,7 +3864,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 6706
+   "views": 6711
   },
   {
    "id": "631b56b5abfb97a6",
@@ -3436,7 +3916,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 3410
+   "views": 3411
   },
   {
    "id": "yt:XDWnekoVCG4",
@@ -3453,7 +3933,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 5485
+   "views": 5488
   },
   {
    "id": "yt:UqB52SmNvXw",
@@ -3473,7 +3953,7 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 1866
+   "views": 1874
   },
   {
    "id": "yt:mlBO92dOdkk",
@@ -3491,7 +3971,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 1459
+   "views": 1462
   },
   {
    "id": "bed0ac79753a7521",
@@ -3614,7 +4094,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 6029
+   "views": 6034
   },
   {
    "id": "dc79171e4adbad03",
@@ -3648,7 +4128,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 6028
+   "views": 6032
   },
   {
    "id": "yt:joU1tumWb7Y",
@@ -3687,7 +4167,7 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 7888
+   "views": 7890
   },
   {
    "id": "9fabd938ded32c00",
@@ -3722,7 +4202,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 6610
+   "views": 6611
   },
   {
    "id": "2f61ea4a363b6da3",
@@ -3757,7 +4237,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 1975
+   "views": 1978
   },
   {
    "id": "5908be68841f12d7",
@@ -3793,7 +4273,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 1295
+   "views": 1298
   },
   {
    "id": "167f74951e401f4d",
@@ -3829,7 +4309,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 2918
+   "views": 2925
   },
   {
    "id": "yt:3uXYs0RHqDA",
@@ -3846,7 +4326,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 1348
+   "views": 1349
   },
   {
    "id": "yt:O5bQoAyO7hY",
@@ -3867,7 +4347,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 643
+   "views": 646
   },
   {
    "id": "730a60485a47ef72",
@@ -3922,7 +4402,7 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 1049
+   "views": 1051
   },
   {
    "id": "5a2ce48084ec4a31",
@@ -3956,7 +4436,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 777
+   "views": 778
   },
   {
    "id": "c5a4dcc87d02561d",
@@ -4039,7 +4519,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 10806
+   "views": 10809
   },
   {
    "id": "9ca0bb1ac0e2bcd0",
@@ -4093,7 +4573,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 2889
+   "views": 2894
   },
   {
    "id": "yt:Mypavnx92tw",
@@ -4110,7 +4590,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 3617
+   "views": 3621
   },
   {
    "id": "yt:NJSNt653z-I",
@@ -4167,7 +4647,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 575
+   "views": 577
   },
   {
    "id": "d98576edb322cb0e",
@@ -4202,7 +4682,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 4409
+   "views": 4411
   },
   {
    "id": "1e7804a00cf3a902",
@@ -4319,7 +4799,7 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 447
+   "views": 448
   },
   {
    "id": "3487ca281f160f7b",
@@ -4386,7 +4866,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 1514
+   "views": 1515
   },
   {
    "id": "yt:nDPUM8B0vcc",
@@ -4406,7 +4886,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 854
+   "views": 856
   },
   {
    "id": "yt:MuPo6tK8mPs",
@@ -4425,7 +4905,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 1321
+   "views": 1329
   },
   {
    "id": "ddad1bd37958ff14",
@@ -4546,7 +5026,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 2714
+   "views": 2715
   },
   {
    "id": "yt:SGqXg7kZkNY",
@@ -4631,7 +5111,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 529
+   "views": 530
   },
   {
    "id": "yt:-lPQdcthqVM",
@@ -4665,7 +5145,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 324
+   "views": 323
   },
   {
    "id": "yt:BW4XnSjtQAo",
@@ -4682,7 +5162,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 476
+   "views": 474
   },
   {
    "id": "yt:hCCX9O3WaMc",
@@ -4699,7 +5179,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 242
+   "views": 243
   },
   {
    "id": "yt:fsxUascfN-8",
@@ -4807,7 +5287,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 840
+   "views": 843
   },
   {
    "id": "44a20e5237daa6c0",
@@ -4846,7 +5326,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 484
+   "views": 486
   },
   {
    "id": "2057dca3e7fa3e1e",
@@ -4968,7 +5448,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 770
+   "views": 771
   },
   {
    "id": "d74e338f72aef8f2",
@@ -5041,7 +5521,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 508
+   "views": 510
   },
   {
    "id": "1acedf0fb809ce1d",
@@ -5091,7 +5571,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 873
+   "views": 876
   },
   {
    "id": "c86b7bebab2c8ac6",
@@ -5200,7 +5680,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 989
+   "views": 992
   },
   {
    "id": "d4a495c0af44b6e5",
@@ -5306,7 +5786,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 1649
+   "views": 1652
   },
   {
    "id": "yt:y9u8hNIFf-4",
@@ -5463,7 +5943,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 2509
+   "views": 2508
   },
   {
    "id": "c76120b704fea2da",
@@ -5569,7 +6049,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 6071
+   "views": 6079
   },
   {
    "id": "f013c57819d7e9bd",
@@ -5623,7 +6103,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 1688
+   "views": 1689
   },
   {
    "id": "yt:BcDR7vD2lyM",
@@ -5640,7 +6120,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 3734
+   "views": 3738
   },
   {
    "id": "4c39e1e1ff055623",
@@ -5677,7 +6157,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 4978
+   "views": 4982
   },
   {
    "id": "yt:aAF46gH5JCU",
@@ -5694,7 +6174,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 7942
+   "views": 7950
   },
   {
    "id": "yt:jZ5I9nNQ75w",
@@ -5711,7 +6191,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 14676
+   "views": 14680
   },
   {
    "id": "58bfe7687c284384",
@@ -5766,7 +6246,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 2048
+   "views": 2049
   },
   {
    "id": "yt:1UaFqGRZJC0",
@@ -5783,7 +6263,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 1757
+   "views": 1759
   },
   {
    "id": "844715d970798402",
@@ -5822,7 +6302,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 4200
+   "views": 4201
   },
   {
    "id": "yt:i_Sm-5nNtq8",
@@ -5858,7 +6338,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 2401
+   "views": 2402
   },
   {
    "id": "yt:Lwgev4hG2IM",
@@ -5893,7 +6373,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 7875
+   "views": 7881
   },
   {
    "id": "yt:IoFcjhoxDJc",
@@ -5912,7 +6392,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 9151
+   "views": 9162
   },
   {
    "id": "yt:gbTGTgqdKGI",
@@ -5930,7 +6410,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 2013
+   "views": 2016
   },
   {
    "id": "yt:nMqSRDNWkfI",
@@ -5966,7 +6446,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 8937
+   "views": 8941
   },
   {
    "id": "yt:RB7D0Pxfrvs",
@@ -6020,7 +6500,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 3080
+   "views": 3083
   },
   {
    "id": "yt:FTS46d06EzI",
@@ -6037,7 +6517,7 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 7983
+   "views": 7992
   },
   {
    "id": "yt:w57jDzNMqOU",
@@ -6055,7 +6535,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 4125
+   "views": 4127
   },
   {
    "id": "yt:1Ti6O6Yfp7U",
@@ -6072,7 +6552,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 2516
+   "views": 2519
   },
   {
    "id": "yt:r2753HA-7RA",
@@ -6089,7 +6569,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 2578
+   "views": 2579
   },
   {
    "id": "ab4460a2cc7cedaa",
@@ -6125,7 +6605,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 6976
+   "views": 6981
   },
   {
    "id": "yt:fZUXruQH9E0",
@@ -6161,7 +6641,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 2606
+   "views": 2608
   },
   {
    "id": "yt:SzrhSG2Ll0I",
@@ -6196,7 +6676,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 3432
+   "views": 3435
   },
   {
    "id": "yt:TYx6zx4kbG8",
@@ -6214,7 +6694,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 2277
+   "views": 2278
   },
   {
    "id": "yt:GHRuXuEb6S0",
@@ -6249,7 +6729,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 3074
+   "views": 3076
   },
   {
    "id": "yt:ylbU8_PbcBI",
@@ -6322,7 +6802,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 2370
+   "views": 2373
   },
   {
    "id": "yt:VAXzuJl_hOY",
@@ -6375,7 +6855,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 25436
+   "views": 25440
   },
   {
    "id": "yt:G7SnVk4Jj8U",
@@ -6393,7 +6873,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 2885
+   "views": 2880
   },
   {
    "id": "yt:Q4R7AeCf-Os",
@@ -6412,7 +6892,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 5353
+   "views": 5355
   },
   {
    "id": "yt:MHDL1hekOq0",
@@ -6497,7 +6977,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 4291
+   "views": 4292
   },
   {
    "id": "9dcc259995ed5a64",
@@ -6622,7 +7102,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 15041
+   "views": 15049
   },
   {
    "id": "yt:9B-H1U6BMeg",
@@ -6711,7 +7191,7 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 1140
+   "views": 1144
   },
   {
    "id": "yt:W4SG-OXoJtc",
@@ -6751,7 +7231,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 9107
+   "views": 9109
   },
   {
    "id": "7fe6179c8f3e0bf2",
@@ -6786,7 +7266,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 2894
+   "views": 2895
   },
   {
    "id": "e504d90cf320df1e",
@@ -6822,7 +7302,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 3483
+   "views": 3484
   },
   {
    "id": "yt:wFXA3aC1NKY",
@@ -6840,7 +7320,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 7433
+   "views": 7434
   },
   {
    "id": "yt:6J9uQSVXZgA",
@@ -6859,7 +7339,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 28031
+   "views": 28034
   },
   {
    "id": "yt:6YPnEP0_XJk",
@@ -6879,7 +7359,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 25912
+   "views": 25923
   },
   {
    "id": "yt:n5EJM3mA_Dw",
@@ -6914,7 +7394,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 18471
+   "views": 18473
   },
   {
    "id": "yt:FB5-zOhiHgs",
@@ -6951,7 +7431,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 27636
+   "views": 27646
   },
   {
    "id": "yt:O-lCDNv-9ag",
@@ -6987,7 +7467,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 56889
+   "views": 56923
   },
   {
    "id": "yt:kMpYf2FrJws",
@@ -7060,7 +7540,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 43490
+   "views": 43528
   },
   {
    "id": "yt:kYCT743alVI",
@@ -7080,7 +7560,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 39228
+   "views": 39251
   },
   {
    "id": "yt:F7_B-BA6C1o",
@@ -7100,7 +7580,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 28385
+   "views": 28393
   },
   {
    "id": "yt:GEXhbwPn3Zc",
@@ -7153,7 +7633,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 29435
+   "views": 29449
   },
   {
    "id": "yt:d_8EEfIe1Lk",
@@ -7173,7 +7653,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 17337
+   "views": 17341
   },
   {
    "id": "yt:cE-Bbdspu_8",
@@ -7192,7 +7672,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 53372
+   "views": 53392
   },
   {
    "id": "yt:ul85ejWgnvY",
@@ -7211,7 +7691,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 23502
+   "views": 23507
   },
   {
    "id": "yt:OfPoK_T3XNU",
@@ -7231,7 +7711,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 31609
+   "views": 31610
   },
   {
    "id": "yt:O0jQwM3GLBs",
@@ -7267,7 +7747,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 11057
+   "views": 11058
   },
   {
    "id": "yt:nQuVoXEAziU",
@@ -7285,7 +7765,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 40263
+   "views": 40270
   },
   {
    "id": "yt:9GUJz3d8S4o",
@@ -7320,7 +7800,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 5648
+   "views": 5650
   },
   {
    "id": "yt:dc4g1l4rxOU",
@@ -7355,7 +7835,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 14647
+   "views": 14650
   },
   {
    "id": "yt:VNX9Qf6a5hs",
@@ -7373,7 +7853,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 63321
+   "views": 63345
   },
   {
    "id": "yt:rgeMOOJ6M5g",
@@ -7390,7 +7870,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 15889
+   "views": 15892
   },
   {
    "id": "yt:z0pArthvMx4",
@@ -7408,7 +7888,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 57223
+   "views": 57228
   },
   {
    "id": "yt:GOMN8Ywh3c8",
@@ -7443,7 +7923,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 22640
+   "views": 22643
   }
  ]
 }
