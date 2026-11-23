@@ -5,7 +5,7 @@
  },
  "https://www.sidefx.com/forum/feeds/topics/": {
   "etag": "",
-  "last_modified": "Sat, 21 Nov 2026 18:07:28 GMT"
+  "last_modified": "Sun, 22 Nov 2026 22:46:20 GMT"
  },
  "https://www.sidefx.com/changelog/rss/22_0/": {
   "etag": "",
@@ -37,14 +37,14 @@
  },
  "https://zenn.dev/topics/houdini/feed": {
   "etag": "",
-  "last_modified": "Sun, 22 Nov 2026 01:22:24 GMT"
+  "last_modified": "Sun, 22 Nov 2026 23:27:10 GMT"
  },
  "https://api.github.com/repos/sideeffects/SideFXLabs/releases?per_page=8": {
-  "etag": "W/\"aebecf5154f428693ede1a211bef0dfdabca359e322b0148c106c3363e5609d2\"",
+  "etag": "W/\"383ece24c74f968f4a8347e6fbcbe457b83882ce8cae959ff01b7410825e45e0\"",
   "last_modified": ""
  },
  "https://api.github.com/repos/sideeffects/HoudiniEngineForUnreal/releases?per_page=10": {
-  "etag": "W/\"cddfbc68234248525672f44e2a279a2123b9b39e42c8cbbdcc604b7796022592\"",
+  "etag": "W/\"19492b92c9901b5ed9b091230786736536fc5a50f9ee3bc8ddf77aada1e51da4\"",
   "last_modified": ""
  },
  "https://api.github.com/repos/sideeffects/HoudiniEngineForUnity/releases?per_page=10": {
@@ -52,7 +52,7 @@
   "last_modified": ""
  },
  "https://api.github.com/repos/sideeffects/HoudiniNiagara/releases?per_page=8": {
-  "etag": "W/\"5caa2710f6210bb6c7e37c8c23593bf4f465f74214f7891f4450b128b68cb198\"",
+  "etag": "W/\"63db973f23aa899da93ccae0be2324982a43d82915a90ddcc02edbf07746d4a4\"",
   "last_modified": ""
  },
  "https://www.sidefx.com/forum/feeds/forum/10/": {
@@ -65,7 +65,7 @@
  },
  "https://www.sidefx.com/forum/feeds/forum/82/": {
   "etag": "",
-  "last_modified": "Fri, 20 Nov 2026 14:09:40 GMT"
+  "last_modified": "Sun, 22 Nov 2026 16:16:44 GMT"
  },
  "https://www.youtube.com/feeds/videos.xml?channel_id=UCN2wg0lZFIjS7q1V-WsI85A": {
   "etag": "",
