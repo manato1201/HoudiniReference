@@ -5,11 +5,11 @@
  },
  "https://www.sidefx.com/forum/feeds/topics/": {
   "etag": "",
-  "last_modified": "Sun, 22 Nov 2026 22:46:20 GMT"
+  "last_modified": "Mon, 23 Nov 2026 21:44:28 GMT"
  },
  "https://www.sidefx.com/changelog/rss/22_0/": {
   "etag": "",
-  "last_modified": "Fri, 20 Nov 2026 20:04:17 GMT"
+  "last_modified": "Sun, 22 Nov 2026 21:23:02 GMT"
  },
  "https://www.sidefx.com/changelog/rss/21_0/": {
   "etag": "",
@@ -32,27 +32,27 @@
   "last_modified": ""
  },
  "https://qiita.com/tags/houdini/feed": {
-  "etag": "W/\"ad6495e02b088661c08c3d3be51c4743\"",
+  "etag": "W/\"a9ecc9241d2c8a3305f46c02e69021d3\"",
   "last_modified": ""
  },
  "https://zenn.dev/topics/houdini/feed": {
   "etag": "",
-  "last_modified": "Sun, 22 Nov 2026 23:27:10 GMT"
+  "last_modified": "Tue, 24 Nov 2026 05:20:45 GMT"
  },
  "https://api.github.com/repos/sideeffects/SideFXLabs/releases?per_page=8": {
-  "etag": "W/\"383ece24c74f968f4a8347e6fbcbe457b83882ce8cae959ff01b7410825e45e0\"",
+  "etag": "W/\"1a7a5cbbba26e99bf81281cc4bd5f1105e45a32eee6d4796b944576c7242c086\"",
   "last_modified": ""
  },
  "https://api.github.com/repos/sideeffects/HoudiniEngineForUnreal/releases?per_page=10": {
-  "etag": "W/\"19492b92c9901b5ed9b091230786736536fc5a50f9ee3bc8ddf77aada1e51da4\"",
+  "etag": "W/\"623fae55962883591da1699c04ef89998bc70d45078f0215ea959152610a0cd8\"",
   "last_modified": ""
  },
  "https://api.github.com/repos/sideeffects/HoudiniEngineForUnity/releases?per_page=10": {
-  "etag": "W/\"dc3f8926b87e52212d2591f6f12693796e900a43de4959b067c9f3aa4dd6e667\"",
+  "etag": "W/\"3d261802745da9e65f4d6259fcabd1c53e216611f17e6ac9a8f3c02c75aeed52\"",
   "last_modified": ""
  },
  "https://api.github.com/repos/sideeffects/HoudiniNiagara/releases?per_page=8": {
-  "etag": "W/\"63db973f23aa899da93ccae0be2324982a43d82915a90ddcc02edbf07746d4a4\"",
+  "etag": "W/\"49baac39af7290840e75bd06c5e4eefe849a0b67e6b6e8ee6d70865e4ac04f85\"",
   "last_modified": ""
  },
  "https://www.sidefx.com/forum/feeds/forum/10/": {
@@ -65,7 +65,7 @@
  },
  "https://www.sidefx.com/forum/feeds/forum/82/": {
   "etag": "",
-  "last_modified": "Sun, 22 Nov 2026 16:16:44 GMT"
+  "last_modified": "Mon, 23 Nov 2026 16:26:25 GMT"
  },
  "https://www.youtube.com/feeds/videos.xml?channel_id=UCN2wg0lZFIjS7q1V-WsI85A": {
   "etag": "",
