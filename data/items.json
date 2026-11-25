@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-24T05:20:44Z",
+ "generated_at": "2026-11-25T04:14:57Z",
  "sources": [
   {
    "id": "sidefx-news",
@@ -10,7 +10,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-24T05:20:44Z"
+   "last_ok": "2026-11-25T04:14:57Z"
   },
   {
    "id": "sidefx-forum",
@@ -20,7 +20,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-24T05:20:44Z"
+   "last_ok": "2026-11-25T04:14:57Z"
   },
   {
    "id": "sidefx-changelog-22",
@@ -28,9 +28,9 @@
    "kind": "rss",
    "tab": "reference",
    "ok": true,
-   "fetched": 22,
+   "fetched": 25,
    "not_modified": false,
-   "last_ok": "2026-11-24T05:20:44Z"
+   "last_ok": "2026-11-25T04:14:57Z"
   },
   {
    "id": "sidefx-changelog-21",
@@ -40,7 +40,7 @@
    "ok": true,
    "fetched": 1,
    "not_modified": false,
-   "last_ok": "2026-11-24T05:20:44Z"
+   "last_ok": "2026-11-25T04:14:57Z"
   },
   {
    "id": "sidefx-forum-learning",
@@ -50,7 +50,7 @@
    "ok": true,
    "fetched": 8,
    "not_modified": false,
-   "last_ok": "2026-11-24T05:20:44Z"
+   "last_ok": "2026-11-25T04:14:57Z"
   },
   {
    "id": "sidefx-forum-solaris-karma",
@@ -60,7 +60,7 @@
    "ok": true,
    "fetched": 10,
    "not_modified": false,
-   "last_ok": "2026-11-24T05:20:44Z"
+   "last_ok": "2026-11-25T04:14:57Z"
   },
   {
    "id": "sidefx-forum-copernicus",
@@ -70,7 +70,7 @@
    "ok": true,
    "fetched": 6,
    "not_modified": false,
-   "last_ok": "2026-11-24T05:20:44Z"
+   "last_ok": "2026-11-25T04:14:57Z"
   },
   {
    "id": "sidefx-forum-ja",
@@ -80,7 +80,7 @@
    "ok": true,
    "fetched": 9,
    "not_modified": false,
-   "last_ok": "2026-11-24T05:20:44Z"
+   "last_ok": "2026-11-25T04:14:57Z"
   },
   {
    "id": "entagma-site",
@@ -90,7 +90,7 @@
    "ok": true,
    "fetched": 0,
    "not_modified": true,
-   "last_ok": "2026-11-24T05:20:44Z"
+   "last_ok": "2026-11-25T04:14:57Z"
   },
   {
    "id": "qiita-houdini",
@@ -98,9 +98,9 @@
    "kind": "rss",
    "tab": "tips",
    "ok": true,
-   "fetched": 4,
-   "not_modified": false,
-   "last_ok": "2026-11-24T05:20:44Z"
+   "fetched": 0,
+   "not_modified": true,
+   "last_ok": "2026-11-25T04:14:57Z"
   },
   {
    "id": "zenn-houdini",
@@ -110,7 +110,7 @@
    "ok": true,
    "fetched": 20,
    "not_modified": false,
-   "last_ok": "2026-11-24T05:20:44Z"
+   "last_ok": "2026-11-25T04:14:57Z"
   },
   {
    "id": "youtube-sidefx",
@@ -120,7 +120,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-24T05:20:44Z"
+   "last_ok": "2026-11-25T04:14:57Z"
   },
   {
    "id": "youtube-entagma",
@@ -130,7 +130,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-24T05:20:44Z"
+   "last_ok": "2026-11-25T04:14:57Z"
   },
   {
    "id": "youtube-horikawa",
@@ -140,7 +140,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-24T05:20:44Z"
+   "last_ok": "2026-11-25T04:14:57Z"
   },
   {
    "id": "youtube-ninebetween",
@@ -150,7 +150,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-24T05:20:44Z"
+   "last_ok": "2026-11-25T04:14:57Z"
   },
   {
    "id": "youtube-indyzone",
@@ -160,7 +160,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-24T05:20:44Z"
+   "last_ok": "2026-11-25T04:14:57Z"
   },
   {
    "id": "youtube-usdvfx",
@@ -170,7 +170,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-24T05:20:44Z"
+   "last_ok": "2026-11-25T04:14:57Z"
   },
   {
    "id": "youtube-magnus",
@@ -180,7 +180,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-24T05:20:44Z"
+   "last_ok": "2026-11-25T04:14:57Z"
   },
   {
    "id": "youtube-dalvi",
@@ -190,7 +190,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-24T05:20:44Z"
+   "last_ok": "2026-11-25T04:14:57Z"
   },
   {
    "id": "youtube-radu",
@@ -200,7 +200,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-24T05:20:44Z"
+   "last_ok": "2026-11-25T04:14:57Z"
   },
   {
    "id": "youtube-cgartistacademy",
@@ -210,7 +210,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-24T05:20:44Z"
+   "last_ok": "2026-11-25T04:14:57Z"
   },
   {
    "id": "youtube-simonhoudini",
@@ -220,7 +220,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-24T05:20:44Z"
+   "last_ok": "2026-11-25T04:14:57Z"
   },
   {
    "id": "youtube-timvanh",
@@ -230,7 +230,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-24T05:20:44Z"
+   "last_ok": "2026-11-25T04:14:57Z"
   },
   {
    "id": "youtube-adrienlambert",
@@ -240,7 +240,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-24T05:20:44Z"
+   "last_ok": "2026-11-25T04:14:57Z"
   },
   {
    "id": "youtube-fancher",
@@ -250,7 +250,7 @@
    "ok": true,
    "fetched": 15,
    "not_modified": false,
-   "last_ok": "2026-11-24T05:20:44Z"
+   "last_ok": "2026-11-25T04:14:57Z"
   },
   {
    "id": "github-sideeffects-sidefxlabs",
@@ -258,9 +258,9 @@
    "kind": "github",
    "tab": "reference",
    "ok": true,
-   "fetched": 8,
-   "not_modified": false,
-   "last_ok": "2026-11-24T05:20:44Z"
+   "fetched": 0,
+   "not_modified": true,
+   "last_ok": "2026-11-25T04:14:57Z"
   },
   {
    "id": "github-sideeffects-houdiniengineforunreal",
@@ -270,7 +270,7 @@
    "ok": true,
    "fetched": 10,
    "not_modified": false,
-   "last_ok": "2026-11-24T05:20:44Z"
+   "last_ok": "2026-11-25T04:14:57Z"
   },
   {
    "id": "github-sideeffects-houdiniengineforunity",
@@ -278,9 +278,9 @@
    "kind": "github",
    "tab": "reference",
    "ok": true,
-   "fetched": 1,
-   "not_modified": false,
-   "last_ok": "2026-11-24T05:20:44Z"
+   "fetched": 0,
+   "not_modified": true,
+   "last_ok": "2026-11-25T04:14:57Z"
   },
   {
    "id": "github-sideeffects-houdininiagara",
@@ -290,7 +290,7 @@
    "ok": true,
    "fetched": 8,
    "not_modified": false,
-   "last_ok": "2026-11-24T05:20:44Z"
+   "last_ok": "2026-11-25T04:14:57Z"
   },
   {
    "id": "x",
@@ -301,6 +301,111 @@
   }
  ],
  "items": [
+  {
+   "id": "yt:rmkzUjruAB0",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "London Craft Week with Found Studio",
+   "url": "https://www.youtube.com/watch?v=rmkzUjruAB0",
+   "published": "2026-11-24T22:06:36Z",
+   "excerpt": "",
+   "tags": [
+    "YouTube",
+    "SideFX"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-25T04:14:57Z",
+   "views": 253
+  },
+  {
+   "id": "5269fa7e1f06a158",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum",
+   "source": "SideFX フォーラム",
+   "title": "Exporting Packed Geo: How to keep the same pivot as Houdini?",
+   "url": "https://www.sidefx.com/forum/topic/104817/",
+   "published": "2026-11-24T20:57:20Z",
+   "excerpt": "Hi! I packed and translated 2 geos. When I export to alembic and into Maya, the geos are in the good world positions but their pivots are at the center of the world. How can I get the pivots to be wh…",
+   "tags": [
+    "Forum"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-25T04:14:57Z"
+  },
+  {
+   "id": "2986843d78274dc0",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum",
+   "source": "SideFX フォーラム",
+   "title": "How do you make this upgraded version of the apex curved rig",
+   "url": "https://www.sidefx.com/forum/topic/104816/",
+   "published": "2026-11-24T16:34:20Z",
+   "excerpt": "This enhanced version stops working after version 22. I wonder if any experts have other ways to make it work! Feature 1: The curve model doesn’t stretch Feature 2: CV control points, fitting, model…",
+   "tags": [
+    "Forum",
+    "APEX"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-25T04:14:57Z"
+  },
+  {
+   "id": "80f6d3c0ddf7e595",
+   "tab": "tips",
+   "kind": "rss",
+   "source_id": "sidefx-forum",
+   "source": "SideFX フォーラム",
+   "title": "Export to GLTF, GLB",
+   "url": "https://www.sidefx.com/forum/topic/104815/",
+   "published": "2026-11-24T13:00:44Z",
+   "excerpt": "Hi everyone... There's a note on labs quick material that it's going to be removed in H23, and it'll be replaced by COP Preview Material... What I am trying to do is export my models to GLTF/GIB form…",
+   "tags": [
+    "Forum",
+    "Copernicus",
+    "Labs"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-25T04:14:57Z"
+  },
+  {
+   "id": "yt:tKqKkjcjYNk",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-sidefx",
+   "source": "Houdini (SideFX)",
+   "title": "Making Clair Obscure: Expedition 33 #houdini #gamedev #proceduralism",
+   "url": "https://www.youtube.com/watch?v=tKqKkjcjYNk",
+   "published": "2026-11-24T12:22:55Z",
+   "excerpt": "Alexandre Breton – Technical Artist at Sandfall Interactive – shares how a small team of just 33 developers took on the ambitious challenge of building Clair Obscure: Expedition 33. From navigating r…",
+   "tags": [
+    "YouTube",
+    "SideFX",
+    "Procedural"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-25T04:14:57Z",
+   "views": 736
+  },
+  {
+   "id": "yt:eIuN3-6zF2E",
+   "tab": "tips",
+   "kind": "youtube",
+   "source_id": "youtube-dalvi",
+   "source": "Rohan Dalvi",
+   "title": "Houdini Project - Cone Loop Animation",
+   "url": "https://www.youtube.com/watch?v=eIuN3-6zF2E",
+   "published": "2026-11-24T07:26:31Z",
+   "excerpt": "Black friday sale - 30% off Code- friday Patreon https://www.patreon.com/cw/rohandalvicreates website https://www.rohandalvi.net/home",
+   "tags": [
+    "YouTube"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-25T04:14:57Z",
+   "views": 457
+  },
   {
    "id": "bd60dbd638bc4a08",
    "tab": "reference",
@@ -322,6 +427,57 @@
    "first_seen": "2026-11-24T05:20:44Z"
   },
   {
+   "id": "1fa77e6f23efc710",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.513: Biped Setup and Biped Retarget. F...",
+   "url": "https://www.sidefx.com/changelog/entry/1006945221/",
+   "published": "2026-11-24T00:25:32Z",
+   "excerpt": "Biped Setup and Biped Retarget. Fix issues where non human sizes skeletons would not solve well at all. Add two new biped groups, biped_hand_beyond and biped_foot_beyond. Improve performance on skele…",
+   "tags": [
+    "Release notes",
+    "H22.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-25T04:14:57Z"
+  },
+  {
+   "id": "9086bbe356431d8c",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.513: Fix issues in OrientJoints2.0 whe...",
+   "url": "https://www.sidefx.com/changelog/entry/1006945222/",
+   "published": "2026-11-24T00:22:06Z",
+   "excerpt": "Fix issues in OrientJoints2.0 where the viewer state would not show up when the jointorientparmsattrib was anything other than the default value",
+   "tags": [
+    "Release notes",
+    "H22.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-25T04:14:57Z"
+  },
+  {
+   "id": "873616d74c674973",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.513: Change behavior of function RV_Ge...",
+   "url": "https://www.sidefx.com/changelog/entry/1006945223/",
+   "published": "2026-11-24T00:06:14Z",
+   "excerpt": "Change behavior of function RV_Geometry::populateBuffers() to return false if allocation fails for any internal buffers",
+   "tags": [
+    "Release notes",
+    "H22.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-25T04:14:57Z"
+  },
+  {
    "id": "yt:i1GB6XmwgKE",
    "tab": "tips",
    "kind": "youtube",
@@ -337,7 +493,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-24T05:20:44Z",
-   "views": 133
+   "views": 473
   },
   {
    "id": "3d9fba8b7d882779",
@@ -372,7 +528,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-24T05:20:44Z",
-   "views": 423
+   "views": 1259
   },
   {
    "id": "yt:zu9zsrRFi74",
@@ -392,7 +548,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-24T05:20:44Z",
-   "views": 71
+   "views": 319
   },
   {
    "id": "yt:ufR6k30UGKI",
@@ -411,7 +567,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-24T05:20:44Z",
-   "views": 119
+   "views": 299
   },
   {
    "id": "yt:uWWBvo8pEAQ",
@@ -430,7 +586,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-24T05:20:44Z",
-   "views": 106
+   "views": 458
   },
   {
    "id": "yt:uB04x7G-fJk",
@@ -448,7 +604,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-24T05:20:44Z",
-   "views": 373
+   "views": 789
   },
   {
    "id": "yt:tXISM0thh4E",
@@ -468,7 +624,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-24T05:20:44Z",
-   "views": 159
+   "views": 570
   },
   {
    "id": "yt:YgZ2XgCbrVE",
@@ -487,7 +643,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-24T05:20:44Z",
-   "views": 310
+   "views": 1070
   },
   {
    "id": "yt:lG80ujzL1fA",
@@ -505,7 +661,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-24T05:20:44Z",
-   "views": 500
+   "views": 969
   },
   {
    "id": "yt:iwzMWqRhEaI",
@@ -524,7 +680,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-24T05:20:44Z",
-   "views": 74
+   "views": 212
   },
   {
    "id": "yt:JJ7aYIuWqrA",
@@ -580,7 +736,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-24T05:20:44Z",
-   "views": 52
+   "views": 128
   },
   {
    "id": "yt:EsJs-UF6CSY",
@@ -599,7 +755,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-24T05:20:44Z",
-   "views": 74
+   "views": 195
   },
   {
    "id": "yt:Ec9TdwizqWc",
@@ -618,7 +774,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-24T05:20:44Z",
-   "views": 32
+   "views": 174
   },
   {
    "id": "4aafac1dc4347f98",
@@ -636,6 +792,41 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-24T05:20:44Z"
+  },
+  {
+   "id": "547b9802de5a8d9d",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.513: Fixed a bug where sidefx::header_...",
+   "url": "https://www.sidefx.com/changelog/entry/1006945224/",
+   "published": "2026-11-23T19:49:27Z",
+   "excerpt": "Fixed a bug where sidefx::header_toggle didn't move the target toggle into the header.",
+   "tags": [
+    "Release notes",
+    "H22.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-25T04:14:57Z"
+  },
+  {
+   "id": "559db73f9fdfbe58",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.513: When opening the APEX Animate vie...",
+   "url": "https://www.sidefx.com/changelog/entry/1006945225/",
+   "published": "2026-11-23T18:40:07Z",
+   "excerpt": "When opening the APEX Animate viewer state in a second scene viewer on the same node, a warning will now be raised preventing the state from openeing. This warning provides buttons to tear off a copy…",
+   "tags": [
+    "Release notes",
+    "APEX",
+    "H22.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-25T04:14:57Z"
   },
   {
    "id": "e4ac2dc00fd498ac",
@@ -656,6 +847,23 @@
    "first_seen": "2026-11-24T05:20:44Z"
   },
   {
+   "id": "41b3de96c5014145",
+   "tab": "reference",
+   "kind": "rss",
+   "source_id": "sidefx-changelog-22",
+   "source": "SideFX 変更履歴 22.0",
+   "title": "22.0.513: Fixed a bug where clients mDNS qu...",
+   "url": "https://www.sidefx.com/changelog/entry/1006945226/",
+   "published": "2026-11-23T16:05:29Z",
+   "excerpt": "Fixed a bug where clients mDNS query accepted any result and didnt scope the result to _sesi-lm._tcp thus devices like some printers would be accepted as license servers.",
+   "tags": [
+    "Release notes",
+    "H22.0"
+   ],
+   "lang": "en",
+   "first_seen": "2026-11-25T04:14:57Z"
+  },
+  {
    "id": "yt:4hA83Wr7ggw",
    "tab": "tips",
    "kind": "youtube",
@@ -672,7 +880,7 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-24T05:20:44Z",
-   "views": 948
+   "views": 1287
   },
   {
    "id": "d82e11f7b4da78c1",
@@ -799,7 +1007,7 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 546
+   "views": 579
   },
   {
    "id": "6e9636ee7b2cab3d",
@@ -1714,7 +1922,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-20T02:21:44Z",
-   "views": 1373
+   "views": 1389
   },
   {
    "id": "f3045b143386f5ce",
@@ -2068,7 +2276,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T02:36:36Z",
-   "views": 3718
+   "views": 3852
   },
   {
    "id": "5eee49c58b76a4a2",
@@ -2175,7 +2383,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 6846
+   "views": 6931
   },
   {
    "id": "6702aab2c002c27d",
@@ -2657,7 +2865,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 1902
+   "views": 1905
   },
   {
    "id": "ccd41bca4608db59",
@@ -2729,7 +2937,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 1321
+   "views": 1344
   },
   {
    "id": "yt:-05LoJrNQ_I",
@@ -2746,7 +2954,7 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 2397
+   "views": 2466
   },
   {
    "id": "880a8d869055dd78",
@@ -2800,7 +3008,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 1575
+   "views": 1611
   },
   {
    "id": "024ddde778cc9d80",
@@ -3121,7 +3329,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 2330
+   "views": 2384
   },
   {
    "id": "ea0cebb2dc3185e5",
@@ -3173,7 +3381,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 1020
+   "views": 1036
   },
   {
    "id": "869ad5697c6bf9b3",
@@ -3330,7 +3538,7 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 2215
+   "views": 2256
   },
   {
    "id": "yt:4jaizBENyRQ",
@@ -3349,7 +3557,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 1754
+   "views": 1775
   },
   {
    "id": "c2f11049e279c487",
@@ -3437,7 +3645,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 967
+   "views": 983
   },
   {
    "id": "yt:SwjsWmIZtAo",
@@ -3454,7 +3662,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 2924
+   "views": 2958
   },
   {
    "id": "yt:oCj05Fp0tyc",
@@ -3471,7 +3679,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 6931
+   "views": 6971
   },
   {
    "id": "5d7ce2fce19467b2",
@@ -3507,7 +3715,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 5933
+   "views": 5962
   },
   {
    "id": "860dd95adc5048dc",
@@ -3541,7 +3749,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 952
+   "views": 953
   },
   {
    "id": "yt:9Y8dUr99Gv4",
@@ -3558,7 +3766,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 4386
+   "views": 4394
   },
   {
    "id": "yt:KKBR3o38GK4",
@@ -3575,7 +3783,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 1931
+   "views": 1939
   },
   {
    "id": "yt:kOg4AF82xzg",
@@ -3592,7 +3800,7 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 767
+   "views": 768
   },
   {
    "id": "6a3dd3ae3c3ac712",
@@ -3630,7 +3838,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 964
+   "views": 977
   },
   {
    "id": "yt:VDIsRIsVgsw",
@@ -3647,7 +3855,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 20140
+   "views": 20267
   },
   {
    "id": "c64fafdfebba0221",
@@ -3697,7 +3905,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 2037
+   "views": 2043
   },
   {
    "id": "yt:PeeAvnOyaa4",
@@ -3714,7 +3922,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 2494
+   "views": 2501
   },
   {
    "id": "yt:pOeuG24PUZ8",
@@ -3732,7 +3940,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 3117
+   "views": 3143
   },
   {
    "id": "465dc940d01d8456",
@@ -3784,7 +3992,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 3637
+   "views": 3662
   },
   {
    "id": "yt:Y03l5nxwA00",
@@ -3801,7 +4009,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 1619
+   "views": 1620
   },
   {
    "id": "b02bfb3d1b5404cd",
@@ -3835,7 +4043,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 1195
+   "views": 1201
   },
   {
    "id": "yt:GE4DH4N2D0c",
@@ -3852,7 +4060,7 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 3709
+   "views": 3751
   },
   {
    "id": "yt:QoiBoltVDjs",
@@ -3869,7 +4077,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 2525
+   "views": 2537
   },
   {
    "id": "cf6b5e8cf34f3c89",
@@ -3907,7 +4115,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 756
+   "views": 761
   },
   {
    "id": "6f68e6b243405bb6",
@@ -4027,7 +4235,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 4577
+   "views": 4631
   },
   {
    "id": "f0b05eb4ee408f43",
@@ -4060,7 +4268,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 5205
+   "views": 5209
   },
   {
    "id": "6ef6efe747f4f4e4",
@@ -4093,7 +4301,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 12695
+   "views": 12718
   },
   {
    "id": "yt:4aKv3Pkyj8Y",
@@ -4147,7 +4355,7 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 1504
+   "views": 1514
   },
   {
    "id": "ab1ad67848b61437",
@@ -4182,7 +4390,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 2023
+   "views": 2027
   },
   {
    "id": "yt:lVL5qz9v23k",
@@ -4199,7 +4407,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 2104
+   "views": 2106
   },
   {
    "id": "yt:8oUbY4aww0s",
@@ -4220,7 +4428,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 1323
+   "views": 1330
   },
   {
    "id": "yt:R_MoYhQ_AmE",
@@ -4256,7 +4464,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 1750
+   "views": 1761
   },
   {
    "id": "yt:u5CXPmnVwYw",
@@ -4311,7 +4519,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 1349
+   "views": 1358
   },
   {
    "id": "yt:KYgzXSRfVsw",
@@ -4328,7 +4536,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 2773
+   "views": 2785
   },
   {
    "id": "yt:2T34relmbm8",
@@ -4363,7 +4571,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 6720
+   "views": 6733
   },
   {
    "id": "631b56b5abfb97a6",
@@ -4415,7 +4623,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 3416
+   "views": 3429
   },
   {
    "id": "yt:XDWnekoVCG4",
@@ -4432,7 +4640,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 5506
+   "views": 5516
   },
   {
    "id": "yt:UqB52SmNvXw",
@@ -4452,7 +4660,7 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 1889
+   "views": 1909
   },
   {
    "id": "yt:mlBO92dOdkk",
@@ -4470,7 +4678,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 1463
+   "views": 1465
   },
   {
    "id": "bed0ac79753a7521",
@@ -4593,7 +4801,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 6044
+   "views": 6047
   },
   {
    "id": "dc79171e4adbad03",
@@ -4627,7 +4835,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 6037
+   "views": 6038
   },
   {
    "id": "yt:joU1tumWb7Y",
@@ -4648,7 +4856,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 1428
+   "views": 1431
   },
   {
    "id": "yt:6mgiWm5B6iw",
@@ -4666,7 +4874,7 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 7899
+   "views": 7902
   },
   {
    "id": "9fabd938ded32c00",
@@ -4701,7 +4909,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 6621
+   "views": 6637
   },
   {
    "id": "2f61ea4a363b6da3",
@@ -4772,7 +4980,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 1299
+   "views": 1301
   },
   {
    "id": "167f74951e401f4d",
@@ -4808,7 +5016,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 2936
+   "views": 2941
   },
   {
    "id": "yt:3uXYs0RHqDA",
@@ -4825,7 +5033,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 1351
+   "views": 1353
   },
   {
    "id": "yt:O5bQoAyO7hY",
@@ -4846,7 +5054,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 651
+   "views": 652
   },
   {
    "id": "730a60485a47ef72",
@@ -4880,7 +5088,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 404
+   "views": 412
   },
   {
    "id": "yt:QaVzISbXwys",
@@ -4901,7 +5109,7 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 1052
+   "views": 1055
   },
   {
    "id": "5a2ce48084ec4a31",
@@ -4935,7 +5143,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 781
+   "views": 782
   },
   {
    "id": "c5a4dcc87d02561d",
@@ -5018,7 +5226,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 10847
+   "views": 10878
   },
   {
    "id": "9ca0bb1ac0e2bcd0",
@@ -5053,7 +5261,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 958
+   "views": 960
   },
   {
    "id": "yt:27EsQjdUy64",
@@ -5072,7 +5280,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 2905
+   "views": 2907
   },
   {
    "id": "yt:Mypavnx92tw",
@@ -5089,7 +5297,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 3630
+   "views": 3636
   },
   {
    "id": "yt:NJSNt653z-I",
@@ -5107,7 +5315,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 962
+   "views": 965
   },
   {
    "id": "yt:hax6m20SuqY",
@@ -5181,7 +5389,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 4421
+   "views": 4432
   },
   {
    "id": "1e7804a00cf3a902",
@@ -5298,7 +5506,7 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 450
+   "views": 451
   },
   {
    "id": "3487ca281f160f7b",
@@ -5385,7 +5593,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 862
+   "views": 863
   },
   {
    "id": "yt:MuPo6tK8mPs",
@@ -5490,7 +5698,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 1248
+   "views": 1250
   },
   {
    "id": "5414dc364fa67279",
@@ -5525,7 +5733,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 2727
+   "views": 2732
   },
   {
    "id": "yt:SGqXg7kZkNY",
@@ -5542,7 +5750,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 640
+   "views": 642
   },
   {
    "id": "yt:Tv04GDBCeEU",
@@ -5559,7 +5767,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 592
+   "views": 594
   },
   {
    "id": "yt:T0ZHRYSSg04",
@@ -5576,7 +5784,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 433
+   "views": 434
   },
   {
    "id": "yt:4P3LGNlWDjg",
@@ -5593,7 +5801,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 384
+   "views": 385
   },
   {
    "id": "yt:4bdPYraXYiE",
@@ -5610,7 +5818,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 537
+   "views": 538
   },
   {
    "id": "yt:-lPQdcthqVM",
@@ -5627,7 +5835,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 417
+   "views": 420
   },
   {
    "id": "yt:DVwaVl0FlKI",
@@ -5644,7 +5852,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 324
+   "views": 326
   },
   {
    "id": "yt:BW4XnSjtQAo",
@@ -5661,7 +5869,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 475
+   "views": 477
   },
   {
    "id": "yt:hCCX9O3WaMc",
@@ -5678,7 +5886,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 245
+   "views": 249
   },
   {
    "id": "yt:fsxUascfN-8",
@@ -5748,7 +5956,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 161
+   "views": 162
   },
   {
    "id": "yt:Gc89LLzq_PE",
@@ -5766,7 +5974,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 365
+   "views": 369
   },
   {
    "id": "yt:WbR8k_yOrRw",
@@ -5786,7 +5994,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 845
+   "views": 848
   },
   {
    "id": "44a20e5237daa6c0",
@@ -5825,7 +6033,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 488
+   "views": 490
   },
   {
    "id": "2057dca3e7fa3e1e",
@@ -6020,7 +6228,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 512
+   "views": 513
   },
   {
    "id": "1acedf0fb809ce1d",
@@ -6248,7 +6456,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 554
+   "views": 556
   },
   {
    "id": "dd8b62063e02c560",
@@ -6285,7 +6493,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 1666
+   "views": 1676
   },
   {
    "id": "yt:y9u8hNIFf-4",
@@ -6303,7 +6511,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 1027
+   "views": 1028
   },
   {
    "id": "bd89413b29bddf19",
@@ -6548,7 +6756,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 6098
+   "views": 6112
   },
   {
    "id": "f013c57819d7e9bd",
@@ -6656,7 +6864,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 4992
+   "views": 4993
   },
   {
    "id": "yt:aAF46gH5JCU",
@@ -6673,7 +6881,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 7968
+   "views": 7974
   },
   {
    "id": "yt:jZ5I9nNQ75w",
@@ -6690,7 +6898,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 14690
+   "views": 14699
   },
   {
    "id": "58bfe7687c284384",
@@ -6745,7 +6953,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 2047
+   "views": 2050
   },
   {
    "id": "yt:1UaFqGRZJC0",
@@ -6762,7 +6970,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 1762
+   "views": 1764
   },
   {
    "id": "844715d970798402",
@@ -6801,7 +7009,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 4219
+   "views": 4222
   },
   {
    "id": "yt:i_Sm-5nNtq8",
@@ -6837,7 +7045,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 2404
+   "views": 2406
   },
   {
    "id": "yt:Lwgev4hG2IM",
@@ -6855,7 +7063,7 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 547
+   "views": 548
   },
   {
    "id": "yt:m2-nviiuUo4",
@@ -6872,7 +7080,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 7899
+   "views": 7914
   },
   {
    "id": "yt:IoFcjhoxDJc",
@@ -6891,7 +7099,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 9193
+   "views": 9221
   },
   {
    "id": "yt:gbTGTgqdKGI",
@@ -6909,7 +7117,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 2020
+   "views": 2021
   },
   {
    "id": "yt:nMqSRDNWkfI",
@@ -6927,7 +7135,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 2214
+   "views": 2215
   },
   {
    "id": "yt:ZcXKWAUx2fE",
@@ -6945,7 +7153,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 8967
+   "views": 8973
   },
   {
    "id": "yt:RB7D0Pxfrvs",
@@ -6964,7 +7172,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 1268
+   "views": 1270
   },
   {
    "id": "f1da71140e113c03",
@@ -6999,7 +7207,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 3088
+   "views": 3091
   },
   {
    "id": "yt:FTS46d06EzI",
@@ -7016,7 +7224,7 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 8016
+   "views": 8037
   },
   {
    "id": "yt:w57jDzNMqOU",
@@ -7034,7 +7242,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 4135
+   "views": 4141
   },
   {
    "id": "yt:1Ti6O6Yfp7U",
@@ -7051,7 +7259,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 2519
+   "views": 2521
   },
   {
    "id": "yt:r2753HA-7RA",
@@ -7068,7 +7276,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 2579
+   "views": 2581
   },
   {
    "id": "ab4460a2cc7cedaa",
@@ -7140,7 +7348,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 2611
+   "views": 2613
   },
   {
    "id": "yt:SzrhSG2Ll0I",
@@ -7157,7 +7365,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 2720
+   "views": 2721
   },
   {
    "id": "yt:I7i5rrjAc8c",
@@ -7175,7 +7383,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 3438
+   "views": 3441
   },
   {
    "id": "yt:TYx6zx4kbG8",
@@ -7228,7 +7436,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 3079
+   "views": 3082
   },
   {
    "id": "yt:ylbU8_PbcBI",
@@ -7246,7 +7454,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 3281
+   "views": 3282
   },
   {
    "id": "08aa5f2528670804",
@@ -7283,7 +7491,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 2638
+   "views": 2639
   },
   {
    "id": "yt:sa7HS-oSCzI",
@@ -7354,7 +7562,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 25443
+   "views": 25444
   },
   {
    "id": "yt:G7SnVk4Jj8U",
@@ -7372,7 +7580,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 2887
+   "views": 2891
   },
   {
    "id": "yt:Q4R7AeCf-Os",
@@ -7391,7 +7599,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 5367
+   "views": 5378
   },
   {
    "id": "yt:MHDL1hekOq0",
@@ -7408,7 +7616,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 853
+   "views": 854
   },
   {
    "id": "yt:0_NnCTxhah4",
@@ -7442,7 +7650,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 1205
+   "views": 1206
   },
   {
    "id": "yt:zdGscqhXhts",
@@ -7476,7 +7684,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 4293
+   "views": 4294
   },
   {
    "id": "9dcc259995ed5a64",
@@ -7582,7 +7790,7 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 1764
+   "views": 1765
   },
   {
    "id": "yt:FyhR1VYJ3N4",
@@ -7601,7 +7809,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 15059
+   "views": 15072
   },
   {
    "id": "yt:9B-H1U6BMeg",
@@ -7619,7 +7827,7 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 600
+   "views": 603
   },
   {
    "id": "yt:_hpNgRs8aTQ",
@@ -7655,7 +7863,7 @@
    ],
    "lang": "ja",
    "first_seen": "2026-11-19T06:33:46Z",
-   "views": 518
+   "views": 520
   },
   {
    "id": "yt:XKHuEbuiE9E",
@@ -7730,7 +7938,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 9120
+   "views": 9126
   },
   {
    "id": "7fe6179c8f3e0bf2",
@@ -7765,7 +7973,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 2895
+   "views": 2896
   },
   {
    "id": "e504d90cf320df1e",
@@ -7801,7 +8009,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 3484
+   "views": 3486
   },
   {
    "id": "yt:wFXA3aC1NKY",
@@ -7819,7 +8027,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 7445
+   "views": 7447
   },
   {
    "id": "yt:6J9uQSVXZgA",
@@ -7838,7 +8046,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 28058
+   "views": 28067
   },
   {
    "id": "yt:6YPnEP0_XJk",
@@ -7858,7 +8066,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 25962
+   "views": 25972
   },
   {
    "id": "yt:n5EJM3mA_Dw",
@@ -7893,7 +8101,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 18479
+   "views": 18488
   },
   {
    "id": "yt:FB5-zOhiHgs",
@@ -7911,7 +8119,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 19167
+   "views": 19168
   },
   {
    "id": "yt:c9Xu9YEZaKs",
@@ -7930,7 +8138,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 27671
+   "views": 27681
   },
   {
    "id": "yt:O-lCDNv-9ag",
@@ -7948,7 +8156,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 8102
+   "views": 8103
   },
   {
    "id": "yt:Xs2tHiVFKF0",
@@ -7966,7 +8174,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 57026
+   "views": 57080
   },
   {
    "id": "yt:kMpYf2FrJws",
@@ -7985,7 +8193,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 5395
+   "views": 5396
   },
   {
    "id": "d9f9b8ad0cca7997",
@@ -8021,7 +8229,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 7631
+   "views": 7632
   },
   {
    "id": "yt:DJfkTV3Pivc",
@@ -8039,7 +8247,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 43561
+   "views": 43597
   },
   {
    "id": "yt:kYCT743alVI",
@@ -8059,7 +8267,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 39299
+   "views": 39321
   },
   {
    "id": "yt:F7_B-BA6C1o",
@@ -8079,7 +8287,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 28406
+   "views": 28408
   },
   {
    "id": "yt:GEXhbwPn3Zc",
@@ -8114,7 +8322,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 8562
+   "views": 8563
   },
   {
    "id": "yt:kJKiCAPcomg",
@@ -8132,7 +8340,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 29468
+   "views": 29480
   },
   {
    "id": "yt:d_8EEfIe1Lk",
@@ -8171,7 +8379,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 53444
+   "views": 53471
   },
   {
    "id": "yt:ul85ejWgnvY",
@@ -8190,7 +8398,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 23515
+   "views": 23519
   },
   {
    "id": "yt:OfPoK_T3XNU",
@@ -8210,7 +8418,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 31614
+   "views": 31619
   },
   {
    "id": "yt:O0jQwM3GLBs",
@@ -8264,7 +8472,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-18T07:04:11Z",
-   "views": 40292
+   "views": 40304
   },
   {
    "id": "yt:9GUJz3d8S4o",
@@ -8281,7 +8489,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 11714
+   "views": 11716
   },
   {
    "id": "yt:H5aY9wcbX3c",
@@ -8317,7 +8525,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 7051
+   "views": 7054
   },
   {
    "id": "yt:gfS6ylg9vbA",
@@ -8334,7 +8542,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 14656
+   "views": 14661
   },
   {
    "id": "yt:VNX9Qf6a5hs",
@@ -8352,7 +8560,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 63407
+   "views": 63443
   },
   {
    "id": "yt:rgeMOOJ6M5g",
@@ -8369,7 +8577,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 15897
+   "views": 15898
   },
   {
    "id": "yt:z0pArthvMx4",
@@ -8387,7 +8595,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 57228
+   "views": 57234
   },
   {
    "id": "yt:GOMN8Ywh3c8",
@@ -8405,7 +8613,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 44654
+   "views": 44656
   },
   {
    "id": "yt:dH_8GcVkfwg",
@@ -8422,7 +8630,7 @@
    ],
    "lang": "en",
    "first_seen": "2026-11-19T06:56:50Z",
-   "views": 22644
+   "views": 22647
   }
  ]
 }
