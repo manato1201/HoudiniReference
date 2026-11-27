@@ -12,7 +12,8 @@
     { name: "Houdini リファレンス", desc: "Tips・ニュース・リファレンスを自動で集めて見る", url: "https://houdini-reference.vercel.app", self: true },
     { name: "アルゴリズム図鑑", desc: "動きを 1 コマずつ再生して学ぶ", url: "https://the-algorithm-illustrated.vercel.app" },
     { name: "基礎学習図鑑", desc: "言語・IT・DCC の土台を手順の図で", url: "https://foundations-encyclopedia.vercel.app" },
-    { name: "色彩図鑑", desc: "色と図形の図鑑・色彩検定の対策", url: "https://color-encyclopedia.vercel.app" }
+    { name: "色彩図鑑", desc: "色と図形の図鑑・色彩検定の対策", url: "https://color-encyclopedia.vercel.app" },
+    { name: "シェーダー・3Dモーション図鑑", desc: "シェーダーと 3D の動きを、動くデモと 4 つの作り方で引く", url: "https://shader-motion-encyclopedia.pages.dev" }
   ];
   var FAV_KEY = "hr.fav", THEME_KEY = "hr.theme", VIEW_KEY = "hr.view";
   var YT_ID = /^yt:([A-Za-z0-9_-]{11})$/;   /* 動画 ID はこの形のものだけ(サムネ・埋め込みの URL に入れてよい) */
