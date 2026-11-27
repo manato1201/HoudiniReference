@@ -8,10 +8,6 @@
   /* カテゴリの並び(80 件・19 カテゴリでも探しやすいよう、作る→変える→属性→シミュレーション→入出力…の流れ)。ここに無いカテゴリは末尾に五十音順 */
   var CATEGORY_ORDER = ["生成", "配置・コピー", "変形", "モデリング", "曲線", "選択・削除", "統合", "VEX・アトリビュート", "ボリューム(VDB)", "シミュレーション",
                         "リギング(KineFX)", "APEX", "入出力・管理", "USD 連携", "マテリアル", "レンダリング", "画像処理", "TOP・自動化", "チャンネル"];
-  var SECTIONS = [
-    ["①", "何をするか"], ["②", "どう使うか"], ["③", "実例のポイント"],
-    ["④", "使いどころ"], ["⑤", "他のノードとの組み合わせ例"], ["⑥", "使う前と後の違い"]
-  ];
 
   function el(tag, cls, text) {
     var n = document.createElement(tag);
@@ -71,7 +67,7 @@
   }
 
   /* ---- 画面 ---- */
-  var S = { nodes: [], ctx: "", cat: "", q: "", id: "", root: null, onChange: null };
+  var S = { nodes: [], ctx: "", cat: "", q: "", id: "", root: null, onChange: null, rows: [], fav: null };
 
   function filtered() {
     var terms = S.q.toLowerCase().split(/\s+/).filter(Boolean);
@@ -148,6 +144,7 @@
     b.type = "button";
     var head = el("div", "ncard-head");
     head.appendChild(el("h3", "ncard-name", n.name));
+    if (S.fav && S.fav.has(n.id)) { var star = el("span", "ncard-fav", "★"); star.setAttribute("aria-label", "お気に入り"); head.appendChild(star); }
     head.appendChild(el("span", "badge nctx", n.context));
     b.appendChild(head);
     b.appendChild(el("p", "ncard-what", n.what));
@@ -182,113 +179,254 @@
     main.appendChild(ul);
   }
 
-  function section(num, title) {
-    var s = el("section", "nsec");
-    var h = el("h3", "nsec-h");
-    h.appendChild(el("span", "nsec-num", num));
-    h.appendChild(document.createTextNode(" " + title));
-    s.appendChild(h);
-    return s;
-  }
+  /* ---- 詳細: 5 サイト共通の並び(ITEM・SPEC・NOTES・TIPS・METHODS・RELATED)。左(狭い画面では ITEM の下)は前後の違い(主役)。
+     データに無い欄は出さない(空のカードや「準備中」を並べない)。 ---- */
   function bullets(items) {
     var ul = el("ul", "nlist");
     items.forEach(function (t) { ul.appendChild(el("li", null, t)); });
     return ul;
   }
+  var panelNo = 0;
+  function panel(cls, key, title) {
+    var p = el("section", "np " + cls);
+    p.setAttribute("data-panel", key.toLowerCase());
+    p.style.setProperty("--i", String(panelNo++));   // 出てくる順(動きの遅れ)
+    var h = el("p", "np-label mono");
+    h.appendChild(el("span", "np-key", key));
+    h.appendChild(el("span", null, "· " + title));
+    p.appendChild(h);
+    return p;
+  }
+  function byName() {
+    var m = {};
+    S.nodes.forEach(function (x) { m[x.name.toLowerCase()] = x; });
+    return m;
+  }
+  function openNode(id) { S.id = id; renderPanel(true); sync(); }
+  function step(d) {
+    var rows = S.rows, idx = rows.map(function (r) { return r.id; }).indexOf(S.id);
+    if (rows.length < 2 || idx < 0) return;
+    openNode(rows[(idx + d + rows.length) % rows.length].id);
+  }
 
-  function renderDetail(main, n, rows) {
-    var top = el("div", "ndetail-top");
+  function itemPanel(n, rows) {
+    var p = panel("np-item", "ITEM", "NODE-" + String(S.nodes.indexOf(n) + 1).padStart(3, "0"));
+    var nav = el("div", "nd-nav");
     var back = el("button", "btn", "← 一覧へ");
     back.type = "button";
     back.addEventListener("click", function () { S.id = ""; renderPanel(); sync(); });
-    top.appendChild(back);
     var idx = rows.map(function (r) { return r.id; }).indexOf(n.id);
-    var nav = el("div", "ndetail-nav");
-    var prev = el("button", "btn", "← 前のノード"), next = el("button", "btn", "次のノード →");
+    var prev = el("button", "btn nd-prev", "← 前のノード"), next = el("button", "btn nd-next", "次のノード →");
     prev.type = next.type = "button";
-    prev.disabled = idx <= 0; next.disabled = idx < 0 || idx >= rows.length - 1;
-    prev.addEventListener("click", function () { S.id = rows[idx - 1].id; renderPanel(true); sync(); });
-    next.addEventListener("click", function () { S.id = rows[idx + 1].id; renderPanel(true); sync(); });
-    nav.appendChild(prev); nav.appendChild(next);
-    nav.appendChild(el("span", "mono ndetail-pos", idx >= 0 ? (idx + 1) + " / " + rows.length : ""));
-    top.appendChild(nav);
-    main.appendChild(top);
-
-    var art = el("article", "ndetail");
-    art.setAttribute("aria-labelledby", "ndetail-title");
-    var head = el("header", "ndetail-head");
-    var h2 = el("h2", null, n.name);
-    h2.id = "ndetail-title";
-    head.appendChild(h2);
-    var meta = el("div", "ndetail-meta");
-    meta.appendChild(el("span", "badge nctx", n.context));
-    meta.appendChild(el("span", "tag", n.category));
-    if (n.type) meta.appendChild(el("span", "mono ntype", n.type));
-    meta.appendChild(el("span", "nverified " + (n.verified ? "ok" : "unv"), n.verified ? "Houdini 22 で名前・パラメータを確認済み" : "未確認(名前・パラメータは Houdini で確認していません)"));
-    head.appendChild(meta);
-    art.appendChild(head);
-
-    var s1 = section(SECTIONS[0][0], SECTIONS[0][1]); s1.appendChild(el("p", null, n.what)); art.appendChild(s1);
-
-    var s2 = section(SECTIONS[1][0], SECTIONS[1][1]); s2.appendChild(el("p", null, n.how));
-    var params = Array.isArray(n.params) ? n.params.filter(function (p) { return p && typeof p.name === "string"; }) : [];
-    if (params.length) {
-      s2.appendChild(el("h4", "nsub", "主なパラメータ"));
-      var dl = el("dl", "nparams");
-      params.forEach(function (p) { dl.appendChild(el("dt", "mono", p.name)); dl.appendChild(el("dd", null, str(p.note))); });
-      s2.appendChild(dl);
+    if (rows.length > 1) {
+      prev.title = "前のノード: " + rows[(idx - 1 + rows.length) % rows.length].name + "(Shift+N)";
+      next.title = "次のノード: " + rows[(idx + 1) % rows.length].name + "(N)";
     }
-    art.appendChild(s2);
+    prev.setAttribute("aria-keyshortcuts", "Shift+N");
+    next.setAttribute("aria-keyshortcuts", "N");
+    prev.disabled = next.disabled = rows.length < 2;
+    prev.addEventListener("click", function () { step(-1); });
+    next.addEventListener("click", function () { step(1); });
+    var pos = el("span", "mono ndetail-pos", idx >= 0 ? (idx + 1) + " / " + rows.length : "");
+    nav.appendChild(back); nav.appendChild(prev); nav.appendChild(pos); nav.appendChild(next);
+    nav.appendChild(el("span", "grow"));
+    if (S.fav) {
+      var on = S.fav.has(n.id);
+      var fav = el("button", "fav", on ? "★" : "☆");
+      fav.type = "button";
+      fav.setAttribute("aria-pressed", on ? "true" : "false");
+      fav.setAttribute("aria-label", "お気に入り: " + n.name);
+      fav.addEventListener("click", function () {
+        var now = S.fav.toggle(n);
+        fav.textContent = now ? "★" : "☆";
+        fav.setAttribute("aria-pressed", now ? "true" : "false");
+      });
+      nav.appendChild(fav);
+    }
+    p.appendChild(nav);
+    p.appendChild(el("p", "nd-eyebrow mono", n.context + " · " + n.category));
+    var h2 = el("h2", "nd-title", n.name);
+    h2.id = "ndetail-title";
+    p.appendChild(h2);
+    p.appendChild(el("p", "nd-what", n.what));
+    return p;
+  }
 
-    var s3 = section(SECTIONS[2][0], SECTIONS[2][1]); s3.appendChild(bullets(strList(n.example_points))); art.appendChild(s3);
-    var s4 = section(SECTIONS[3][0], SECTIONS[3][1]); s4.appendChild(bullets(strList(n.use_cases))); art.appendChild(s4);
-
-    var s5 = section(SECTIONS[4][0], SECTIONS[4][1]);
-    var combos = Array.isArray(n.combos) ? n.combos : [];
-    var wrap = el("div", "ncombos");
-    combos.forEach(function (c) {
-      if (!c || !Array.isArray(c.chain)) return;
-      var f = el("figure", "ncombo");
-      f.appendChild(renderChain(c.chain));
-      var cap = el("figcaption");
-      cap.appendChild(el("strong", null, str(c.title)));
-      cap.appendChild(el("span", null, str(c.note)));
-      f.appendChild(cap);
-      wrap.appendChild(f);
-    });
-    s5.appendChild(wrap); art.appendChild(s5);
-
-    var s6 = section(SECTIONS[5][0], SECTIONS[5][1]);
-    var ba = n.before_after || {};
+  /* 前後の違い(主役)。図があれば左の列、無ければ ITEM の下に文章だけ。文章も無ければ出さない */
+  function stagePanel(n) {
+    var ba = n.before_after && typeof n.before_after === "object" ? n.before_after : {};
+    var image = ba.image && typeof ba.image === "object" ? ba.image : null;
+    var any = false;
+    var p = panel("np-stage", "BEFORE / AFTER", "使う前と後");
+    p.setAttribute("data-panel", "stage");
     var pair = el("div", "nba");
     [["before", "使う前"], ["after", "使った後"]].forEach(function (k) {
+      var src = image && safeImg(image[k[0]]), text = str(ba[k[0]]);
+      if (!src && !text) return;
+      any = true;
       var box = el("div", "nba-box " + k[0]);
       box.appendChild(el("h4", "nsub", k[1]));
-      var image = ba.image && safeImg(ba.image[k[0]]);
-      if (image) {
+      if (src) {
         var img = el("img", "nba-img");
-        img.alt = k[0] === "after" ? str(ba.image.alt) : "使う前のジオメトリの図";
+        img.alt = k[0] === "after" ? str(image.alt) || "使った後のジオメトリの図" : "使う前のジオメトリの図";
         img.loading = "lazy"; img.decoding = "async"; img.width = 320; img.height = 240;
         img.addEventListener("error", function () { if (img.parentNode) img.parentNode.removeChild(img); });
-        img.src = image;
+        img.src = src;
         box.appendChild(img);
       }
-      box.appendChild(el("p", null, str(ba[k[0]])));
+      if (text) box.appendChild(el("p", null, text));
       pair.appendChild(box);
     });
-    s6.appendChild(pair);
-    if (ba.image) s6.appendChild(el("p", "nnote", "図は、このノードを実際に Houdini 22 で cook したジオメトリの点・面を、簡易に描いたものです(公式の画像ではありません)。"));
-    art.appendChild(s6);
+    if (!any) return null;
+    p.appendChild(pair);
+    if (p.querySelector(".nba-img")) {
+      p.classList.add("has-img");
+      p.appendChild(el("p", "nnote", "図は、このノードを実際に Houdini 22 で cook したジオメトリの点・面を、簡易に描いたものです(公式の画像ではありません)。"));
+    }
+    return p;
+  }
 
-    var href = safeDocUrl(n.doc_url);
+  function specPanel(n) {
+    var p = panel("np-spec", "SPEC", "仕様");
+    var dl = el("dl", "nd-meta");
+    function row(k, v) {
+      var d = el("div");
+      d.appendChild(el("dt", "mono", k));
+      var dd = el("dd");
+      if (typeof v === "string") dd.textContent = v; else dd.appendChild(v);
+      d.appendChild(dd);
+      dl.appendChild(d);
+    }
+    row("コンテキスト", el("span", "badge nctx", n.context));
+    row("カテゴリ", el("span", "tag", n.category));
+    if (str(n.type)) row("型名", el("span", "mono ntype", n.type));
+    row("確認", el("span", "nverified " + (n.verified ? "ok" : "unv"), n.verified ? "Houdini 22 で名前・パラメータを確認済み" : "未確認(名前・パラメータは Houdini で確認していません)"));
+    var uses = strList(n.use_cases);
+    if (uses.length) row("使いどころ", bullets(uses));
+    p.appendChild(dl);
+    var params = paramsOf(n);
+    if (params.length) {
+      var chips = el("ul", "nchips mono");
+      chips.setAttribute("aria-label", "主なパラメータ");
+      params.forEach(function (x) {
+        var li = el("li", null, x.name);
+        if (str(x.note)) li.title = x.note;
+        chips.appendChild(li);
+      });
+      p.appendChild(chips);
+    }
+    return p;
+  }
+  function paramsOf(n) {
+    return Array.isArray(n.params) ? n.params.filter(function (x) { return x && typeof x.name === "string" && x.name; }) : [];
+  }
+
+  function notesPanel(n) {
+    var look = strList(n.example_points);
+    if (!look.length) return null;   // 「使うときの注意」はデータが無いので出さない(段階 B で足す)
+    var p = panel("np-notes", "NOTES", "見る所と注意");
+    var cards = el("div", "nd-cards");
+    var c1 = el("section", "nd-card nd-card--look");
+    c1.appendChild(el("h3", "mono", "見るポイント"));
+    c1.appendChild(bullets(look));
+    cards.appendChild(c1);
+    p.appendChild(cards);
+    return p;
+  }
+
+  function tipsPanel(n) {
+    var combos = (Array.isArray(n.combos) ? n.combos : []).filter(function (c) { return c && Array.isArray(c.chain) && strList(c.chain).length; });
+    if (!combos.length) return null;
+    var p = panel("np-tips", "TIPS", "組み合わせの要点");
+    var ol = el("ol", "ntips");
+    combos.forEach(function (c, i) {
+      var li = el("li", "ntip");
+      li.appendChild(el("span", "ntip-n mono", String(i + 1).padStart(2, "0")));
+      var body = el("div", "ntip-body");
+      if (str(c.title)) body.appendChild(el("strong", null, c.title));
+      if (str(c.note)) body.appendChild(el("span", null, c.note));
+      li.appendChild(body);
+      var f = el("figure", "ncombo");
+      f.appendChild(renderChain(c.chain));
+      li.appendChild(f);
+      ol.appendChild(li);
+    });
+    p.appendChild(ol);
+    return p;
+  }
+
+  function methodsPanel(n) {
+    var how = str(n.how), params = paramsOf(n), href = safeDocUrl(n.doc_url);
+    if (!how && !params.length && !href) return null;
+    var p = panel("np-methods", "METHODS", "使い方");
+    if (how) p.appendChild(el("p", "nd-how", how));
+    if (params.length) {
+      p.appendChild(el("h4", "nsub", "主なパラメータ"));
+      var dl = el("dl", "nparams");
+      params.forEach(function (x) { dl.appendChild(el("dt", "mono", x.name)); dl.appendChild(el("dd", null, str(x.note))); });
+      p.appendChild(dl);
+    }
     if (href) {
-      var p = el("p", "ndoc");
+      var d = el("p", "ndoc");
       var a = el("a", "btn", "公式ドキュメントを開く(sidefx.com)");
       a.href = href; a.target = "_blank"; a.rel = "noopener noreferrer";
-      p.appendChild(a);
-      p.appendChild(el("span", "nnote", "説明は自作の文章で、公式の文章ではありません。詳しい仕様は公式を参照してください。"));
-      art.appendChild(p);
+      d.appendChild(a);
+      d.appendChild(el("span", "nnote", "説明は自作の文章で、公式の文章ではありません。詳しい仕様は公式を参照してください。"));
+      p.appendChild(d);
     }
+    return p;
+  }
+
+  /* 組み合わせに出てくる他のノード(出てきた順・重複なし)。ノード一覧にある名前はリンク */
+  function relatedPanel(n) {
+    var map = byName(), seen = {}, names = [];
+    (Array.isArray(n.combos) ? n.combos : []).forEach(function (c) {
+      strList(c && c.chain).forEach(function (x) {
+        var k = x.toLowerCase();
+        if (k === n.name.toLowerCase() || seen[k]) return;
+        seen[k] = true; names.push(x);
+      });
+    });
+    if (!names.length) return null;
+    var p = panel("np-rel", "RELATED", "組み合わせに出てくるノード");
+    var ul = el("ul", "nrel");
+    names.forEach(function (x) {
+      var li = el("li");
+      var hit = map[x.toLowerCase()];
+      if (hit && hit.id !== n.id) {
+        var a = el("a", "nrel-link");
+        a.setAttribute("href", "#nodes/" + encodeURIComponent(hit.id));
+        a.appendChild(el("span", "badge nctx", hit.context));
+        a.appendChild(el("span", null, hit.name));
+        a.addEventListener("click", function (e) {
+          if (e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+          e.preventDefault(); openNode(hit.id);
+        });
+        li.appendChild(a);
+      } else {
+        li.appendChild(el("span", "nrel-item", x));
+      }
+      ul.appendChild(li);
+    });
+    p.appendChild(ul);
+    return p;
+  }
+
+  function renderDetail(main, n, rows) {
+    panelNo = 0;
+    S.rows = rows;
+    var art = el("article", "ndetail");
+    art.setAttribute("aria-labelledby", "ndetail-title");
+    var item = itemPanel(n, rows);
+    var stage = stagePanel(n);
+    var info = el("div", "nd-info");
+    [specPanel(n), notesPanel(n), tipsPanel(n), methodsPanel(n), relatedPanel(n)].forEach(function (x) { if (x) info.appendChild(x); });
+    art.appendChild(item);
+    if (stage) {
+      art.appendChild(stage);
+      if (stage.classList.contains("has-img")) art.classList.add("has-stage");
+    }
+    art.appendChild(info);
     main.appendChild(art);
   }
 
@@ -307,14 +445,25 @@
   }
 
   /* 公開 API。nodes.json の "nodes" 配列を受け取り、panel に描く。onChange(id) は選択の変化を app.js に知らせる(URL ハッシュ用) */
-  function mount(panel, nodes, opts) {
-    S.root = panel;
+  function mount(root, nodes, opts) {
+    S.root = root;
     S.nodes = (Array.isArray(nodes) ? nodes : []).filter(function (n) {
       return n && typeof n.id === "string" && typeof n.name === "string" && typeof n.context === "string" && typeof n.what === "string";
     });
     S.onChange = opts && opts.onChange;
+    S.fav = opts && opts.fav && typeof opts.fav.has === "function" && typeof opts.fav.toggle === "function" ? opts.fav : null;
     S.id = (opts && opts.id) || "";
     renderPanel(false);
+    if (!keysBound) { keysBound = true; document.addEventListener("keydown", onKey); }
+  }
+  /* 詳細を開いているとき: n = 次のノード、N(Shift+n)= 前のノード。入力中・修飾キーつき・タブが隠れているときは何もしない */
+  var keysBound = false;
+  function onKey(e) {
+    if (!S.root || S.root.hidden || !S.id || e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey) return;
+    var t = e.target, tag = t && t.tagName;
+    if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || (t && t.isContentEditable)) return;
+    if (document.querySelector("dialog[open]")) return;
+    if (e.key === "n" || e.key === "N") { e.preventDefault(); step(e.key === "N" ? -1 : 1); }
   }
   function select(id) {   // ハッシュの変化から。存在しない id は一覧に戻す
     if (!S.root) return;

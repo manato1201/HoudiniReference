@@ -395,6 +395,17 @@
     state.nodesMounted = true;
     window.HRNodes.mount(panel, state.nodes, {
       id: state.nodeId,
+      /* ノードのお気に入りも同じ保存先(hr.fav)。キーは "node:<id>"、tab は "nodes"(他のタブの一覧には混ざらない) */
+      fav: {
+        has: function (id) { return !!state.favs["node:" + id]; },
+        toggle: function (n) {
+          var k = "node:" + n.id;
+          if (state.favs[k]) { delete state.favs[k]; }
+          else { state.favs[k] = { id: k, tab: "nodes", kind: "node", source: "", handle: "", title: n.name, url: "#nodes/" + n.id, published: "", excerpt: "", tags: [], lang: "" }; }
+          saveFavs();
+          return !!state.favs[k];
+        }
+      },
       onChange: function (id) {
         state.nodeId = id || "";
         try { history.replaceState(null, "", "#nodes" + (id ? "/" + id : "")); } catch (e) { /* 無視 */ }
