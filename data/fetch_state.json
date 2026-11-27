@@ -5,15 +5,15 @@
  },
  "https://www.sidefx.com/forum/feeds/topics/": {
   "etag": "",
-  "last_modified": "Wed, 25 Nov 2026 22:06:22 GMT"
+  "last_modified": "Thu, 26 Nov 2026 17:58:36 GMT"
  },
  "https://www.sidefx.com/changelog/rss/22_0/": {
   "etag": "",
-  "last_modified": "Tue, 24 Nov 2026 22:45:54 GMT"
+  "last_modified": "Wed, 25 Nov 2026 21:05:16 GMT"
  },
  "https://www.sidefx.com/changelog/rss/21_0/": {
   "etag": "",
-  "last_modified": "Tue, 24 Nov 2026 21:13:10 GMT"
+  "last_modified": "Wed, 25 Nov 2026 15:20:27 GMT"
  },
  "https://www.youtube.com/feeds/videos.xml?channel_id=UCegWLyW4CYzph4dYW-gYy0g": {
   "etag": "",
@@ -37,14 +37,14 @@
  },
  "https://zenn.dev/topics/houdini/feed": {
   "etag": "",
-  "last_modified": "Thu, 26 Nov 2026 03:36:26 GMT"
+  "last_modified": "Fri, 27 Nov 2026 03:39:31 GMT"
  },
  "https://api.github.com/repos/sideeffects/SideFXLabs/releases?per_page=8": {
-  "etag": "W/\"9bbbe733b7493a5824d2135e6b65f0233d38d78f3b22a044fe72ec72394e4447\"",
+  "etag": "W/\"ccd3323c65cddd6986deb568f755038250702096cbbf45ea4c0d32dc035ca332\"",
   "last_modified": ""
  },
  "https://api.github.com/repos/sideeffects/HoudiniEngineForUnreal/releases?per_page=10": {
-  "etag": "W/\"598ef96b066f51dacb6a1cf568183a95698fc22f98177eac2903a0610b558b84\"",
+  "etag": "W/\"0a28db8e6543f8a65bdb826d18b0815b264404527f8dcbaedb36212fecb40563\"",
   "last_modified": ""
  },
  "https://api.github.com/repos/sideeffects/HoudiniEngineForUnity/releases?per_page=10": {
@@ -52,7 +52,7 @@
   "last_modified": ""
  },
  "https://api.github.com/repos/sideeffects/HoudiniNiagara/releases?per_page=8": {
-  "etag": "W/\"dfbeea1a64168534e672e2b53b98b5bb2580c7e77d6a2d11bc951899b1b8738f\"",
+  "etag": "W/\"2e566497023762293b5daa35143d19090e7fbcf17ed517b4734ce501c07f36a0\"",
   "last_modified": ""
  },
  "https://www.sidefx.com/forum/feeds/forum/10/": {
@@ -65,7 +65,7 @@
  },
  "https://www.sidefx.com/forum/feeds/forum/82/": {
   "etag": "",
-  "last_modified": "Mon, 23 Nov 2026 16:26:25 GMT"
+  "last_modified": "Thu, 26 Nov 2026 19:16:15 GMT"
  },
  "https://www.youtube.com/feeds/videos.xml?channel_id=UCN2wg0lZFIjS7q1V-WsI85A": {
   "etag": "",
